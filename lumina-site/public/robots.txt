@@ -1,0 +1,5 @@
+# robots.txt for luminaconsulting.ai
+User-agent: *
+Allow: /
+
+Sitemap: https://luminaconsulting.ai/sitemap-index.xml
