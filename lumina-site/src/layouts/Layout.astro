@@ -12,7 +12,7 @@ interface Props {
 const {
   title,
   description = 'Transformamos datos dispersos en información estratégica. Ayudamos a PyMEs y startups con automatización inteligente y análisis de datos.',
-  ogImage = '/og-image.png'
+  ogImage = '/logo-wide-horizontal.svg'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -23,7 +23,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/ISO-color.svg" />
+    <link rel="apple-touch-icon" href="/ISO-color.svg" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Primary Meta Tags -->
