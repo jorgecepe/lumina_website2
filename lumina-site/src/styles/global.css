@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  body {
+    @apply font-sans text-lumina-dark-gray;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-lumina-navy font-semibold;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-lumina-bright-blue hover:bg-lumina-bright-blue-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-lumina-light-gray text-lumina-navy font-semibold px-6 py-3 rounded-lg border-2 border-lumina-navy transition-colors duration-200;
+  }
+
+  .section-light {
+    @apply bg-lumina-light-blue;
+  }
+
+  .section-dark {
+    @apply bg-lumina-navy text-white;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

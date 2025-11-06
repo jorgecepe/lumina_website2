@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const lastUpdated = '6 de Noviembre de 2025';
+---
+
+<Layout
+  title="Términos de Uso - Lumina Consulting"
+  description="Términos y condiciones de uso del sitio web de Lumina Consulting"
+>
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto prose prose-lg">
+        <h1 class="text-lumina-navy">Términos de Uso</h1>
+        <p class="text-sm text-lumina-dark-gray mb-8">
+          <strong>Última actualización:</strong> {lastUpdated}
+        </p>
+
+        <h2 class="text-lumina-navy">1. Aceptación de los Términos</h2>
+        <p class="text-lumina-dark-gray">
+          Al acceder y utilizar este sitio web, aceptas estar sujeto a estos Términos de Uso y a todas las leyes y regulaciones aplicables. Si no estás de acuerdo con alguno de estos términos, no debes utilizar este sitio.
+        </p>
+
+        <h2 class="text-lumina-navy">2. Uso del Sitio</h2>
+        <p class="text-lumina-dark-gray">
+          Este sitio web es para uso informativo y comercial legítimo. No está permitido utilizar este sitio para:
+        </p>
+        <ul class="text-lumina-dark-gray">
+          <li>Actividades ilegales o no autorizadas</li>
+          <li>Transmitir virus o código malicioso</li>
+          <li>Intentar acceder sin autorización a sistemas o datos</li>
+          <li>Recopilar información de otros usuarios sin su consentimiento</li>
+          <li>Hacerse pasar por otra persona o entidad</li>
+        </ul>
+
+        <h2 class="text-lumina-navy">3. Propiedad Intelectual</h2>
+        <p class="text-lumina-dark-gray">
+          Todo el contenido de este sitio web, incluyendo pero no limitado a textos, gráficos, logos, imágenes y software, es propiedad de Lumina Consulting y está protegido por las leyes de propiedad intelectual de Chile.
+        </p>
+        <p class="text-lumina-dark-gray">
+          No puedes reproducir, distribuir, modificar o crear trabajos derivados del contenido sin autorización expresa por escrito de Lumina Consulting.
+        </p>
+
+        <h2 class="text-lumina-navy">4. Servicios Profesionales</h2>
+        <p class="text-lumina-dark-gray">
+          La información proporcionada en este sitio web tiene fines informativos generales. No constituye asesoramiento profesional específico para tu situación particular. Para obtener asesoramiento personalizado, debes contactarnos directamente para establecer una relación formal de consultoría.
+        </p>
+
+        <h2 class="text-lumina-navy">5. Enlaces a Terceros</h2>
+        <p class="text-lumina-dark-gray">
+          Este sitio puede contener enlaces a sitios web de terceros. Lumina Consulting no es responsable del contenido o las prácticas de privacidad de estos sitios externos. El acceso a sitios de terceros es bajo tu propio riesgo.
+        </p>
+
+        <h2 class="text-lumina-navy">6. Limitación de Responsabilidad</h2>
+        <p class="text-lumina-dark-gray">
+          Este sitio web se proporciona "tal como está" sin garantías de ningún tipo, ya sean expresas o implícitas. Lumina Consulting no será responsable por:
+        </p>
+        <ul class="text-lumina-dark-gray">
+          <li>Daños directos, indirectos, incidentales o consecuentes</li>
+          <li>Pérdida de datos o beneficios</li>
+          <li>Interrupción del negocio</li>
+          <li>Errores u omisiones en el contenido del sitio</li>
+        </ul>
+
+        <h2 class="text-lumina-navy">7. Privacidad</h2>
+        <p class="text-lumina-dark-gray">
+          El uso de este sitio también está sujeto a nuestra <a href="/privacidad" class="text-lumina-bright-blue hover:underline">Política de Privacidad</a>, que describe cómo recopilamos, usamos y protegemos tu información personal.
+        </p>
+
+        <h2 class="text-lumina-navy">8. Modificaciones</h2>
+        <p class="text-lumina-dark-gray">
+          Lumina Consulting se reserva el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en este sitio. Es tu responsabilidad revisar periódicamente estos términos.
+        </p>
+
+        <h2 class="text-lumina-navy">9. Ley Aplicable y Jurisdicción</h2>
+        <p class="text-lumina-dark-gray">
+          Estos términos se rigen por las leyes de la República de Chile. Cualquier disputa relacionada con estos términos será resuelta en los tribunales competentes de Chile.
+        </p>
+
+        <h2 class="text-lumina-navy">10. Contacto</h2>
+        <p class="text-lumina-dark-gray">
+          Para consultas sobre estos Términos de Uso:
+        </p>
+        <ul class="text-lumina-dark-gray">
+          <li>Email: <a href="mailto:contacto@luminaconsulting.ai" class="text-lumina-bright-blue hover:underline">contacto@luminaconsulting.ai</a></li>
+          <li>WhatsApp: <a href="https://wa.me/56991629095" class="text-lumina-bright-blue hover:underline" target="_blank">+56 9 9162 9095</a></li>
+        </ul>
+
+        <h2 class="text-lumina-navy">11. Separabilidad</h2>
+        <p class="text-lumina-dark-gray">
+          Si alguna disposición de estos términos se considera inválida o inaplicable, las disposiciones restantes continuarán siendo válidas y aplicables.
+        </p>
+
+        <div class="mt-12 p-6 bg-lumina-light-blue rounded-lg">
+          <p class="text-lumina-dark-gray mb-4">
+            <strong>¿Tienes preguntas sobre nuestros términos de uso?</strong>
+          </p>
+          <a
+            href="/contacto"
+            class="btn-primary inline-block"
+          >
+            Contáctanos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .prose h1 {
+    @apply text-4xl font-bold mb-6;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-semibold mt-8 mb-4;
+  }
+
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .prose ul {
+    @apply mb-4 ml-6 list-disc;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose a {
+    @apply text-lumina-bright-blue hover:underline;
+  }
+
+  .prose strong {
+    @apply font-semibold text-lumina-navy;
+  }
+</style>
