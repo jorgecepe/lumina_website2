@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Skill(frontend-design:frontend-design)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nRediseño completo del frontend: nueva identidad visual profesional\n\n- Nueva paleta de colores con navy oscuro y acentos cyan\n- Tipografía Plus Jakarta Sans y DM Sans (reemplaza Inter)\n- Animaciones scroll-fade y micro-interacciones\n- Header con glassmorphism y efectos de scroll\n- Hero sections con gradientes animados y grid patterns\n- Cards con bordes gradient y efectos hover\n- Todos los emojis reemplazados por iconos SVG\n- Footer modernizado con íconos sociales\n- Componentes reutilizables (btn-primary, testimonial-card, etc.)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix: actualizar clases Tailwind obsoletas en páginas restantes\n\n- privacidad.astro: text-lumina-bright-blue -> text-lumina-accent\n- terminos.astro: text-lumina-bright-blue -> text-lumina-accent\n- portfolio.astro: text-lumina-dark-gray -> text-lumina-slate\n- GitHubRepos.astro: border-lumina-light-blue -> border-lumina-blue/20\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
