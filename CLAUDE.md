@@ -37,14 +37,24 @@ src/
 public/              # Assets estáticos (logos, favicon, robots.txt)
 ```
 
-## Paleta de Colores
+## Sistema de Diseño
+
+**Ver `DESIGN-SYSTEM.md`** para especificaciones completas de:
+- Tipografía (Plus Jakarta Sans + DM Sans)
+- Paleta de colores actualizada
+- Sombras y animaciones
+- Componentes (botones, cards, badges, etc.)
+- Glassmorphism y backgrounds decorativos
+
+### Colores Principales
 ```
-lumina-navy: #1E3A8A           // Azul oscuro - textos principales
-lumina-light-blue: #E1E7F9      // Azul claro - fondos alternos
-lumina-bright-blue: #3B82F6     // Azul brillante - CTAs/botones
-lumina-bright-blue-hover: #2563EB // Hover de botones
-lumina-dark-gray: #374151       // Gris oscuro - textos secundarios
-lumina-light-gray: #F3F4F6      // Gris claro - fondos neutros
+lumina-navy: #0f172a           // Fondo oscuro principal
+lumina-navy-light: #1e293b     // Fondo oscuro secundario
+lumina-blue: #3b82f6           // Azul principal
+lumina-accent: #06b6d4         // Cyan accent (destaque)
+lumina-slate: #64748b          // Texto secundario
+lumina-slate-light: #94a3b8    // Texto sobre fondos oscuros
+lumina-success: #10b981        // Verde éxito
 ```
 
 ## Servicios Ofrecidos
@@ -65,10 +75,12 @@ npm run preview  # Preview del build
 
 ## Convenciones de Código
 - Componentes Astro usan PascalCase
-- Clases CSS con Tailwind utilities + custom classes (btn-primary, section-light)
-- Tipografía: Inter (Google Fonts)
+- Clases CSS con Tailwind utilities + custom classes (btn-primary, card, badge, etc.)
+- Tipografía: Plus Jakarta Sans (títulos) + DM Sans (cuerpo)
 - Mobile-first responsive design
 - SEO: Meta tags, Open Graph, Schema.org JSON-LD
+- Usar iconos SVG en lugar de emojis
+- Animaciones scroll-fade para elementos que aparecen al hacer scroll
 
 ## Integraciones
 - **WhatsApp Business:** Botón flotante en todas las páginas
@@ -76,6 +88,7 @@ npm run preview  # Preview del build
 - **Vercel Analytics:** Tracking automático de visitas
 
 ## Documentación Adicional
+- `DESIGN-SYSTEM.md` - **Sistema de diseño completo** (colores, tipografía, componentes, animaciones)
 - `README.md` - Guía general
 - `EDITING_GUIDE.md` - Cómo editar contenido
 - `DEPLOYMENT.md` - Proceso de deployment
