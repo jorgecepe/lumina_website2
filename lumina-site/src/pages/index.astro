@@ -7,69 +7,127 @@ import Layout from '../layouts/Layout.astro';
   description="Ayudamos a PyMEs y startups a tomar decisiones ágiles, anticipar desafíos y enfocar su equipo en tareas de mayor valor a través de automatización inteligente y análisis de datos."
 >
   <!-- Hero Section -->
-  <section class="section-light py-20">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="mb-6">
-          Transformamos datos dispersos en información estratégica
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-lumina-navy">
+    <!-- Background gradient orbs -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-lumina-blue/20 rounded-full blur-3xl animate-pulse-slow" />
+      <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-lumina-accent/15 rounded-full blur-3xl animate-pulse-slow animation-delay-200" />
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-lumina-blue/10 to-transparent rounded-full" />
+    </div>
+
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);" />
+
+    <div class="container-custom relative py-20">
+      <div class="max-w-4xl">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-8 animate-fade-in">
+          <span class="w-2 h-2 rounded-full bg-lumina-accent animate-pulse" />
+          <span class="text-sm text-lumina-slate-light">Consultoría especializada en datos</span>
+        </div>
+
+        <!-- Main heading -->
+        <h1 class="text-white mb-6 animate-fade-in-up">
+          Transformamos datos dispersos en
+          <span class="text-gradient"> información estratégica</span>
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-lumina-dark-gray">
-          Ayudamos a PyMEs y startups a tomar decisiones ágiles, anticipar desafíos y enfocar su equipo en tareas de mayor valor a través de automatización inteligente y análisis de datos.
+
+        <p class="text-xl md:text-2xl text-lumina-slate-light mb-10 max-w-2xl animate-fade-in-up animation-delay-100">
+          Ayudamos a PyMEs y startups a tomar decisiones ágiles, anticipar desafíos y enfocar su equipo en tareas de mayor valor.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
           <a
             href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
             target="_blank"
-            class="btn-primary text-center"
+            class="btn-primary"
           >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
             Contactar por WhatsApp
           </a>
-          <a href="/contacto" class="btn-secondary text-center">
+          <a href="/contacto" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
             Solicitar Asesoría
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
+        </div>
+
+        <!-- Trust indicators -->
+        <div class="mt-16 pt-8 border-t border-white/10 animate-fade-in animation-delay-300">
+          <p class="text-sm text-lumina-slate-light mb-4">Tecnologías que dominamos</p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-lg bg-white/5 text-sm text-white/80 border border-white/10">Python</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 text-sm text-white/80 border border-white/10">Power BI</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 text-sm text-white/80 border border-white/10">Automatización</span>
+            <span class="px-4 py-2 rounded-lg bg-white/5 text-sm text-white/80 border border-white/10">IA</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Value Proposition Section -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="container-custom">
-      <h2 class="text-center mb-12">¿Por qué Lumina Consulting?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="text-center mb-16 scroll-fade">
+        <span class="badge mb-4">Por qué elegirnos</span>
+        <h2>Lo que nos hace diferentes</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Benefit 1 -->
-        <div class="bg-lumina-light-gray p-8 rounded-lg hover:shadow-lg transition-shadow">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="mb-4">Eficiencia</h3>
-          <p class="text-lumina-dark-gray">
-            Automatizamos procesos manuales que consumen tiempo valioso
+        <div class="feature-card scroll-fade">
+          <div class="icon-container mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-lg mb-3">Eficiencia</h3>
+          <p class="text-lumina-slate text-sm">
+            Automatizamos procesos manuales que consumen tiempo valioso de tu equipo.
           </p>
         </div>
 
         <!-- Benefit 2 -->
-        <div class="bg-lumina-light-gray p-8 rounded-lg hover:shadow-lg transition-shadow">
-          <div class="text-4xl mb-4">🎯</div>
-          <h3 class="mb-4">Claridad</h3>
-          <p class="text-lumina-dark-gray">
-            Convertimos datos complejos en insights accionables
+        <div class="feature-card scroll-fade animation-delay-100">
+          <div class="icon-container mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg mb-3">Claridad</h3>
+          <p class="text-lumina-slate text-sm">
+            Convertimos datos complejos en insights accionables para tu negocio.
           </p>
         </div>
 
         <!-- Benefit 3 -->
-        <div class="bg-lumina-light-gray p-8 rounded-lg hover:shadow-lg transition-shadow">
-          <div class="text-4xl mb-4">📈</div>
-          <h3 class="mb-4">Crecimiento</h3>
-          <p class="text-lumina-dark-gray">
-            Liberamos a tu equipo para enfocarse en tareas estratégicas
+        <div class="feature-card scroll-fade animation-delay-200">
+          <div class="icon-container mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h3 class="text-lg mb-3">Crecimiento</h3>
+          <p class="text-lumina-slate text-sm">
+            Liberamos a tu equipo para enfocarse en tareas estratégicas de alto valor.
           </p>
         </div>
 
         <!-- Benefit 4 -->
-        <div class="bg-lumina-light-gray p-8 rounded-lg hover:shadow-lg transition-shadow">
-          <div class="text-4xl mb-4">🚀</div>
-          <h3 class="mb-4">Tecnología</h3>
-          <p class="text-lumina-dark-gray">
-            Combinamos visión de negocio con expertise técnico avanzado
+        <div class="feature-card scroll-fade animation-delay-300">
+          <div class="icon-container mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg mb-3">Tecnología</h3>
+          <p class="text-lumina-slate text-sm">
+            Combinamos visión de negocio con expertise técnico avanzado.
           </p>
         </div>
       </div>
@@ -77,121 +135,181 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Brief Description Section -->
-  <section class="section-light py-20">
+  <section class="py-24 section-light">
     <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center">
-        <p class="text-lg md:text-xl text-lumina-dark-gray leading-relaxed">
-          En Lumina Consulting transformamos la reportería manual y los datos dispersos en información estratégica automatizada, confiable e inteligente. Combinando una profunda visión de negocio con expertise tecnológica avanzada (Python, Power BI, automatización e IA), permitimos a nuestros clientes tomar decisiones ágiles, anticipar desafíos y impulsar su crecimiento y rentabilidad.
+      <div class="max-w-4xl mx-auto text-center scroll-fade">
+        <p class="text-xl md:text-2xl text-lumina-slate leading-relaxed">
+          En Lumina Consulting transformamos la reportería manual y los datos dispersos en
+          <span class="text-lumina-navy font-semibold">información estratégica automatizada, confiable e inteligente</span>.
+          Combinando una profunda visión de negocio con expertise tecnológica avanzada, permitimos a nuestros clientes tomar decisiones ágiles, anticipar desafíos y
+          <span class="text-gradient font-semibold">impulsar su crecimiento y rentabilidad</span>.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Services Preview Section -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="container-custom">
-      <h2 class="text-center mb-12">Nuestros Servicios</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+      <div class="text-center mb-16 scroll-fade">
+        <span class="badge mb-4">Soluciones</span>
+        <h2>Nuestros Servicios</h2>
+        <p class="text-lumina-slate mt-4 max-w-2xl mx-auto">
+          Soluciones diseñadas para resolver los desafíos reales de tu negocio
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-12">
         <!-- Service 1 -->
-        <div class="border-2 border-lumina-light-blue p-8 rounded-lg hover:border-lumina-bright-blue transition-colors">
-          <h3 class="mb-4">Dashboards Estratégicos y Automatización de Reportes</h3>
-          <p class="text-lumina-dark-gray mb-4">
-            Creamos dashboards interactivos y automatizamos la generación de reportes que se actualizan en tiempo real.
-          </p>
-          <ul class="space-y-2 text-sm text-lumina-dark-gray">
-            <li>✓ Información actualizada en tiempo real</li>
-            <li>✓ Ahorro de horas semanales</li>
-            <li>✓ Decisiones más rápidas y fundamentadas</li>
-          </ul>
+        <div class="card-interactive group scroll-fade">
+          <div class="flex items-start gap-4">
+            <div class="icon-container icon-container-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg mb-2">Dashboards Estratégicos</h3>
+              <p class="text-lumina-slate text-sm mb-4">
+                Creamos dashboards interactivos y automatizamos reportes que se actualizan en tiempo real.
+              </p>
+              <ul class="check-list text-sm">
+                <li>Información actualizada en tiempo real</li>
+                <li>Ahorro de horas semanales</li>
+                <li>Decisiones más rápidas</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Service 2 -->
-        <div class="border-2 border-lumina-light-blue p-8 rounded-lg hover:border-lumina-bright-blue transition-colors">
-          <h3 class="mb-4">Análisis de Competencia Automatizado</h3>
-          <p class="text-lumina-dark-gray mb-4">
-            Implementamos sistemas que monitorean precios, productos y estrategias de la competencia automáticamente.
-          </p>
-          <ul class="space-y-2 text-sm text-lumina-dark-gray">
-            <li>✓ Monitoreo continuo sin esfuerzo manual</li>
-            <li>✓ Alertas tempranas sobre cambios</li>
-            <li>✓ Estrategias de precios competitivas</li>
-          </ul>
+        <div class="card-interactive group scroll-fade animation-delay-100">
+          <div class="flex items-start gap-4">
+            <div class="icon-container icon-container-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg mb-2">Análisis de Competencia</h3>
+              <p class="text-lumina-slate text-sm mb-4">
+                Implementamos sistemas que monitorean precios y estrategias de la competencia automáticamente.
+              </p>
+              <ul class="check-list text-sm">
+                <li>Monitoreo continuo automatizado</li>
+                <li>Alertas tempranas sobre cambios</li>
+                <li>Estrategias de precios competitivas</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Service 3 -->
-        <div class="border-2 border-lumina-light-blue p-8 rounded-lg hover:border-lumina-bright-blue transition-colors">
-          <h3 class="mb-4">Gestión del Negocio con Visibilidad Total</h3>
-          <p class="text-lumina-dark-gray mb-4">
-            Te acompañamos a definir indicadores, metas y estructuras de control alineadas con tu estrategia.
-          </p>
-          <ul class="space-y-2 text-sm text-lumina-dark-gray">
-            <li>✓ Metas conectadas con la operación real</li>
-            <li>✓ Visibilidad clara para todas las áreas</li>
-            <li>✓ Control sin fricción operativa</li>
-          </ul>
+        <div class="card-interactive group scroll-fade animation-delay-200">
+          <div class="flex items-start gap-4">
+            <div class="icon-container icon-container-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg mb-2">Gestión con Visibilidad Total</h3>
+              <p class="text-lumina-slate text-sm mb-4">
+                Te acompañamos a definir indicadores, metas y estructuras de control alineadas con tu estrategia.
+              </p>
+              <ul class="check-list text-sm">
+                <li>Metas conectadas con la operación</li>
+                <li>Visibilidad clara para todas las áreas</li>
+                <li>Control sin fricción operativa</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Service 4 -->
-        <div class="border-2 border-lumina-light-blue p-8 rounded-lg hover:border-lumina-bright-blue transition-colors">
-          <h3 class="mb-4">Programas de Capacitación a Medida</h3>
-          <p class="text-lumina-dark-gray mb-4">
-            Diseñamos capacitaciones según tus procesos, datos y realidades. Onsite y online.
-          </p>
-          <ul class="space-y-2 text-sm text-lumina-dark-gray">
-            <li>✓ Capacitación aplicada con impacto inmediato</li>
-            <li>✓ Autonomía del equipo</li>
-            <li>✓ Posibilidad de franquicia Sence</li>
-          </ul>
+        <div class="card-interactive group scroll-fade animation-delay-300">
+          <div class="flex items-start gap-4">
+            <div class="icon-container icon-container-lg flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg mb-2">Capacitación a Medida</h3>
+              <p class="text-lumina-slate text-sm mb-4">
+                Diseñamos capacitaciones según tus procesos, datos y realidades. Onsite y online.
+              </p>
+              <ul class="check-list text-sm">
+                <li>Capacitación con impacto inmediato</li>
+                <li>Autonomía del equipo</li>
+                <li>Posibilidad de franquicia Sence</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="text-center">
+      <div class="text-center scroll-fade">
         <a href="/servicios" class="btn-primary">
           Ver Todos los Servicios
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Products Section -->
-  <section class="py-20 bg-lumina-light-gray">
+  <section class="py-24 section-light">
     <div class="container-custom">
-      <h2 class="text-center mb-4">Nuestros Productos</h2>
-      <p class="text-center text-lumina-dark-gray mb-12 max-w-2xl mx-auto">
-        Herramientas desarrolladas por Lumina Consulting para resolver problemas reales
-      </p>
+      <div class="text-center mb-12 scroll-fade">
+        <span class="badge-accent mb-4">Producto</span>
+        <h2>Nuestros Productos</h2>
+        <p class="text-lumina-slate mt-4 max-w-2xl mx-auto">
+          Herramientas desarrolladas por Lumina Consulting para resolver problemas reales
+        </p>
+      </div>
 
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-white border-2 border-lumina-light-blue p-8 rounded-lg hover:border-lumina-bright-blue transition-colors shadow-md">
-          <div class="flex flex-col md:flex-row items-center gap-6">
+      <div class="max-w-4xl mx-auto scroll-fade">
+        <div class="card bg-white border-2 border-lumina-accent/20 hover:border-lumina-accent/40 p-8 md:p-10">
+          <div class="flex flex-col md:flex-row items-center gap-8">
             <div class="flex-shrink-0">
-              <!-- Logo NodalTree -->
-              <img
-                src="/logoNodalTree.png"
-                alt="NodalTree Logo"
-                class="w-20 h-20 object-contain"
-              />
+              <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-lumina-accent/10 to-lumina-blue/10 flex items-center justify-center p-4">
+                <img
+                  src="/logoNodalTree.png"
+                  alt="NodalTree Logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
             </div>
             <div class="flex-grow text-center md:text-left">
-              <h3 class="mb-2">NodalTree</h3>
-              <p class="text-lumina-dark-gray mb-4">
+              <div class="flex items-center justify-center md:justify-start gap-2 mb-3">
+                <h3>NodalTree</h3>
+                <span class="badge-accent text-xs">Nuevo</span>
+              </div>
+              <p class="text-lumina-slate mb-6">
                 Transforma datos de Excel, CSV o SQL en organigramas interactivos.
                 Sin costo por usuario, 100% privado, resultados instantáneos.
               </p>
-              <ul class="flex flex-wrap gap-4 justify-center md:justify-start text-sm text-lumina-dark-gray mb-4">
-                <li>✓ Importación flexible</li>
-                <li>✓ Edición en vivo</li>
-                <li>✓ Exportación PDF/Excel</li>
-              </ul>
+              <div class="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
+                <span class="badge">Importación flexible</span>
+                <span class="badge">Edición en vivo</span>
+                <span class="badge">Exportación PDF/Excel</span>
+              </div>
             </div>
             <div class="flex-shrink-0">
               <a
                 href="https://nodaltree.luminaconsulting.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn-primary whitespace-nowrap"
+                class="btn-accent whitespace-nowrap"
               >
-                Probar NodalTree →
+                Probar NodalTree
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </a>
             </div>
           </div>
@@ -201,60 +319,96 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Social Proof Section -->
-  <section class="section-light py-20">
+  <section class="py-24 bg-white">
     <div class="container-custom">
-      <h2 class="text-center mb-12">Casos de Éxito</h2>
-      <div class="max-w-4xl mx-auto space-y-8">
-        <!-- Case 1 Preview -->
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <h3 class="mb-4">Red de Automotoras</h3>
-          <p class="text-lumina-dark-gray mb-4">
-            Automatización completa del control de calidad de publicaciones y análisis de precios competitivos.
-          </p>
-          <p class="text-sm text-lumina-bright-blue font-semibold">
-            "Es como tener un analista 24/7 trabajando para nosotros."
-          </p>
+      <div class="text-center mb-16 scroll-fade">
+        <span class="badge mb-4">Testimonios</span>
+        <h2>Casos de Éxito</h2>
+        <p class="text-lumina-slate mt-4 max-w-2xl mx-auto">
+          Resultados reales de empresas que confiaron en nosotros
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <!-- Case 1 -->
+        <div class="testimonial-card scroll-fade">
+          <div class="flex flex-col md:flex-row md:items-center gap-6">
+            <div class="flex-grow">
+              <h3 class="text-lg mb-2">Red de Automotoras</h3>
+              <p class="text-lumina-slate mb-4">
+                Automatización completa del control de calidad de publicaciones y análisis de precios competitivos.
+              </p>
+              <blockquote class="text-lumina-blue font-medium italic">
+                "Es como tener un analista 24/7 trabajando para nosotros."
+              </blockquote>
+            </div>
+            <div class="flex-shrink-0 flex gap-2">
+              <span class="badge-success">Automatización</span>
+              <span class="badge">Análisis</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Case 2 Preview -->
-        <div class="bg-white p-8 rounded-lg shadow-md">
-          <h3 class="mb-4">Red de Clínicas Veterinarias</h3>
-          <p class="text-lumina-dark-gray mb-4">
-            Sistema integrado de reportes financieros y operacionales que dio visibilidad completa del negocio.
-          </p>
-          <p class="text-sm text-lumina-bright-blue font-semibold">
-            "Nos dio un salto de profesionalismo que necesitábamos para crecer."
-          </p>
+        <!-- Case 2 -->
+        <div class="testimonial-card scroll-fade animation-delay-100">
+          <div class="flex flex-col md:flex-row md:items-center gap-6">
+            <div class="flex-grow">
+              <h3 class="text-lg mb-2">Red de Clínicas Veterinarias</h3>
+              <p class="text-lumina-slate mb-4">
+                Sistema integrado de reportes financieros y operacionales que dio visibilidad completa del negocio.
+              </p>
+              <blockquote class="text-lumina-blue font-medium italic">
+                "Nos dio un salto de profesionalismo que necesitábamos para crecer."
+              </blockquote>
+            </div>
+            <div class="flex-shrink-0 flex gap-2">
+              <span class="badge-success">Reportería</span>
+              <span class="badge">Integración</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="text-center mt-12">
-        <a href="/casos-de-exito" class="btn-primary">
+      <div class="text-center mt-12 scroll-fade">
+        <a href="/casos-de-exito" class="btn-secondary">
           Ver Casos de Éxito Completos
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Final CTA Section -->
-  <section class="section-dark py-20">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="mb-6 text-white">
-          ¿Listo para transformar tus datos en información estratégica?
+  <section class="py-24 bg-lumina-navy relative overflow-hidden">
+    <!-- Background effects -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-lumina-blue/10 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-lumina-accent/10 rounded-full blur-3xl" />
+    </div>
+
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6 scroll-fade">
+          ¿Listo para transformar tus datos en
+          <span class="text-gradient">información estratégica</span>?
         </h2>
-        <p class="text-xl mb-8 text-lumina-light-blue">
+        <p class="text-xl text-lumina-slate-light mb-10 scroll-fade animation-delay-100">
           Nos comprometemos a responder todas las consultas en menos de 24 horas.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-fade animation-delay-200">
           <a
             href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
             target="_blank"
-            class="btn-primary text-center"
+            class="btn-primary"
           >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
             Contactar por WhatsApp
           </a>
-          <a href="/contacto" class="btn-secondary text-center bg-white hover:bg-lumina-light-gray text-lumina-navy">
+          <a href="/contacto" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
             Solicitar Diagnóstico Gratuito
           </a>
         </div>

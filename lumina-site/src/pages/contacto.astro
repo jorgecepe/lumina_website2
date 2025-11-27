@@ -7,11 +7,16 @@ import Layout from '../layouts/Layout.astro';
   description="Contáctanos para una consulta gratuita. Respondemos en menos de 24 horas."
 >
   <!-- Hero Section -->
-  <section class="section-light py-20">
-    <div class="container-custom">
+  <section class="relative py-24 bg-lumina-navy overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lumina-blue/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lumina-accent/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="mb-6">Contacto</h1>
-        <p class="text-xl text-lumina-dark-gray">
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Contacto</span>
+        <h1 class="text-white mb-6">Conversemos</h1>
+        <p class="text-xl text-lumina-slate-light max-w-2xl mx-auto">
           ¿Listo para transformar tus datos en información estratégica?
         </p>
       </div>
@@ -19,108 +24,149 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Contact Information -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="container-custom">
       <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Contact Details -->
           <div>
-            <h2 class="mb-8">Información de Contacto</h2>
+            <h2 class="mb-8 scroll-fade">Información de Contacto</h2>
 
             <div class="space-y-6">
               <!-- WhatsApp -->
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-2xl">
-                  📱
-                </div>
-                <div>
-                  <h3 class="mb-1">WhatsApp</h3>
-                  <a
-                    href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
-                    target="_blank"
-                    class="text-lumina-bright-blue hover:underline"
-                  >
-                    +56 9 9162 9095
-                  </a>
-                  <p class="text-sm text-lumina-dark-gray mt-1">Respuesta rápida garantizada</p>
-                </div>
+              <div class="card-interactive scroll-fade">
+                <a
+                  href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
+                  target="_blank"
+                  class="flex items-start gap-4"
+                >
+                  <div class="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg mb-1">WhatsApp</h3>
+                    <p class="text-lumina-blue font-medium">+56 9 9162 9095</p>
+                    <p class="text-sm text-lumina-slate mt-1">Respuesta rápida garantizada</p>
+                  </div>
+                </a>
               </div>
 
               <!-- Email -->
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl">
-                  📧
-                </div>
-                <div>
-                  <h3 class="mb-1">Email</h3>
-                  <a
-                    href="mailto:jcepeda@luminaconsulting.ai"
-                    class="text-lumina-bright-blue hover:underline"
-                  >
-                    jcepeda@luminaconsulting.ai
-                  </a>
-                  <p class="text-sm text-lumina-dark-gray mt-1">Respuesta en menos de 24 horas</p>
-                </div>
+              <div class="card-interactive scroll-fade animation-delay-100">
+                <a
+                  href="mailto:jcepeda@luminaconsulting.ai"
+                  class="flex items-start gap-4"
+                >
+                  <div class="w-12 h-12 rounded-xl bg-lumina-blue/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-lumina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg mb-1">Email</h3>
+                    <p class="text-lumina-blue font-medium">jcepeda@luminaconsulting.ai</p>
+                    <p class="text-sm text-lumina-slate mt-1">Respuesta en menos de 24 horas</p>
+                  </div>
+                </a>
               </div>
 
               <!-- Business Hours -->
-              <div class="flex items-start gap-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center text-2xl">
-                  🕐
-                </div>
-                <div>
-                  <h3 class="mb-1">Horario de Atención</h3>
-                  <p class="text-lumina-dark-gray">Lunes a Viernes: 9:00 - 18:00 (GMT-3)</p>
-                  <p class="text-sm text-lumina-dark-gray mt-1">Consultas urgentes por WhatsApp</p>
+              <div class="card scroll-fade animation-delay-200">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-lumina-accent/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-lumina-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg mb-1">Horario de Atención</h3>
+                    <p class="text-lumina-slate">Lunes a Viernes: 9:00 - 18:00 (GMT-3)</p>
+                    <p class="text-sm text-lumina-slate mt-1">Consultas urgentes por WhatsApp</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Response Guarantee -->
-            <div class="mt-8 p-6 bg-lumina-light-blue rounded-lg">
-              <h3 class="mb-2">Compromiso de Respuesta</h3>
-              <p class="text-lumina-dark-gray">
-                Nos comprometemos a responder todas las consultas en menos de 24 horas. Creemos en la comunicación directa y sin burocracia.
-              </p>
+            <div class="mt-8 p-6 rounded-2xl bg-gradient-to-br from-lumina-gray to-white border border-lumina-navy/5 scroll-fade animation-delay-300">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-lumina-success/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-lumina-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg mb-2">Compromiso de Respuesta</h3>
+                  <p class="text-lumina-slate text-sm">
+                    Nos comprometemos a responder todas las consultas en menos de 24 horas. Creemos en la comunicación directa y sin burocracia.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Quick Actions -->
           <div>
-            <h2 class="mb-8">¿Cómo podemos ayudarte?</h2>
+            <h2 class="mb-8 scroll-fade">¿Cómo podemos ayudarte?</h2>
 
             <div class="space-y-4">
               <a
                 href="https://wa.me/56991629095?text=Hola,%20me%20gustaría%20solicitar%20un%20diagnóstico%20sin%20costo%20para%20mi%20empresa"
                 target="_blank"
-                class="block p-6 bg-white border-2 border-lumina-light-blue rounded-lg hover:border-lumina-bright-blue transition-colors"
+                class="card-interactive block group scroll-fade"
               >
-                <h3 class="mb-2">Solicitar Diagnóstico Sin Costo</h3>
-                <p class="text-lumina-dark-gray text-sm">
-                  Analizaremos tu situación actual y te daremos recomendaciones personalizadas
-                </p>
+                <div class="flex items-start gap-4">
+                  <div class="icon-container flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg mb-1">Solicitar Diagnóstico Sin Costo</h3>
+                    <p class="text-lumina-slate text-sm">
+                      Analizaremos tu situación actual y te daremos recomendaciones personalizadas
+                    </p>
+                  </div>
+                </div>
               </a>
 
               <a
                 href="https://wa.me/56991629095?text=Hola,%20me%20gustaría%20agendar%20una%20llamada%20de%20descubrimiento"
                 target="_blank"
-                class="block p-6 bg-white border-2 border-lumina-light-blue rounded-lg hover:border-lumina-bright-blue transition-colors"
+                class="card-interactive block group scroll-fade animation-delay-100"
               >
-                <h3 class="mb-2">Agendar Llamada de Descubrimiento</h3>
-                <p class="text-lumina-dark-gray text-sm">
-                  Conversemos sobre tus desafíos y objetivos
-                </p>
+                <div class="flex items-start gap-4">
+                  <div class="icon-container flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-lg mb-1">Agendar Llamada de Descubrimiento</h3>
+                    <p class="text-lumina-slate text-sm">
+                      Conversemos sobre tus desafíos y objetivos
+                    </p>
+                  </div>
+                </div>
               </a>
             </div>
 
             <!-- Direct Contact CTA -->
-            <div class="mt-8 p-6 bg-lumina-navy text-white rounded-lg text-center">
-              <h3 class="mb-4 text-white">¿Prefieres hablar directamente?</h3>
+            <div class="mt-8 p-8 rounded-2xl bg-lumina-navy text-white text-center scroll-fade animation-delay-200">
+              <h3 class="text-xl mb-4 text-white">¿Prefieres hablar directamente?</h3>
+              <p class="text-lumina-slate-light mb-6 text-sm">
+                Estamos listos para ayudarte a transformar tus datos
+              </p>
               <a
                 href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
                 target="_blank"
-                class="btn-primary w-full sm:w-auto inline-block"
+                class="btn-primary w-full sm:w-auto"
               >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
                 Iniciar Conversación por WhatsApp
               </a>
             </div>
@@ -130,30 +176,47 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Map or Additional Info Section (Optional) -->
-  <section class="section-light py-20">
+  <!-- Presence Section -->
+  <section class="py-24 section-light">
     <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="mb-6">Presencia en Chile y Servicios Remotos</h2>
-        <p class="text-lg text-lumina-dark-gray mb-8">
-          Trabajamos con clientes en Chile y ofrecemos servicios remotos para empresas en toda Latinoamérica. Nuestra metodología nos permite colaborar eficientemente sin importar la distancia.
+      <div class="text-center mb-12 scroll-fade">
+        <span class="badge mb-4">Alcance</span>
+        <h2>Presencia en Chile y Servicios Remotos</h2>
+        <p class="text-lumina-slate mt-4 max-w-2xl mx-auto">
+          Trabajamos con clientes en Chile y ofrecemos servicios remotos para empresas en toda Latinoamérica
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-lg">
-            <div class="text-3xl mb-3">🇨🇱</div>
-            <h3 class="mb-2 text-lg">Presencial en Chile</h3>
-            <p class="text-sm text-lumina-dark-gray">Reuniones y capacitaciones presenciales disponibles</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="card text-center scroll-fade">
+          <div class="icon-container mx-auto mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
           </div>
-          <div class="bg-white p-6 rounded-lg">
-            <div class="text-3xl mb-3">💻</div>
-            <h3 class="mb-2 text-lg">Trabajo Remoto</h3>
-            <p class="text-sm text-lumina-dark-gray">Implementación y seguimiento 100% online</p>
+          <h3 class="text-lg mb-2">Presencial en Chile</h3>
+          <p class="text-sm text-lumina-slate">Reuniones y capacitaciones presenciales disponibles</p>
+        </div>
+
+        <div class="card text-center scroll-fade animation-delay-100">
+          <div class="icon-container mx-auto mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
           </div>
-          <div class="bg-white p-6 rounded-lg">
-            <div class="text-3xl mb-3">🌎</div>
-            <h3 class="mb-2 text-lg">Alcance Internacional</h3>
-            <p class="text-sm text-lumina-dark-gray">Clientes en múltiples países de Latinoamérica</p>
+          <h3 class="text-lg mb-2">Trabajo Remoto</h3>
+          <p class="text-sm text-lumina-slate">Implementación y seguimiento 100% online</p>
+        </div>
+
+        <div class="card text-center scroll-fade animation-delay-200">
+          <div class="icon-container mx-auto mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </div>
+          <h3 class="text-lg mb-2">Alcance Internacional</h3>
+          <p class="text-sm text-lumina-slate">Clientes en múltiples países de Latinoamérica</p>
         </div>
       </div>
     </div>

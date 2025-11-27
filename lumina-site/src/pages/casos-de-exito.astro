@@ -7,11 +7,16 @@ import Layout from '../layouts/Layout.astro';
   description="Conoce cómo hemos ayudado a empresas a transformar sus datos en información estratégica y automatizar procesos clave."
 >
   <!-- Hero Section -->
-  <section class="section-light py-20">
-    <div class="container-custom">
+  <section class="relative py-24 bg-lumina-navy overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lumina-blue/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lumina-accent/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
       <div class="max-w-4xl mx-auto text-center">
-        <h1 class="mb-6">Casos de Éxito</h1>
-        <p class="text-xl text-lumina-dark-gray">
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Testimonios</span>
+        <h1 class="text-white mb-6">Casos de Éxito</h1>
+        <p class="text-xl text-lumina-slate-light max-w-2xl mx-auto">
           Resultados reales de empresas que transformaron su operación con Lumina Consulting
         </p>
       </div>
@@ -19,74 +24,72 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- Case 1: Automotive Network -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <div class="mb-8">
-          <div class="inline-block bg-lumina-bright-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Caso de Éxito
-          </div>
-          <h2 class="mb-4">Automatización de Control de Calidad y Análisis de Precios</h2>
-          <p class="text-lg text-lumina-dark-gray">Red de Automotoras</p>
+        <div class="mb-10 scroll-fade">
+          <span class="badge-accent mb-4">Caso de Éxito</span>
+          <h2 class="mb-2">Automatización de Control de Calidad y Análisis de Precios</h2>
+          <p class="text-lumina-slate">Red de Automotoras</p>
         </div>
 
-        <!-- Challenge -->
-        <div class="mb-8">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-2xl">
-              ⚠️
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+          <!-- Challenge -->
+          <div class="card scroll-fade">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center">
+                <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 class="text-lg">El Desafío</h3>
             </div>
-            <div>
-              <h3 class="mb-2">El Desafío</h3>
-              <p class="text-lumina-dark-gray">
-                Una red de automotoras publicaba diariamente decenas de vehículos en su sitio web y portales externos, pero no contaba con un sistema que les alertara sobre publicaciones sin fotos o con información incompleta. Además, no tenían visibilidad de cómo se comparaban sus precios con el mercado.
-              </p>
-            </div>
+            <p class="text-lumina-slate text-sm">
+              Una red de automotoras publicaba diariamente decenas de vehículos pero no tenían forma de detectar publicaciones incompletas ni comparar sus precios con el mercado.
+            </p>
           </div>
-        </div>
 
-        <!-- Solution -->
-        <div class="mb-8">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl">
-              💡
+          <!-- Solution -->
+          <div class="card scroll-fade animation-delay-100">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-lumina-blue/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-lumina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 class="text-lg">Nuestra Solución</h3>
             </div>
-            <div>
-              <h3 class="mb-2">Nuestra Solución</h3>
-              <p class="text-lumina-dark-gray mb-4">
-                Desarrollamos un sistema automatizado que diariamente:
-              </p>
-              <ul class="space-y-2 text-lumina-dark-gray ml-4">
-                <li>• Escanea el sitio web del cliente para detectar publicaciones sin fotos o con errores</li>
-                <li>• Compara los precios de sus vehículos con autos similares en distintos portales</li>
-                <li>• Genera un informe HTML y Excel con alertas y análisis comparativo</li>
-                <li>• Envía todo automáticamente por correo a los encargados comerciales de cada sucursal</li>
-              </ul>
-            </div>
+            <p class="text-lumina-slate text-sm">
+              Sistema automatizado que escanea publicaciones, detecta errores, compara precios con la competencia y envía informes diarios por correo.
+            </p>
           </div>
-        </div>
 
-        <!-- Results -->
-        <div class="mb-8">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-2xl">
-              📈
+          <!-- Results -->
+          <div class="card scroll-fade animation-delay-200">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-lumina-success/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-lumina-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <h3 class="text-lg">Resultados</h3>
             </div>
-            <div>
-              <h3 class="mb-2">Resultados</h3>
-              <ul class="space-y-2 text-lumina-dark-gray ml-4">
-                <li>✓ Reducción drástica de publicaciones incompletas o sin imágenes</li>
-                <li>✓ Identificación de autos sobrevalorados o subvalorados en el mercado</li>
-                <li>✓ Decisiones de pricing más rápidas y mejor fundamentadas</li>
-                <li>✓ Un equipo comercial que parte el día con información clara y accionable</li>
-              </ul>
-            </div>
+            <ul class="text-lumina-slate text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-lumina-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                Reducción de publicaciones incompletas
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-lumina-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                Decisiones de pricing más rápidas
+              </li>
+            </ul>
           </div>
         </div>
 
         <!-- Testimonial -->
-        <div class="bg-lumina-light-blue p-8 rounded-lg border-l-4 border-lumina-bright-blue">
-          <p class="text-lg text-lumina-dark-gray italic mb-4">
+        <div class="testimonial-card scroll-fade animation-delay-300">
+          <p class="text-lg text-lumina-slate mb-4">
             "Antes teníamos que revisar todo a mano, y aún así se nos pasaban errores. Ahora cada mañana recibimos un resumen con los autos sin fotos, los precios que están fuera de mercado y recomendaciones claras. Es como tener un analista 24/7 trabajando para nosotros."
           </p>
           <p class="text-sm font-semibold text-lumina-navy">
@@ -97,78 +100,75 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Separator -->
-  <div class="h-px bg-lumina-light-blue"></div>
+  <div class="divider-gradient" />
 
   <!-- Case 2: Veterinary Clinic -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <div class="mb-8">
-          <div class="inline-block bg-lumina-bright-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-            Caso de Éxito
-          </div>
-          <h2 class="mb-4">Visibilidad Financiera y Operacional</h2>
-          <p class="text-lg text-lumina-dark-gray">Red de Clínicas Veterinarias</p>
+        <div class="mb-10 scroll-fade">
+          <span class="badge-accent mb-4">Caso de Éxito</span>
+          <h2 class="mb-2">Visibilidad Financiera y Operacional</h2>
+          <p class="text-lumina-slate">Red de Clínicas Veterinarias</p>
         </div>
 
-        <!-- Challenge -->
-        <div class="mb-8">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-2xl">
-              ⚠️
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+          <!-- Challenge -->
+          <div class="card scroll-fade">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center">
+                <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 class="text-lg">El Desafío</h3>
             </div>
-            <div>
-              <h3 class="mb-2">El Desafío</h3>
-              <p class="text-lumina-dark-gray">
-                Una clínica veterinaria en expansión contaba con un software de gestión que funcionaba bien para operaciones clínicas, pero no ofrecía reportes estratégicos. La información estaba dispersa en múltiples archivos descargables, y no existía una visión clara del desempeño financiero y la productividad del equipo.
-              </p>
-            </div>
+            <p class="text-lumina-slate text-sm">
+              Una clínica veterinaria en expansión no tenía visión clara del desempeño financiero. La información estaba dispersa en múltiples archivos sin reportes estratégicos.
+            </p>
           </div>
-        </div>
 
-        <!-- Solution -->
-        <div class="mb-8">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl">
-              💡
+          <!-- Solution -->
+          <div class="card scroll-fade animation-delay-100">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-lumina-blue/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-lumina-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 class="text-lg">Nuestra Solución</h3>
             </div>
-            <div>
-              <h3 class="mb-2">Nuestra Solución</h3>
-              <p class="text-lumina-dark-gray mb-4">
-                Creamos un sistema automatizado que:
-              </p>
-              <ul class="space-y-2 text-lumina-dark-gray ml-4">
-                <li>• Extrae periódicamente información clave desde el sistema de gestión</li>
-                <li>• Procesa los datos en archivos Excel conectados por Power Query</li>
-                <li>• Genera reportes visuales y tablas dinámicas con visión clara del desempeño</li>
-                <li>• Permite al equipo contable acceder directamente a los datos sin depender del equipo clínico</li>
-              </ul>
-            </div>
+            <p class="text-lumina-slate text-sm">
+              Sistema automatizado que extrae datos del sistema de gestión, los procesa con Power Query y genera reportes visuales con visión clara del desempeño.
+            </p>
           </div>
-        </div>
 
-        <!-- Results -->
-        <div class="mb-8">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center text-2xl">
-              📈
+          <!-- Results -->
+          <div class="card scroll-fade animation-delay-200">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-lumina-success/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-lumina-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <h3 class="text-lg">Resultados</h3>
             </div>
-            <div>
-              <h3 class="mb-2">Resultados</h3>
-              <ul class="space-y-2 text-lumina-dark-gray ml-4">
-                <li>✓ Consolidación de múltiples fuentes de datos en un único archivo inteligente</li>
-                <li>✓ Visibilidad clara del uso del sistema por parte de cada sección</li>
-                <li>✓ Mejor control de ingresos, flujos de pacientes y productividad</li>
-                <li>✓ Ahorro de tiempo significativo en generación de reportes</li>
-              </ul>
-            </div>
+            <ul class="text-lumina-slate text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-lumina-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                Consolidación de datos en un archivo
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-4 h-4 text-lumina-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                Mejor control de ingresos y flujos
+              </li>
+            </ul>
           </div>
         </div>
 
         <!-- Testimonial -->
-        <div class="bg-lumina-light-blue p-8 rounded-lg border-l-4 border-lumina-bright-blue">
-          <p class="text-lg text-lumina-dark-gray italic mb-4">
+        <div class="testimonial-card scroll-fade animation-delay-300">
+          <p class="text-lg text-lumina-slate mb-4">
             "Teníamos los datos, pero no la película completa. Ahora podemos ver cómo va cada sección de la clínica, cuánto estamos generando, y qué áreas necesitan mejorar. Nos dio un salto de profesionalismo que necesitábamos para crecer."
           </p>
           <p class="text-sm font-semibold text-lumina-navy">
@@ -180,22 +180,29 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CTA Section -->
-  <section class="section-dark py-20">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="mb-6 text-white">¿Tu empresa podría ser el próximo caso de éxito?</h2>
-        <p class="text-xl mb-8 text-lumina-light-blue">
+  <section class="py-24 bg-lumina-navy relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-lumina-blue/10 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-lumina-accent/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6 scroll-fade">¿Tu empresa podría ser el próximo caso de éxito?</h2>
+        <p class="text-xl text-lumina-slate-light mb-10 scroll-fade animation-delay-100">
           Conversemos sobre los desafíos específicos de tu negocio
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-fade animation-delay-200">
           <a
             href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
             target="_blank"
             class="btn-primary"
           >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
             Contactar por WhatsApp
           </a>
-          <a href="/contacto" class="btn-secondary bg-white hover:bg-lumina-light-gray text-lumina-navy">
+          <a href="/contacto" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
             Solicitar Diagnóstico Gratuito
           </a>
         </div>

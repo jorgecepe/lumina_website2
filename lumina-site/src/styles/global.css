@@ -3,47 +3,279 @@
 @tailwind utilities;
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  /* Font imports */
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+  * {
+    @apply antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
-    @apply font-sans text-lumina-dark-gray;
+    @apply font-body text-lumina-slate bg-lumina-white;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-lumina-navy font-semibold;
+    @apply font-display text-lumina-navy font-semibold tracking-tight;
   }
 
   h1 {
-    @apply text-5xl md:text-6xl;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl;
+    @apply text-3xl sm:text-4xl font-bold;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl sm:text-2xl font-semibold;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-lumina-accent/20 text-lumina-navy;
   }
 }
 
 @layer components {
+  /* Primary Button - with subtle glow effect */
   .btn-primary {
-    @apply bg-lumina-bright-blue hover:bg-lumina-bright-blue-hover text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+    @apply relative inline-flex items-center justify-center gap-2
+           bg-lumina-blue hover:bg-lumina-blue-hover
+           text-white font-display font-semibold
+           px-6 py-3.5 rounded-xl
+           transition-all duration-300 ease-out
+           hover:shadow-glow hover:-translate-y-0.5
+           active:translate-y-0 active:shadow-none;
   }
 
+  /* Secondary Button */
   .btn-secondary {
-    @apply bg-white hover:bg-lumina-light-gray text-lumina-navy font-semibold px-6 py-3 rounded-lg border-2 border-lumina-navy transition-colors duration-200;
+    @apply relative inline-flex items-center justify-center gap-2
+           bg-transparent hover:bg-lumina-navy/5
+           text-lumina-navy font-display font-semibold
+           px-6 py-3.5 rounded-xl
+           border-2 border-lumina-navy/20 hover:border-lumina-navy/40
+           transition-all duration-300 ease-out
+           hover:-translate-y-0.5;
   }
 
+  /* Accent Button */
+  .btn-accent {
+    @apply relative inline-flex items-center justify-center gap-2
+           bg-lumina-accent hover:bg-lumina-accent-dark
+           text-white font-display font-semibold
+           px-6 py-3.5 rounded-xl
+           transition-all duration-300 ease-out
+           hover:shadow-glow-accent hover:-translate-y-0.5;
+  }
+
+  /* Ghost Button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           text-lumina-slate hover:text-lumina-navy
+           font-display font-medium
+           px-4 py-2 rounded-lg
+           transition-colors duration-200;
+  }
+
+  /* Section styles */
   .section-light {
-    @apply bg-lumina-light-blue;
+    @apply bg-gradient-to-b from-lumina-gray to-white;
   }
 
   .section-dark {
     @apply bg-lumina-navy text-white;
   }
 
+  .section-gradient {
+    @apply bg-hero-gradient text-white;
+  }
+
+  /* Container */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-2xl p-6 sm:p-8
+           border border-lumina-navy/5
+           shadow-card hover:shadow-card-hover
+           transition-all duration-300 ease-out;
+  }
+
+  .card-interactive {
+    @apply card cursor-pointer
+           hover:-translate-y-1 hover:border-lumina-blue/20;
+  }
+
+  .card-gradient {
+    @apply card bg-card-gradient;
+  }
+
+  /* Feature card with icon */
+  .feature-card {
+    @apply card relative overflow-hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1
+           bg-gradient-to-r from-lumina-blue to-lumina-accent
+           opacity-0 transition-opacity duration-300;
+  }
+
+  .feature-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Icon container */
+  .icon-container {
+    @apply w-12 h-12 rounded-xl
+           bg-gradient-to-br from-lumina-blue/10 to-lumina-accent/10
+           flex items-center justify-center
+           text-lumina-blue;
+  }
+
+  .icon-container-lg {
+    @apply w-16 h-16 rounded-2xl;
+  }
+
+  /* Badge/Tag styles */
+  .badge {
+    @apply inline-flex items-center gap-1.5
+           px-3 py-1 rounded-full
+           text-xs font-medium
+           bg-lumina-blue/10 text-lumina-blue;
+  }
+
+  .badge-accent {
+    @apply badge bg-lumina-accent/10 text-lumina-accent-dark;
+  }
+
+  .badge-success {
+    @apply badge bg-lumina-success/10 text-lumina-success;
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-lumina-blue to-lumina-accent
+           bg-clip-text text-transparent;
+  }
+
+  /* Divider with gradient */
+  .divider-gradient {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-lumina-navy/10 to-transparent;
+  }
+
+  /* Animated underline for links */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5
+           bg-lumina-accent
+           transition-all duration-300 ease-out;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay {
+    @apply pointer-events-none fixed inset-0 z-50 opacity-[0.015];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  /* Gradient border effect */
+  .gradient-border {
+    @apply relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    @apply absolute -inset-px rounded-2xl -z-10
+           bg-gradient-to-r from-lumina-blue to-lumina-accent
+           opacity-0 transition-opacity duration-300;
+  }
+
+  .gradient-border:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Quote/Testimonial styling */
+  .testimonial-card {
+    @apply card relative pl-8;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    @apply absolute top-4 left-4 text-5xl font-display font-bold
+           text-lumina-accent/20 leading-none;
+  }
+
+  /* Stats display */
+  .stat-value {
+    @apply text-4xl sm:text-5xl font-display font-bold text-gradient;
+  }
+
+  .stat-label {
+    @apply text-sm text-lumina-slate-light uppercase tracking-wider mt-1;
+  }
+
+  /* List with custom checkmarks */
+  .check-list {
+    @apply space-y-3;
+  }
+
+  .check-list li {
+    @apply flex items-start gap-3 text-lumina-slate;
+  }
+
+  .check-list li::before {
+    content: '';
+    @apply w-5 h-5 mt-0.5 flex-shrink-0
+           bg-lumina-success/10 rounded-full
+           bg-[url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2310b981'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E")]
+           bg-center bg-no-repeat;
+  }
+}
+
+@layer utilities {
+  /* Animation delays for staggered effects */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+
+  /* Fade in on scroll - initial state */
+  .scroll-fade {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .scroll-fade.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-lumina-navy/70 backdrop-blur-xl border border-white/10;
   }
 }
