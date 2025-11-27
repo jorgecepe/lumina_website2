@@ -36,8 +36,14 @@ const currentPath = Astro.url.pathname;
         >
           Casos de Éxito
         </a>
-        <!-- Portfolio temporalmente oculto -->
-        <!-- <a href="/portfolio">Portfolio</a> -->
+        <a
+          href="https://nodaltree.luminaconsulting.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-lumina-bright-blue transition-colors text-lumina-dark-gray"
+        >
+          Productos ↗
+        </a>
         <a
           href="/contacto"
           class={`hover:text-lumina-bright-blue transition-colors ${currentPath === '/contacto' ? 'text-lumina-bright-blue font-semibold' : 'text-lumina-dark-gray'}`}
@@ -71,8 +77,14 @@ const currentPath = Astro.url.pathname;
       <a href="/acerca-de" class="block hover:text-lumina-bright-blue transition-colors">Acerca de</a>
       <a href="/servicios" class="block hover:text-lumina-bright-blue transition-colors">Servicios</a>
       <a href="/casos-de-exito" class="block hover:text-lumina-bright-blue transition-colors">Casos de Éxito</a>
-      <!-- Portfolio temporalmente oculto -->
-      <!-- <a href="/portfolio" class="block hover:text-lumina-bright-blue transition-colors">Portfolio</a> -->
+      <a
+        href="https://nodaltree.luminaconsulting.ai"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block hover:text-lumina-bright-blue transition-colors"
+      >
+        Productos ↗
+      </a>
       <a href="/contacto" class="block hover:text-lumina-bright-blue transition-colors">Contacto</a>
       <a
         href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
