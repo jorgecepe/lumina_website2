@@ -26,11 +26,10 @@ const services = [
       <!-- Company Info - larger column -->
       <div class="lg:col-span-4">
         <a href="/" class="inline-block mb-6 group">
-          <img
-            src="/logo-compact.png"
-            alt="Lumina Consulting"
-            class="h-10 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
-          />
+          <!-- Logo text fallback for dark background -->
+          <span class="font-serif text-2xl text-lum-cream group-hover:text-lum-coral transition-colors">
+            <span class="text-lum-coral">L</span>umina
+          </span>
         </a>
         <p class="text-lum-slate-light text-sm leading-relaxed mb-6 max-w-xs">
           Convertimos datos dispersos en inteligencia accionable para PyMEs y startups.
