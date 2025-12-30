@@ -57,22 +57,154 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Schema.org markup for Google -->
+    <!-- Schema.org markup for LLM Optimization (LLMO) + SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Lumina Consulting",
-        "description": "Consultoría en automatización y análisis de datos para PyMEs y startups",
-        "url": "https://luminaconsulting.ai",
-        "telephone": "+56991629095",
-        "email": "jcepeda@luminaconsulting.ai",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "CL"
-        },
-        "areaServed": "CL",
-        "priceRange": "$$"
+        "@graph": [
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://luminaconsulting.ai/#organization",
+            "name": "Lumina Consulting",
+            "description": "Consultoría especializada en Business Intelligence, dashboards estratégicos y automatización de datos para PyMEs y startups en Chile y Latinoamérica. Transformamos datos dispersos en decisiones estratégicas medibles.",
+            "url": "https://luminaconsulting.ai",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://luminaconsulting.ai/logo-wide.png"
+            },
+            "image": "https://luminaconsulting.ai/logo-wide.png",
+            "telephone": "+56991629095",
+            "email": "jcepeda@luminaconsulting.ai",
+            "founder": {"@id": "https://luminaconsulting.ai/#jorge-cepeda"},
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "CL",
+              "addressRegion": "Región Metropolitana"
+            },
+            "areaServed": [
+              {"@type": "Country", "name": "Chile"},
+              {"@type": "Country", "name": "Argentina"},
+              {"@type": "Country", "name": "Colombia"},
+              {"@type": "Country", "name": "México"},
+              {"@type": "Country", "name": "Perú"}
+            ],
+            "priceRange": "$$",
+            "serviceType": [
+              "Business Intelligence",
+              "Dashboards Power BI",
+              "HR Analytics",
+              "Automatización de Reportería",
+              "Análisis de Competencia",
+              "Capacitación SENCE"
+            ],
+            "knowsAbout": [
+              "Power BI",
+              "Streamlit",
+              "Python",
+              "Data Analytics",
+              "Business Intelligence",
+              "HR Analytics",
+              "Automatización RPA",
+              "Looker"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/company/lumina-consulting-ai"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://luminaconsulting.ai/#jorge-cepeda",
+            "name": "Jorge Cepeda",
+            "givenName": "Jorge",
+            "familyName": "Cepeda",
+            "jobTitle": "Fundador & Consultor de Business Intelligence",
+            "description": "Especialista en Business Intelligence y Data Analytics con más de 15 años de experiencia en control financiero. MBA de la Pontificia Universidad Católica de Chile, Profesor de Data Analytics en Universidad de los Andes, y Microsoft Certified Power BI Data Analyst (PL-300).",
+            "url": "https://luminaconsulting.ai/acerca-de#fundador",
+            "image": "https://luminaconsulting.ai/jorge-cepeda.jpg",
+            "email": "jcepeda@luminaconsulting.ai",
+            "telephone": "+56991629095",
+            "worksFor": {"@id": "https://luminaconsulting.ai/#organization"},
+            "alumniOf": [
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Pontificia Universidad Católica de Chile",
+                "url": "https://www.uc.cl",
+                "sameAs": "https://www.uc.cl"
+              },
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidad de los Andes",
+                "url": "https://www.uandes.cl",
+                "sameAs": "https://www.uandes.cl"
+              }
+            ],
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Master of Business Administration (MBA)",
+                "credentialCategory": "degree",
+                "recognizedBy": {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Pontificia Universidad Católica de Chile"
+                }
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Microsoft Certified: Power BI Data Analyst Associate (PL-300)",
+                "credentialCategory": "certificate",
+                "recognizedBy": {
+                  "@type": "Organization",
+                  "name": "Microsoft",
+                  "url": "https://www.microsoft.com"
+                }
+              }
+            ],
+            "hasOccupation": [
+              {
+                "@type": "Occupation",
+                "name": "Profesor de Data Analytics Avanzado",
+                "occupationLocation": {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Universidad de los Andes"
+                }
+              },
+              {
+                "@type": "Occupation",
+                "name": "Consultor de Business Intelligence",
+                "occupationLocation": {
+                  "@type": "Organization",
+                  "name": "Lumina Consulting"
+                }
+              }
+            ],
+            "knowsAbout": [
+              "Power BI",
+              "Streamlit",
+              "Python",
+              "Data Analytics",
+              "Business Intelligence",
+              "HR Analytics",
+              "People Analytics",
+              "Automatización de Reportería",
+              "Control Financiero",
+              "KPIs Estratégicos",
+              "Looker",
+              "SQL"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/jorgecepeda/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://luminaconsulting.ai/#website",
+            "url": "https://luminaconsulting.ai",
+            "name": "Lumina Consulting",
+            "description": "Consultoría de Business Intelligence y Data Analytics para PyMEs en Chile",
+            "publisher": {"@id": "https://luminaconsulting.ai/#organization"},
+            "inLanguage": "es-CL"
+          }
+        ]
       }
     </script>
   </head>
