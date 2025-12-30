@@ -1,0 +1,350 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// FAQ data structured for both display and schema markup
+const faqCategories = [
+  {
+    name: "Servicios Generales",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />`,
+    questions: [
+      {
+        question: "¿Qué servicios de análisis de datos ofrece Lumina Consulting?",
+        answer: "Lumina Consulting ofrece servicios especializados en Business Intelligence para PyMEs: dashboards estratégicos en Power BI y Streamlit, automatización de reportería con Python, HR Analytics (People Analytics), análisis de competencia automatizado, y capacitación corporativa con opción SENCE. Todos los servicios están diseñados para transformar datos dispersos en decisiones estratégicas medibles."
+      },
+      {
+        question: "¿Cuánto cuesta implementar un dashboard en Power BI?",
+        answer: "El costo de un dashboard en Power BI varía según la complejidad del proyecto. Un dashboard básico con 3-5 visualizaciones parte desde $800.000 CLP, mientras que soluciones enterprise con múltiples fuentes de datos y automatización completa pueden superar los $3.000.000 CLP. Ofrecemos una evaluación inicial gratuita para entregar una cotización precisa según tus necesidades específicas."
+      },
+      {
+        question: "¿Cuánto tiempo toma crear un dashboard personalizado?",
+        answer: "Un dashboard personalizado típicamente toma entre 2 a 6 semanas, dependiendo de la complejidad. Proyectos simples con datos estructurados pueden completarse en 2 semanas. Proyectos complejos con múltiples fuentes de datos, transformaciones ETL y capacitación del equipo requieren 4-6 semanas. Siempre entregamos un cronograma detallado antes de comenzar."
+      },
+      {
+        question: "¿Trabajan con empresas fuera de Chile?",
+        answer: "Sí, trabajamos con empresas en toda Latinoamérica. Tenemos experiencia con clientes en Argentina, Colombia, México y Perú. Las reuniones se realizan por videollamada y todo el trabajo se entrega de forma remota. La diferencia horaria mínima facilita la comunicación fluida con equipos en la región."
+      },
+      {
+        question: "¿Qué diferencia a Lumina Consulting de otras consultoras de datos?",
+        answer: "Lumina Consulting combina visión estratégica de negocio con ejecución técnica real. El fundador Jorge Cepeda tiene MBA de la UC, es profesor de Data Analytics en Universidad de los Andes, y cuenta con certificación Microsoft Power BI (PL-300) más 15 años de experiencia en control financiero en Grupo Security. Esta combinación permite identificar los KPIs correctos, no solo crear dashboards bonitos."
+      },
+      {
+        question: "¿Ofrecen soporte después de entregar un proyecto?",
+        answer: "Sí, todos los proyectos incluyen un período de soporte post-implementación de 30 días. Durante este tiempo resolvemos dudas, ajustamos visualizaciones y aseguramos que el equipo pueda usar las herramientas de forma autónoma. También ofrecemos planes de soporte mensual para mantenimiento continuo y nuevas implementaciones."
+      }
+    ]
+  },
+  {
+    name: "Power BI y Dashboards",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />`,
+    questions: [
+      {
+        question: "¿Qué es Power BI y para qué sirve?",
+        answer: "Power BI es la plataforma de Business Intelligence de Microsoft que permite crear dashboards interactivos y reportes visuales a partir de múltiples fuentes de datos. Sirve para transformar datos crudos en información visual comprensible, permitiendo a gerentes y equipos tomar decisiones basadas en datos actualizados en tiempo real, sin depender de reportes manuales en Excel."
+      },
+      {
+        question: "¿Power BI o Looker: cuál es mejor para PyMEs?",
+        answer: "Para PyMEs en Chile, Power BI generalmente es la mejor opción por tres razones: menor costo de licenciamiento (desde $10 USD/usuario/mes), integración nativa con Excel y herramientas Microsoft que ya usan, y mayor disponibilidad de profesionales capacitados en el mercado local. Looker es más adecuado para empresas con equipos de datos maduros y presupuestos enterprise."
+      },
+      {
+        question: "¿Puedo conectar Power BI a mi ERP actual?",
+        answer: "Sí, Power BI se conecta a prácticamente cualquier ERP del mercado. Tiene conectores nativos para SAP, Oracle, Dynamics, Defontana, y otros sistemas populares en Chile. También puede conectarse a bases de datos SQL, archivos Excel, Google Sheets, y APIs REST. La integración permite actualización automática de datos sin intervención manual."
+      },
+      {
+        question: "¿Qué datos necesito para crear un dashboard efectivo?",
+        answer: "Para un dashboard efectivo necesitas datos históricos de al menos 6-12 meses, claridad sobre los KPIs que quieres medir, y acceso a las fuentes de datos (ERP, CRM, Excel, etc.). No necesitas datos perfectos para empezar; parte del proceso incluye limpiar y estructurar la información. Lo más importante es definir qué decisiones quieres tomar con los datos."
+      },
+      {
+        question: "¿Cada cuánto se actualizan los dashboards automáticamente?",
+        answer: "La frecuencia de actualización depende de tus necesidades y licencia de Power BI. Con licencia Pro, los datos pueden actualizarse hasta 8 veces al día automáticamente. Con licencia Premium, la actualización puede ser casi en tiempo real. Para la mayoría de PyMEs, una actualización diaria matutina es suficiente para tomar decisiones informadas."
+      },
+      {
+        question: "¿Puedo ver mis dashboards desde el celular?",
+        answer: "Sí, Power BI tiene aplicaciones móviles gratuitas para iOS y Android. Los dashboards se adaptan automáticamente al tamaño de pantalla del celular. También puedes configurar alertas que te notifican cuando un KPI supera cierto umbral, permitiendo monitorear tu negocio desde cualquier lugar sin necesidad de abrir la aplicación constantemente."
+      }
+    ]
+  },
+  {
+    name: "HR Analytics",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`,
+    questions: [
+      {
+        question: "¿Qué es HR Analytics o People Analytics?",
+        answer: "HR Analytics (también llamado People Analytics) es el uso de datos y técnicas analíticas para mejorar las decisiones de recursos humanos. Incluye análisis de rotación de personal, engagement, performance, compensaciones y reclutamiento. Permite pasar de decisiones basadas en intuición a decisiones basadas en evidencia, reduciendo costos de rotación y mejorando la productividad."
+      },
+      {
+        question: "¿Qué métricas de RRHH puedo analizar con un dashboard?",
+        answer: "Las métricas más valiosas incluyen: tasa de rotación voluntaria e involuntaria, tiempo promedio de contratación, costo por contratación, índice de engagement (si tienes encuestas), distribución salarial y equidad, horas extra por departamento, ausentismo, y performance por equipo. Un buen dashboard de HR cruza estas métricas para identificar patrones y problemas antes de que escalen."
+      },
+      {
+        question: "¿Cómo predecir la rotación de empleados con datos?",
+        answer: "La predicción de rotación usa modelos estadísticos que analizan factores como antigüedad, historial de aumentos, cambios de jefatura, horas extra, y resultados de encuestas de clima. Con datos históricos de 2-3 años, podemos identificar patrones que preceden a las renuncias. Esto permite intervenir proactivamente con empleados en riesgo de salir, reduciendo costos de reemplazo que pueden superar el 150% del salario anual."
+      },
+      {
+        question: "¿Qué beneficios tiene HR Analytics para PyMEs?",
+        answer: "Para PyMEs, HR Analytics reduce costos de rotación (que pueden ser 50-200% del salario anual por empleado), optimiza procesos de contratación identificando fuentes más efectivas, mejora la retención al detectar problemas temprano, y permite tomar decisiones de compensación basadas en datos del mercado. Empresas de 50-200 empleados ven retorno de inversión en 6-12 meses."
+      },
+      {
+        question: "¿Necesito un software especial para HR Analytics?",
+        answer: "No necesariamente. Si ya tienes datos en tu sistema de RRHH o incluso en Excel, podemos crear dashboards de HR Analytics en Power BI sin invertir en software adicional. Para empresas más grandes, existen plataformas especializadas como Visier o Workday Analytics, pero para PyMEs en Chile, Power BI conectado a tus fuentes existentes es la opción más costo-efectiva."
+      }
+    ]
+  },
+  {
+    name: "Automatización",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />`,
+    questions: [
+      {
+        question: "¿Qué procesos de mi empresa puedo automatizar?",
+        answer: "Los procesos más comunes para automatizar son: generación de reportes periódicos (diarios, semanales, mensuales), consolidación de datos de múltiples fuentes, envío automático de informes por email, actualización de dashboards, extracción de datos de sistemas legacy, y monitoreo de precios de competencia. Si un proceso se repite más de una vez por semana y sigue reglas claras, probablemente puede automatizarse."
+      },
+      {
+        question: "¿Cuánto tiempo puedo ahorrar con automatización de reportes?",
+        answer: "El ahorro típico es de 70-90% del tiempo dedicado a reportería manual. Un reporte que toma 4 horas semanales de preparación manual puede reducirse a minutos con automatización. En términos concretos, hemos ayudado a equipos a recuperar 15-20 horas semanales que antes dedicaban a copiar datos entre sistemas y formatear reportes en Excel."
+      },
+      {
+        question: "¿Qué diferencia hay entre RPA y scripts de Python?",
+        answer: "RPA (Robotic Process Automation) usa robots que imitan acciones humanas en interfaces gráficas, ideal para sistemas sin APIs. Python scripts interactúan directamente con bases de datos y APIs, siendo más rápidos y robustos. Para PyMEs, generalmente recomendamos Python porque es más mantenible, económico y flexible. RPA es mejor cuando necesitas automatizar sistemas legacy sin acceso a datos subyacentes."
+      },
+      {
+        question: "¿La automatización reemplaza empleados?",
+        answer: "No, la automatización libera a los empleados de tareas repetitivas para que se enfoquen en trabajo de mayor valor. En nuestra experiencia, los equipos que automatizan reportería pueden dedicar más tiempo a análisis, estrategia y atención a clientes. La automatización complementa el trabajo humano, no lo reemplaza. El objetivo es eliminar tareas tediosas, no personas."
+      },
+      {
+        question: "¿Puedo automatizar reportes de Excel que envío por email?",
+        answer: "Sí, es uno de los casos de uso más comunes. Podemos crear un proceso que automáticamente extrae datos de tus fuentes, genera el reporte en Excel con el formato que necesitas, y lo envía por email a los destinatarios correctos en el horario programado. El proceso puede incluir validaciones para alertarte si hay datos anómalos antes del envío."
+      }
+    ]
+  },
+  {
+    name: "Proceso de Trabajo",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />`,
+    questions: [
+      {
+        question: "¿Cómo es el proceso de trabajo con Lumina Consulting?",
+        answer: "El proceso tiene 5 etapas: (1) Diagnóstico gratuito donde entendemos tus necesidades y datos disponibles, (2) Propuesta con alcance, cronograma y presupuesto, (3) Diseño donde definimos KPIs y estructura del dashboard, (4) Desarrollo con entregas incrementales para tu feedback, (5) Capacitación y entrega con documentación. Todo el proceso incluye comunicación constante via WhatsApp o email."
+      },
+      {
+        question: "¿Necesito conocimientos técnicos para trabajar con ustedes?",
+        answer: "No, no necesitas conocimientos técnicos. Nosotros nos encargamos de toda la parte técnica. Lo que sí necesitamos de ti es claridad sobre qué decisiones quieres tomar con los datos, acceso a las fuentes de información, y disponibilidad para reuniones de feedback (típicamente 1-2 horas semanales durante el proyecto). Diseñamos soluciones que tu equipo pueda usar sin conocimientos de programación."
+      },
+      {
+        question: "¿Quién será mi punto de contacto durante el proyecto?",
+        answer: "Jorge Cepeda, fundador de Lumina Consulting, es el punto de contacto principal en todos los proyectos. A diferencia de consultoras grandes donde te asignan un junior, aquí trabajas directamente con un profesional con MBA de la UC y 15 años de experiencia. Esto asegura que las decisiones de diseño y priorización se tomen con visión estratégica de negocio."
+      },
+      {
+        question: "¿Puedo ver avances del proyecto antes de la entrega final?",
+        answer: "Sí, trabajamos con metodología iterativa. Típicamente hacemos entregas parciales cada 1-2 semanas para que puedas ver el avance, dar feedback y solicitar ajustes. Esto asegura que el resultado final sea exactamente lo que necesitas, sin sorpresas. Usamos herramientas colaborativas donde puedes ver el dashboard en desarrollo en cualquier momento."
+      },
+      {
+        question: "¿Ofrecen capacitación a mi equipo para usar los dashboards?",
+        answer: "Sí, todos los proyectos incluyen capacitación. Realizamos sesiones prácticas donde tu equipo aprende a navegar los dashboards, interpretar las visualizaciones, y usar los filtros para responder sus propias preguntas. También entregamos documentación escrita y videos grabados para referencia futura. La capacitación asegura que la herramienta se use efectivamente después de nuestra salida."
+      }
+    ]
+  },
+  {
+    name: "Técnicas y Seguridad",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`,
+    questions: [
+      {
+        question: "¿Qué tecnologías usa Lumina Consulting?",
+        answer: "Usamos tecnologías probadas en el mercado: Power BI para dashboards enterprise, Streamlit y Python para aplicaciones web de datos personalizadas, SQL para bases de datos, APIs REST para integraciones, y herramientas cloud como Azure y AWS. Seleccionamos la tecnología según las necesidades del proyecto, no por preferencia personal. Priorizamos soluciones que tu equipo pueda mantener a largo plazo."
+      },
+      {
+        question: "¿Mis datos están seguros durante el proyecto?",
+        answer: "Sí, la seguridad es prioritaria. Firmamos acuerdos de confidencialidad (NDA) antes de acceder a datos. Trabajamos en ambientes seguros con acceso controlado. No almacenamos datos de clientes después de terminar el proyecto. Para datos sensibles, podemos trabajar en tu propia infraestructura. Seguimos mejores prácticas de seguridad de la información y cumplimos con regulaciones de protección de datos."
+      },
+      {
+        question: "¿Pueden trabajar con datos en la nube y on-premise?",
+        answer: "Sí, trabajamos con ambos modelos. Podemos conectarnos a bases de datos en Azure, AWS, Google Cloud, o servidores on-premise en tu oficina. Power BI tiene conectores para ambos escenarios. Si tienes restricciones de seguridad que impiden sacar datos a la nube, podemos implementar soluciones completamente on-premise con Power BI Report Server."
+      },
+      {
+        question: "¿Qué pasa si mis datos están desordenados?",
+        answer: "Es normal y lo manejamos. Parte de nuestro proceso incluye limpieza y estructuración de datos (ETL). Identificamos inconsistencias, valores faltantes, duplicados y formatos incorrectos. Creamos procesos de transformación que limpian los datos automáticamente para futuros análisis. De hecho, muchos proyectos empiezan con datos desordenados y terminan con una estructura sólida para análisis continuo."
+      }
+    ]
+  },
+  {
+    name: "Credenciales y Experiencia",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />`,
+    questions: [
+      {
+        question: "¿Qué experiencia tiene el fundador de Lumina Consulting?",
+        answer: "Jorge Cepeda tiene más de 15 años de experiencia en control financiero y gestión en Grupo Security, uno de los principales holdings financieros de Chile. Es MBA de la Pontificia Universidad Católica de Chile, Profesor de Data Analytics Avanzado en la Universidad de los Andes, y posee la certificación Microsoft Power BI Data Analyst Associate (PL-300). Esta combinación de experiencia corporativa, académica y técnica permite entregar soluciones con visión estratégica real."
+      },
+      {
+        question: "¿Lumina Consulting está certificado por Microsoft?",
+        answer: "Sí, el fundador Jorge Cepeda cuenta con la certificación Microsoft Certified: Power BI Data Analyst Associate (PL-300). Esta certificación valida competencias en preparación de datos, modelado, visualización y análisis en Power BI. Es la certificación oficial de Microsoft para profesionales de Business Intelligence y garantiza conocimiento actualizado de la plataforma."
+      },
+      {
+        question: "¿En qué industrias han trabajado antes?",
+        answer: "Tenemos experiencia en múltiples industrias: retail (redes de tiendas y análisis de ventas), automotriz (concesionarios y servicios técnicos), salud (clínicas y centros médicos), servicios financieros, real estate, y empresas de tecnología. Esta diversidad nos permite aplicar mejores prácticas cross-industry y adaptar soluciones probadas a nuevos contextos."
+      }
+    ]
+  }
+];
+
+// Flatten all questions for schema
+const allFaqs = faqCategories.flatMap(cat => cat.questions);
+---
+
+<Layout
+  title="Preguntas Frecuentes sobre Business Intelligence y Data Analytics | Lumina Consulting"
+  description="Respuestas a las preguntas más comunes sobre dashboards Power BI, HR Analytics, automatización de reportería y servicios de consultoría de datos para PyMEs en Chile."
+>
+  <!-- FAQ Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": allFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  })} />
+
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">FAQ</span>
+        <h1 class="text-white mb-6">Preguntas Frecuentes</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
+          Respuestas claras sobre Business Intelligence, dashboards, automatización y nuestros servicios de consultoría de datos
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Navigation -->
+  <section class="py-8 bg-white border-b border-lum-slate/10 sticky top-0 z-40">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-3">
+        {faqCategories.map((category, index) => (
+          <a
+            href={`#cat-${index}`}
+            class="px-4 py-2 text-sm rounded-full bg-lum-cream hover:bg-lum-coral/10 text-lum-slate hover:text-lum-coral transition-colors"
+          >
+            {category.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Categories -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto space-y-16">
+        {faqCategories.map((category, catIndex) => (
+          <div id={`cat-${catIndex}`} class="scroll-mt-32">
+            <!-- Category Header -->
+            <div class="flex items-center gap-4 mb-8 scroll-fade">
+              <div class="w-12 h-12 rounded-xl bg-lum-coral/10 flex items-center justify-center">
+                <svg class="w-6 h-6 text-lum-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={category.icon} />
+              </div>
+              <h2 class="text-2xl font-display font-semibold text-lum-black">{category.name}</h2>
+            </div>
+
+            <!-- Questions -->
+            <div class="space-y-4">
+              {category.questions.map((faq, qIndex) => (
+                <details class="group bg-lum-cream rounded-2xl overflow-hidden scroll-fade" style={`animation-delay: ${qIndex * 50}ms`}>
+                  <summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-lum-coral/5 transition-colors">
+                    <h3 class="text-lg font-medium text-lum-black pr-8">{faq.question}</h3>
+                    <span class="flex-shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center group-open:rotate-180 transition-transform">
+                      <svg class="w-5 h-5 text-lum-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div class="px-6 pb-6">
+                    <p class="text-lum-slate leading-relaxed">{faq.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Have Questions CTA -->
+  <section class="py-24 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="scroll-fade">
+          <span class="badge mb-4">¿Más preguntas?</span>
+          <h2 class="mb-6">¿No encontraste lo que buscabas?</h2>
+          <p class="text-lg text-lum-slate mb-10">
+            Agenda una llamada gratuita de 30 minutos para discutir tu proyecto específico y resolver todas tus dudas
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/56991629095?text=Hola,%20tengo%20una%20consulta%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
+              target="_blank"
+              class="btn-primary"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Contactar por WhatsApp
+            </a>
+            <a href="/contacto" class="btn-secondary">
+              Ver todas las opciones de contacto
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Resources -->
+  <section class="py-24 bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-12 scroll-fade">
+        <span class="badge mb-4">Recursos</span>
+        <h2>Contenido Relacionado</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <a href="/servicios" class="card hover:shadow-lg transition-shadow scroll-fade">
+          <div class="icon-container mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg mb-2">Nuestros Servicios</h3>
+          <p class="text-sm text-lum-slate">Conoce en detalle cada servicio que ofrecemos</p>
+        </a>
+
+        <a href="/casos-de-exito" class="card hover:shadow-lg transition-shadow scroll-fade animation-delay-100">
+          <div class="icon-container mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg mb-2">Casos de Éxito</h3>
+          <p class="text-sm text-lum-slate">Resultados reales con clientes reales</p>
+        </a>
+
+        <a href="/acerca-de#fundador" class="card hover:shadow-lg transition-shadow scroll-fade animation-delay-200">
+          <div class="icon-container mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <h3 class="text-lg mb-2">Sobre el Fundador</h3>
+          <p class="text-sm text-lum-slate">Conoce las credenciales de Jorge Cepeda</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
