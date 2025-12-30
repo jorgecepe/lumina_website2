@@ -1,0 +1,585 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const tableOfContents = [
+  { id: "que-es", title: "¿Qué es Power BI?" },
+  { id: "beneficios", title: "Beneficios para PyMEs" },
+  { id: "componentes", title: "Componentes de Power BI" },
+  { id: "licencias", title: "Licencias y costos" },
+  { id: "como-empezar", title: "Cómo empezar" },
+  { id: "casos-uso", title: "Casos de uso por industria" },
+  { id: "errores-comunes", title: "Errores comunes" },
+  { id: "faq", title: "Preguntas frecuentes" }
+];
+---
+
+<Layout
+  title="Guía Completa de Power BI para PyMEs en Chile [2025] | Lumina Consulting"
+  description="Todo sobre Power BI para empresas medianas: qué es, costos, licencias, cómo empezar y casos de uso. Guía práctica por experto certificado Microsoft PL-300."
+>
+  <!-- Article Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Guía Completa de Power BI para PyMEs en Chile [2025]",
+    "description": "Todo sobre Power BI para empresas medianas: qué es, costos, licencias, cómo empezar y casos de uso.",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/acerca-de#fundador",
+      "jobTitle": "Microsoft Certified Power BI Data Analyst"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai",
+      "logo": "https://luminaconsulting.ai/logo-wide.png"
+    },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01",
+    "mainEntityOfPage": "https://luminaconsulting.ai/recursos/guias/power-bi-pymes",
+    "image": "https://luminaconsulting.ai/logo-wide.png",
+    "articleSection": "Business Intelligence",
+    "keywords": ["Power BI", "PyMEs", "Business Intelligence", "Chile", "dashboards"]
+  })} />
+
+  <!-- HowTo Schema for implementation steps -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Cómo implementar Power BI en una PyME",
+    "description": "Guía paso a paso para implementar Power BI en empresas medianas",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Definir objetivos y KPIs",
+        "text": "Identifica qué decisiones quieres tomar con datos y qué métricas necesitas monitorear"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Auditar fuentes de datos",
+        "text": "Mapea dónde están tus datos: ERP, CRM, Excel, bases de datos"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Elegir licencia adecuada",
+        "text": "Power BI Pro para equipos pequeños, Premium per user para funciones avanzadas"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Diseñar modelo de datos",
+        "text": "Crear esquema estrella con tablas de hechos y dimensiones"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Construir dashboards",
+        "text": "Desarrollar visualizaciones priorizando los KPIs más importantes"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Capacitar usuarios",
+        "text": "Entrenar al equipo para que puedan usar y mantener los dashboards"
+      }
+    ]
+  })} />
+
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto">
+        <a href="/recursos" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver a Recursos
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Guía Completa</span>
+        <h1 class="text-white mb-6">Power BI para PyMEs</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Todo lo que necesitas saber para implementar Business Intelligence en tu empresa mediana: desde qué es Power BI hasta casos de uso específicos por industria.
+        </p>
+        <div class="flex items-center gap-4 mt-8 text-sm text-lum-slate-light">
+          <span>Actualizado: Enero 2025</span>
+          <span>•</span>
+          <span>15 min lectura</span>
+          <span>•</span>
+          <span>Por Jorge Cepeda (Microsoft PL-300)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="py-8 bg-white border-b border-lum-slate/10 sticky top-0 z-40">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-wrap gap-3 justify-center">
+          {tableOfContents.map(item => (
+            <a
+              href={`#${item.id}`}
+              class="px-3 py-1.5 text-sm rounded-full bg-lum-cream hover:bg-lum-coral/10 text-lum-slate hover:text-lum-coral transition-colors"
+            >
+              {item.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+
+        <!-- Executive Summary -->
+        <div class="not-prose bg-lum-cream rounded-2xl p-8 mb-12">
+          <h2 class="text-xl font-display font-semibold text-lum-black mb-4">Resumen Ejecutivo</h2>
+          <p class="text-lum-slate mb-4">
+            <strong>Power BI es la plataforma de Business Intelligence de Microsoft</strong> que permite a PyMEs crear dashboards interactivos sin grandes inversiones en infraestructura. Con licencias desde $10 USD/usuario/mes, es la opción más accesible para empresas de 50-500 empleados en Chile que quieren tomar decisiones basadas en datos.
+          </p>
+          <p class="text-lum-slate">
+            Esta guía cubre todo lo necesario para evaluar e implementar Power BI: componentes, licencias, pasos de implementación, casos de uso por industria, y errores comunes a evitar.
+          </p>
+        </div>
+
+        <!-- Section 1: What is Power BI -->
+        <section id="que-es" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">¿Qué es Power BI?</h2>
+
+          <p>
+            <strong>Power BI es una plataforma de Business Intelligence desarrollada por Microsoft</strong> que permite conectar múltiples fuentes de datos, transformarlos, y crear visualizaciones interactivas para la toma de decisiones empresariales.
+          </p>
+
+          <p>
+            A diferencia de los reportes estáticos en Excel, Power BI ofrece:
+          </p>
+
+          <ul>
+            <li><strong>Actualización automática de datos:</strong> Los dashboards se actualizan solos sin intervención manual</li>
+            <li><strong>Interactividad:</strong> Los usuarios pueden filtrar, hacer drill-down y explorar los datos</li>
+            <li><strong>Acceso desde cualquier lugar:</strong> Web, desktop y aplicaciones móviles</li>
+            <li><strong>Colaboración:</strong> Compartir dashboards con equipos de forma segura</li>
+            <li><strong>Integración con ecosistema Microsoft:</strong> Excel, Teams, SharePoint, Azure</li>
+          </ul>
+
+          <div class="not-prose bg-lum-cream rounded-xl p-6 my-8">
+            <p class="text-sm text-lum-slate">
+              <strong>Dato clave:</strong> Según Gartner, Microsoft ha sido líder en el Cuadrante Mágico de Analytics y Business Intelligence por 16 años consecutivos (2008-2024). Power BI es usado por más de 5 millones de suscriptores a nivel mundial.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2: Benefits -->
+        <section id="beneficios" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">Beneficios de Power BI para PyMEs</h2>
+
+          <h3>1. Costo accesible</h3>
+          <p>
+            Con licencias desde <strong>$10 USD por usuario al mes</strong>, Power BI es significativamente más económico que alternativas como Tableau o Qlik. Para una PyME de 10 usuarios, el costo mensual es ~$100 USD, versus $700+ en otras plataformas.
+          </p>
+
+          <h3>2. Curva de aprendizaje razonable</h3>
+          <p>
+            Si tu equipo usa Excel, la transición a Power BI es natural. La interfaz es similar y muchas fórmulas se traducen directamente. Un usuario con conocimientos intermedios de Excel puede crear dashboards básicos en 2-3 semanas de capacitación.
+          </p>
+
+          <h3>3. Eliminación de reportería manual</h3>
+          <p>
+            El beneficio más tangible: <strong>eliminar las horas dedicadas a copiar datos entre sistemas, formatear reportes y enviarlos por email</strong>. Empresas típicamente ahorran 10-20 horas semanales por analista después de implementar Power BI.
+          </p>
+
+          <h3>4. Visibilidad en tiempo real</h3>
+          <p>
+            En lugar de esperar el reporte de fin de mes, los gerentes pueden ver métricas actualizadas diariamente. Esto permite identificar problemas y oportunidades semanas antes.
+          </p>
+
+          <h3>5. Una sola fuente de verdad</h3>
+          <p>
+            Cuando todos ven el mismo dashboard, se eliminan las discusiones sobre "cuál Excel tiene el número correcto". Power BI centraliza la lógica de cálculo y asegura consistencia.
+          </p>
+
+          <div class="not-prose grid md:grid-cols-3 gap-4 my-8">
+            <div class="bg-lum-cream rounded-xl p-6 text-center">
+              <span class="text-3xl font-display font-bold text-lum-coral">70%</span>
+              <p class="text-sm text-lum-slate mt-2">Reducción en tiempo de reportería</p>
+            </div>
+            <div class="bg-lum-cream rounded-xl p-6 text-center">
+              <span class="text-3xl font-display font-bold text-lum-coral">$10</span>
+              <p class="text-sm text-lum-slate mt-2">USD/usuario/mes (Pro)</p>
+            </div>
+            <div class="bg-lum-cream rounded-xl p-6 text-center">
+              <span class="text-3xl font-display font-bold text-lum-coral">8x</span>
+              <p class="text-sm text-lum-slate mt-2">Actualizaciones diarias automáticas</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Components -->
+        <section id="componentes" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">Componentes de Power BI</h2>
+
+          <p>Power BI es un ecosistema con varios componentes. Entender cada uno es clave para una implementación exitosa:</p>
+
+          <h3>Power BI Desktop (Gratis)</h3>
+          <p>
+            Aplicación de Windows para crear reportes y dashboards. Aquí se conectan los datos, se crean transformaciones, se diseña el modelo de datos y se construyen las visualizaciones. <strong>Es gratuito y no requiere licencia.</strong>
+          </p>
+
+          <h3>Power BI Service (Nube)</h3>
+          <p>
+            Plataforma web (app.powerbi.com) donde se publican y comparten los reportes. Permite colaboración, programar actualizaciones automáticas, crear alertas y gestionar permisos. <strong>Requiere licencia Pro o Premium.</strong>
+          </p>
+
+          <h3>Power BI Mobile</h3>
+          <p>
+            Aplicaciones gratuitas para iOS y Android para ver dashboards en dispositivos móviles. Incluye notificaciones de alertas cuando KPIs superan umbrales definidos.
+          </p>
+
+          <h3>Power Query (Motor ETL)</h3>
+          <p>
+            Motor de transformación de datos integrado en Power BI Desktop. Permite limpiar, combinar y dar forma a los datos antes del análisis. También disponible en Excel.
+          </p>
+
+          <h3>DAX (Lenguaje de Fórmulas)</h3>
+          <p>
+            Data Analysis Expressions: lenguaje para crear cálculos personalizados. Similar a las fórmulas de Excel pero más potente para análisis multidimensional.
+          </p>
+
+          <div class="not-prose bg-lum-black rounded-xl p-6 my-8">
+            <p class="text-white text-sm">
+              <strong>Tip de experto:</strong> No necesitas dominar DAX para empezar. El 80% de los dashboards empresariales se pueden construir con las funciones básicas: SUM, AVERAGE, COUNT, CALCULATE. Las fórmulas avanzadas se agregan iterativamente según las necesidades.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 4: Licenses -->
+        <section id="licencias" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">Licencias y Costos</h2>
+
+          <p>Microsoft ofrece varias opciones de licenciamiento. Para PyMEs, las más relevantes son:</p>
+
+          <div class="not-prose overflow-x-auto my-8">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-lum-cream">
+                  <th class="p-4 text-left font-semibold text-lum-black">Licencia</th>
+                  <th class="p-4 text-left font-semibold text-lum-black">Precio</th>
+                  <th class="p-4 text-left font-semibold text-lum-black">Mejor para</th>
+                  <th class="p-4 text-left font-semibold text-lum-black">Limitaciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-lum-slate/10">
+                  <td class="p-4"><strong>Power BI Free</strong></td>
+                  <td class="p-4">$0</td>
+                  <td class="p-4">Uso individual, aprender</td>
+                  <td class="p-4">No puede compartir ni colaborar</td>
+                </tr>
+                <tr class="border-b border-lum-slate/10">
+                  <td class="p-4"><strong>Power BI Pro</strong></td>
+                  <td class="p-4">$10 USD/usuario/mes</td>
+                  <td class="p-4">Equipos de 5-50 usuarios</td>
+                  <td class="p-4">8 actualizaciones/día, 1GB por dataset</td>
+                </tr>
+                <tr class="border-b border-lum-slate/10">
+                  <td class="p-4"><strong>Premium Per User (PPU)</strong></td>
+                  <td class="p-4">$20 USD/usuario/mes</td>
+                  <td class="p-4">Funciones avanzadas</td>
+                  <td class="p-4">48 actualizaciones/día, IA incluida</td>
+                </tr>
+                <tr>
+                  <td class="p-4"><strong>Premium Capacity</strong></td>
+                  <td class="p-4">Desde $4,995 USD/mes</td>
+                  <td class="p-4">Empresas grandes, +100 usuarios</td>
+                  <td class="p-4">Capacidad dedicada, sin límite usuarios lectura</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Recomendación para PyMEs chilenas</h3>
+          <p>
+            Para la mayoría de las PyMEs (50-200 empleados), <strong>Power BI Pro es la opción más costo-efectiva</strong>. A ~$10.000 CLP/usuario/mes, 10 usuarios cuestan aproximadamente $100.000 CLP mensuales, menos que un analista part-time.
+          </p>
+
+          <p>
+            <strong>¿Ya tienes Microsoft 365 E5?</strong> Buenas noticias: Power BI Pro está incluido. Verifica con tu administrador de TI.
+          </p>
+        </section>
+
+        <!-- Section 5: Getting Started -->
+        <section id="como-empezar" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">Cómo Empezar: Guía Paso a Paso</h2>
+
+          <h3>Paso 1: Define tus objetivos (Semana 1)</h3>
+          <p>
+            Antes de tocar la herramienta, responde: <strong>¿Qué decisiones quieres tomar mejor?</strong> No "quiero un dashboard de ventas", sino "quiero identificar qué productos tienen margen decreciente para ajustar precios".
+          </p>
+          <ul>
+            <li>Lista 3-5 preguntas de negocio que quieres responder</li>
+            <li>Identifica qué KPIs necesitas para responderlas</li>
+            <li>Define quién usará los dashboards y para qué</li>
+          </ul>
+
+          <h3>Paso 2: Audita tus fuentes de datos (Semana 1-2)</h3>
+          <p>
+            Mapea dónde viven tus datos hoy:
+          </p>
+          <ul>
+            <li><strong>ERP:</strong> ¿Defontana, SAP Business One, Softland?</li>
+            <li><strong>CRM:</strong> ¿HubSpot, Salesforce, planillas Excel?</li>
+            <li><strong>Finanzas:</strong> ¿Sistema contable, archivos Excel?</li>
+            <li><strong>Otros:</strong> ¿Google Analytics, bases de datos propias?</li>
+          </ul>
+
+          <h3>Paso 3: Instala Power BI Desktop</h3>
+          <p>
+            Descarga gratuita desde <a href="https://powerbi.microsoft.com/desktop/" target="_blank" rel="noopener">powerbi.microsoft.com/desktop</a>. Disponible solo para Windows. Usuarios de Mac pueden usar máquina virtual o la versión web limitada.
+          </p>
+
+          <h3>Paso 4: Conecta tu primera fuente de datos</h3>
+          <p>
+            Empieza simple: conecta un archivo Excel que ya uses para reportes. Power BI tiene conectores nativos para:
+          </p>
+          <ul>
+            <li>Excel, CSV, archivos de texto</li>
+            <li>SQL Server, MySQL, PostgreSQL</li>
+            <li>SharePoint, OneDrive</li>
+            <li>Salesforce, Dynamics, Google Analytics</li>
+            <li>APIs REST (con algo de configuración)</li>
+          </ul>
+
+          <h3>Paso 5: Construye tu primer dashboard</h3>
+          <p>
+            Comienza con un dashboard simple de 3-5 visualizaciones. <strong>No intentes replicar todos tus reportes Excel en la primera semana.</strong> Un buen primer proyecto:
+          </p>
+          <ul>
+            <li>Ventas totales con filtro por período</li>
+            <li>Top 10 productos/clientes</li>
+            <li>Comparativa vs. período anterior</li>
+          </ul>
+
+          <h3>Paso 6: Publica y comparte</h3>
+          <p>
+            Una vez validado el dashboard con stakeholders, publícalo en Power BI Service. Configura actualizaciones automáticas (Gateway si los datos son on-premise) y comparte con los usuarios relevantes.
+          </p>
+
+          <div class="not-prose bg-lum-coral/10 border border-lum-coral/20 rounded-xl p-6 my-8">
+            <p class="text-lum-charcoal text-sm">
+              <strong>¿Necesitas ayuda?</strong> En Lumina Consulting guiamos PyMEs en todo este proceso. Desde la definición de KPIs hasta dashboards en producción, típicamente en 4-6 semanas. <a href="/contacto" class="text-lum-coral hover:underline">Agenda una llamada gratuita</a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 6: Use Cases -->
+        <section id="casos-uso" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">Casos de Uso por Industria</h2>
+
+          <h3>Retail y Comercio</h3>
+          <ul>
+            <li><strong>Dashboard de ventas:</strong> Ventas por tienda, categoría, vendedor con drill-down a nivel de transacción</li>
+            <li><strong>Análisis de inventario:</strong> Rotación, quiebres de stock, días de inventario por SKU</li>
+            <li><strong>Análisis de competencia:</strong> Comparativa de precios integrada con web scraping</li>
+          </ul>
+
+          <h3>Servicios Profesionales</h3>
+          <ul>
+            <li><strong>Utilización de recursos:</strong> Horas facturables vs. disponibles por consultor</li>
+            <li><strong>Pipeline de proyectos:</strong> Estado de propuestas, probabilidad de cierre</li>
+            <li><strong>Rentabilidad por cliente:</strong> Margen real considerando horas invertidas</li>
+          </ul>
+
+          <h3>Salud (Clínicas, Centros Médicos)</h3>
+          <ul>
+            <li><strong>Ocupación y agendamiento:</strong> Tasa de ocupación por profesional y especialidad</li>
+            <li><strong>No-shows:</strong> Análisis de pacientes que no asisten y patrones</li>
+            <li><strong>Indicadores financieros:</strong> Facturación por convenio, Fonasa vs. Isapre</li>
+          </ul>
+
+          <h3>Manufactura</h3>
+          <ul>
+            <li><strong>OEE (Overall Equipment Effectiveness):</strong> Disponibilidad, rendimiento, calidad</li>
+            <li><strong>Control de producción:</strong> Unidades producidas vs. planificadas</li>
+            <li><strong>Calidad:</strong> Tasa de defectos, rechazos, retrabajo</li>
+          </ul>
+
+          <h3>Recursos Humanos</h3>
+          <ul>
+            <li><strong>Dashboard de headcount:</strong> Plantilla por área, tipo de contrato, antigüedad</li>
+            <li><strong>Rotación:</strong> Tasa de rotación, costos asociados, predicción de riesgo</li>
+            <li><strong>Compensaciones:</strong> Análisis de equidad salarial, posición de mercado</li>
+          </ul>
+        </section>
+
+        <!-- Section 7: Common Mistakes -->
+        <section id="errores-comunes" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">Errores Comunes a Evitar</h2>
+
+          <h3>1. Empezar sin objetivos claros</h3>
+          <p>
+            El error #1: comprar licencias y empezar a conectar datos sin saber qué problema resolver. Resultado: dashboards que nadie usa porque no responden preguntas relevantes.
+          </p>
+
+          <h3>2. Replicar Excel exactamente</h3>
+          <p>
+            Power BI no es para hacer "el mismo reporte pero más bonito". Es una oportunidad para replantear qué información necesitas y cómo la consumes. Las tablas gigantes de Excel rara vez son la mejor visualización.
+          </p>
+
+          <h3>3. Ignorar el modelo de datos</h3>
+          <p>
+            Un modelo de datos mal diseñado genera cálculos incorrectos y dashboards lentos. Invierte tiempo en crear un esquema estrella limpio antes de construir visualizaciones.
+          </p>
+
+          <h3>4. No considerar la actualización de datos</h3>
+          <p>
+            Un dashboard con datos de hace un mes no sirve. Planifica desde el inicio cómo se actualizarán los datos: ¿Gateway? ¿Exportación manual? ¿API?
+          </p>
+
+          <h3>5. Crear dashboards sin usuarios en mente</h3>
+          <p>
+            Un dashboard para el CEO es diferente de uno para el jefe de bodega. Diseña pensando en quién lo usará, qué decisiones toma, y en qué contexto (¿oficina o terreno?).
+          </p>
+
+          <h3>6. No capacitar a los usuarios</h3>
+          <p>
+            El mejor dashboard es inútil si nadie sabe usarlo. Incluye capacitación como parte del proyecto, no como opcional.
+          </p>
+        </section>
+
+        <!-- Section 8: FAQ -->
+        <section id="faq" class="scroll-mt-32 mb-16">
+          <h2 class="text-3xl font-display font-semibold text-lum-black mb-6">Preguntas Frecuentes</h2>
+
+          <div class="not-prose space-y-4">
+            <details class="bg-lum-cream rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+                ¿Puedo usar Power BI en Mac?
+              </summary>
+              <div class="px-6 pb-6 text-lum-slate">
+                Power BI Desktop solo está disponible para Windows. Los usuarios de Mac pueden: (1) usar una máquina virtual con Windows, (2) usar Power BI Service en el navegador (funcionalidad limitada para creación), o (3) usar Parallels Desktop.
+              </div>
+            </details>
+
+            <details class="bg-lum-cream rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+                ¿Cuánto demora implementar Power BI?
+              </summary>
+              <div class="px-6 pb-6 text-lum-slate">
+                Un proyecto típico para PyME toma 4-8 semanas: 1-2 semanas de definición y diseño, 2-4 semanas de desarrollo, 1-2 semanas de capacitación y ajustes. Proyectos complejos con múltiples fuentes pueden extenderse.
+              </div>
+            </details>
+
+            <details class="bg-lum-cream rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+                ¿Qué pasa si mis datos están en Excel desordenado?
+              </summary>
+              <div class="px-6 pb-6 text-lum-slate">
+                Power Query (incluido en Power BI) está diseñado precisamente para esto. Puede limpiar, transformar y estandarizar datos de Excel por más desordenados que estén. Es parte normal del proceso de implementación.
+              </div>
+            </details>
+
+            <details class="bg-lum-cream rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+                ¿Es seguro subir mis datos a la nube de Microsoft?
+              </summary>
+              <div class="px-6 pb-6 text-lum-slate">
+                Power BI Service cumple con estándares de seguridad empresarial: ISO 27001, SOC 1/2, HIPAA. Los datos están encriptados en tránsito y en reposo. Para datos altamente sensibles, existe Power BI Report Server (on-premise).
+              </div>
+            </details>
+
+            <details class="bg-lum-cream rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+                ¿Puedo conectar Power BI a mi ERP chileno?
+              </summary>
+              <div class="px-6 pb-6 text-lum-slate">
+                Sí. Los ERPs más comunes en Chile (Defontana, Softland, Nubox, Random) generalmente permiten exportación de datos o conexión directa a su base de datos. Power BI se conecta a SQL Server, MySQL, PostgreSQL, y archivos Excel/CSV.
+              </div>
+            </details>
+
+            <details class="bg-lum-cream rounded-xl overflow-hidden">
+              <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+                ¿Necesito saber programar?
+              </summary>
+              <div class="px-6 pb-6 text-lum-slate">
+                No para empezar. El 80% de Power BI se usa con interfaz visual drag-and-drop. Para análisis avanzados, DAX es un lenguaje de fórmulas (no programación tradicional). SQL ayuda para conexiones directas a bases de datos, pero no es obligatorio.
+              </div>
+            </details>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <section class="py-16 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="card bg-white">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <img
+              src="/jorge-cepeda.jpg"
+              alt="Jorge Cepeda"
+              class="w-24 h-24 rounded-full object-cover"
+            />
+            <div class="text-center md:text-left">
+              <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-1">Autor</p>
+              <h3 class="text-xl font-display font-semibold text-lum-black mb-2">Jorge Cepeda</h3>
+              <p class="text-sm text-lum-slate mb-3">
+                MBA de la Pontificia Universidad Católica de Chile. Profesor de Data Analytics Avanzado en Universidad de los Andes. <strong>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</strong>. 15+ años de experiencia en control financiero en Grupo Security.
+              </p>
+              <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                <a
+                  href="https://www.linkedin.com/in/jorgecepeda/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-sm text-lum-coral hover:underline"
+                >
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  Ver LinkedIn
+                </a>
+                <a href="/contacto" class="text-sm text-lum-slate hover:text-lum-coral">
+                  Contactar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">¿Listo para implementar Power BI?</h2>
+        <p class="text-xl text-lum-slate-light mb-10">
+          Esta guía es un punto de partida. Si quieres implementar Power BI con acompañamiento experto, desde la definición de KPIs hasta dashboards en producción, conversemos.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hola,%20leí%20la%20guía%20de%20Power%20BI%20y%20me%20gustaría%20conversar%20sobre%20implementación"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contactar por WhatsApp
+          </a>
+          <a href="/recursos" class="btn bg-transparent text-lum-cream border-lum-cream/30 hover:bg-lum-cream/10">
+            Ver más recursos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
