@@ -1,0 +1,487 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Power BI vs Looker: Complete Comparison for SMBs [2025] | Lumina Consulting"
+  description="Detailed comparison between Power BI and Looker: costs, features, learning curve, and which to choose based on your company. By Microsoft certified expert."
+  lang="en"
+>
+  <!-- Comparison Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Power BI vs Looker: Complete Comparison for SMBs [2025]",
+    "description": "Detailed analysis comparing Power BI and Looker for mid-sized companies",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/en/about#founder"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting"
+    },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  })} />
+
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto">
+        <a href="/en/resources" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Resources
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Comparison</span>
+        <h1 class="text-white mb-6">Power BI vs Looker</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Objective analysis of the two most popular Business Intelligence platforms. Which to choose based on your company size, budget, and technical needs.
+        </p>
+        <div class="flex items-center gap-4 mt-8 text-sm text-lum-slate-light">
+          <span>Updated: January 2025</span>
+          <span>•</span>
+          <span>10 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Verdict -->
+  <section class="py-12 bg-lum-coral/10 border-y border-lum-coral/20">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-xl font-display font-semibold text-lum-black mb-4 text-center">Quick Verdict</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lum-black mb-2">Choose Power BI if...</h3>
+            <ul class="text-sm text-lum-slate space-y-1">
+              <li>• Your company has fewer than 100 users</li>
+              <li>• Limited budget (~$10 USD/user/month)</li>
+              <li>• You already use Microsoft 365 or Excel heavily</li>
+              <li>• You need quick results without a data team</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lum-black mb-2">Choose Looker if...</h3>
+            <ul class="text-sm text-lum-slate space-y-1">
+              <li>• You have a data team with SQL knowledge</li>
+              <li>• Enterprise budget (+$3,000 USD/month)</li>
+              <li>• You need a centralized semantic layer (LookML)</li>
+              <li>• You already use Google Cloud Platform</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Comparison Table -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl font-display font-semibold text-lum-black mb-8 text-center">Detailed Comparison</h2>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-lum-black text-white">
+                <th class="p-4 text-left font-semibold">Criteria</th>
+                <th class="p-4 text-center font-semibold">Power BI</th>
+                <th class="p-4 text-center font-semibold">Looker</th>
+                <th class="p-4 text-center font-semibold">Winner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-lum-slate/10">
+                <td class="p-4 font-medium">Entry price</td>
+                <td class="p-4 text-center">$10 USD/user/month</td>
+                <td class="p-4 text-center">~$3,000+ USD/month (minimum)</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10 bg-lum-cream/50">
+                <td class="p-4 font-medium">Learning curve</td>
+                <td class="p-4 text-center">Low-Medium (similar to Excel)</td>
+                <td class="p-4 text-center">High (requires SQL/LookML)</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10">
+                <td class="p-4 font-medium">Self-service BI</td>
+                <td class="p-4 text-center">Excellent</td>
+                <td class="p-4 text-center">Limited (requires LookML)</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10 bg-lum-cream/50">
+                <td class="p-4 font-medium">Data governance</td>
+                <td class="p-4 text-center">Good</td>
+                <td class="p-4 text-center">Excellent (LookML)</td>
+                <td class="p-4 text-center"><span class="badge-mocha">Looker</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10">
+                <td class="p-4 font-medium">Semantic layer</td>
+                <td class="p-4 text-center">Evolving</td>
+                <td class="p-4 text-center">Market leader</td>
+                <td class="p-4 text-center"><span class="badge-mocha">Looker</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10 bg-lum-cream/50">
+                <td class="p-4 font-medium">Microsoft integration</td>
+                <td class="p-4 text-center">Native (Excel, Teams, Azure)</td>
+                <td class="p-4 text-center">Limited</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10">
+                <td class="p-4 font-medium">Google Cloud integration</td>
+                <td class="p-4 text-center">Good</td>
+                <td class="p-4 text-center">Native</td>
+                <td class="p-4 text-center"><span class="badge-mocha">Looker</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10 bg-lum-cream/50">
+                <td class="p-4 font-medium">Visualizations</td>
+                <td class="p-4 text-center">100+ native + custom</td>
+                <td class="p-4 text-center">Limited but elegant</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10">
+                <td class="p-4 font-medium">Mobile app</td>
+                <td class="p-4 text-center">Excellent (iOS/Android)</td>
+                <td class="p-4 text-center">Basic</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10 bg-lum-cream/50">
+                <td class="p-4 font-medium">Embedded analytics</td>
+                <td class="p-4 text-center">Good (Power BI Embedded)</td>
+                <td class="p-4 text-center">Excellent (API-first)</td>
+                <td class="p-4 text-center"><span class="badge-mocha">Looker</span></td>
+              </tr>
+              <tr class="border-b border-lum-slate/10">
+                <td class="p-4 font-medium">Global availability</td>
+                <td class="p-4 text-center">High (local partners)</td>
+                <td class="p-4 text-center">Limited</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+              <tr>
+                <td class="p-4 font-medium">Community/Resources</td>
+                <td class="p-4 text-center">Massive (millions of users)</td>
+                <td class="p-4 text-center">Niche (more technical)</td>
+                <td class="p-4 text-center"><span class="badge-coral">Power BI</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-center text-sm text-lum-slate mt-6">
+          <strong>Result:</strong> Power BI wins 8/12 categories, Looker wins 4/12. For SMBs, Power BI is the most practical option.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost Comparison -->
+  <section class="py-16 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-display font-semibold text-lum-black mb-8 text-center">Cost Comparison</h2>
+
+        <div class="bg-white rounded-2xl p-8">
+          <h3 class="font-semibold text-lum-black mb-6">Scenario: Company with 20 users needing dashboards</h3>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-medium text-lum-coral mb-4">Power BI Pro</h4>
+              <table class="w-full text-sm">
+                <tr class="border-b border-lum-slate/10">
+                  <td class="py-2">Licenses (20 x $10)</td>
+                  <td class="py-2 text-right">$200 USD/month</td>
+                </tr>
+                <tr class="border-b border-lum-slate/10">
+                  <td class="py-2">Gateway (on-premise)</td>
+                  <td class="py-2 text-right">$0 (included)</td>
+                </tr>
+                <tr class="border-b border-lum-slate/10">
+                  <td class="py-2">Initial training</td>
+                  <td class="py-2 text-right">~$1,500 USD (one-time)</td>
+                </tr>
+                <tr class="font-semibold">
+                  <td class="py-2">Year 1 total</td>
+                  <td class="py-2 text-right text-lum-coral">~$3,900 USD</td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <h4 class="font-medium text-lum-mocha mb-4">Looker</h4>
+              <table class="w-full text-sm">
+                <tr class="border-b border-lum-slate/10">
+                  <td class="py-2">Base license</td>
+                  <td class="py-2 text-right">~$3,000+ USD/month</td>
+                </tr>
+                <tr class="border-b border-lum-slate/10">
+                  <td class="py-2">BigQuery (if applicable)</td>
+                  <td class="py-2 text-right">Variable</td>
+                </tr>
+                <tr class="border-b border-lum-slate/10">
+                  <td class="py-2">LookML implementation</td>
+                  <td class="py-2 text-right">~$10,000+ USD</td>
+                </tr>
+                <tr class="font-semibold">
+                  <td class="py-2">Year 1 total</td>
+                  <td class="py-2 text-right text-lum-mocha">~$46,000+ USD</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="mt-8 p-4 bg-lum-coral/10 rounded-xl">
+            <p class="text-sm text-lum-charcoal">
+              <strong>Difference:</strong> For a typical SMB, Power BI costs ~10x less than Looker in the first year. This difference narrows for large enterprises (500+ users) where Looker may be more cost-effective due to its licensing model.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Choose Each -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-display font-semibold text-lum-black mb-8 text-center">When to Choose Each?</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card border-2 border-lum-coral">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-lg bg-lum-coral/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-lum-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-lum-coral">Power BI is better when:</h3>
+            </div>
+            <ul class="space-y-3 text-sm text-lum-slate">
+              <li class="flex items-start gap-2">
+                <span class="text-lum-coral mt-1">→</span>
+                <span><strong>Limited budget:</strong> You need to start with less than $500 USD/month</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-coral mt-1">→</span>
+                <span><strong>Non-technical team:</strong> Users are business analysts, not data engineers</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-coral mt-1">→</span>
+                <span><strong>Microsoft ecosystem:</strong> You already use Excel, Teams, SharePoint, Azure</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-coral mt-1">→</span>
+                <span><strong>Time-to-value:</strong> You need dashboards working in weeks, not months</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-coral mt-1">→</span>
+                <span><strong>Self-service:</strong> You want users to create their own reports</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-coral mt-1">→</span>
+                <span><strong>Local support:</strong> You need local partners and support</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card border-2 border-lum-mocha">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-lg bg-lum-mocha/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-lum-mocha" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-lum-mocha">Looker is better when:</h3>
+            </div>
+            <ul class="space-y-3 text-sm text-lum-slate">
+              <li class="flex items-start gap-2">
+                <span class="text-lum-mocha mt-1">→</span>
+                <span><strong>Mature data team:</strong> You have data engineers who know SQL well</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-mocha mt-1">→</span>
+                <span><strong>Critical governance:</strong> You need strict control of metrics and definitions</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-mocha mt-1">→</span>
+                <span><strong>Google Cloud:</strong> Your data warehouse is BigQuery</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-mocha mt-1">→</span>
+                <span><strong>Embedded analytics:</strong> You want to integrate dashboards into your SaaS product</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-mocha mt-1">→</span>
+                <span><strong>Enterprise scale:</strong> 500+ users and corresponding budget</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-lum-mocha mt-1">→</span>
+                <span><strong>API-first:</strong> You need intensive programmatic access to data</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Deep Dive -->
+  <section class="py-16 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-display font-semibold text-lum-black mb-8 text-center">Key Technical Differences</h2>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lum-black mb-3">Data Architecture</h3>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="font-medium text-lum-coral mb-2">Power BI</p>
+                <p class="text-lum-slate">Import model: data is copied to an in-memory engine (VertiPaq). Also supports DirectQuery for live queries. Transformation is done in Power Query (visual ETL).</p>
+              </div>
+              <div>
+                <p class="font-medium text-lum-mocha mb-2">Looker</p>
+                <p class="text-lum-slate">No own engine: executes SQL directly on your data warehouse. LookML defines the semantic layer. No data import, always live queries.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lum-black mb-3">Semantic Layer</h3>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="font-medium text-lum-coral mb-2">Power BI</p>
+                <p class="text-lum-slate">Metrics are defined in DAX within each model. In 2024 Microsoft launched "Semantic Model" to centralize definitions, but it's still maturing.</p>
+              </div>
+              <div>
+                <p class="font-medium text-lum-mocha mb-2">Looker</p>
+                <p class="text-lum-slate">LookML is the main differentiator: a language that centrally defines metrics, dimensions, and relationships. Once defined, all users see the same consistent metrics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-semibold text-lum-black mb-3">Development Workflow</h3>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="font-medium text-lum-coral mb-2">Power BI</p>
+                <p class="text-lum-slate">Primarily visual development in Power BI Desktop. Publishing to Service. Git integration available but not the standard flow.</p>
+              </div>
+              <div>
+                <p class="font-medium text-lum-mocha mb-2">Looker</p>
+                <p class="text-lum-slate">Development in LookML (code). Git version control is part of the standard flow. Deploy via integrated IDE. More similar to traditional software development.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Recommendation -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-lum-black rounded-2xl p-8 text-center">
+          <h2 class="text-2xl font-display font-semibold text-white mb-4">My Recommendation for SMBs</h2>
+          <p class="text-lum-slate-light mb-6">
+            As a Power BI certified consultant (PL-300) who has worked with both platforms, my recommendation for SMBs with 50-500 employees is clear:
+          </p>
+          <div class="bg-lum-coral/20 rounded-xl p-6 mb-6">
+            <p class="text-xl font-display font-semibold text-white">
+              Start with Power BI
+            </p>
+          </div>
+          <p class="text-lum-slate-light text-sm">
+            95% of an SMB's Business Intelligence needs can be solved with Power BI at a fraction of the cost. Looker makes sense when you have a dedicated data team (3+ people), enterprise budget, and very specific governance or embedded analytics needs.
+          </p>
+          <p class="text-white mt-4 font-medium">
+            — Jorge Cepeda, MBA UC, Microsoft Certified PL-300
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display font-semibold text-lum-black mb-8 text-center">Frequently Asked Questions</h2>
+
+        <div class="space-y-4">
+          <details class="bg-white rounded-xl overflow-hidden">
+            <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+              Can I migrate from Power BI to Looker (or vice versa)?
+            </summary>
+            <div class="px-6 pb-6 text-sm text-lum-slate">
+              Yes, but it's not trivial. Dashboards and business logic must be rebuilt. Data connections are portable. If you're considering migrating, carefully evaluate whether the effort justifies the change. It's typically easier to migrate data than to rebuild the entire reporting layer.
+            </div>
+          </details>
+
+          <details class="bg-white rounded-xl overflow-hidden">
+            <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+              Is Tableau better than both?
+            </summary>
+            <div class="px-6 pb-6 text-sm text-lum-slate">
+              Tableau excels in visualization and has a strong community. However, for SMBs: (1) it's more expensive than Power BI, (2) has less Microsoft ecosystem integration that many companies use, (3) has fewer local partners. It's a good option if you already use it or have specific advanced visualization requirements.
+            </div>
+          </details>
+
+          <details class="bg-white rounded-xl overflow-hidden">
+            <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+              Is Looker free with Google Cloud?
+            </summary>
+            <div class="px-6 pb-6 text-sm text-lum-slate">
+              No. Looker requires a separate license even if you use Google Cloud. Google offers Looker Studio (formerly Data Studio) which is free, but it's a different, more limited tool without LookML. Don't confuse Looker (enterprise, paid) with Looker Studio (free, basic).
+            </div>
+          </details>
+
+          <details class="bg-white rounded-xl overflow-hidden">
+            <summary class="p-6 cursor-pointer font-medium text-lum-black hover:bg-lum-coral/5">
+              Can I use both in the same company?
+            </summary>
+            <div class="px-6 pb-6 text-sm text-lum-slate">
+              Technically yes, but not recommended. Having two BI platforms creates confusion about "which number is correct," doubles licensing and training costs, and complicates governance. It's better to choose one platform and standardize.
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Need help choosing?</h2>
+        <p class="text-xl text-lum-slate-light mb-10">
+          If you still have doubts about which platform is better for your company, schedule a call. We'll analyze your specific case with no commitment.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hi,%20I%20read%20the%20Power%20BI%20vs%20Looker%20comparison%20and%20have%20questions%20about%20which%20to%20choose"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/resources" class="btn bg-transparent text-lum-cream border-lum-cream/30 hover:bg-lum-cream/10">
+            View more resources
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

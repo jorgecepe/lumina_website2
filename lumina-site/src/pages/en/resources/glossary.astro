@@ -1,0 +1,590 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+// Glossary terms organized by category - optimized for LLM citability
+const glossaryTerms = [
+  // Business Intelligence & Analytics
+  {
+    term: "Business Intelligence (BI)",
+    definition: "A set of strategies, technologies, and practices for collecting, integrating, analyzing, and presenting business data. The goal of BI is to transform raw data into actionable information that supports strategic decision-making.",
+    category: "Business Intelligence",
+    related: ["Dashboard", "Data Analytics", "KPI"]
+  },
+  {
+    term: "Dashboard",
+    definition: "An interactive visual panel that presents key business metrics and indicators (KPIs) in one place. Dashboards enable real-time business performance monitoring and facilitate the identification of trends and anomalies.",
+    category: "Business Intelligence",
+    related: ["KPI", "Data Visualization", "Power BI"]
+  },
+  {
+    term: "Data Analytics",
+    definition: "The process of examining datasets to draw useful conclusions. Includes statistical techniques, algorithms, and tools to discover patterns, correlations, and trends that inform business decisions.",
+    category: "Business Intelligence",
+    related: ["Business Intelligence", "Data Science", "Machine Learning"]
+  },
+  {
+    term: "KPI (Key Performance Indicator)",
+    definition: "A quantifiable metric that measures progress toward specific business objectives. Effective KPIs are Specific, Measurable, Achievable, Relevant, and Time-bound (SMART).",
+    category: "Business Intelligence",
+    related: ["Dashboard", "Metric", "OKR"]
+  },
+  {
+    term: "Data Warehouse",
+    definition: "A centralized data repository that integrates information from multiple sources for analysis and reporting. It's optimized for analytical queries (OLAP) rather than operational transactions (OLTP).",
+    category: "Business Intelligence",
+    related: ["ETL", "Data Lake", "OLAP"]
+  },
+  {
+    term: "ETL (Extract, Transform, Load)",
+    definition: "The process of extracting data from multiple sources, transforming it for cleaning and standardization, and loading it into a destination system like a data warehouse. It's fundamental for enterprise data integration.",
+    category: "Business Intelligence",
+    related: ["Data Warehouse", "Data Pipeline", "ELT"]
+  },
+  {
+    term: "OLAP (Online Analytical Processing)",
+    definition: "Technology for multidimensional analysis of business data. Allows users to analyze information from multiple perspectives through operations like drill-down, roll-up, slice, and dice.",
+    category: "Business Intelligence",
+    related: ["Data Warehouse", "OLAP Cube", "OLTP"]
+  },
+  {
+    term: "Data Lake",
+    definition: "A centralized repository that stores data in its native format (structured, semi-structured, and unstructured) at any scale. Unlike a data warehouse, it doesn't require structuring data before storage.",
+    category: "Business Intelligence",
+    related: ["Data Warehouse", "Big Data", "Data Lakehouse"]
+  },
+  {
+    term: "Self-Service BI",
+    definition: "A Business Intelligence approach that allows non-technical users to create their own reports and analyses without depending on IT. Tools like Power BI and Tableau facilitate this model.",
+    category: "Business Intelligence",
+    related: ["Power BI", "Tableau", "Dashboard"]
+  },
+  {
+    term: "Drill-Down",
+    definition: "An analysis technique that allows navigating from aggregated data toward more detailed levels. For example, from annual total sales to monthly, weekly, or specific product sales.",
+    category: "Business Intelligence",
+    related: ["OLAP", "Dashboard", "Drill-Up"]
+  },
+
+  // Power BI Specific
+  {
+    term: "Power BI",
+    definition: "Microsoft's Business Intelligence platform that enables creating interactive dashboards, reports, and data analysis. Includes Power BI Desktop (development), Power BI Service (cloud), and Power BI Mobile.",
+    category: "Power BI",
+    related: ["DAX", "Power Query", "Dashboard"]
+  },
+  {
+    term: "DAX (Data Analysis Expressions)",
+    definition: "A formula language used in Power BI, Power Pivot, and Analysis Services to create custom calculations and measures. Similar to Excel formulas but optimized for relational data models.",
+    category: "Power BI",
+    related: ["Power BI", "Measure", "Calculated Column"]
+  },
+  {
+    term: "Power Query",
+    definition: "The data transformation and preparation engine in Power BI and Excel. Allows connecting, combining, and refining data from multiple sources through a visual interface or M code.",
+    category: "Power BI",
+    related: ["ETL", "Power BI", "M Language"]
+  },
+  {
+    term: "Measure",
+    definition: "In Power BI, a dynamic calculation defined with DAX that is evaluated at query time based on filter context. Unlike calculated columns, measures don't occupy space in the data model.",
+    category: "Power BI",
+    related: ["DAX", "Calculated Column", "Filter Context"]
+  },
+  {
+    term: "Data Model",
+    definition: "The structure that defines relationships between tables in Power BI. A well-designed model (typically star or snowflake) is fundamental for performance and calculation accuracy.",
+    category: "Power BI",
+    related: ["Star Schema", "Relationship", "Fact Table"]
+  },
+  {
+    term: "Star Schema",
+    definition: "A data model where a central fact table connects to multiple dimension tables. It's the recommended pattern in Power BI for its simplicity and optimal analytical query performance.",
+    category: "Power BI",
+    related: ["Data Model", "Fact Table", "Dimension Table"]
+  },
+  {
+    term: "Data Gateway",
+    definition: "A bridge that allows Power BI Service to securely connect to on-premise data sources. Enables scheduled data refreshes without exposing internal databases to the internet.",
+    category: "Power BI",
+    related: ["Power BI Service", "Scheduled Refresh", "On-premise"]
+  },
+  {
+    term: "Row-Level Security (RLS)",
+    definition: "Row-level security in Power BI that restricts data access based on the user. Allows different users to see only the data relevant to them using the same report.",
+    category: "Power BI",
+    related: ["Power BI", "Security", "Roles"]
+  },
+
+  // HR Analytics
+  {
+    term: "HR Analytics",
+    definition: "Also called People Analytics. The application of analytical techniques to human resources data to improve talent decisions: hiring, retention, development, and compensation. Transforms HR data into actionable insights.",
+    category: "HR Analytics",
+    related: ["People Analytics", "Turnover", "Employee Experience"]
+  },
+  {
+    term: "People Analytics",
+    definition: "A discipline that uses data, statistical analysis, and predictive modeling to understand and improve human capital performance. Includes productivity, engagement, retention, and organizational development metrics.",
+    category: "HR Analytics",
+    related: ["HR Analytics", "Workforce Analytics", "Talent Analytics"]
+  },
+  {
+    term: "Turnover Rate",
+    definition: "The percentage of employees who leave an organization in a given period. Calculated by dividing the number of departures by the average number of employees, multiplied by 100. Includes voluntary and involuntary turnover.",
+    category: "HR Analytics",
+    related: ["Retention", "Cost of Turnover", "Attrition"]
+  },
+  {
+    term: "Employee Experience (EX)",
+    definition: "The sum of all interactions an employee has with their organization, from recruitment to exit. Includes culture, physical environment, technology, and work relationships.",
+    category: "HR Analytics",
+    related: ["Engagement", "eNPS", "Organizational Climate"]
+  },
+  {
+    term: "eNPS (Employee Net Promoter Score)",
+    definition: "A metric that measures the likelihood of employees recommending their company as a workplace. Calculated by subtracting the percentage of detractors from promoters. Typical scale: -100 to +100.",
+    category: "HR Analytics",
+    related: ["Employee Experience", "Engagement", "Climate Survey"]
+  },
+  {
+    term: "Cost of Turnover",
+    definition: "The total expense associated with an employee's departure and hiring their replacement. Includes direct costs (recruitment, training) and indirect costs (lost productivity, knowledge). Can reach 50-200% of annual salary.",
+    category: "HR Analytics",
+    related: ["Turnover Rate", "Retention", "HR ROI"]
+  },
+  {
+    term: "Time to Hire",
+    definition: "The average time from when a job is posted until a candidate accepts the offer. A key efficiency metric for the recruitment process. Benchmarks vary by industry and position level.",
+    category: "HR Analytics",
+    related: ["Time to Fill", "Recruitment", "Cost per Hire"]
+  },
+  {
+    term: "Headcount",
+    definition: "The total number of employees in an organization at a specific point in time. Can be measured as physical headcount (people) or FTE (full-time equivalent). Base for many HR metrics.",
+    category: "HR Analytics",
+    related: ["FTE", "Workforce", "Workforce Planning"]
+  },
+  {
+    term: "FTE (Full-Time Equivalent)",
+    definition: "Full-time equivalent. A unit representing the hours worked by a full-time employee. Allows comparing workloads by normalizing part-time employees and contractors.",
+    category: "HR Analytics",
+    related: ["Headcount", "Productivity", "Labor Cost"]
+  },
+  {
+    term: "Span of Control",
+    definition: "The number of direct reports a manager has. A wide span (many reports) may indicate efficiency but also risk of insufficient supervision. The optimal depends on the type of work.",
+    category: "HR Analytics",
+    related: ["Organizational Structure", "Org Chart", "Layers"]
+  },
+
+  // Automation
+  {
+    term: "RPA (Robotic Process Automation)",
+    definition: "Technology that uses software robots to automate repetitive, rule-based tasks. RPA bots mimic human actions on user interfaces: clicks, typing, copying/pasting data between systems.",
+    category: "Automation",
+    related: ["Automation", "Bot", "Process"]
+  },
+  {
+    term: "Report Automation",
+    definition: "The process of generating, updating, and distributing reports without manual intervention. Includes automatic data extraction, transformation, visualization creation, and scheduled delivery to recipients.",
+    category: "Automation",
+    related: ["ETL", "Dashboard", "Scheduled Refresh"]
+  },
+  {
+    term: "Web Scraping",
+    definition: "A technique for extracting data from websites automatically. Used for price monitoring, competitive analysis, and public information gathering. Requires legal and ethical considerations.",
+    category: "Automation",
+    related: ["API", "Data", "Competitive Analysis"]
+  },
+  {
+    term: "API (Application Programming Interface)",
+    definition: "An interface that allows different software systems to communicate with each other. REST APIs are the current standard for data exchange. Fundamental for system integration and automation.",
+    category: "Automation",
+    related: ["REST", "Integration", "JSON"]
+  },
+  {
+    term: "Workflow",
+    definition: "A sequence of steps or tasks that form a business process. Workflow automation eliminates manual tasks, reduces errors, and accelerates business process execution.",
+    category: "Automation",
+    related: ["Process", "Automation", "BPM"]
+  },
+  {
+    term: "Scheduled Refresh",
+    definition: "Scheduled data updates in BI tools. Allows dashboards and reports to update automatically at defined times without manual intervention.",
+    category: "Automation",
+    related: ["Power BI", "Gateway", "ETL"]
+  },
+  {
+    term: "Data Pipeline",
+    definition: "A series of processes that move data from a source to a destination, applying transformations along the way. Modern pipelines are automated, monitored, and scalable.",
+    category: "Automation",
+    related: ["ETL", "Data Engineering", "Orchestration"]
+  },
+
+  // Metrics and Analysis
+  {
+    term: "Metric",
+    definition: "A quantitative measure representing an aspect of the business. Unlike KPIs, metrics are not necessarily linked to strategic objectives. Examples: number of sales, web visits, tickets closed.",
+    category: "Metrics",
+    related: ["KPI", "Indicator", "Measurement"]
+  },
+  {
+    term: "Benchmark",
+    definition: "A reference point or standard against which performance is compared. Can be internal (historical), competitive (industry), or aspirational (best practices). Fundamental for contextualizing metrics.",
+    category: "Metrics",
+    related: ["KPI", "Comparison", "Best Practice"]
+  },
+  {
+    term: "Descriptive Analytics",
+    definition: "A type of analysis that answers 'what happened?' using historical data. Includes reports, dashboards, and basic statistics. It's the first level of analytical maturity in organizations.",
+    category: "Metrics",
+    related: ["Predictive Analytics", "Prescriptive Analytics", "BI"]
+  },
+  {
+    term: "Predictive Analytics",
+    definition: "A type of analysis that answers 'what could happen?' using statistical models and machine learning on historical data. Examples: sales forecasting, turnover risk, inventory demand.",
+    category: "Metrics",
+    related: ["Machine Learning", "Forecasting", "Descriptive Analytics"]
+  },
+  {
+    term: "Prescriptive Analytics",
+    definition: "The most advanced level of analytics that answers 'what should we do?'. Combines predictive analytics with optimization to recommend specific actions. Requires data and algorithm maturity.",
+    category: "Metrics",
+    related: ["Predictive Analytics", "Optimization", "AI"]
+  },
+  {
+    term: "Data Visualization",
+    definition: "Graphical representation of information to facilitate understanding. Includes charts, maps, tables, and infographics. Good visualization communicates insights clearly and memorably.",
+    category: "Metrics",
+    related: ["Dashboard", "Chart", "Data Storytelling"]
+  },
+  {
+    term: "Data Storytelling",
+    definition: "The art of communicating data insights through compelling narratives. Combines data, visualizations, and context to influence decisions. Goes beyond showing numbers to explaining their meaning.",
+    category: "Metrics",
+    related: ["Data Visualization", "Presentation", "Insights"]
+  },
+
+  // Data and Quality
+  {
+    term: "Data Quality",
+    definition: "The degree to which data is accurate, complete, consistent, timely, and relevant for its intended use. Poor data quality leads to incorrect decisions. 'Garbage in, garbage out.'",
+    category: "Data",
+    related: ["Data Governance", "Data Cleaning", "Master Data"]
+  },
+  {
+    term: "Data Governance",
+    definition: "A framework of policies, processes, and standards that ensure effective data management in an organization. Includes data quality, security, privacy, and regulatory compliance.",
+    category: "Data",
+    related: ["Data Quality", "Data Steward", "Compliance"]
+  },
+  {
+    term: "Data Cleaning",
+    definition: "The process of detecting and correcting (or removing) incorrect, incomplete, or duplicate records in a dataset. A critical step before any analysis. Also called data cleansing or data scrubbing.",
+    category: "Data",
+    related: ["Data Quality", "ETL", "Data Preparation"]
+  },
+  {
+    term: "Master Data",
+    definition: "Fundamental and consistent data about key business entities: customers, products, employees, suppliers. Master data management (MDM) ensures a 'single version of the truth.'",
+    category: "Data",
+    related: ["Data Governance", "Single Source of Truth", "MDM"]
+  },
+  {
+    term: "Structured Data",
+    definition: "Information organized in a predefined format, typically in tables with rows and columns. Examples: relational databases, spreadsheets. Easy to search and analyze.",
+    category: "Data",
+    related: ["Unstructured Data", "Database", "SQL"]
+  },
+  {
+    term: "Unstructured Data",
+    definition: "Information without a predefined format: emails, documents, images, videos, social media posts. Represents ~80% of enterprise data and requires special techniques for analysis.",
+    category: "Data",
+    related: ["Structured Data", "NLP", "Big Data"]
+  },
+
+  // Technology
+  {
+    term: "SQL (Structured Query Language)",
+    definition: "The standard language for managing and querying relational databases. Basic commands: SELECT (query), INSERT (add), UPDATE (modify), DELETE (remove). Essential for any data professional.",
+    category: "Technology",
+    related: ["Database", "Structured Data", "Query"]
+  },
+  {
+    term: "Python",
+    definition: "A versatile and popular programming language for data analysis, automation, and machine learning. Key libraries: Pandas (data), NumPy (calculations), Matplotlib (visualization), Scikit-learn (ML).",
+    category: "Technology",
+    related: ["Pandas", "Automation", "Data Science"]
+  },
+  {
+    term: "Streamlit",
+    definition: "A Python framework for creating data web applications quickly. Allows analysts without web experience to build interactive dashboards and data tools with pure Python code.",
+    category: "Technology",
+    related: ["Python", "Dashboard", "Web App"]
+  },
+  {
+    term: "Looker",
+    definition: "Google Cloud's Business Intelligence platform. Differentiates itself through its semantic layer (LookML) that centrally defines metrics, ensuring consistency across the organization.",
+    category: "Technology",
+    related: ["Business Intelligence", "Google Cloud", "LookML"]
+  },
+  {
+    term: "Cloud Computing",
+    definition: "A computing model that provides resources (servers, storage, databases) on-demand over the internet. Major providers: AWS, Azure, Google Cloud. Eliminates the need for own infrastructure.",
+    category: "Technology",
+    related: ["AWS", "Azure", "SaaS"]
+  },
+  {
+    term: "Machine Learning",
+    definition: "A branch of artificial intelligence where systems learn patterns from data without being explicitly programmed. BI applications: sales prediction, customer segmentation, anomaly detection.",
+    category: "Technology",
+    related: ["AI", "Predictive Analytics", "Algorithm"]
+  }
+];
+
+// Get unique categories
+const categories = [...new Set(glossaryTerms.map(t => t.category))];
+
+// Get first letters for index
+const letters = [...new Set(glossaryTerms.map(t => t.term[0].toUpperCase()))].sort();
+---
+
+<Layout
+  title="Business Intelligence and Data Analytics Glossary | Lumina Consulting"
+  description="Clear definitions of 50+ BI, Power BI, HR Analytics, automation, and data analysis terms. Complete glossary for professionals and SMBs."
+  lang="en"
+>
+  <!-- DefinedTermSet Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "Business Intelligence and Data Analytics Glossary",
+    "description": "Definitions of key terms in Business Intelligence, Power BI, HR Analytics, and data automation",
+    "url": "https://luminaconsulting.ai/en/resources/glossary",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/en/about#founder"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "hasDefinedTerm": glossaryTerms.map(term => ({
+      "@type": "DefinedTerm",
+      "name": term.term,
+      "description": term.definition,
+      "inDefinedTermSet": "https://luminaconsulting.ai/en/resources/glossary"
+    }))
+  })} />
+
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Glossary</span>
+        <h1 class="text-white mb-6">Business Intelligence Glossary</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
+          {glossaryTerms.length} essential BI, analytics, and automation terms explained clearly
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Navigation -->
+  <section class="py-6 bg-white border-b border-lum-slate/10 sticky top-0 z-40">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-2">
+        <!-- Letter Index -->
+        <div class="flex flex-wrap justify-center gap-1 mr-4 pr-4 border-r border-lum-slate/20">
+          {letters.map(letter => (
+            <a
+              href={`#letter-${letter}`}
+              class="w-8 h-8 flex items-center justify-center text-sm font-mono rounded bg-lum-cream hover:bg-lum-coral hover:text-white transition-colors"
+            >
+              {letter}
+            </a>
+          ))}
+        </div>
+        <!-- Category Filter -->
+        <div class="flex flex-wrap justify-center gap-2">
+          {categories.map(category => (
+            <a
+              href={`#cat-${category.toLowerCase().replace(/\s+/g, '-')}`}
+              class="px-3 py-1.5 text-xs rounded-full bg-lum-cream hover:bg-lum-coral/10 text-lum-slate hover:text-lum-coral transition-colors"
+            >
+              {category}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glossary Content -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <!-- By Letter -->
+        {letters.map(letter => {
+          const termsForLetter = glossaryTerms.filter(t => t.term[0].toUpperCase() === letter);
+          return (
+            <div id={`letter-${letter}`} class="mb-12 scroll-mt-32">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="w-12 h-12 flex items-center justify-center bg-lum-coral text-white font-display text-2xl font-bold rounded-xl">
+                  {letter}
+                </span>
+                <div class="flex-grow h-px bg-lum-slate/10"></div>
+              </div>
+
+              <div class="space-y-6">
+                {termsForLetter.map(item => (
+                  <article
+                    id={item.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+                    class="p-6 bg-lum-cream rounded-2xl scroll-fade"
+                  >
+                    <div class="flex items-start justify-between gap-4 mb-3">
+                      <h3 class="text-xl font-display font-semibold text-lum-black">
+                        {item.term}
+                      </h3>
+                      <span class="badge-outline text-xs whitespace-nowrap">
+                        {item.category}
+                      </span>
+                    </div>
+                    <p class="text-lum-slate leading-relaxed mb-4">
+                      {item.definition}
+                    </p>
+                    {item.related && item.related.length > 0 && (
+                      <div class="flex flex-wrap gap-2">
+                        <span class="text-xs text-lum-slate-light">Related:</span>
+                        {item.related.map(rel => (
+                          <a
+                            href={`#${rel.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                            class="text-xs text-lum-coral hover:underline"
+                          >
+                            {rel}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </article>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- By Category Section -->
+  <section class="py-16 bg-lum-cream">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <span class="badge mb-4">By Category</span>
+        <h2>Terms organized by topic</h2>
+      </div>
+
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categories.map(category => {
+          const termsInCategory = glossaryTerms.filter(t => t.category === category);
+          return (
+            <div
+              id={`cat-${category.toLowerCase().replace(/\s+/g, '-')}`}
+              class="card scroll-fade"
+            >
+              <h3 class="text-lg font-display font-semibold text-lum-black mb-4">
+                {category}
+              </h3>
+              <ul class="space-y-2">
+                {termsInCategory.slice(0, 8).map(term => (
+                  <li>
+                    <a
+                      href={`#${term.term.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                      class="text-sm text-lum-slate hover:text-lum-coral transition-colors"
+                    >
+                      {term.term}
+                    </a>
+                  </li>
+                ))}
+                {termsInCategory.length > 8 && (
+                  <li class="text-xs text-lum-slate-light">
+                    +{termsInCategory.length - 8} more
+                  </li>
+                )}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Author Box -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="card bg-lum-cream">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <img
+              src="/jorge-cepeda.jpg"
+              alt="Jorge Cepeda"
+              class="w-20 h-20 rounded-full object-cover"
+            />
+            <div class="text-center md:text-left">
+              <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-1">Author</p>
+              <h3 class="text-lg font-display font-semibold text-lum-black mb-2">Jorge Cepeda</h3>
+              <p class="text-sm text-lum-slate mb-3">
+                MBA UC Chile • Data Analytics Professor, U. Andes • Microsoft Certified PL-300
+              </p>
+              <a
+                href="https://www.linkedin.com/in/jorgecepeda/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm text-lum-coral hover:underline"
+              >
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                View LinkedIn profile
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Need to implement these technologies?</h2>
+        <p class="text-xl text-lum-slate-light mb-10">
+          Knowing the terms is the first step. If you need help implementing dashboards, automation, or analytics in your company, let's talk.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hi,%20I%20was%20reviewing%20the%20glossary%20and%20would%20like%20to%20discuss%20implementation"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/resources" class="btn bg-transparent text-lum-cream border-lum-cream/30 hover:bg-lum-cream/10">
+            View more resources
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

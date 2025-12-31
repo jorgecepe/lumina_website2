@@ -1,16 +1,76 @@
 ---
 const currentPath = Astro.url.pathname;
-const isEnglish = currentPath.startsWith('/en');
+// Normalize path: remove trailing slash except for root
+const normalizedPath = currentPath === '/' ? '/' : currentPath.replace(/\/$/, '');
+const isEnglish = normalizedPath.startsWith('/en');
 const lang = isEnglish ? 'en' : 'es';
+
+// Complete URL mapping between ES and EN
+const urlMap: Record<string, string> = {
+  // Main pages
+  '/': '/en',
+  '/en': '/',
+  '/acerca-de': '/en/about',
+  '/en/about': '/acerca-de',
+  '/servicios': '/en/services',
+  '/en/services': '/servicios',
+  '/recursos': '/en/resources',
+  '/en/resources': '/recursos',
+  '/blog': '/en/blog',
+  '/en/blog': '/blog',
+  '/casos-de-exito': '/en/case-studies',
+  '/en/case-studies': '/casos-de-exito',
+  '/faq': '/en/faq',
+  '/en/faq': '/faq',
+  '/contacto': '/en/contact',
+  '/en/contact': '/contacto',
+
+  // Service pages
+  '/servicios/dashboards-estrategicos': '/en/services/strategic-dashboards',
+  '/en/services/strategic-dashboards': '/servicios/dashboards-estrategicos',
+  '/servicios/hr-analytics': '/en/services/hr-analytics',
+  '/en/services/hr-analytics': '/servicios/hr-analytics',
+  '/servicios/automatizacion-reporteria': '/en/services/reporting-automation',
+  '/en/services/reporting-automation': '/servicios/automatizacion-reporteria',
+  '/servicios/analisis-competencia': '/en/services/competitive-analysis',
+  '/en/services/competitive-analysis': '/servicios/analisis-competencia',
+  '/servicios/capacitacion-sence': '/en/services/data-training',
+  '/en/services/data-training': '/servicios/capacitacion-sence',
+
+  // Blog posts
+  '/blog/como-elegir-kpis-pyme': '/en/blog/how-to-choose-kpis',
+  '/en/blog/how-to-choose-kpis': '/blog/como-elegir-kpis-pyme',
+  '/blog/errores-dashboards-evitar': '/en/blog/dashboard-mistakes-avoid',
+  '/en/blog/dashboard-mistakes-avoid': '/blog/errores-dashboards-evitar',
+  '/blog/hr-analytics-primeros-pasos': '/en/blog/hr-analytics-getting-started',
+  '/en/blog/hr-analytics-getting-started': '/blog/hr-analytics-primeros-pasos',
+  '/blog/automatizacion-reporteria-roi': '/en/blog/reporting-automation-roi',
+  '/en/blog/reporting-automation-roi': '/blog/automatizacion-reporteria-roi',
+
+  // Resources pages
+  '/recursos/glosario': '/en/resources/glossary',
+  '/en/resources/glossary': '/recursos/glosario',
+  '/recursos/guias/power-bi-pymes': '/en/resources/guides/power-bi-smbs',
+  '/en/resources/guides/power-bi-smbs': '/recursos/guias/power-bi-pymes',
+  '/recursos/comparativas/power-bi-vs-looker': '/en/resources/comparisons/power-bi-vs-looker',
+  '/en/resources/comparisons/power-bi-vs-looker': '/recursos/comparativas/power-bi-vs-looker',
+};
 
 // Get the equivalent path in the other language
 const getAlternatePath = () => {
+  // First check if we have an exact mapping
+  if (urlMap[normalizedPath]) {
+    return urlMap[normalizedPath];
+  }
+
+  // Fallback: try to intelligently switch language
   if (isEnglish) {
-    // Remove /en prefix
-    return currentPath.replace(/^\/en/, '') || '/';
+    // Remove /en prefix and go to Spanish home if no mapping
+    const esPath = normalizedPath.replace(/^\/en/, '') || '/';
+    return urlMap[`/en${esPath === '/' ? '' : esPath}`] ? urlMap[`/en${esPath === '/' ? '' : esPath}`] : '/';
   } else {
-    // Add /en prefix
-    return '/en' + currentPath;
+    // Add /en prefix and go to English home if no mapping
+    return urlMap[normalizedPath] || '/en';
   }
 };
 
