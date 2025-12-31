@@ -1,0 +1,332 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Corporate Data Training | Lumina Consulting"
+  description="Power BI, advanced Excel, and data analysis courses for your team. Practical, hands-on training applied to your real business problems."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Data Training",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Corporate training in Power BI, advanced Excel, and data analysis. Practical courses with hands-on exercises using your real data.",
+    "areaServed": ["CL", "LATAM"],
+    "serviceType": "Corporate Training"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/en/services" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          All Services
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Training</span>
+        <h1 class="text-white mb-6">Data Training</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Practical Power BI, advanced Excel, and data analysis courses. Not abstract theory: we work with your company's real data and problems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why different -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">Why this training is different</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Most courses on tools like Power BI or Excel teach functions and buttons. The participant leaves knowing how to make a bar chart, but doesn't know how to apply it to their real work.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          I do things differently: before we start, I meet with you to understand what problems you have, what data you manage, and what decisions you need to make. Then I design the course using those real examples.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-10">
+          <div class="p-6 bg-lum-cream rounded-xl">
+            <h3 class="font-semibold text-red-600 mb-3">Traditional training</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Generic textbook examples</li>
+              <li>• Made-up data</li>
+              <li>• Focused on functions and menus</li>
+              <li>• Monday you're back at work and don't know where to start</li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-lum-cream rounded-xl">
+            <h3 class="font-semibold text-lum-coral mb-3">My approach</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Examples from your industry or company</li>
+              <li>• Your real data (anonymized if needed)</li>
+              <li>• Focused on solving business problems</li>
+              <li>• Monday you already have something working</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available courses -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">Available courses</h2>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Power BI for business users</h3>
+                <p class="text-lum-slate mb-4">
+                  From zero to creating useful dashboards. Data connection, basic modeling, visualizations, and publishing. Designed for managers, analysts, and anyone who needs to make decisions with data.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">16-24 hours</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Advanced Excel for data analysis</h3>
+                <p class="text-lum-slate mb-4">
+                  Pivot tables, lookup functions, array formulas, Power Query for automating data cleaning. For those who already use Excel but want to get more out of it.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">12-16 hours</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Data analysis for decision making</h3>
+                <p class="text-lum-slate mb-4">
+                  Beyond the tools: how to frame business questions, choose what to measure, interpret data, and present conclusions effectively. Ideal for managers and team leaders.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">8-12 hours</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Custom training</h3>
+                <p class="text-lum-slate mb-4">
+                  If no standard course fits what you need, we design one specifically for your team. Can combine topics, go deeper in specific areas, or focus on a concrete project.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Variable duration</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What makes it effective -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">What makes training effective</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          After years of corporate training, I've learned that what makes the difference isn't the amount of content covered, but how applicable it is to the participant's daily work.
+        </p>
+
+        <div class="bg-lum-cream rounded-xl p-6 mb-8">
+          <h3 class="font-semibold mb-4">My training approach:</h3>
+          <ol class="space-y-3 text-lum-slate">
+            <li><strong>1.</strong> We define the course objectives and relevant real-world problems</li>
+            <li><strong>2.</strong> I customize examples using your data (or industry-specific data)</li>
+            <li><strong>3.</strong> Participants work on exercises they can reuse at work</li>
+            <li><strong>4.</strong> We build something practical during the training</li>
+            <li><strong>5.</strong> Post-training support to answer questions that come up later</li>
+          </ol>
+        </div>
+
+        <p class="text-lum-slate">
+          The result: participants leave with skills they can apply immediately, not just certificates to hang on the wall.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formats -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">Training formats</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">On-site at your company</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              I come to your office with everything needed. Ideal for groups of 5-15 people. Allows working with your real data in the moment.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Advantage:</strong> Maximum customization, fewer distractions for participants.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Live online</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Sessions via Zoom or Teams. Good for distributed teams or when in-person isn't possible. Just as interactive, with real-time exercises.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Advantage:</strong> Flexibility, no travel costs, easy to record.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Intensive format</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              2-3 consecutive days, full day. For when you need the team to learn quickly and apply immediately.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Best for:</strong> Projects with deadlines, new teams, initiative kickoffs.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Extended format</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              3-4 hour sessions, 1-2 times per week, over several weeks. Allows practicing between sessions and bringing real questions.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Best for:</strong> Habit change, deep adoption, busy teams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Frequently asked questions</h2>
+
+        <div class="space-y-6">
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How many people can participate?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              For it to be truly practical, I recommend groups of 5 to 12 people. More than 15 makes it difficult to give individual attention. If you have more people, we do parallel groups.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              What do participants need to know beforehand?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              For Power BI from scratch, they just need to know how to use a computer and basic Excel. For advanced Excel, they should know the basics (simple formulas, tables). I can do a preliminary assessment if there are doubts.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Do you provide support materials?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Yes. Each participant receives exercise files, a quick reference guide, and access to session recordings (for online format). I also include 30 days of email support for post-course questions.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How much does it cost?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Depends on the course and format. A 16-hour course for a group of up to 10 people starts from $4,500. I'll give you a specific quote after understanding what you need.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Can training be done in English?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Yes, all courses can be delivered in English or Spanish, depending on your team's needs. Materials and support are available in both languages.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Need to train your team?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Tell me what tools they use today, what they'd like to learn, and how many people there are. I'll propose a plan.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hi,%20I'm%20interested%20in%20training%20for%20my%20team"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/contact" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Schedule a Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

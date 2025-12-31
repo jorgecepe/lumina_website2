@@ -1,0 +1,322 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Capacitación en Datos con Franquicia SENCE | Lumina Consulting"
+  description="Cursos de Power BI, Excel avanzado y análisis de datos para tu equipo. Capacitación práctica, aplicada a tu realidad, con posibilidad de franquicia SENCE."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Capacitación en Datos",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Capacitación corporativa en Power BI, Excel avanzado y análisis de datos. Cursos prácticos con franquicia SENCE disponible.",
+    "areaServed": "CL",
+    "serviceType": "Corporate Training"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/servicios" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Todos los servicios
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Formación</span>
+        <h1 class="text-white mb-6">Capacitación en Datos</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Cursos prácticos de Power BI, Excel avanzado y análisis de datos. No teoría abstracta: trabajamos con los datos y problemas reales de tu empresa. Con opción de franquicia SENCE.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué diferente -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">Por qué esta capacitación es diferente</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          La mayoría de los cursos de herramientas como Power BI o Excel enseñan funciones y botones. El participante sale sabiendo cómo hacer un gráfico de barras, pero no sabe cómo aplicarlo a su trabajo real.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Yo hago las cosas distinto: antes de empezar, me junto con ustedes para entender qué problemas tienen, qué datos manejan, y qué decisiones necesitan tomar. Luego diseño el curso usando esos ejemplos reales.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mt-10">
+          <div class="p-6 bg-lum-cream rounded-xl">
+            <h3 class="font-semibold text-red-600 mb-3">❌ Capacitación tradicional</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Ejemplos genéricos de libros</li>
+              <li>• Datos inventados</li>
+              <li>• Enfocada en funciones y menús</li>
+              <li>• El lunes vuelves al trabajo y no sabes por dónde empezar</li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-lum-cream rounded-xl">
+            <h3 class="font-semibold text-lum-coral mb-3">✓ Mi enfoque</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Ejemplos de tu industria o empresa</li>
+              <li>• Tus datos reales (anonimizados si es necesario)</li>
+              <li>• Enfocada en resolver problemas de negocio</li>
+              <li>• El lunes ya tienes algo funcionando</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursos disponibles -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">Cursos disponibles</h2>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Power BI para usuarios de negocio</h3>
+                <p class="text-lum-slate mb-4">
+                  Desde cero hasta crear dashboards útiles. Conexión de datos, modelado básico, visualizaciones, y publicación. Pensado para gerentes, analistas y cualquiera que necesite tomar decisiones con datos.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">16-24 horas</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">SENCE disponible</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Excel avanzado para análisis de datos</h3>
+                <p class="text-lum-slate mb-4">
+                  Tablas dinámicas, funciones de búsqueda, fórmulas matriciales, Power Query para automatizar limpieza de datos. Para quienes ya usan Excel pero quieren sacarle más provecho.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">12-16 horas</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">SENCE disponible</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Análisis de datos para toma de decisiones</h3>
+                <p class="text-lum-slate mb-4">
+                  Más allá de las herramientas: cómo plantear preguntas de negocio, elegir qué medir, interpretar datos, y presentar conclusiones de forma efectiva. Ideal para gerentes y líderes de área.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">8-12 horas</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-green-100 text-green-700 rounded">SENCE disponible</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Capacitación a medida</h3>
+                <p class="text-lum-slate mb-4">
+                  Si ningún curso estándar calza con lo que necesitas, diseñamos uno específico para tu equipo. Puede combinar temas, profundizar en áreas específicas, o enfocarse en un proyecto concreto.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Duración variable</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Franquicia SENCE -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">Sobre la franquicia SENCE</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Los cursos están registrados en SENCE, lo que significa que puedes usar la franquicia tributaria para financiarlos. Esto aplica a empresas que pagan impuesto de primera categoría en Chile.
+        </p>
+
+        <div class="bg-lum-cream rounded-xl p-6 mb-8">
+          <h3 class="font-semibold mb-4">¿Cómo funciona?</h3>
+          <ol class="space-y-3 text-lum-slate">
+            <li><strong>1.</strong> Definimos el curso y el número de participantes</li>
+            <li><strong>2.</strong> Te entrego el código SENCE del curso</li>
+            <li><strong>3.</strong> Tu área de RRHH inscribe a los participantes en el portal SENCE</li>
+            <li><strong>4.</strong> Ejecutamos el curso y registramos la asistencia</li>
+            <li><strong>5.</strong> Tu empresa puede descontar el costo de impuestos</li>
+          </ol>
+        </div>
+
+        <p class="text-lum-slate">
+          El monto que puedes descontar depende del tamaño de tu empresa y de la remuneración de los participantes. Típicamente cubre entre el 50% y el 100% del costo del curso.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formato -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">Formatos de capacitación</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Presencial en tu empresa</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Voy a tu oficina con todo lo necesario. Ideal para grupos de 5-15 personas. Permite trabajar con tus datos reales en el momento.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Ventaja:</strong> Máxima personalización, menos distracciones para los participantes.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Online en vivo</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Sesiones por Zoom o Teams. Bueno para equipos distribuidos o cuando el presencial no es posible. Igual de interactivo, con ejercicios en tiempo real.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Ventaja:</strong> Flexibilidad, sin costos de traslado, fácil de grabar.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Formato intensivo</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              2-3 días seguidos, jornada completa. Para cuando necesitas que el equipo aprenda rápido y pueda aplicar inmediatamente.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Mejor para:</strong> Proyectos con deadline, equipos nuevos, kick-off de iniciativas.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Formato extendido</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Sesiones de 3-4 horas, 1-2 veces por semana, durante varias semanas. Permite practicar entre sesiones y traer dudas reales.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              <strong>Mejor para:</strong> Cambio de hábitos, adopción profunda, equipos ocupados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Preguntas frecuentes</h2>
+
+        <div class="space-y-6">
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Cuántas personas pueden participar?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Para que sea realmente práctico, recomiendo grupos de 5 a 12 personas. Más de 15 se vuelve difícil dar atención individual. Si tienes más gente, hacemos grupos paralelos.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Qué necesitan saber los participantes antes?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Para Power BI desde cero, solo necesitan saber usar un computador y Excel básico. Para Excel avanzado, deben manejar lo básico (fórmulas simples, tablas). Puedo hacer un diagnóstico previo si hay dudas.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Entregan material de apoyo?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Sí. Cada participante recibe los archivos de ejercicios, una guía de referencia rápida, y acceso a grabaciones de las sesiones (en formato online). También incluyo 30 días de soporte por email para dudas post-curso.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Cuánto cuesta?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Depende del curso y del formato. Un curso de 16 horas para un grupo de hasta 10 personas parte desde $1.500.000 + IVA. Te doy un presupuesto específico después de entender qué necesitas. Recuerda que con SENCE puedes recuperar parte o todo el costo.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">¿Necesitas capacitar a tu equipo?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Cuéntame qué herramientas usan hoy, qué les gustaría aprender, y cuántas personas son. Te propongo un plan.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20capacitación%20para%20mi%20equipo"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contactar por WhatsApp
+          </a>
+          <a href="/contacto" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Agendar una llamada
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

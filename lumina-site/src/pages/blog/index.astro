@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Blog posts - newest first
+const posts = [
+  {
+    slug: "como-elegir-kpis-pyme",
+    title: "Cómo elegir los KPIs correctos (y no morir en el intento)",
+    excerpt: "La mayoría de las PyMEs miden demasiadas cosas o las cosas equivocadas. Te cuento cómo identificar los 5-7 indicadores que realmente importan para tu negocio.",
+    date: "2025-01-15",
+    readTime: "8 min",
+    category: "Estrategia"
+  },
+  {
+    slug: "errores-dashboards-evitar",
+    title: "7 errores que arruinan un buen dashboard (y cómo evitarlos)",
+    excerpt: "He visto dashboards hermosos que nadie usa. Y dashboards feos que cambiaron empresas. La diferencia no está donde crees.",
+    date: "2025-01-10",
+    readTime: "6 min",
+    category: "Dashboards"
+  },
+  {
+    slug: "hr-analytics-primeros-pasos",
+    title: "HR Analytics: por dónde empezar si no tienes idea",
+    excerpt: "No necesitas un data scientist ni software caro. Con los datos que ya tienes en tu ERP y unas planillas bien armadas, puedes empezar mañana.",
+    date: "2025-01-05",
+    readTime: "10 min",
+    category: "HR Analytics"
+  },
+  {
+    slug: "automatizacion-reporteria-roi",
+    title: "¿Vale la pena automatizar reportes? Hagamos los números",
+    excerpt: "Spoiler: si alguien de tu equipo pasa más de 4 horas semanales armando reportes a mano, probablemente sí. Pero depende.",
+    date: "2025-01-01",
+    readTime: "7 min",
+    category: "Automatización"
+  }
+];
+
+const categories = [...new Set(posts.map(p => p.category))];
+---
+
+<Layout
+  title="Blog de Business Intelligence y Data Analytics | Lumina Consulting"
+  description="Artículos prácticos sobre dashboards, KPIs, HR Analytics y automatización. Sin jerga innecesaria, con ejemplos reales de PyMEs en Chile."
+>
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Blog</span>
+        <h1 class="text-white mb-6">Ideas sobre datos, sin rodeos</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
+          Artículos cortos y prácticos sobre Business Intelligence para PyMEs.
+          Nada de teoría abstracta: ejemplos reales, problemas concretos, soluciones que funcionan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="py-6 bg-white border-b border-lum-slate/10">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-2 text-sm rounded-full bg-lum-coral text-white">
+          Todos
+        </span>
+        {categories.map(cat => (
+          <span class="px-4 py-2 text-sm rounded-full bg-lum-cream hover:bg-lum-coral/10 text-lum-slate cursor-pointer transition-colors">
+            {cat}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-8">
+          {posts.map((post, index) => (
+            <article class="group scroll-fade" style={`animation-delay: ${index * 100}ms`}>
+              <a href={`/blog/${post.slug}`} class="block">
+                <div class="p-8 bg-lum-cream rounded-2xl hover:bg-lum-coral/5 transition-colors">
+                  <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span class="badge-outline text-xs">{post.category}</span>
+                    <span class="text-xs text-lum-slate-light">{post.date}</span>
+                    <span class="text-xs text-lum-slate-light">•</span>
+                    <span class="text-xs text-lum-slate-light">{post.readTime} lectura</span>
+                  </div>
+                  <h2 class="text-2xl font-display font-semibold text-lum-black mb-3 group-hover:text-lum-coral transition-colors">
+                    {post.title}
+                  </h2>
+                  <p class="text-lum-slate mb-4">
+                    {post.excerpt}
+                  </p>
+                  <span class="inline-flex items-center text-lum-coral font-medium text-sm group-hover:gap-2 transition-all">
+                    Leer artículo
+                    <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author Box -->
+  <section class="py-16 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="card bg-white">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <img
+              src="/jorge-cepeda.jpg"
+              alt="Jorge Cepeda"
+              class="w-20 h-20 rounded-full object-cover"
+            />
+            <div class="text-center md:text-left">
+              <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-1">Sobre el autor</p>
+              <h3 class="text-lg font-display font-semibold text-lum-black mb-2">Jorge Cepeda</h3>
+              <p class="text-sm text-lum-slate">
+                Llevo 15 años trabajando con datos en empresas financieras. Ahora ayudo a PyMEs a usar esas mismas herramientas sin necesitar presupuestos de corporación. MBA UC, profesor en U. Andes, y certificado Microsoft en Power BI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA (placeholder) -->
+  <section class="py-24 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">¿Quieres recibir artículos nuevos?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Publico 2-3 veces al mes. Sin spam, sin vender cursos, solo contenido útil.
+        </p>
+        <a
+          href="https://www.linkedin.com/in/jorgecepeda/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          Sígueme en LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

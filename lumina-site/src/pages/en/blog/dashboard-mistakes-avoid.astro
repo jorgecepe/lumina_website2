@@ -1,0 +1,228 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="7 Mistakes That Ruin a Good Dashboard | Lumina Consulting"
+  description="I've seen beautiful dashboards that nobody uses. And ugly ones that transformed companies. The difference isn't where you think."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "7 Mistakes That Ruin a Good Dashboard (and How to Avoid Them)",
+    "description": "Practical guide to avoiding the most common mistakes when creating management dashboards",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/en/about#founder"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting"
+    },
+    "datePublished": "2025-01-10",
+    "dateModified": "2025-01-10"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <a href="/en/blog" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to blog
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Dashboards</span>
+        <h1 class="text-white mb-6 text-4xl md:text-5xl">7 Mistakes That Ruin a Good Dashboard (and How to Avoid Them)</h1>
+        <div class="flex items-center gap-4 text-sm text-lum-slate-light">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-10 h-10 rounded-full" />
+          <span>Jorge Cepeda</span>
+          <span>•</span>
+          <span>January 10, 2025</span>
+          <span>•</span>
+          <span>6 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <article class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+
+        <p class="lead text-xl text-lum-slate">
+          The dashboard was gorgeous. Corporate colors, animated charts, filters everywhere. The problem: three months after delivery, nobody was opening it.
+        </p>
+
+        <p>
+          I've seen this many times. Dashboards that took months of work and ended up abandoned. And I've also seen the opposite: simple dashboards, almost ugly, that became the most-used tool in the company.
+        </p>
+
+        <p>
+          The difference is rarely in the technology or how pretty it looks. It's in design mistakes that seem minor but kill adoption.
+        </p>
+
+        <h2>Mistake #1: Cramming in everything measurable</h2>
+
+        <p>
+          The client asks for a dashboard. You, wanting to demonstrate value, put 35 charts on one screen. Sales, inventory, HR, finance, marketing. Everything.
+        </p>
+
+        <p>
+          The result is a wall of data where nobody knows where to look first. It's like being handed a 200-page newspaper every morning and being told "read it all before the meeting."
+        </p>
+
+        <p>
+          <strong>The solution:</strong> A dashboard should answer at most 3-4 business questions. If you need to cover more, make multiple dashboards. One for each audience or each decision.
+        </p>
+
+        <h2>Mistake #2: Pretty charts that are unreadable</h2>
+
+        <p>
+          Donut charts with 12 categories. 3D charts that distort proportions. Colors that look great on your monitor but in the meeting room projector all look the same.
+        </p>
+
+        <p>
+          An operations manager told me he spent 10 minutes "deciphering" his dashboard before every board meeting. It should be the other way around: he should understand it in 10 seconds.
+        </p>
+
+        <p>
+          <strong>The solution:</strong> Bar and line charts cover 80% of cases. If you have to explain how to read a chart, it's the wrong chart.
+        </p>
+
+        <h2>Mistake #3: Data that arrives late</h2>
+
+        <p>
+          A sales dashboard that updates every Friday. By Monday, the data is already three days old. By the time you see a problem, a week has passed.
+        </p>
+
+        <p>
+          Not all dashboards need to be real-time (that costs money and complexity). But the update frequency has to match the speed of decision-making.
+        </p>
+
+        <p>
+          <strong>The solution:</strong> Ask yourself: how often do I make decisions with this data? If it's daily, the dashboard should update at least once a day. If it's weekly, it can be weekly.
+        </p>
+
+        <h2>Mistake #4: No clear "entry point"</h2>
+
+        <p>
+          You open the dashboard and don't know where to start. There are 15 charts of the same size, all appearing equally important. You end up looking at anything or, worse, closing the tab.
+        </p>
+
+        <p>
+          <strong>The solution:</strong> Design a visual hierarchy. The most important number or chart goes at the top and big. The rest, smaller and below. Guide the user's eye like a newspaper article: headline, subtitle, body.
+        </p>
+
+        <h2>Mistake #5: Numbers without context</h2>
+
+        <p>
+          "We sold $450K this month." Is that good or bad? No idea. How much did we sell last month? What was the target? How did the market do?
+        </p>
+
+        <p>
+          A standalone number says nothing. It becomes useful when you compare it to something: previous period, budget, industry average, historical record.
+        </p>
+
+        <p>
+          <strong>The solution:</strong> Each key metric should have at least one comparison. And if it changes significantly, it should stand out (colors, arrows, alerts).
+        </p>
+
+        <h2>Mistake #6: Filters that nobody understands</h2>
+
+        <p>
+          I saw a dashboard with 8 filters at the top. Region, branch, salesperson, category, subcategory, start date, end date, customer type. To see the month's sales, you had to configure 8 things first.
+        </p>
+
+        <p>
+          Filters are useful, but each filter you add is friction. And friction kills adoption.
+        </p>
+
+        <p>
+          <strong>The solution:</strong> Start with default values that show the most common view (e.g., current month, all regions). Leave advanced filters for those who really need them, but don't make them mandatory to see something useful.
+        </p>
+
+        <h2>Mistake #7: Not involving users from the beginning</h2>
+
+        <p>
+          This is the most expensive mistake. You lock yourself away for 3 months to build the "perfect" dashboard according to what you think they need. You deliver it proudly. And they tell you: "it's good, but what I really need is something else."
+        </p>
+
+        <p>
+          I've seen entire projects end up in the trash because of this. Months of lost work.
+        </p>
+
+        <p>
+          <strong>The solution:</strong> Quick prototype. Show something in the first week, even if it's ugly. Ask: "is this what you need?" Adjust. Repeat. End users should see the dashboard during development, not only at final delivery.
+        </p>
+
+        <h2>The 5-second test</h2>
+
+        <p>
+          When you finish a dashboard, do this test: show it to someone who hasn't seen it for 5 seconds. Then ask them what they understood.
+        </p>
+
+        <p>
+          If they can tell you what the main message is, you're on track. If they're blank or say "I saw a lot of numbers," you have work to do.
+        </p>
+
+        <p>
+          The best dashboards aren't the most complete or the prettiest. They're the ones people actually use. And for people to use them, they have to be so easy to read that they require no effort.
+        </p>
+
+        <hr class="my-12" />
+
+        <p class="text-sm text-lum-slate">
+          Have a dashboard that nobody looks at? We can review it together and see what can be improved. <a href="/en/contact" class="text-lum-coral hover:underline">Write me</a>.
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <section class="py-12 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-20 h-20 rounded-full object-cover" />
+          <div>
+            <p class="font-semibold text-lum-black mb-1">Jorge Cepeda</p>
+            <p class="text-sm text-lum-slate mb-3">
+              15 years in management control and finance. Now I help SMBs make better decisions with data, without needing a corporation's budget.
+            </p>
+            <a href="https://www.linkedin.com/in/jorgecepeda/" target="_blank" rel="noopener noreferrer" class="text-sm text-lum-coral hover:underline">
+              Connect on LinkedIn →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Other articles you might find useful</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/en/blog/how-to-choose-kpis" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Strategy</span>
+            <h4 class="font-semibold text-lum-black">How to Choose the Right KPIs (Without Losing Your Mind)</h4>
+          </a>
+          <a href="/en/services/strategic-dashboards" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Service</span>
+            <h4 class="font-semibold text-lum-black">Strategic Dashboards for SMBs</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

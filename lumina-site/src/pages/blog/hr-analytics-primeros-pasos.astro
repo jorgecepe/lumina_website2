@@ -1,0 +1,287 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="HR Analytics: por dónde empezar si no tienes idea | Lumina Consulting"
+  description="No necesitas un data scientist ni software caro. Con los datos que ya tienes en tu ERP y unas planillas bien armadas, puedes empezar mañana."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "HR Analytics: por dónde empezar si no tienes idea",
+    "description": "Guía práctica para comenzar con análisis de datos de recursos humanos en PyMEs",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/acerca-de#fundador"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting"
+    },
+    "datePublished": "2025-01-05",
+    "dateModified": "2025-01-05"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <a href="/blog" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver al blog
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">HR Analytics</span>
+        <h1 class="text-white mb-6 text-4xl md:text-5xl">HR Analytics: por dónde empezar si no tienes idea</h1>
+        <div class="flex items-center gap-4 text-sm text-lum-slate-light">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-10 h-10 rounded-full" />
+          <span>Jorge Cepeda</span>
+          <span>•</span>
+          <span>05 enero 2025</span>
+          <span>•</span>
+          <span>10 min lectura</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <article class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+
+        <p class="lead text-xl text-lum-slate">
+          "Eso es para empresas grandes". Lo escucho cada vez que hablo de HR Analytics con gerentes de PyMEs. Y lo entiendo: suena a algo que requiere un equipo de data scientists y millones en software.
+        </p>
+
+        <p>
+          Pero la realidad es más simple. Si tu empresa tiene más de 30 personas y llevas un registro decente de asistencia, licencias, y sueldos, ya tienes lo básico para empezar. No estoy hablando de inteligencia artificial ni modelos predictivos sofisticados. Estoy hablando de mirar tus propios datos y encontrar patrones que hoy no ves.
+        </p>
+
+        <h2>¿Qué es HR Analytics, en simple?</h2>
+
+        <p>
+          Es usar datos de recursos humanos para tomar mejores decisiones sobre personas. En vez de decidir basándote en intuición o "siempre lo hemos hecho así", usas números.
+        </p>
+
+        <p>
+          Por ejemplo: en vez de creer que la rotación está "más o menos igual", calculas que se fue el 18% de la gente el año pasado, que la mayoría se fue antes de cumplir 6 meses, y que el área de ventas tiene el triple de rotación que el resto.
+        </p>
+
+        <p>
+          Con esa información, puedes hacer algo. Sin ella, solo tienes sensaciones.
+        </p>
+
+        <h2>Los datos que probablemente ya tienes</h2>
+
+        <p>
+          Antes de pensar en comprar software o contratar a alguien, revisa qué datos ya existen en tu empresa. Te vas a sorprender.
+        </p>
+
+        <p>
+          <strong>En el sistema de remuneraciones o ERP:</strong>
+        </p>
+        <ul>
+          <li>Fecha de ingreso de cada empleado</li>
+          <li>Fecha de salida (y motivo, si lo registran)</li>
+          <li>Cargo, área, sucursal</li>
+          <li>Sueldo bruto y líquido</li>
+          <li>Días de licencia</li>
+        </ul>
+
+        <p>
+          <strong>En el sistema de control de asistencia:</strong>
+        </p>
+        <ul>
+          <li>Horas trabajadas</li>
+          <li>Atrasos</li>
+          <li>Horas extra</li>
+        </ul>
+
+        <p>
+          <strong>En Excel o sistemas varios:</strong>
+        </p>
+        <ul>
+          <li>Resultados de evaluaciones de desempeño</li>
+          <li>Capacitaciones realizadas</li>
+          <li>Encuestas de clima (si las hacen)</li>
+        </ul>
+
+        <p>
+          Con eso ya puedes hacer bastante. No necesitas más—al menos para empezar.
+        </p>
+
+        <h2>Las 4 métricas con las que yo partiría</h2>
+
+        <p>
+          Si tuviera que elegir las primeras métricas de HR Analytics para una PyME, serían estas:
+        </p>
+
+        <h3>1. Tasa de rotación por área</h3>
+
+        <p>
+          La fórmula básica: (Personas que se fueron en el período / Dotación promedio) x 100.
+        </p>
+
+        <p>
+          Lo interesante no es el número global, sino las diferencias. Si tienes 8% de rotación en administración y 35% en operaciones, algo está pasando en operaciones que vale la pena investigar.
+        </p>
+
+        <h3>2. Tiempo promedio de permanencia antes de renunciar</h3>
+
+        <p>
+          ¿La gente se va al mes? ¿Al año? ¿A los 3 años? Cada respuesta apunta a un problema distinto.
+        </p>
+
+        <p>
+          Si se van antes de 6 meses, probablemente hay un problema de onboarding o de expectativas mal puestas en el proceso de selección. Si se van a los 2-3 años, quizás no hay oportunidades de crecimiento.
+        </p>
+
+        <h3>3. Ausentismo por área</h3>
+
+        <p>
+          No solo el total de días perdidos, sino dónde se concentran. Un área con mucho más ausentismo que las otras puede tener problemas de clima, de carga de trabajo, o de liderazgo.
+        </p>
+
+        <h3>4. Costo de rotación estimado</h3>
+
+        <p>
+          Perder a alguien cuesta más de lo que parece: liquidación, tiempo de reclutamiento, tiempo de capacitación del reemplazo, productividad perdida mientras aprende. Para un cargo operativo, estima entre 3 y 6 meses de sueldo. Para un cargo profesional, puede ser 12 meses o más.
+        </p>
+
+        <p>
+          Cuando pones número a esto, las conversaciones con gerencia cambian. Ya no es "la rotación es un problema", es "la rotación nos costó $150 millones el año pasado".
+        </p>
+
+        <h2>Cómo armar tu primer análisis</h2>
+
+        <p>
+          Acá va un proceso que puedes hacer esta semana:
+        </p>
+
+        <p>
+          <strong>Paso 1:</strong> Exporta los datos de empleados desde tu ERP o sistema de remuneraciones. Necesitas: RUT (o ID), nombre, cargo, área, fecha ingreso, fecha salida si aplica, sueldo bruto.
+        </p>
+
+        <p>
+          <strong>Paso 2:</strong> Calcula los indicadores básicos en Excel. Rotación por área, promedio de permanencia, distribución de renuncias por antigüedad. No necesitas nada más sofisticado para empezar.
+        </p>
+
+        <p>
+          <strong>Paso 3:</strong> Busca anomalías. ¿Algún área con rotación muy distinta al resto? ¿Algún período del año donde se van más personas? ¿Algún supervisor con mucha más rotación que otros?
+        </p>
+
+        <p>
+          <strong>Paso 4:</strong> Presenta los hallazgos a gerencia. Sin adornos, con números concretos. "El área X tiene 3 veces más rotación que el promedio. Si bajamos esa rotación a la mitad, ahorraríamos $X millones al año."
+        </p>
+
+        <h2>Errores típicos al empezar</h2>
+
+        <p>
+          Después de trabajar esto con varias empresas, estos son los errores que más veo:
+        </p>
+
+        <p>
+          <strong>Querer predecir antes de describir.</strong> Me han pedido "modelos predictivos de rotación" en empresas que ni siquiera saben cuál es su tasa de rotación actual. Primero describe bien qué está pasando. Después, si quieres, puedes intentar predecir.
+        </p>
+
+        <p>
+          <strong>Datos sucios que nadie revisa.</strong> Empleados que aparecen activos pero renunciaron hace 2 años. Fechas mal ingresadas. Cargos que nadie actualizó. Antes de analizar, limpia. No tiene que quedar perfecto, pero los errores obvios hay que corregirlos.
+        </p>
+
+        <p>
+          <strong>Medir sin hacer nada.</strong> HR Analytics no sirve de nada si los números no llevan a acciones. Si descubres que la rotación en un área es un problema, ¿qué vas a hacer? Si la respuesta es "nada", mejor no pierdas tiempo midiendo.
+        </p>
+
+        <h2>¿Cuándo necesitas algo más sofisticado?</h2>
+
+        <p>
+          Si ya tienes los análisis básicos funcionando y quieres ir más allá, ahí sí puede tener sentido invertir en herramientas o en análisis más complejos:
+        </p>
+
+        <ul>
+          <li>Un dashboard que se actualice automáticamente (en vez de exportar datos a mano cada mes)</li>
+          <li>Cruzar datos de HR con datos de negocio (¿las áreas con mejor clima venden más?)</li>
+          <li>Modelos predictivos de rotación (¿quiénes tienen más probabilidad de irse?)</li>
+          <li>Análisis de redes organizacionales (¿cómo fluye la información?)</li>
+        </ul>
+
+        <p>
+          Pero honestamente, la mayoría de las PyMEs no necesitan eso para empezar. Necesitan los básicos bien hechos primero.
+        </p>
+
+        <h2>Un ejemplo real</h2>
+
+        <p>
+          Trabajé con una empresa de servicios de unos 200 empleados. Nunca habían mirado sus datos de HR de forma sistemática. Cuando sacamos los números, descubrimos que:
+        </p>
+
+        <ul>
+          <li>El 40% de las renuncias ocurrían en los primeros 90 días</li>
+          <li>Los que pasaban de 90 días duraban en promedio 2.5 años</li>
+          <li>El costo de esas renuncias tempranas era de unos $80 millones al año</li>
+        </ul>
+
+        <p>
+          El problema no era la empresa en general—era que el proceso de inducción era un desastre. Mejoraron el onboarding, pusieron un buddy system, y al año siguiente las renuncias en los primeros 90 días bajaron a la mitad.
+        </p>
+
+        <p>
+          No usaron inteligencia artificial ni software caro. Usaron datos que ya tenían, un Excel, y ganas de hacer algo con lo que encontraron.
+        </p>
+
+        <hr class="my-12" />
+
+        <p class="text-sm text-lum-slate">
+          ¿Quieres ayuda armando tu primer análisis de HR? Podemos revisar qué datos tienes y armar algo útil en una semana. <a href="/contacto" class="text-lum-coral hover:underline">Hablemos</a>.
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <section class="py-12 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-20 h-20 rounded-full object-cover" />
+          <div>
+            <p class="font-semibold text-lum-black mb-1">Jorge Cepeda</p>
+            <p class="text-sm text-lum-slate mb-3">
+              15 años en control de gestión y finanzas. Ahora ayudo a PyMEs a tomar mejores decisiones con datos, sin necesitar el presupuesto de una corporación.
+            </p>
+            <a href="https://www.linkedin.com/in/jorgecepeda/" target="_blank" rel="noopener noreferrer" class="text-sm text-lum-coral hover:underline">
+              Conectar en LinkedIn →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Otros artículos que te pueden servir</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/blog/como-elegir-kpis-pyme" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Estrategia</span>
+            <h4 class="font-semibold text-lum-black">Cómo elegir los KPIs correctos (y no morir en el intento)</h4>
+          </a>
+          <a href="/blog/automatizacion-reporteria-roi" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Automatización</span>
+            <h4 class="font-semibold text-lum-black">¿Vale la pena automatizar reportes? Hagamos los números</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
