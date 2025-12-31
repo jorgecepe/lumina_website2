@@ -1,0 +1,354 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="HR Analytics and People Analytics for SMEs | Lumina Consulting"
+  description="Turn HR data into decisions. Analysis of turnover, absenteeism, personnel costs, and talent metrics. No expensive software, with the data you already have."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "HR Analytics",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "HR Analytics and People Analytics consulting for SMEs. Analysis of turnover, absenteeism, labor costs, and talent metrics.",
+    "areaServed": ["CL", "LATAM"],
+    "serviceType": "HR Analytics Consulting"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/en/services" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          All services
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">People Analytics</span>
+        <h1 class="text-white mb-6">HR Analytics</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Your HR department has valuable data that nobody is looking at. Turnover, absenteeism, costs, performance: all of that tells stories about your organization. I help you listen to them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is HR Analytics -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">What is HR Analytics?</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          It's using human resources data to make better decisions about people. Instead of deciding based on intuition or "we've always done it this way," you use numbers.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          It's not new. Large companies have been doing it for years. What's new is that now an SME can do it without spending millions on software or hiring data scientists.
+        </p>
+
+        <div class="bg-lum-cream rounded-2xl p-8 my-10">
+          <p class="font-semibold text-lum-black mb-4">Questions HR Analytics can answer:</p>
+          <ul class="space-y-3 text-lum-slate">
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              Why are people leaving? In which areas? At what tenure?
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              How much does turnover really cost us?
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              What absenteeism patterns do we have? Are there problem areas?
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              Are our salaries competitive compared to the market?
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              Do the trainings we do have measurable impact?
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key metrics -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">Metrics you can start measuring today</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Turnover</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Turnover rate by area, position, tenure</li>
+              <li>• Voluntary vs involuntary turnover</li>
+              <li>• Average time of permanence</li>
+              <li>• Estimated cost of turnover</li>
+              <li>• Exit reasons (if you track them)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Absenteeism</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Absenteeism rate by area</li>
+              <li>• Days lost by type (medical leave, PTO, etc.)</li>
+              <li>• Absence patterns (days of the week, seasons)</li>
+              <li>• Cost of absenteeism</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Personnel costs</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Cost per employee (total, not just salary)</li>
+              <li>• Cost distribution by area</li>
+              <li>• Overtime and its cost</li>
+              <li>• Evolution of total payroll</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Headcount composition</h3>
+            <ul class="space-y-2 text-sm text-lum-slate">
+              <li>• Headcount by area, contract type</li>
+              <li>• Tenure pyramid</li>
+              <li>• Distribution of positions and levels</li>
+              <li>• Headcount evolution over time</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">How I work on HR Analytics</h2>
+
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Available data diagnosis</h3>
+              <p class="text-lum-slate">
+                We review what data you have in your ERP, payroll system, attendance tracking, etc. You don't need special HR software: most companies already have the basics in their existing systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">2</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Key questions definition</h3>
+              <p class="text-lum-slate">
+                We don't measure everything. We define which business questions we want to answer. Do you want to understand why people leave? Optimize personnel costs? Detect areas with climate issues? That determines what we analyze.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">3</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Data cleaning and modeling</h3>
+              <p class="text-lum-slate">
+                HR data is usually messy: dates entered wrong, non-standardized job titles, employees who left but are still active. We clean that before analyzing.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Analysis and visualization</h3>
+              <p class="text-lum-slate">
+                We generate the analyses and present them in a useful format: it can be a Power BI dashboard, a periodic report, or a one-time analysis. Depends on what you need.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">5</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Action plan</h3>
+              <p class="text-lum-slate">
+                An analysis without actions is useless. We define what we're going to do with what we found. If we discover turnover is concentrated in one area, what do we do about it?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real case -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">A real case</h2>
+
+        <div class="bg-white rounded-2xl p-8">
+          <span class="badge-outline text-xs mb-4">Services company - 200 employees</span>
+
+          <h3 class="text-xl font-semibold mb-4">The problem</h3>
+          <p class="text-lum-slate mb-6">
+            Management perceived turnover was "high," but they didn't have clear numbers. HR spent time recruiting replacements but nobody analyzed why people were leaving.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-4">What we found</h3>
+          <ul class="space-y-3 text-lum-slate mb-6">
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral">→</span>
+              40% of resignations happened in the first 90 days of employment
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral">→</span>
+              Those who passed 90 days stayed an average of 2.5 years
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral">→</span>
+              The annual cost of those early departures was ~$100,000 USD
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral">→</span>
+              The problem wasn't salary or the role: it was the onboarding process
+            </li>
+          </ul>
+
+          <h3 class="text-xl font-semibold mb-4">What they did</h3>
+          <p class="text-lum-slate mb-6">
+            They redesigned onboarding: assigned buddies, structured the first week, and set up follow-up meetings at one month and 60 days.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-4">Result</h3>
+          <p class="text-lum-slate">
+            Turnover in the first 90 days dropped by half. Turnover costs were reduced by about $50,000 USD per year. The analysis cost a fraction of that.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Frequently asked questions</h2>
+
+        <div class="space-y-6">
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Do I need special HR Analytics software?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Not to start. If you already have a payroll system and attendance tracking, you have the basic data. With Power BI or even well-used Excel, you can do a lot.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              What company size is needed for this to make sense?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              From about 50 employees you can start seeing interesting patterns. Less than that, the numbers are too small for statistical conclusions. But even in small companies, understanding your turnover cost can be revealing.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Is my employee data secure?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              I sign confidentiality agreements before starting. Data doesn't leave your environment: I work in your infrastructure or files you control. Analyses are anonymized when necessary.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Can you predict who will resign?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Yes, it's possible to build turnover prediction models. But honestly, for most SMEs, it's better to start by describing well what's happening before trying to predict. Predictive models require more data and more analytical maturity.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Want to start using HR data?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          We can start with something simple: a turnover and absenteeism analysis with the data you already have. In one or two weeks you have your first report.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hi,%20I'd%20like%20to%20learn%20more%20about%20HR%20Analytics"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/contact" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Schedule a call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related articles -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Related articles</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/en/blog/hr-analytics-getting-started" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">HR Analytics</span>
+            <h4 class="font-semibold text-lum-black">HR Analytics: where to start if you have no idea</h4>
+          </a>
+          <a href="/en/blog/how-to-choose-kpis-sme" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Strategy</span>
+            <h4 class="font-semibold text-lum-black">How to choose the right KPIs</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

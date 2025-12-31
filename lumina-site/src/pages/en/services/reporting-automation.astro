@@ -1,0 +1,399 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Reporting Automation and Data Processes | Lumina Consulting"
+  description="Stop wasting hours copying data from one place to another. We automate reports, consolidations, and repetitive processes with Python, Power Automate, and custom tools."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Reporting Automation",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Report automation, data consolidation, and repetitive process automation for SMBs. Python, Power Automate, custom scripts.",
+    "areaServed": ["CL", "LATAM"],
+    "serviceType": "Business Process Automation"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/en/services" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          All Services
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Automation</span>
+        <h1 class="text-white mb-6">Reporting Automation</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          If someone on your team spends hours every week copying data from one spreadsheet to another, building the same report over and over, or sending emails with information that could be generated automatically... that can be fixed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The problem -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">The hidden cost of manual work</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Every company has repetitive processes: the Monday sales report, the monthly close, the account statement distribution, the data upload to the ERP. Someone does them manually because "that's how it's always been done."
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          The problem is that nobody sits down to calculate how much that costs. And when you do the math, the numbers are usually surprising.
+        </p>
+
+        <div class="bg-lum-cream rounded-2xl p-8 my-10">
+          <p class="font-semibold text-lum-black mb-4">Real example:</p>
+          <p class="text-lum-slate mb-4">
+            An analyst earning $60,000/year spends 6 hours per week building manual reports.
+          </p>
+          <ul class="space-y-2 text-lum-slate">
+            <li>• 6 hours/week x 52 weeks = 312 hours per year</li>
+            <li>• Hourly cost = ~$30</li>
+            <li>• <strong>Annual cost = $9,360</strong> (just for one process)</li>
+          </ul>
+          <p class="text-lum-slate mt-4">
+            And that's not counting the errors from copying the wrong number, the vacation days when no one does the report, or the time that could be spent on something that actually adds value.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we automate -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">What can be automated?</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Periodic reports</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Reports that are always generated the same way: daily sales, monthly closing, weekly KPIs. They build and send themselves at the times you define.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Typical savings: 2-6 hours/week
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Data consolidation</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Combining data from multiple sources into one place: several branches, several systems, several Excel files that need to be merged every month.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Typical savings: 4-16 hours/month
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">ETL (Extract, Transform, Load)</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Moving data from one system to another: from ERP to a data warehouse, from a file to a database, from a form to a CRM.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Typical savings: eliminates daily manual processes
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Cleaning and validation</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Fixing malformed IDs, standardizing names, detecting duplicates, validating data before loading it into a system.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Typical savings: reduces errors by 80-90%
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Alerts and notifications</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Sending alerts when something happens: low stock, big sale, negative margin, delinquent customer. They can go by email, WhatsApp, or wherever you need.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Typical savings: detect problems hours or days earlier
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Document generation</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Creating PDFs, quotes, account statements, or any repetitive document from data. They generate and send themselves.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Typical savings: 1-4 hours/day in billing processes
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">How I approach automation</h2>
+
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Current process mapping</h3>
+              <p class="text-lum-slate">
+                I sit down with whoever does the process today and we document it step by step. Where does the data come from? What transformations are done? Where do the results go? What exceptions exist?
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">2</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Feasibility and ROI assessment</h3>
+              <p class="text-lum-slate">
+                Not everything should be automated. We calculate how much time and money it saves versus how much it costs to develop. If the ROI isn't clear, I'll tell you.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">3</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Development and implementation</h3>
+              <p class="text-lum-slate">
+                I build the automation using whatever tool makes the most sense: Python for complex things, Power Automate if you already have Microsoft 365, or specialized tools depending on the case.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Testing and adjustments</h3>
+              <p class="text-lum-slate">
+                We run the automation in parallel with the manual process to validate that the results match. We adjust whatever needs fixing.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">5</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Documentation and training</h3>
+              <p class="text-lum-slate">
+                I leave you with documentation of what the automation does, how it works, and what to do if something fails. I don't want you to depend on me forever.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">Tools I use</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">Python</h3>
+            <p class="text-sm text-lum-slate">
+              For complex automations, heavy data processing, API integrations, and anything requiring elaborate logic.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">Power Automate</h3>
+            <p class="text-sm text-lum-slate">
+              For companies with Microsoft 365. Good for automating simple flows, emails, approvals, and connecting Microsoft apps.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">Custom scripts</h3>
+            <p class="text-sm text-lum-slate">
+              Sometimes the best solution is a simple script that does exactly what you need, without complicated dependencies.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-white rounded-xl">
+          <p class="text-center text-lum-slate">
+            <strong>I don't sell tools.</strong> I use whatever makes the most sense for your situation, infrastructure, and budget. The goal is to solve the problem, not to implement technology for its own sake.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When NOT to automate -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">When automation doesn't make sense</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Not everything should be automated. Sometimes the manual process makes sense, or automating costs more than it saves.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-red-500 text-xl">✗</span>
+            <div>
+              <p class="font-semibold">The process changes constantly</p>
+              <p class="text-sm text-lum-slate">If it's different every time you do it, automation is difficult and expensive to maintain.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-red-500 text-xl">✗</span>
+            <div>
+              <p class="font-semibold">It's done very infrequently</p>
+              <p class="text-sm text-lum-slate">If you only do it once a year, the annual savings are low and the investment may not be worth it.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-red-500 text-xl">✗</span>
+            <div>
+              <p class="font-semibold">The source data is a mess</p>
+              <p class="text-sm text-lum-slate">If you first need to fix how data is captured, that comes before automation.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-red-500 text-xl">✗</span>
+            <div>
+              <p class="font-semibold">No one knows exactly what the process does</p>
+              <p class="text-sm text-lum-slate">If it's in one person's head and has a thousand exceptions, you first need to document and standardize it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Frequently asked questions</h2>
+
+        <div class="space-y-6">
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How much does it cost to automate a process?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              It depends on complexity. A simple automation (consolidate 3 Excel files and send an email) can cost $1,500-$3,000. A more complex one (connecting multiple systems, handling exceptions, with elaborate business logic) can reach $15-25K.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How long does it take?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Typically between 1 and 4 weeks. What usually takes the longest is mapping the process and getting access to the data. The actual development is fast.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              What happens if the automation fails?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              I design automations with error handling: they notify you if something goes wrong instead of failing silently. And there's always documentation on how to do the manual process if there's an emergency.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Will automation replace employees?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              In my experience, rarely. What happens is that the person who used to do the manual process can now dedicate that time to more valuable things: analysis, customer service, new projects. Automation frees up time, it doesn't replace people.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Do you have processes that could be automated?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Tell me what manual processes you have and we'll see if it makes sense to automate them. No commitment.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hi,%20I%20have%20processes%20that%20I%20think%20could%20be%20automated"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/contact" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Schedule a Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related articles -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Related articles</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/en/blog/reporting-automation-roi" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Automation</span>
+            <h4 class="font-semibold text-lum-black">Is automating reports worth it? Let's do the math</h4>
+          </a>
+          <a href="/en/blog/dashboard-mistakes-avoid" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Dashboards</span>
+            <h4 class="font-semibold text-lum-black">7 mistakes that ruin a good dashboard</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

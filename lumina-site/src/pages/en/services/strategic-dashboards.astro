@@ -1,0 +1,357 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Strategic Dashboards with Power BI and Streamlit | Lumina Consulting"
+  description="We create dashboards that actually get used. Not just pretty charts: we help you define what to measure and how to act on the data. Power BI, Streamlit, web apps."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Strategic Dashboards",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Dashboard consulting with strategic vision. KPI definition, visualization design, and reporting automation.",
+    "areaServed": ["CL", "LATAM"],
+    "serviceType": "Business Intelligence Consulting"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/en/services" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          All services
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Main service</span>
+        <h1 class="text-white mb-6">Strategic Dashboards</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          We don't build dashboards to look good. We build them so you use them every day and make better decisions. The difference is in the process: we start by understanding your business, not by connecting data.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The real problem -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">The problem nobody mentions</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Most dashboard projects start wrong. Someone says "we need a dashboard," they hire someone who knows Power BI, connect data, make pretty charts, and deliver.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Three months later, nobody opens it.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          The problem isn't technical. It's that nobody sat down to ask: what decisions do we want to make better? What numbers really matter? Who is going to use this and for what?
+        </p>
+
+        <div class="bg-lum-cream rounded-2xl p-8 my-10">
+          <p class="font-semibold text-lum-black mb-4">What I hear when I arrive at a company:</p>
+          <ul class="space-y-3 text-lum-slate">
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "We have a dashboard but nobody uses it"
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "Each area measures different things and they never match"
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "We spend more time building reports than analyzing them"
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "The CEO asks for a number and nobody knows where to get it"
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">How I approach this</h2>
+
+        <p class="text-lg text-lum-slate mb-10">
+          My approach is different: I start with the business, not the technology. Before opening Power BI or writing a line of code, basic questions need answers.
+        </p>
+
+        <div class="space-y-8">
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold">1</span>
+              <h3 class="text-lg font-semibold">Needs diagnosis</h3>
+            </div>
+            <p class="text-lum-slate">
+              We talk with those who will use the dashboard. Not IT, not whoever's paying: those who will actually make decisions looking at those numbers. What questions do they ask? How do they answer them today? What's missing?
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold">2</span>
+              <h3 class="text-lg font-semibold">KPI definition</h3>
+            </div>
+            <p class="text-lum-slate">
+              We define the 5-7 indicators that really matter. Not the 47 that can be measured. Each KPI must be connected to a business objective and a concrete action.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold">3</span>
+              <h3 class="text-lg font-semibold">Visual design</h3>
+            </div>
+            <p class="text-lum-slate">
+              We design the visualization thinking about usability, not aesthetics. A dashboard understood in 10 seconds beats a pretty one requiring a user manual. We make quick prototypes and validate before building.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold">4</span>
+              <h3 class="text-lg font-semibold">Technical build</h3>
+            </div>
+            <p class="text-lum-slate">
+              We connect the data, build the model, and automate updates. We use Power BI, Streamlit, or whatever makes most sense for your context and budget.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold">5</span>
+              <h3 class="text-lg font-semibold">Training and adoption</h3>
+            </div>
+            <p class="text-lum-slate">
+              A dashboard nobody knows how to use is useless. We train your team, not just on how to read it, but on how to act based on what they see. And we follow up to adjust what isn't working.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech stack -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-8 text-center">Tools I use</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="/logos/power-bi.svg" alt="Power BI" class="w-12 h-12" onerror="this.style.display='none'" />
+              <h3 class="text-xl font-semibold">Power BI</h3>
+            </div>
+            <p class="text-lum-slate mb-4">
+              The standard choice for most companies. If you already have Microsoft 365, you probably already have licenses. Strong in traditional reporting, good ecosystem, wide adoption.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Best for:</strong> Companies with Microsoft stack, financial and operational reporting, teams that need to create their own reports.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="/logos/streamlit.svg" alt="Streamlit" class="w-12 h-12" onerror="this.style.display='none'" />
+              <h3 class="text-xl font-semibold">Streamlit</h3>
+            </div>
+            <p class="text-lum-slate mb-4">
+              For dashboards needing more complex logic or special interactivity. Data web apps that go beyond showing charts: simulations, calculators, predictive models.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Best for:</strong> Custom applications, complex data models, rapid prototypes, tech-forward companies.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-lum-cream rounded-xl">
+          <p class="text-center text-lum-slate">
+            <strong>Which is better?</strong> Depends on your context. I don't have favorites. I use whatever makes most sense for your situation, budget, and team.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Examples of dashboards I've built</h2>
+
+        <div class="space-y-8">
+          <div class="bg-white rounded-xl p-6">
+            <span class="badge-outline text-xs mb-3">Retail</span>
+            <h3 class="text-lg font-semibold mb-3">Sales dashboard for store chain</h3>
+            <p class="text-lum-slate mb-4">
+              3 locations, POS data scattered in Excel files. We consolidated everything into a dashboard showing sales, average ticket, conversion, and margin by store. It updates automatically every night.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Result:</strong> The manager went from manually building Monday reports (2 hours) to checking the dashboard in 5 minutes.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <span class="badge-outline text-xs mb-3">Services</span>
+            <h3 class="text-lg font-semibold mb-3">Management control for services company</h3>
+            <p class="text-lum-slate mb-4">
+              150-person company with no visibility on profitability by project. We created a model connecting hours worked, costs, and billing to show real margin by client and project.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Result:</strong> They discovered 20% of their clients were generating losses. They renegotiated or stopped serving them.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <span class="badge-outline text-xs mb-3">Holding</span>
+            <h3 class="text-lg font-semibold mb-3">Financial consolidation for corporate group</h3>
+            <p class="text-lum-slate mb-4">
+              5 companies, each with its own ERP and different account structure. We automated monthly consolidation and board reporting.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Result:</strong> Monthly close went from 5 days to 1 day. The board has comparable information across companies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Questions I get asked often</h2>
+
+        <div class="space-y-6">
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How much does a dashboard cost?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Depends on complexity. A simple dashboard with 1-2 data sources can cost from $2,000 USD. A more complex one with multiple integrations and elaborate business logic can reach $10-15K. I'll give you a specific quote after understanding what you need.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How long does it take?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Between 3 and 8 weeks typically. The first week is diagnosis and definition. The following weeks are design, building, and adjustments. The slowest factor is usually getting access to data and cleaning it.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              What do I need before starting?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Data. It can be in Excel, in an ERP, in a database, wherever. If you don't have digitized data, that's a previous step. I also need access to the people who will use the dashboard to understand what they need.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Who maintains the dashboard afterward?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              You or your team, if you have the capability. I train you so you can make minor adjustments. For major changes or technical issues, I offer hourly support or monthly maintenance contracts.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Is Power BI free?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Power BI Desktop is free. To share reports with others, you need Pro licenses (~$10 USD/user/month) or Premium. If you already have Microsoft 365 E5, you probably have them included. I can help you review what licenses you need for your case.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Need a dashboard you'll actually use?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Let's talk about your situation. I'll tell you if it makes sense to work together and what the process would look like.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hi,%20I'd%20like%20to%20learn%20more%20about%20strategic%20dashboards"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/contact" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Schedule a call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related articles -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Related articles</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/en/blog/how-to-choose-kpis-sme" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Strategy</span>
+            <h4 class="font-semibold text-lum-black">How to choose the right KPIs</h4>
+          </a>
+          <a href="/en/blog/dashboard-mistakes-to-avoid" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Dashboards</span>
+            <h4 class="font-semibold text-lum-black">7 mistakes that ruin a good dashboard</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

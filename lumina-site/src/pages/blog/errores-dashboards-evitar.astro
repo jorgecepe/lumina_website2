@@ -1,0 +1,227 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="7 errores que arruinan un buen dashboard | Lumina Consulting"
+  description="He visto dashboards hermosos que nadie usa. Y dashboards feos que cambiaron empresas. La diferencia no está donde crees."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "7 errores que arruinan un buen dashboard (y cómo evitarlos)",
+    "description": "Guía práctica para evitar los errores más comunes al crear dashboards de gestión",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/acerca-de#fundador"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting"
+    },
+    "datePublished": "2025-01-10",
+    "dateModified": "2025-01-10"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <a href="/blog" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver al blog
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Dashboards</span>
+        <h1 class="text-white mb-6 text-4xl md:text-5xl">7 errores que arruinan un buen dashboard (y cómo evitarlos)</h1>
+        <div class="flex items-center gap-4 text-sm text-lum-slate-light">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-10 h-10 rounded-full" />
+          <span>Jorge Cepeda</span>
+          <span>•</span>
+          <span>10 enero 2025</span>
+          <span>•</span>
+          <span>6 min lectura</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <article class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+
+        <p class="lead text-xl text-lum-slate">
+          El dashboard estaba precioso. Colores corporativos, gráficos animados, filtros por todas partes. El problema: tres meses después de entregarlo, nadie lo abría.
+        </p>
+
+        <p>
+          He visto esto muchas veces. Dashboards que costaron meses de trabajo y terminan abandonados. Y también he visto lo contrario: dashboards simples, casi feos, que se convirtieron en la herramienta más usada de la empresa.
+        </p>
+
+        <p>
+          La diferencia rara vez está en la tecnología o en lo bonito que se ve. Está en errores de diseño que parecen menores pero matan la adopción.
+        </p>
+
+        <h2>Error #1: Meter todo lo que se puede medir</h2>
+
+        <p>
+          El cliente pide un dashboard. Tú, queriendo demostrar valor, metes 35 gráficos en una pantalla. Ventas, inventario, RRHH, finanzas, marketing. Todo.
+        </p>
+
+        <p>
+          El resultado es un muro de datos donde nadie sabe dónde mirar primero. Es como si te pasaran un diario de 200 páginas cada mañana y te dijeran "léelo todo antes de la reunión".
+        </p>
+
+        <p>
+          <strong>La solución:</strong> Un dashboard debe responder máximo 3-4 preguntas de negocio. Si necesitas cubrir más, haz varios dashboards. Uno para cada público o cada decisión.
+        </p>
+
+        <h2>Error #2: Gráficos bonitos pero ilegibles</h2>
+
+        <p>
+          Los gráficos de dona con 12 categorías. Los gráficos 3D que distorsionan las proporciones. Los colores que se ven bien en tu monitor pero en el proyector de la sala de reuniones son todos iguales.
+        </p>
+
+        <p>
+          Un gerente de operaciones me contó que pasaba 10 minutos "descifrando" su dashboard antes de cada reunión de directorio. Debería ser al revés: debería entenderlo en 10 segundos.
+        </p>
+
+        <p>
+          <strong>La solución:</strong> Barras y líneas cubren el 80% de los casos. Si tienes que explicar cómo leer un gráfico, es el gráfico equivocado.
+        </p>
+
+        <h2>Error #3: Datos que llegan tarde</h2>
+
+        <p>
+          Un dashboard de ventas que se actualiza cada viernes. Para el lunes, los datos ya tienen tres días de desfase. Para cuando ves un problema, ya pasó una semana.
+        </p>
+
+        <p>
+          No todos los dashboards necesitan ser en tiempo real (eso cuesta plata y complejidad). Pero la frecuencia de actualización tiene que calzar con la velocidad de decisión.
+        </p>
+
+        <p>
+          <strong>La solución:</strong> Pregúntate: ¿cada cuánto tomo decisiones con estos datos? Si es diario, el dashboard debería actualizarse al menos una vez al día. Si es semanal, puede ser semanal.
+        </p>
+
+        <h2>Error #4: No tener un "punto de entrada" claro</h2>
+
+        <p>
+          Abres el dashboard y no sabes por dónde empezar. Hay 15 gráficos del mismo tamaño, todos parecen igual de importantes. Terminas mirando cualquier cosa o, peor, cerrando la pestaña.
+        </p>
+
+        <p>
+          <strong>La solución:</strong> Diseña una jerarquía visual. El número o gráfico más importante va arriba y grande. El resto, más pequeño y abajo. Guía el ojo del usuario como si fuera un artículo de diario: titular, subtítulo, desarrollo.
+        </p>
+
+        <h2>Error #5: Números sin contexto</h2>
+
+        <p>
+          "Vendimos $45 millones este mes". ¿Eso es bueno o malo? No tengo idea. ¿Cuánto vendimos el mes pasado? ¿Cuál era la meta? ¿Cómo le fue al mercado?
+        </p>
+
+        <p>
+          Un número suelto no dice nada. Se vuelve útil cuando lo comparas con algo: período anterior, presupuesto, promedio del rubro, récord histórico.
+        </p>
+
+        <p>
+          <strong>La solución:</strong> Cada métrica clave debería tener al menos una comparación. Y si cambia significativamente, debería saltar a la vista (colores, flechas, alertas).
+        </p>
+
+        <h2>Error #6: Filtros que nadie entiende</h2>
+
+        <p>
+          Vi un dashboard con 8 filtros en la parte superior. Región, sucursal, vendedor, categoría, subcategoría, fecha inicio, fecha fin, tipo de cliente. Para ver las ventas del mes, había que configurar 8 cosas primero.
+        </p>
+
+        <p>
+          Los filtros son útiles, pero cada filtro que agregas es fricción. Y la fricción mata la adopción.
+        </p>
+
+        <p>
+          <strong>La solución:</strong> Empieza con valores por defecto que muestren lo más común (ej: mes actual, todas las regiones). Deja filtros avanzados para quienes realmente los necesitan, pero que no sean obligatorios para ver algo útil.
+        </p>
+
+        <h2>Error #7: No involucrar a los usuarios desde el principio</h2>
+
+        <p>
+          Este es el error más caro. Te encierras 3 meses a construir el dashboard "perfecto" según lo que crees que necesitan. Lo entregas con orgullo. Y te dicen: "está bueno, pero lo que realmente me sirve es otra cosa".
+        </p>
+
+        <p>
+          He visto proyectos completos que terminaron en la basura por esto. Meses de trabajo perdido.
+        </p>
+
+        <p>
+          <strong>La solución:</strong> Prototipo rápido. Muestra algo en la primera semana, aunque sea feo. Pregunta: "¿esto es lo que necesitas?" Ajusta. Repite. Los usuarios finales deberían ver el dashboard en desarrollo, no solo en la entrega final.
+        </p>
+
+        <h2>El test de los 5 segundos</h2>
+
+        <p>
+          Cuando termines un dashboard, haz esta prueba: muéstraselo a alguien que no lo ha visto por 5 segundos. Luego pregúntale qué entendió.
+        </p>
+
+        <p>
+          Si puede decirte cuál es el mensaje principal, vas bien. Si se queda en blanco o dice "vi muchos números", tienes trabajo que hacer.
+        </p>
+
+        <p>
+          Los mejores dashboards no son los más completos ni los más bonitos. Son los que la gente realmente usa. Y para que los usen, tienen que ser tan fáciles de leer que no requieran esfuerzo.
+        </p>
+
+        <hr class="my-12" />
+
+        <p class="text-sm text-lum-slate">
+          ¿Tienes un dashboard que nadie mira? Podemos revisarlo juntos y ver qué se puede mejorar. <a href="/contacto" class="text-lum-coral hover:underline">Escríbeme</a>.
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <section class="py-12 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-20 h-20 rounded-full object-cover" />
+          <div>
+            <p class="font-semibold text-lum-black mb-1">Jorge Cepeda</p>
+            <p class="text-sm text-lum-slate mb-3">
+              15 años en control de gestión y finanzas. Ahora ayudo a PyMEs a tomar mejores decisiones con datos, sin necesitar el presupuesto de una corporación.
+            </p>
+            <a href="https://www.linkedin.com/in/jorgecepeda/" target="_blank" rel="noopener noreferrer" class="text-sm text-lum-coral hover:underline">
+              Conectar en LinkedIn →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Otros artículos que te pueden servir</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/blog/como-elegir-kpis-pyme" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Estrategia</span>
+            <h4 class="font-semibold text-lum-black">Cómo elegir los KPIs correctos (y no morir en el intento)</h4>
+          </a>
+          <a href="/recursos/guias/power-bi-pymes" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Guía</span>
+            <h4 class="font-semibold text-lum-black">Power BI para PyMEs: guía completa</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

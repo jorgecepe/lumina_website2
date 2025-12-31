@@ -1,0 +1,276 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Is Automating Reports Worth It? Let's Do the Math | Lumina Consulting"
+  description="If someone on your team spends more than 4 hours a week building reports by hand, it probably is worth automating. But let's do the calculations."
+  lang="en"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Is Automating Reports Worth It? Let's Do the Math",
+    "description": "Cost-benefit analysis for reporting automation in SMBs",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/en/about#founder"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting"
+    },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <a href="/en/blog" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to blog
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Automation</span>
+        <h1 class="text-white mb-6 text-4xl md:text-5xl">Is Automating Reports Worth It? Let's Do the Math</h1>
+        <div class="flex items-center gap-4 text-sm text-lum-slate-light">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-10 h-10 rounded-full" />
+          <span>Jorge Cepeda</span>
+          <span>•</span>
+          <span>January 1, 2025</span>
+          <span>•</span>
+          <span>7 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <article class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+
+        <p class="lead text-xl text-lum-slate">
+          Every Monday, Maria arrives at 7am to the office. She opens 4 Excel files, copies data from one system, pastes it in another, does some formulas, adjusts the format, and sends an email with the weekly report. It takes her 3 hours. She's been doing this for 4 years.
+        </p>
+
+        <p>
+          The obvious question is: why not automate that? The equally obvious answer: "we don't have time," "it's complicated," "Maria already knows how to do it."
+        </p>
+
+        <p>
+          But nobody sits down to do the math. And when you do, the conclusion is usually clear.
+        </p>
+
+        <h2>The calculation almost nobody does</h2>
+
+        <p>
+          Let's take Maria's case. 3 hours every Monday, 52 weeks a year = 156 hours annually. If her fully-loaded cost is $60,000/year, each hour costs approximately $30.
+        </p>
+
+        <p>
+          156 hours x $30 = <strong>$4,680 per year</strong> on a single report.
+        </p>
+
+        <p>
+          And that's not counting the errors. When you copy and paste data by hand, you make mistakes. A mis-pasted number, a skipped row, a forgotten filter. I've seen errors in manual reports that led to wrong decisions.
+        </p>
+
+        <p>
+          It also doesn't count what Maria could be doing in those 156 hours. Analysis that adds value, new projects, things that require human judgment and not just copying and pasting.
+        </p>
+
+        <h2>How much does automation cost?</h2>
+
+        <p>
+          It depends on how complex the process is. But to give you realistic ranges:
+        </p>
+
+        <div class="not-prose bg-lum-cream rounded-xl p-6 my-8">
+          <p class="font-semibold text-lum-black mb-4">Typical investment ranges:</p>
+          <ul class="space-y-3 text-sm text-lum-slate">
+            <li><strong>Simple automation (1-2 sources, fixed format):</strong> $1,500 - $4,500</li>
+            <li><strong>Medium automation (3-5 sources, some logic):</strong> $4,500 - $12,000</li>
+            <li><strong>Complex automation (multiple systems, business rules, validations):</strong> $12,000 - $30,000</li>
+          </ul>
+        </div>
+
+        <p>
+          For Maria's case, we'd probably be talking about a simple or medium automation. Let's say $6,000 as an initial investment.
+        </p>
+
+        <p>
+          <strong>ROI:</strong> The investment pays for itself in about 1.3 years ($6,000 / $4,680 annual savings). After that, it's $4,680 in savings every year, for several years.
+        </p>
+
+        <h2>When TO automate</h2>
+
+        <p>
+          The general rule I use: if someone spends more than 4 hours weekly on a manual, repetitive process, it's worth at least evaluating automation.
+        </p>
+
+        <p>
+          Other indicators that it makes sense:
+        </p>
+
+        <ul>
+          <li>The process happens on a fixed schedule (daily, weekly, monthly)</li>
+          <li>The steps are always the same or very similar</li>
+          <li>There are recurring errors that cause rework</li>
+          <li>The person doing it is expensive or overloaded</li>
+          <li>The report is critical for business decisions</li>
+        </ul>
+
+        <h2>When NOT to automate (yet)</h2>
+
+        <p>
+          Not everything should be automated. Sometimes it's not worth it:
+        </p>
+
+        <ul>
+          <li>The process changes a lot from one time to the next (not repetitive)</li>
+          <li>It's done few times a year (annual savings are low)</li>
+          <li>The source data is a mess and needs to be cleaned up first</li>
+          <li>Nobody is clear on exactly what the process does</li>
+        </ul>
+
+        <p>
+          That last point is key. I've seen automation projects fail because when you try to automate something, you discover nobody knows exactly how it works. The process is in one person's head, has a thousand exceptions, and is done differently every time.
+        </p>
+
+        <p>
+          In those cases, you first need to document and standardize. Then you can automate.
+        </p>
+
+        <h2>What can be automated?</h2>
+
+        <p>
+          More than you think. Examples of things I've automated for clients:
+        </p>
+
+        <p>
+          <strong>Periodic reporting:</strong> Daily sales reports that were sent by email every morning by hand. Now they're generated and sent automatically at 7am.
+        </p>
+
+        <p>
+          <strong>Data consolidation:</strong> A holding company with 5 subsidiaries consolidated data from each one into a master spreadsheet. It took 2 days a month. Now it takes 0.
+        </p>
+
+        <p>
+          <strong>Information cross-referencing:</strong> Comparing supplier price lists with selling prices to detect negative margins. It was done once a year because it took a week. Now it runs every day in 30 seconds.
+        </p>
+
+        <p>
+          <strong>Data cleaning:</strong> Fixing malformed tax IDs, standardizing product names, removing duplicates. Tedious tasks nobody wants to do, but that a machine does without complaining.
+        </p>
+
+        <h2>The hidden cost of NOT automating</h2>
+
+        <p>
+          There's a cost that doesn't show up on any spreadsheet: the cost of frustration.
+        </p>
+
+        <p>
+          When you have professionals doing copy-paste work, they get bored. They get demotivated. Eventually they leave. And the good ones leave first, because they can get jobs elsewhere where they can do more interesting things.
+        </p>
+
+        <p>
+          There's also the opportunity cost. While Maria spends 3 hours building a report, she's not analyzing why sales dropped in the south region, or researching which products have better margins.
+        </p>
+
+        <p>
+          Those 156 annual hours could generate real value for the business. Instead, they go to copying and pasting cells.
+        </p>
+
+        <h2>How to start</h2>
+
+        <p>
+          If you think there are processes in your company that could be automated, I suggest this:
+        </p>
+
+        <p>
+          <strong>1. Take inventory of repetitive processes.</strong> Ask your team: what tasks do they do every week or month that are always the same? How much time does it take?
+        </p>
+
+        <p>
+          <strong>2. Prioritize by impact.</strong> Sort the list by weekly hours spent multiplied by the person's hourly cost. The ones at the top are the candidates.
+        </p>
+
+        <p>
+          <strong>3. Evaluate feasibility.</strong> Not everything that consumes time is easy to automate. Some processes require human judgment, others depend on systems that can't be integrated. Rule them out or mark them for later.
+        </p>
+
+        <p>
+          <strong>4. Start with one.</strong> Don't try to automate everything at once. Pick the one with the best impact/difficulty ratio, do it well, and use that success to justify the next ones.
+        </p>
+
+        <h2>The result</h2>
+
+        <p>
+          Last week I talked with Maria (her name isn't really Maria, but the story is real). The report that used to take 3 hours now arrives in her inbox by itself. She reviews it in 10 minutes, adds a couple of comments, and sends it.
+        </p>
+
+        <p>
+          "I don't know how I put up with doing it by hand for so long," she told me. Now she uses those hours for analysis she didn't have time for before. And the company has fresher data, with fewer errors.
+        </p>
+
+        <p>
+          Automation isn't magic and it's not free. But when it makes sense, the return is hard to ignore.
+        </p>
+
+        <hr class="my-12" />
+
+        <p class="text-sm text-lum-slate">
+          Want to evaluate which processes in your company are worth automating? I can help you do the analysis and prioritize. <a href="/en/contact" class="text-lum-coral hover:underline">Write me</a>.
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <section class="py-12 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-20 h-20 rounded-full object-cover" />
+          <div>
+            <p class="font-semibold text-lum-black mb-1">Jorge Cepeda</p>
+            <p class="text-sm text-lum-slate mb-3">
+              15 years in management control and finance. Now I help SMBs make better decisions with data, without needing a corporation's budget.
+            </p>
+            <a href="https://www.linkedin.com/in/jorgecepeda/" target="_blank" rel="noopener noreferrer" class="text-sm text-lum-coral hover:underline">
+              Connect on LinkedIn →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Other articles you might find useful</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/en/blog/dashboard-mistakes-avoid" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Dashboards</span>
+            <h4 class="font-semibold text-lum-black">7 Mistakes That Ruin a Good Dashboard</h4>
+          </a>
+          <a href="/en/blog/how-to-choose-kpis" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Strategy</span>
+            <h4 class="font-semibold text-lum-black">How to Choose the Right KPIs (Without Losing Your Mind)</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

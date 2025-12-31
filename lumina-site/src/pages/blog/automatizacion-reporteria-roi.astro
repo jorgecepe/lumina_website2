@@ -1,0 +1,275 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="¿Vale la pena automatizar reportes? Hagamos los números | Lumina Consulting"
+  description="Si alguien de tu equipo pasa más de 4 horas semanales armando reportes a mano, probablemente sí conviene automatizar. Pero hagamos los cálculos."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "¿Vale la pena automatizar reportes? Hagamos los números",
+    "description": "Análisis de costo-beneficio para automatización de reportería en PyMEs",
+    "author": {
+      "@type": "Person",
+      "name": "Jorge Cepeda",
+      "url": "https://luminaconsulting.ai/acerca-de#fundador"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumina Consulting"
+    },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-20 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <a href="/blog" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Volver al blog
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Automatización</span>
+        <h1 class="text-white mb-6 text-4xl md:text-5xl">¿Vale la pena automatizar reportes? Hagamos los números</h1>
+        <div class="flex items-center gap-4 text-sm text-lum-slate-light">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-10 h-10 rounded-full" />
+          <span>Jorge Cepeda</span>
+          <span>•</span>
+          <span>01 enero 2025</span>
+          <span>•</span>
+          <span>7 min lectura</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <article class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+
+        <p class="lead text-xl text-lum-slate">
+          Cada lunes, María llega a las 7am a la oficina. Abre 4 archivos de Excel, copia datos de un sistema, los pega en otro, hace unas fórmulas, ajusta el formato, y manda un mail con el reporte semanal. Le toma 3 horas. Lleva haciendo esto 4 años.
+        </p>
+
+        <p>
+          La pregunta obvia es: ¿por qué no automatizar eso? La respuesta también obvia: "no tenemos tiempo", "es complicado", "María ya sabe cómo hacerlo".
+        </p>
+
+        <p>
+          Pero nunca se sientan a hacer los números. Y cuando los haces, la conclusión suele ser clara.
+        </p>
+
+        <h2>El cálculo que casi nadie hace</h2>
+
+        <p>
+          Tomemos el caso de María. 3 horas cada lunes, 52 semanas al año = 156 horas anuales. Si su costo empresa es de $2.000.000 mensuales, cada hora cuesta aproximadamente $11.000.
+        </p>
+
+        <p>
+          156 horas x $11.000 = <strong>$1.700.000 al año</strong> en un solo reporte.
+        </p>
+
+        <p>
+          Y eso sin contar los errores. Cuando copias y pegas datos a mano, te equivocas. Un número mal pegado, una fila que se saltó, un filtro que se olvidó. He visto errores en reportes manuales que costaron decisiones equivocadas.
+        </p>
+
+        <p>
+          Tampoco cuenta lo que María podría estar haciendo en esas 156 horas. Análisis que agreguen valor, proyectos nuevos, cosas que requieren criterio humano y no solo copiar y pegar.
+        </p>
+
+        <h2>¿Cuánto cuesta automatizar?</h2>
+
+        <p>
+          Depende de qué tan complejo sea el proceso. Pero para darte rangos realistas:
+        </p>
+
+        <div class="not-prose bg-lum-cream rounded-xl p-6 my-8">
+          <p class="font-semibold text-lum-black mb-4">Rangos típicos de inversión:</p>
+          <ul class="space-y-3 text-sm text-lum-slate">
+            <li><strong>Automatización simple (1-2 fuentes, formato fijo):</strong> $500.000 - $1.500.000</li>
+            <li><strong>Automatización media (3-5 fuentes, algo de lógica):</strong> $1.500.000 - $4.000.000</li>
+            <li><strong>Automatización compleja (múltiples sistemas, reglas de negocio, validaciones):</strong> $4.000.000 - $10.000.000</li>
+          </ul>
+        </div>
+
+        <p>
+          Para el caso de María, probablemente estaríamos hablando de una automatización simple o media. Digamos $2.000.000 como inversión inicial.
+        </p>
+
+        <p>
+          <strong>ROI:</strong> La inversión se paga en poco más de un año ($2.000.000 / $1.700.000 anuales). Después de eso, son $1.700.000 de ahorro cada año, por varios años.
+        </p>
+
+        <h2>Cuándo SÍ automatizar</h2>
+
+        <p>
+          La regla general que uso: si alguien dedica más de 4 horas semanales a un proceso manual y repetitivo, vale la pena al menos evaluar automatizarlo.
+        </p>
+
+        <p>
+          Otros indicadores de que conviene:
+        </p>
+
+        <ul>
+          <li>El proceso se hace con frecuencia fija (diario, semanal, mensual)</li>
+          <li>Los pasos son siempre los mismos o muy parecidos</li>
+          <li>Hay errores recurrentes que causan reprocesos</li>
+          <li>La persona que lo hace es cara o está sobrecargada</li>
+          <li>El reporte es crítico para decisiones de negocio</li>
+        </ul>
+
+        <h2>Cuándo NO automatizar (todavía)</h2>
+
+        <p>
+          No todo debe automatizarse. A veces no vale la pena:
+        </p>
+
+        <ul>
+          <li>El proceso cambia mucho de una vez a otra (no es repetitivo)</li>
+          <li>Se hace pocas veces al año (el ahorro anual es bajo)</li>
+          <li>Los datos de origen son un desastre y primero hay que ordenarlos</li>
+          <li>Nadie tiene claro qué hace exactamente el proceso</li>
+        </ul>
+
+        <p>
+          Ese último punto es clave. He visto proyectos de automatización que fracasan porque cuando tratas de automatizar algo, descubres que nadie sabe bien cómo funciona. El proceso está en la cabeza de una persona, tiene mil excepciones, y cada vez se hace diferente.
+        </p>
+
+        <p>
+          En esos casos, primero hay que documentar y estandarizar. Después se puede automatizar.
+        </p>
+
+        <h2>¿Qué se puede automatizar?</h2>
+
+        <p>
+          Más de lo que crees. Ejemplos de cosas que he automatizado para clientes:
+        </p>
+
+        <p>
+          <strong>Reportería periódica:</strong> Ventas diarias que se enviaban por mail cada mañana a mano. Ahora se generan y envían solas a las 7am.
+        </p>
+
+        <p>
+          <strong>Consolidación de datos:</strong> Un holding con 5 empresas consolidaba datos de cada una en un Excel maestro. Tomaba 2 días al mes. Ahora toma 0.
+        </p>
+
+        <p>
+          <strong>Cruce de información:</strong> Comparar lista de precios de proveedores con precios de venta para detectar márgenes negativos. Se hacía una vez al año porque tomaba una semana. Ahora se hace todos los días en 30 segundos.
+        </p>
+
+        <p>
+          <strong>Limpieza de datos:</strong> Corregir RUTs mal formateados, estandarizar nombres de productos, eliminar duplicados. Tareas tediosas que nadie quiere hacer, pero que una máquina hace sin quejarse.
+        </p>
+
+        <h2>El costo oculto de NO automatizar</h2>
+
+        <p>
+          Hay un costo que no aparece en ninguna planilla: el costo de la frustración.
+        </p>
+
+        <p>
+          Cuando tienes a profesionales haciendo trabajo de copy-paste, se aburren. Se desmotivan. Eventualmente se van. Y los buenos se van primero, porque consiguen trabajo en otro lado donde pueden hacer cosas más interesantes.
+        </p>
+
+        <p>
+          También está el costo de oportunidad. Mientras María pasa 3 horas armando un reporte, no está analizando por qué las ventas bajaron en la zona sur, o investigando qué productos tienen mejor margen.
+        </p>
+
+        <p>
+          Esas 156 horas anuales podrían generar valor real para el negocio. En vez de eso, se van en copiar y pegar celdas.
+        </p>
+
+        <h2>Cómo empezar</h2>
+
+        <p>
+          Si crees que hay procesos en tu empresa que podrían automatizarse, te sugiero esto:
+        </p>
+
+        <p>
+          <strong>1. Haz un inventario de procesos repetitivos.</strong> Pregunta a tu equipo: ¿qué tareas hacen todas las semanas o todos los meses que son siempre iguales? ¿Cuánto tiempo les toma?
+        </p>
+
+        <p>
+          <strong>2. Prioriza por impacto.</strong> Ordena la lista por horas semanales dedicadas multiplicado por costo hora de la persona. Los que estén arriba son los candidatos.
+        </p>
+
+        <p>
+          <strong>3. Evalúa la factibilidad.</strong> No todo lo que consume tiempo es fácil de automatizar. Algunos procesos requieren juicio humano, otros dependen de sistemas que no se pueden integrar. Descartalos o márcalos para después.
+        </p>
+
+        <p>
+          <strong>4. Empieza con uno.</strong> No trates de automatizar todo al mismo tiempo. Elige el que tenga mejor relación impacto/dificultad, hazlo bien, y usa ese éxito para justificar los siguientes.
+        </p>
+
+        <h2>El resultado</h2>
+
+        <p>
+          La semana pasada hablé con María (no se llama María, pero la historia es real). El reporte que antes le tomaba 3 horas ahora llega solo a su correo. Ella lo revisa en 10 minutos, agrega un par de comentarios, y lo manda.
+        </p>
+
+        <p>
+          "No sé cómo aguanté tanto tiempo haciéndolo a mano", me dijo. Ahora usa esas horas en análisis que antes no tenía tiempo de hacer. Y la empresa tiene datos más frescos, con menos errores.
+        </p>
+
+        <p>
+          La automatización no es magia ni es gratis. Pero cuando tiene sentido, el retorno es difícil de ignorar.
+        </p>
+
+        <hr class="my-12" />
+
+        <p class="text-sm text-lum-slate">
+          ¿Quieres evaluar qué procesos de tu empresa conviene automatizar? Puedo ayudarte a hacer el análisis y priorizar. <a href="/contacto" class="text-lum-coral hover:underline">Escríbeme</a>.
+        </p>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- Author Box -->
+  <section class="py-12 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl">
+          <img src="/jorge-cepeda.jpg" alt="Jorge Cepeda" class="w-20 h-20 rounded-full object-cover" />
+          <div>
+            <p class="font-semibold text-lum-black mb-1">Jorge Cepeda</p>
+            <p class="text-sm text-lum-slate mb-3">
+              15 años en control de gestión y finanzas. Ahora ayudo a PyMEs a tomar mejores decisiones con datos, sin necesitar el presupuesto de una corporación.
+            </p>
+            <a href="https://www.linkedin.com/in/jorgecepeda/" target="_blank" rel="noopener noreferrer" class="text-sm text-lum-coral hover:underline">
+              Conectar en LinkedIn →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Otros artículos que te pueden servir</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/blog/errores-dashboards-evitar" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Dashboards</span>
+            <h4 class="font-semibold text-lum-black">7 errores que arruinan un buen dashboard</h4>
+          </a>
+          <a href="/blog/como-elegir-kpis-pyme" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Estrategia</span>
+            <h4 class="font-semibold text-lum-black">Cómo elegir los KPIs correctos (y no morir en el intento)</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
