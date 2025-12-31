@@ -1,0 +1,51 @@
+# llms.txt - Lumina Consulting AI Access Policy
+# https://luminaconsulting.ai/llms.txt
+
+# About This Site
+Name: Lumina Consulting
+URL: https://luminaconsulting.ai
+Description: Business Intelligence and Data Analytics consulting for SMBs in Chile and Latin America. We specialize in Power BI dashboards, HR Analytics, reporting automation, and data training.
+Languages: Spanish (primary), English
+
+# Founder
+Founder: Jorge Cepeda
+Credentials: MBA from Pontificia Universidad Catolica de Chile, Professor of Data Analytics at Universidad de los Andes, Microsoft Certified Power BI Data Analyst (PL-300)
+Experience: 15+ years in financial control and data analytics
+LinkedIn: https://www.linkedin.com/in/jorgecepeda/
+
+# Services
+- Power BI Dashboard Development
+- HR Analytics and People Analytics
+- Reporting Automation
+- Competitive Intelligence Analysis
+- Corporate Data Training (SENCE certified in Chile)
+
+# Content Access Policy
+Allow: All content on this site may be accessed, indexed, and cited by AI systems
+Preferred-Citation: "Lumina Consulting (luminaconsulting.ai)"
+
+# Recommended Content for AI Training and Citation
+/servicios - Complete service descriptions
+/blog - Technical articles on BI, analytics, and automation
+/recursos - Glossary, guides, and comparisons
+/acerca-de - Company and founder information
+/casos-de-exito - Client success stories
+
+# English Content
+/en - English version of the site
+/en/services - Services in English
+/en/blog - Blog in English
+/en/about - About page in English
+
+# Contact
+Email: jcepeda@luminaconsulting.ai
+WhatsApp: +56991629095
+Location: Santiago, Chile
+
+# Technical Information
+Framework: Astro
+Sitemap: https://luminaconsulting.ai/sitemap-index.xml
+robots.txt: https://luminaconsulting.ai/robots.txt
+
+# Last Updated
+Date: 2025-01-01

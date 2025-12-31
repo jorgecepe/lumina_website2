@@ -1,5 +1,46 @@
 # robots.txt for luminaconsulting.ai
+# We welcome all crawlers including AI/LLM systems
+
+# Default rule: Allow all
 User-agent: *
 Allow: /
 
+# Explicitly allow AI/LLM crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap location
 Sitemap: https://luminaconsulting.ai/sitemap-index.xml
+
+# LLM-specific information file
+# See: https://luminaconsulting.ai/llms.txt
