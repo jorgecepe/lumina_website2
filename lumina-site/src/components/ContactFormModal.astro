@@ -1,0 +1,397 @@
+---
+const currentPath = Astro.url.pathname;
+const normalizedPath = currentPath === '/' ? '/' : currentPath.replace(/\/$/, '');
+const isEnglish = normalizedPath.startsWith('/en');
+
+// Translations
+const t = {
+  // Modal
+  title: isEnglish ? 'Get in Touch' : 'Contáctanos',
+  subtitle: isEnglish ? 'We\'d love to hear from you' : 'Nos encantaría saber de ti',
+
+  // Message types
+  typeLabel: isEnglish ? 'Message type' : 'Tipo de mensaje',
+  types: {
+    contact: isEnglish ? 'Business inquiry' : 'Consulta comercial',
+    feedback: isEnglish ? 'Feedback' : 'Feedback',
+    bug: isEnglish ? 'Report an issue' : 'Reportar problema',
+    feature: isEnglish ? 'Feature request' : 'Sugerencia',
+  },
+
+  // Fields
+  nameLabel: isEnglish ? 'Name' : 'Nombre',
+  namePlaceholder: isEnglish ? 'Your name (optional)' : 'Tu nombre (opcional)',
+  emailLabel: isEnglish ? 'Email' : 'Correo electrónico',
+  emailPlaceholder: isEnglish ? 'your@email.com' : 'tu@email.com',
+  subjectLabel: isEnglish ? 'Subject' : 'Asunto',
+  subjectPlaceholder: isEnglish ? 'What is this about?' : '¿De qué se trata?',
+  messageLabel: isEnglish ? 'Message' : 'Mensaje',
+  messagePlaceholder: isEnglish ? 'Tell us more...' : 'Cuéntanos más...',
+
+  // Buttons
+  submit: isEnglish ? 'Send Message' : 'Enviar Mensaje',
+  sending: isEnglish ? 'Sending...' : 'Enviando...',
+  close: isEnglish ? 'Close' : 'Cerrar',
+
+  // States
+  successTitle: isEnglish ? 'Message sent!' : '¡Mensaje enviado!',
+  successMessage: isEnglish ? 'We\'ll get back to you soon.' : 'Te responderemos pronto.',
+  errorTitle: isEnglish ? 'Error sending message' : 'Error al enviar',
+  errorMessage: isEnglish ? 'Please try again or contact us via WhatsApp.' : 'Intenta de nuevo o contáctanos por WhatsApp.',
+  tryAgain: isEnglish ? 'Try again' : 'Intentar de nuevo',
+
+  // Validation
+  required: isEnglish ? 'This field is required' : 'Este campo es requerido',
+  invalidEmail: isEnglish ? 'Please enter a valid email' : 'Ingresa un email válido',
+};
+---
+
+<!-- Contact Form Modal -->
+<div id="contact-modal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-lum-black/70 backdrop-blur-sm" id="contact-backdrop"></div>
+
+  <!-- Modal Content -->
+  <div class="fixed inset-0 flex items-center justify-center p-4">
+    <div class="relative w-full max-w-lg bg-lum-white border-2 border-lum-black shadow-brutal-lg transform transition-all duration-300 scale-95 opacity-0" id="contact-modal-content">
+
+      <!-- Header with coral gradient -->
+      <div class="bg-gradient-to-r from-lum-coral to-lum-coral-dark p-6 border-b-2 border-lum-black">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 id="contact-modal-title" class="font-display text-2xl text-white tracking-wide">{t.title}</h2>
+            <p class="text-white/80 text-sm mt-1">{t.subtitle}</p>
+          </div>
+          <button
+            type="button"
+            id="contact-close-btn"
+            class="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded transition-colors"
+            aria-label={t.close}
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="contact-form" class="p-6 space-y-4">
+        <!-- Message Type -->
+        <div>
+          <label for="contact-type" class="block text-sm font-medium text-lum-charcoal mb-1.5">
+            {t.typeLabel}
+          </label>
+          <select
+            id="contact-type"
+            name="message_type"
+            class="form-input w-full"
+          >
+            <option value="contact">{t.types.contact}</option>
+            <option value="feedback">{t.types.feedback}</option>
+            <option value="bug">{t.types.bug}</option>
+            <option value="feature">{t.types.feature}</option>
+          </select>
+        </div>
+
+        <!-- Name (optional) -->
+        <div>
+          <label for="contact-name" class="block text-sm font-medium text-lum-charcoal mb-1.5">
+            {t.nameLabel}
+          </label>
+          <input
+            type="text"
+            id="contact-name"
+            name="user_name"
+            class="form-input w-full"
+            placeholder={t.namePlaceholder}
+          />
+        </div>
+
+        <!-- Email (required) -->
+        <div>
+          <label for="contact-email" class="block text-sm font-medium text-lum-charcoal mb-1.5">
+            {t.emailLabel} <span class="text-lum-coral">*</span>
+          </label>
+          <input
+            type="email"
+            id="contact-email"
+            name="user_email"
+            class="form-input w-full"
+            placeholder={t.emailPlaceholder}
+            required
+          />
+          <p class="text-lum-error text-xs mt-1 hidden" id="email-error">{t.invalidEmail}</p>
+        </div>
+
+        <!-- Subject (required) -->
+        <div>
+          <label for="contact-subject" class="block text-sm font-medium text-lum-charcoal mb-1.5">
+            {t.subjectLabel} <span class="text-lum-coral">*</span>
+          </label>
+          <input
+            type="text"
+            id="contact-subject"
+            name="subject"
+            class="form-input w-full"
+            placeholder={t.subjectPlaceholder}
+            required
+          />
+        </div>
+
+        <!-- Message (required) -->
+        <div>
+          <label for="contact-message" class="block text-sm font-medium text-lum-charcoal mb-1.5">
+            {t.messageLabel} <span class="text-lum-coral">*</span>
+          </label>
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="4"
+            class="form-input w-full resize-none"
+            placeholder={t.messagePlaceholder}
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          id="contact-submit"
+          class="btn-primary w-full justify-center py-3"
+        >
+          <span id="submit-text">{t.submit}</span>
+          <span id="submit-loading" class="hidden items-center gap-2">
+            <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            {t.sending}
+          </span>
+        </button>
+      </form>
+
+      <!-- Success State -->
+      <div id="contact-success" class="hidden p-8 text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-lum-success/20 rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-lum-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl text-lum-black mb-2">{t.successTitle}</h3>
+        <p class="text-lum-slate mb-6">{t.successMessage}</p>
+        <button type="button" id="success-close-btn" class="btn-outline">
+          {t.close}
+        </button>
+      </div>
+
+      <!-- Error State -->
+      <div id="contact-error" class="hidden p-8 text-center">
+        <div class="w-16 h-16 mx-auto mb-4 bg-lum-error/20 rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-lum-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl text-lum-black mb-2">{t.errorTitle}</h3>
+        <p class="text-lum-slate mb-6">{t.errorMessage}</p>
+        <button type="button" id="error-retry-btn" class="btn-primary">
+          {t.tryAgain}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Contact Button -->
+<button
+  id="contact-trigger"
+  class="fixed bottom-6 right-6 z-50 p-4 bg-lum-coral text-white border-2 border-lum-black shadow-brutal hover:shadow-brutal-lg hover:-translate-y-1 transition-all duration-200 group"
+  aria-label={t.title}
+>
+  <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>
+</button>
+
+<script>
+  const ENDPOINT = 'https://wueqnruymfwbnkzwrdil.supabase.co/functions/v1/send-contact-message';
+
+  // Elements
+  const modal = document.getElementById('contact-modal');
+  const modalContent = document.getElementById('contact-modal-content');
+  const backdrop = document.getElementById('contact-backdrop');
+  const trigger = document.getElementById('contact-trigger');
+  const closeBtn = document.getElementById('contact-close-btn');
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('contact-submit');
+  const submitText = document.getElementById('submit-text');
+  const submitLoading = document.getElementById('submit-loading');
+  const successState = document.getElementById('contact-success');
+  const errorState = document.getElementById('contact-error');
+  const successCloseBtn = document.getElementById('success-close-btn');
+  const errorRetryBtn = document.getElementById('error-retry-btn');
+  const emailError = document.getElementById('email-error');
+
+  // Open modal
+  function openModal() {
+    modal?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    // Animate in
+    requestAnimationFrame(() => {
+      modalContent?.classList.remove('scale-95', 'opacity-0');
+      modalContent?.classList.add('scale-100', 'opacity-100');
+    });
+  }
+
+  // Close modal
+  function closeModal() {
+    modalContent?.classList.remove('scale-100', 'opacity-100');
+    modalContent?.classList.add('scale-95', 'opacity-0');
+
+    setTimeout(() => {
+      modal?.classList.add('hidden');
+      document.body.style.overflow = '';
+      resetForm();
+    }, 200);
+  }
+
+  // Reset form to initial state
+  function resetForm() {
+    form?.reset();
+    showForm();
+    emailError?.classList.add('hidden');
+  }
+
+  // Show form, hide states
+  function showForm() {
+    form?.classList.remove('hidden');
+    successState?.classList.add('hidden');
+    errorState?.classList.add('hidden');
+  }
+
+  // Show success state
+  function showSuccess() {
+    form?.classList.add('hidden');
+    successState?.classList.remove('hidden');
+    errorState?.classList.add('hidden');
+  }
+
+  // Show error state
+  function showError() {
+    form?.classList.add('hidden');
+    successState?.classList.add('hidden');
+    errorState?.classList.remove('hidden');
+  }
+
+  // Set loading state
+  function setLoading(loading: boolean) {
+    if (loading) {
+      submitBtn?.setAttribute('disabled', 'true');
+      submitText?.classList.add('hidden');
+      submitLoading?.classList.remove('hidden');
+      submitLoading?.classList.add('flex');
+    } else {
+      submitBtn?.removeAttribute('disabled');
+      submitText?.classList.remove('hidden');
+      submitLoading?.classList.add('hidden');
+      submitLoading?.classList.remove('flex');
+    }
+  }
+
+  // Validate email
+  function isValidEmail(email: string): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  // Handle form submission
+  async function handleSubmit(e: Event) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const email = formData.get('user_email') as string;
+
+    // Validate email
+    if (!isValidEmail(email)) {
+      emailError?.classList.remove('hidden');
+      return;
+    }
+    emailError?.classList.add('hidden');
+
+    setLoading(true);
+
+    try {
+      const response = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          user_email: email,
+          user_name: formData.get('user_name') || null,
+          subject: formData.get('subject'),
+          message: formData.get('message'),
+          message_type: formData.get('message_type') || 'contact',
+          page_context: 'luminaconsulting.ai'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        showSuccess();
+      } else {
+        showError();
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      showError();
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // Event listeners
+  trigger?.addEventListener('click', openModal);
+  closeBtn?.addEventListener('click', closeModal);
+  backdrop?.addEventListener('click', closeModal);
+  successCloseBtn?.addEventListener('click', closeModal);
+  errorRetryBtn?.addEventListener('click', showForm);
+  form?.addEventListener('submit', handleSubmit);
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal?.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
+  // Allow other elements to trigger the modal
+  document.querySelectorAll('[data-contact-trigger]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+</script>
+
+<style>
+  .form-input {
+    @apply bg-lum-white text-lum-black
+           border-2 border-lum-black
+           px-4 py-2.5
+           transition-all duration-200
+           focus:outline-none focus:border-lum-coral focus:ring-2 focus:ring-lum-coral/20;
+  }
+
+  select.form-input {
+    @apply cursor-pointer appearance-none
+           bg-[url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231a1814'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E")]
+           bg-[length:1.5rem] bg-[right_0.5rem_center] bg-no-repeat
+           pr-10;
+  }
+
+  #contact-submit:disabled {
+    @apply opacity-70 cursor-not-allowed;
+  }
+</style>
