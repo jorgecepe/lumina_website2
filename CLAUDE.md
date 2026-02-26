@@ -1,7 +1,11 @@
 # Lumina Consulting - Contexto del Proyecto
 
 ## Descripción General
-Sitio web corporativo para **Lumina Consulting**, una consultora chilena especializada en transformación digital para PyMEs y startups. El sitio funciona como landing page y herramienta de lead generation.
+Sitio web para **Lumina Consulting**, agencia de inteligencia de negocio fundada por Jorge Cepeda. Lumina conecta los sistemas de datos de empresas medianas chilenas (ERPs, plataformas de venta, APIs públicas) y los convierte en información visual, automatizada y actualizada para la gerencia.
+
+**Propuesta de valor:** "Abre una pantalla y ve cómo va tu negocio hoy — sin pedirle a nadie que haga un Excel."
+**Cliente ideal:** Dueños y socios de empresas medianas (50-500 personas) en Chile.
+**Sectores:** Automotriz, inmobiliario, retail, salud/veterinaria, servicios.
 
 **Dominio:** luminaconsulting.ai
 **Contacto:** jcepeda@luminaconsulting.ai | +56 9 9162 9095
