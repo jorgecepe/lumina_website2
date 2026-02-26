@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://luminaconsulting.ai',
+  site: 'https://www.luminaconsulting.ai',
   integrations: [tailwind(), sitemap()],
   build: {
     inlineStylesheets: 'auto',

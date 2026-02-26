@@ -40,7 +40,7 @@ User-agent: cohere-ai
 Allow: /
 
 # Sitemap location
-Sitemap: https://luminaconsulting.ai/sitemap-index.xml
+Sitemap: https://www.luminaconsulting.ai/sitemap-index.xml
 
 # LLM-specific information file
-# See: https://luminaconsulting.ai/llms.txt
+# See: https://www.luminaconsulting.ai/llms.txt
