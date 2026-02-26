@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = 'Transformamos datos dispersos en inteligencia accionable. Consultoría en automatización y análisis para PyMEs y startups.',
+  description = 'Abre una pantalla y ve cómo va tu negocio. Consultoría de datos para empresas medianas: dashboards, automatización de reportes, inteligencia competitiva.',
   ogImage = '/logo-wide.png'
 } = Astro.props;
 
@@ -51,8 +51,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Additional Meta Tags -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Lumina Consulting" />
-    <meta name="keywords" content="consultoría datos, automatización, análisis de datos, Power BI, Python, dashboards, PyMEs, startups, Chile" />
+    <meta name="keywords" content="visibilidad de negocio, dashboards estratégicos, automatización reportes, control de gestión PyME, Power BI Chile, inteligencia competitiva, consultoría datos, análisis de datos, Python, empresas medianas" />
     <meta name="theme-color" content="#1a1814" />
+
+    <!-- Hreflang tags for bilingual support -->
+    <link rel="alternate" hreflang="es" href={canonicalURL} />
+    <link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname.replace(/^\//, '/en/'), Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL} />
 
     <!-- Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,7 +72,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             "@type": "ProfessionalService",
             "@id": "https://luminaconsulting.ai/#organization",
             "name": "Lumina Consulting",
-            "description": "Consultoría especializada en Business Intelligence, dashboards estratégicos y automatización de datos para PyMEs y startups en Chile y Latinoamérica. Transformamos datos dispersos en decisiones estratégicas medibles.",
+            "description": "Ayudamos a empresas medianas a ver su negocio con la misma claridad que tiene un holding. Dashboards estratégicos, automatización de reportes e inteligencia competitiva en Chile y Latinoamérica.",
             "url": "https://luminaconsulting.ai",
             "logo": {
               "@type": "ImageObject",
@@ -201,7 +206,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             "@id": "https://luminaconsulting.ai/#website",
             "url": "https://luminaconsulting.ai",
             "name": "Lumina Consulting",
-            "description": "Consultoría de Business Intelligence y Data Analytics para PyMEs en Chile",
+            "description": "Visibilidad de negocio para empresas medianas. Dashboards, automatización de reportes e inteligencia competitiva en Chile y Latinoamérica.",
             "publisher": {"@id": "https://luminaconsulting.ai/#organization"},
             "inLanguage": "es-CL"
           }
