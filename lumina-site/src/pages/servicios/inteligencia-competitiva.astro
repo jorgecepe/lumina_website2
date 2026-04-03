@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout
   title="Inteligencia Competitiva Automatizada | Lumina Consulting"
-  description="Monitoreo diario de precios y posicionamiento de tu competencia. Dashboard web, alertas automáticas y rankings de competitividad."
+  description="Monitorea precios, productos y posicionamiento de competidores de forma automatica y diaria. Dashboard comparativo, alertas y web app con historial."
 >
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -15,7 +15,7 @@ import Layout from '../../layouts/Layout.astro';
       "name": "Lumina Consulting",
       "url": "https://luminaconsulting.ai"
     },
-    "description": "Monitoreo automatizado de competencia: precios, productos, promociones. Web scraping, dashboards comparativos y alertas.",
+    "description": "Monitoreo automatizado de competencia: precios, productos, posicionamiento. Web scraping, dashboards comparativos, web app con historial y alertas diarias.",
     "areaServed": "CL",
     "serviceType": "Competitive Intelligence"
   })} />
@@ -34,9 +34,9 @@ import Layout from '../../layouts/Layout.astro';
           Todos los servicios
         </a>
         <span class="badge bg-white/10 text-white border-white/20 mb-4">Inteligencia Competitiva</span>
-        <h1 class="text-white mb-6">Inteligencia Competitiva Automatizada</h1>
+        <h1 class="text-white mb-6">Inteligencia competitiva automatizada</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl">
-          ¿Cuánto tiempo pasa alguien de tu equipo revisando páginas web de competidores, anotando precios en un Excel? Eso se puede hacer automáticamente. Todos los días si quieres.
+          No sabes como se comparan tus precios con la competencia. Te enteras tarde de cambios en el mercado. Eso tiene solucion: monitoreo automatico, diario y sin intervencion humana.
         </p>
       </div>
     </div>
@@ -49,7 +49,7 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="mb-8">El problema con el monitoreo manual</h2>
 
         <p class="text-lg text-lum-slate mb-6">
-          Las empresas que hacen análisis de competencia suelen hacerlo de forma esporádica: una vez al trimestre alguien revisa los sitios web, toma nota de precios, y arma un Excel comparativo.
+          Las empresas que hacen analisis de competencia suelen hacerlo de forma esporadica: una vez al trimestre alguien revisa los sitios web, toma nota de precios, y arma un Excel comparativo. O peor: no lo hacen nunca.
         </p>
 
         <p class="text-lg text-lum-slate mb-6">
@@ -58,26 +58,26 @@ import Layout from '../../layouts/Layout.astro';
 
         <div class="space-y-4 mb-8">
           <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
-            <span class="text-red-500 text-xl">1</span>
+            <span class="text-red-500 text-xl font-semibold flex-shrink-0">1</span>
             <div>
               <p class="font-semibold">Te enteras tarde</p>
-              <p class="text-sm text-lum-slate">Si la competencia bajó precios hace dos meses, ya perdiste clientes antes de darte cuenta.</p>
+              <p class="text-sm text-lum-slate">Si la competencia bajo precios hace dos meses, ya perdiste clientes antes de darte cuenta.</p>
             </div>
           </div>
 
           <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
-            <span class="text-red-500 text-xl">2</span>
+            <span class="text-red-500 text-xl font-semibold flex-shrink-0">2</span>
             <div>
               <p class="font-semibold">Es tedioso y nadie quiere hacerlo</p>
-              <p class="text-sm text-lum-slate">Revisar 50 productos en 5 sitios web es aburrido. Se hace mal, se hace incompleto, o se deja de hacer.</p>
+              <p class="text-sm text-lum-slate">Revisar cientos de productos en multiples sitios web es aburrido. Se hace mal, se hace incompleto, o se deja de hacer.</p>
             </div>
           </div>
 
           <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
-            <span class="text-red-500 text-xl">3</span>
+            <span class="text-red-500 text-xl font-semibold flex-shrink-0">3</span>
             <div>
-              <p class="font-semibold">No hay histórico</p>
-              <p class="text-sm text-lum-slate">Sabes cómo están los precios hoy, pero no cómo han evolucionado. No puedes ver patrones.</p>
+              <p class="font-semibold">No hay historico</p>
+              <p class="text-sm text-lum-slate">Sabes como estan los precios hoy, pero no como han evolucionado. No puedes ver patrones ni anticipar movimientos.</p>
             </div>
           </div>
         </div>
@@ -85,38 +85,48 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Qué hacemos -->
+  <!-- Que hago -->
   <section class="py-20 bg-lum-cream">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
-        <h2 class="mb-10 text-center">Qué podemos automatizar</h2>
+        <h2 class="mb-4 text-center">Que implemento</h2>
+        <p class="text-lg text-lum-slate text-center mb-10 max-w-2xl mx-auto">
+          Sistemas que monitorean precios, productos y posicionamiento de competidores de forma automatica y diaria. Sin intervencion humana.
+        </p>
 
         <div class="grid md:grid-cols-2 gap-6">
           <div class="bg-white rounded-xl p-6">
-            <h3 class="text-lg font-semibold mb-3">Monitoreo de precios</h3>
+            <h3 class="text-lg font-semibold mb-3">Monitoreo diario de precios</h3>
             <p class="text-lum-slate text-sm">
-              Extracción automática de precios de sitios web de competidores. Puede correr diario, semanal, o con la frecuencia que necesites. Se almacena histórico para ver tendencias.
+              Extraccion automatica de precios de sitios web de competidores. Corre todos los dias, almacena historico y detecta cambios en tiempo real.
             </p>
           </div>
 
           <div class="bg-white rounded-xl p-6">
-            <h3 class="text-lg font-semibold mb-3">Catálogo de productos</h3>
+            <h3 class="text-lg font-semibold mb-3">Alertas automaticas</h3>
             <p class="text-lum-slate text-sm">
-              Detectamos cuando la competencia agrega o elimina productos. Útil para identificar nuevas líneas o productos descontinuados antes que el mercado.
+              Notificaciones cuando un competidor cambia precios, agrega productos nuevos o lanza promociones. Te enteras el mismo dia, no semanas despues.
             </p>
           </div>
 
           <div class="bg-white rounded-xl p-6">
-            <h3 class="text-lg font-semibold mb-3">Promociones y descuentos</h3>
+            <h3 class="text-lg font-semibold mb-3">Dashboard comparativo con ranking</h3>
             <p class="text-lum-slate text-sm">
-              Alertas cuando un competidor lanza una promoción. Puedes reaccionar el mismo día en vez de enterarte por tus vendedores semanas después.
+              Visualizacion de tu posicion de precios vs la competencia. Por producto, por categoria, con evolucion en el tiempo y ranking de competitividad.
             </p>
           </div>
 
           <div class="bg-white rounded-xl p-6">
-            <h3 class="text-lg font-semibold mb-3">Dashboard comparativo</h3>
+            <h3 class="text-lg font-semibold mb-3">Reportes por email cada manana</h3>
             <p class="text-lum-slate text-sm">
-              Visualización de tu posición de precios vs la competencia. Por producto, por categoría, con evolución en el tiempo.
+              Resumen diario con los cambios mas relevantes directo a tu bandeja de entrada. Llegas a la oficina sabiendo como esta el mercado.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 md:col-span-2">
+            <h3 class="text-lg font-semibold mb-3">Web app con historial y filtros</h3>
+            <p class="text-lum-slate text-sm">
+              Aplicacion web completa donde tu equipo puede explorar datos historicos, filtrar por competidor, categoria o producto, y hacer analisis a profundidad. Con autenticacion para que solo tu equipo tenga acceso.
             </p>
           </div>
         </div>
@@ -124,23 +134,23 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Cómo funciona -->
+  <!-- Como funciona -->
   <section class="py-20 bg-white">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
-        <h2 class="mb-8">Cómo funciona técnicamente</h2>
+        <h2 class="mb-8">Como funciona tecnicamente</h2>
 
         <p class="text-lg text-lum-slate mb-6">
-          Usamos web scraping: programas que visitan automáticamente los sitios web de tus competidores, leen la información, y la guardan en una base de datos.
+          Uso web scraping y matching engines: programas que visitan automaticamente los sitios web de tus competidores, leen la informacion, la emparejan con tu catalogo, y la guardan en una base de datos.
         </p>
 
         <div class="space-y-6">
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">Definimos qué monitorear</h3>
+              <h3 class="text-lg font-semibold mb-2">Definimos que monitorear</h3>
               <p class="text-lum-slate">
-                Identificamos los competidores relevantes, los productos que quieres comparar, y qué información necesitas (precio, stock, promociones, etc.).
+                Identificamos los competidores relevantes, los productos que quieres comparar, y que informacion necesitas (precio, stock, promociones, especificaciones).
               </p>
             </div>
           </div>
@@ -148,9 +158,9 @@ import Layout from '../../layouts/Layout.astro';
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">2</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">Construimos el scraper</h3>
+              <h3 class="text-lg font-semibold mb-2">Construimos el scraper y el matching engine</h3>
               <p class="text-lum-slate">
-                Desarrollamos un programa personalizado que extrae los datos de cada sitio. Cada sitio es distinto, así que cada scraper es a medida.
+                Desarrollo scrapers personalizados para cada sitio y un motor de emparejamiento que vincula los productos de la competencia con los tuyos, incluso cuando tienen nombres distintos.
               </p>
             </div>
           </div>
@@ -158,9 +168,9 @@ import Layout from '../../layouts/Layout.astro';
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">3</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">Programamos la ejecución</h3>
+              <h3 class="text-lg font-semibold mb-2">Programamos la ejecucion diaria</h3>
               <p class="text-lum-slate">
-                El scraper corre automáticamente según la frecuencia que definas. Los datos se guardan con fecha para tener histórico.
+                El sistema corre automaticamente todos los dias. Los datos se guardan con fecha para tener historico completo y detectar tendencias.
               </p>
             </div>
           </div>
@@ -168,9 +178,9 @@ import Layout from '../../layouts/Layout.astro';
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">Visualizamos y alertamos</h3>
+              <h3 class="text-lg font-semibold mb-2">Desplegamos dashboard y web app</h3>
               <p class="text-lum-slate">
-                Creamos un dashboard donde puedes ver toda la información. Configuramos alertas para cambios importantes (ej: "avísame si X baja más de 10%").
+                Creamos un dashboard ejecutivo y una web app donde tu equipo puede explorar los datos, gestionar mappings y profundizar en el analisis.
               </p>
             </div>
           </div>
@@ -178,38 +188,43 @@ import Layout from '../../layouts/Layout.astro';
 
         <div class="mt-10 p-6 bg-lum-cream rounded-xl">
           <p class="text-lum-slate text-sm">
-            <strong>Nota legal:</strong> El web scraping de información pública es legal. Extraemos datos que cualquier persona puede ver navegando el sitio web. No accedemos a áreas protegidas ni violamos términos de servicio.
+            <strong>Nota legal:</strong> El web scraping de informacion publica es legal. Extraemos datos que cualquier persona puede ver navegando el sitio web. No accedemos a areas protegidas ni violamos terminos de servicio.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ejemplo -->
+  <!-- Caso principal -->
   <section class="py-20 bg-lum-cream">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
-        <h2 class="mb-8">Un ejemplo concreto</h2>
+        <h2 class="mb-10">Caso real</h2>
 
         <div class="bg-white rounded-2xl p-8">
-          <span class="badge-outline text-xs mb-4">Retail - Ferretería</span>
+          <span class="badge-outline text-xs mb-4">Automotriz</span>
 
-          <h3 class="text-xl font-semibold mb-4">El contexto</h3>
+          <h3 class="text-xl font-semibold mb-4">Red de automotoras: monitoreo de +50.000 publicaciones</h3>
+
+          <h4 class="text-lg font-semibold mb-3">El contexto</h4>
           <p class="text-lum-slate mb-6">
-            Cadena de ferreterías con 8 locales. Competían con grandes tiendas (Sodimac, Easy) y con ferreterías locales. El gerente comercial revisaba precios "cuando podía", pero no había sistema.
+            Red de automotoras con +300 vehiculos en stock. Necesitaban saber como se comparaban sus precios contra todo el mercado chileno de vehiculos usados. Lo hacian a mano, revisando portales uno por uno.
           </p>
 
-          <h3 class="text-xl font-semibold mb-4">Lo que implementamos</h3>
+          <h4 class="text-lg font-semibold mb-3">Lo que implemente</h4>
           <ul class="space-y-2 text-lum-slate mb-6">
-            <li>• Scraper de 200 productos clave en 4 competidores</li>
-            <li>• Ejecución diaria a las 6am</li>
-            <li>• Dashboard con posición de precios por categoría</li>
-            <li>• Alertas cuando un competidor bajaba más de 5%</li>
+            <li>Scraper diario que monitorea +50.000 publicaciones del mercado chileno</li>
+            <li>Motor de matching que empareja vehiculos propios contra publicaciones similares (marca, modelo, ano, version)</li>
+            <li>Dashboard web construido con Next.js + Supabase</li>
+            <li>Autenticacion por usuario con roles diferenciados</li>
+            <li>Rankings de competitividad por vehiculo y sucursal</li>
+            <li>Gestion de mappings: el equipo comercial puede ajustar emparejamientos directamente desde la app</li>
+            <li>Reporte por email cada manana antes de las 7 AM</li>
           </ul>
 
-          <h3 class="text-xl font-semibold mb-4">Resultado</h3>
+          <h4 class="text-lg font-semibold mb-3">Resultado</h4>
           <p class="text-lum-slate">
-            Descubrieron que estaban 15% más caros que el mercado en una categoría que creían competitiva. Ajustaron precios y recuperaron participación. También detectaron una guerra de precios de un competidor local antes de perder clientes.
+            El equipo comercial arranca cada dia sabiendo exactamente donde esta parado. Identificaron vehiculos sobrevaluados que llevaban semanas sin moverse y ajustaron precios. Tambien detectaron oportunidades donde estaban subvalorados. El gerente comercial dejo de pedir reportes manuales.
           </p>
         </div>
       </div>
@@ -225,49 +240,61 @@ import Layout from '../../layouts/Layout.astro';
         <div class="space-y-6">
           <details class="bg-lum-cream rounded-xl p-6 group">
             <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
-              ¿Funciona con cualquier sitio web?
+              Funciona con cualquier sitio web?
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
             <p class="mt-4 text-lum-slate">
-              Con la mayoría, sí. Algunos sitios tienen protecciones anti-scraping que lo hacen más difícil o imposible. Evaluamos cada caso antes de empezar.
+              Con la mayoria, si. Algunos sitios tienen protecciones anti-scraping que lo hacen mas dificil. Evaluamos cada caso antes de empezar y te digo si es factible.
             </p>
           </details>
 
           <details class="bg-lum-cream rounded-xl p-6 group">
             <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
-              ¿Es legal hacer scraping?
+              Como funciona el matching de productos?
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
             <p class="mt-4 text-lum-slate">
-              Extraer información pública es legal. No accedemos a áreas protegidas, no hackeamos nada, no violamos términos de servicio. Es lo mismo que alguien viendo el sitio y anotando precios, pero automatizado.
+              El motor de matching usa algoritmos de similitud que comparan atributos clave (marca, modelo, ano, version, etc.). Cuando no hay match automatico, el sistema lo marca para revision manual desde la web app. Con el tiempo, el matching mejora a medida que el equipo valida y ajusta.
             </p>
           </details>
 
           <details class="bg-lum-cream rounded-xl p-6 group">
             <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
-              ¿Qué pasa si el sitio del competidor cambia?
+              Es legal hacer scraping?
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
             <p class="mt-4 text-lum-slate">
-              El scraper deja de funcionar y hay que ajustarlo. Por eso ofrezco mantención mensual: monitoreamos que todo siga funcionando y arreglamos cuando algo se rompe.
+              Extraer informacion publica es legal. No accedemos a areas protegidas, no hackeamos nada, no violamos terminos de servicio. Es lo mismo que alguien viendo el sitio y anotando precios, pero automatizado.
             </p>
           </details>
 
           <details class="bg-lum-cream rounded-xl p-6 group">
             <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
-              ¿Cuánto cuesta?
+              Que pasa si el sitio del competidor cambia?
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
             <p class="mt-4 text-lum-slate">
-              El desarrollo inicial depende de cuántos sitios y cuántos productos. Desde $2.000.000 para algo simple (1-2 competidores, 50 productos) hasta $8-10 millones para algo más complejo. La mantención mensual suele ser 10-15% del desarrollo.
+              El scraper deja de funcionar y hay que ajustarlo. Por eso ofrezco mantencion mensual: monitoreamos que todo siga funcionando y arreglamos cuando algo se rompe. El sistema alerta automaticamente si una extraccion falla.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Cuanto cuesta?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              El desarrollo inicial depende del alcance. Desde $2.000.000 para monitoreo basico (1-2 competidores, dashboard simple) hasta $10-15 millones para una solucion completa con web app, matching engine y multiples fuentes. La mantencion mensual suele ser 10-15% del desarrollo.
             </p>
           </details>
         </div>
@@ -279,13 +306,13 @@ import Layout from '../../layouts/Layout.astro';
   <section class="py-20 bg-lum-black">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-white mb-6">¿Quieres monitorear a tu competencia?</h2>
+        <h2 class="text-white mb-6">Quieres monitorear a tu competencia?</h2>
         <p class="text-xl text-lum-slate-light mb-8">
-          Cuéntame quiénes son tus competidores y qué te gustaría saber de ellos. Evaluamos si es factible y cómo sería.
+          Cuentame quienes son tus competidores y que te gustaria saber de ellos. Evaluamos si es factible y como seria.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20monitorear%20a%20mi%20competencia"
+            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20monitorear%20a%20mi%20competencia%20de%20forma%20automatica"
             target="_blank"
             class="btn-primary"
           >
