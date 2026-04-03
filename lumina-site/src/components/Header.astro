@@ -28,14 +28,18 @@ const urlMap: Record<string, string> = {
   // Service pages
   '/servicios/dashboards-estrategicos': '/en/services/strategic-dashboards',
   '/en/services/strategic-dashboards': '/servicios/dashboards-estrategicos',
+  '/servicios/control-de-gestion': '/en/services/management-control',
+  '/en/services/management-control': '/servicios/control-de-gestion',
+  '/servicios/automatizacion-inteligente': '/en/services/intelligent-automation',
+  '/en/services/intelligent-automation': '/servicios/automatizacion-inteligente',
+  '/servicios/inteligencia-competitiva': '/en/services/competitive-intelligence',
+  '/en/services/competitive-intelligence': '/servicios/inteligencia-competitiva',
   '/servicios/hr-analytics': '/en/services/hr-analytics',
   '/en/services/hr-analytics': '/servicios/hr-analytics',
-  '/servicios/automatizacion-reporteria': '/en/services/reporting-automation',
-  '/en/services/reporting-automation': '/servicios/automatizacion-reporteria',
-  '/servicios/analisis-competencia': '/en/services/competitive-analysis',
-  '/en/services/competitive-analysis': '/servicios/analisis-competencia',
-  '/servicios/capacitacion-sence': '/en/services/data-training',
-  '/en/services/data-training': '/servicios/capacitacion-sence',
+  '/servicios/soluciones-a-medida': '/en/services/custom-solutions',
+  '/en/services/custom-solutions': '/servicios/soluciones-a-medida',
+  '/servicios/capacitacion': '/en/services/training',
+  '/en/services/training': '/servicios/capacitacion',
 
   // Blog posts
   '/blog/como-elegir-kpis-pyme': '/en/blog/how-to-choose-kpis',
@@ -76,23 +80,15 @@ const getAlternatePath = () => {
 
 const navLinks = isEnglish ? [
   { href: '/en', label: 'Home' },
-  { href: '/en/about', label: 'About' },
   { href: '/en/services', label: 'Services' },
-  { href: '/en/resources', label: 'Resources' },
-  { href: '/en/blog', label: 'Blog' },
   { href: '/en/case-studies', label: 'Cases' },
-  { href: '/en/faq', label: 'FAQ' },
-  { href: 'https://nodaltree.luminaconsulting.ai', label: 'NodalTree', external: true },
+  { href: '/en/about', label: 'About' },
   { href: '/en/contact', label: 'Contact' },
 ] : [
   { href: '/', label: 'Inicio' },
-  { href: '/acerca-de', label: 'Nosotros' },
   { href: '/servicios', label: 'Servicios' },
-  { href: '/recursos', label: 'Recursos' },
-  { href: '/blog', label: 'Blog' },
   { href: '/casos-de-exito', label: 'Casos' },
-  { href: '/faq', label: 'FAQ' },
-  { href: 'https://nodaltree.luminaconsulting.ai', label: 'NodalTree', external: true },
+  { href: '/acerca-de', label: 'Nosotros' },
   { href: '/contacto', label: 'Contacto' },
 ];
 

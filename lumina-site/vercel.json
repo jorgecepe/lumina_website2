@@ -1,4 +1,9 @@
 {
+  "redirects": [
+    { "source": "/servicios/automatizacion-reporteria", "destination": "/servicios/automatizacion-inteligente", "permanent": true },
+    { "source": "/servicios/analisis-competencia", "destination": "/servicios/inteligencia-competitiva", "permanent": true },
+    { "source": "/servicios/capacitacion-sence", "destination": "/servicios/capacitacion", "permanent": true }
+  ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",

@@ -1,48 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const services = [
+const coreServices = [
   {
     slug: "dashboards-estrategicos",
-    title: "Tu negocio en una pantalla",
-    description: "Abre un dashboard y ve ventas, márgenes, operación y flujo de caja — todo consolidado y actualizado. Sin armar reportes a mano.",
+    title: "Dashboards y visibilidad",
+    description: "Conecto tus sistemas y te muestro cómo va tu operación, actualizado todos los días. Sin armar reportes a mano.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />`,
     highlights: ["Actualización diaria", "Sin Excel manual", "Datos en tiempo real"]
   },
   {
-    slug: "hr-analytics",
-    title: "Visibilidad sobre tu equipo",
-    description: "Entiende por qué se va la gente, cuánto te cuesta la rotación, y dónde están los problemas de ausentismo — antes de que escalen.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`,
-    highlights: ["Rotación", "Ausentismo", "Costos laborales"]
+    slug: "control-de-gestion",
+    title: "Control de gestión con datos",
+    description: "No basta con ver números. Defino contigo qué medir, cómo interpretarlo y qué decisiones tomar. 15 años de experiencia en control financiero.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />`,
+    highlights: ["KPIs estratégicos", "Presupuesto vs. real", "Gestión por excepción"]
   },
   {
-    slug: "automatizacion-reporteria",
-    title: "Reportes que se arman solos",
-    description: "Tus reportes diarios, semanales y mensuales se generan y envían automáticamente. Tu equipo deja de copiar datos y empieza a analizarlos.",
+    slug: "automatizacion-inteligente",
+    title: "Automatización inteligente",
+    description: "Robots, agentes de IA y flujos automáticos para que tu equipo deje de hacer trabajo mecánico y se enfoque en lo que importa.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />`,
-    highlights: ["Automático", "Sin intervención manual", "Datos consolidados"]
+    highlights: ["n8n + Python", "Agentes de IA", "Sin intervención manual"]
   },
+];
+
+const moreServices = [
   {
-    slug: "analisis-competencia",
-    title: "Inteligencia competitiva automatizada",
-    description: "Sabes cuánto cobra tu competencia, qué productos mueve y cuándo cambia precios — todos los días, sin que nadie revise manualmente.",
+    slug: "inteligencia-competitiva",
+    title: "Inteligencia competitiva",
+    description: "Monitoreo diario de precios y posicionamiento de tu competencia, con alertas automáticas.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />`,
-    highlights: ["Monitoreo diario", "Alertas por email", "Comparación visual"]
+    highlights: ["Monitoreo diario", "Alertas", "Rankings"]
   },
   {
-    slug: "capacitacion-sence",
-    title: "Capacitación a Medida",
-    description: "Tu equipo aprende a leer datos, usar dashboards y tomar decisiones con información. Con tus datos reales, no ejemplos de libro. Franquicia SENCE.",
+    slug: "hr-analytics",
+    title: "HR Analytics y organigramas",
+    description: "Visibilidad sobre dotación, rotación, costos laborales y desempeño. Incluye NodalTree.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`,
+    highlights: ["Rotación", "Ausentismo", "NodalTree"]
+  },
+  {
+    slug: "soluciones-a-medida",
+    title: "Soluciones a medida",
+    description: "Aplicaciones web, herramientas internas e integraciones cuando el problema necesita algo hecho a tu medida.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
+    highlights: ["React/Next.js", "APIs", "SaaS"]
+  },
+  {
+    slug: "capacitacion",
+    title: "Capacitación",
+    description: "Power BI, análisis de datos, automatización. Con tus datos reales, no ejemplos de libro. Franquicia SENCE.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />`,
-    highlights: ["Con tus datos reales", "Presencial u online", "Franquicia SENCE"]
-  }
+    highlights: ["Datos reales", "Presencial/online", "SENCE"]
+  },
 ];
 ---
 
 <Layout
-  title="Servicios | Ve cómo va tu negocio y toma mejores decisiones | Lumina Consulting"
-  description="Visibilidad total de tu negocio en una pantalla. Dashboards, automatización de reportes, inteligencia competitiva y capacitación para PyMEs en Chile."
+  title="Servicios | Datos, automatización e inteligencia para empresas | Lumina Consulting"
+  description="Dashboards, control de gestión, automatización inteligente, inteligencia competitiva, HR analytics, soluciones a medida y capacitación para empresas medianas en Chile."
 >
   <!-- Hero Section -->
   <section class="relative py-24 bg-lum-black overflow-hidden">
@@ -53,43 +70,40 @@ const services = [
     <div class="container-custom relative">
       <div class="max-w-4xl mx-auto text-center">
         <span class="badge bg-white/10 text-white border-white/20 mb-6">Servicios</span>
-        <h1 class="text-white mb-6">Qué obtienes al trabajar conmigo</h1>
+        <h1 class="text-white mb-6">Lo que hacemos</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
-          Visibilidad sobre tu negocio, reportes que se arman solos, y un equipo que toma decisiones con datos. Sin proyectos eternos ni jerga innecesaria.
+          Datos, automatización e inteligencia para empresas que quieren decidir mejor. Sin proyectos eternos ni jerga innecesaria.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Services Grid -->
+  <!-- Core Services -->
   <section class="py-20 bg-white">
     <div class="container-custom">
       <div class="max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-8">Servicios principales</p>
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {coreServices.map(service => (
             <a
               href={`/servicios/${service.slug}`}
-              class="group card hover:border-lum-coral/30 transition-all duration-300"
+              class="group card-elevated hover:border-lum-coral transition-all duration-300"
             >
               <div class="flex items-start gap-4 mb-4">
-                <div class="icon-container flex-shrink-0">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={service.icon} />
-                </div>
-                <div>
-                  <h2 class="text-xl font-semibold text-lum-black group-hover:text-lum-coral transition-colors">
-                    {service.title}
-                  </h2>
+                <div class="w-12 h-12 bg-lum-coral/10 flex-shrink-0 flex items-center justify-center border-2 border-lum-black">
+                  <svg class="w-6 h-6 text-lum-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={service.icon} />
                 </div>
               </div>
-              <p class="text-lum-slate mb-4">
-                {service.description}
-              </p>
+              <h2 class="text-xl font-semibold text-lum-black group-hover:text-lum-coral transition-colors mb-3">
+                {service.title}
+              </h2>
+              <p class="text-lum-slate mb-4 text-sm">{service.description}</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 {service.highlights.map(h => (
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">{h}</span>
+                  <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">{h}</span>
                 ))}
               </div>
-              <span class="inline-flex items-center text-lum-coral font-medium text-sm group-hover:gap-2 transition-all">
+              <span class="inline-flex items-center text-lum-coral font-mono text-mono-sm group-hover:gap-2 transition-all">
                 Ver más
                 <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -97,30 +111,27 @@ const services = [
               </span>
             </a>
           ))}
-          <!-- 6th card: CTA -->
-          <a
-            href="https://wa.me/56991629095?text=Hola,%20no%20estoy%20seguro%20qué%20servicio%20necesito.%20¿Podemos%20conversar?"
-            target="_blank"
-            class="group card hover:border-lum-coral/30 transition-all duration-300 flex flex-col items-center justify-center text-center"
-          >
-            <div class="icon-container mb-4">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-            </div>
-            <h2 class="text-xl font-semibold text-lum-black group-hover:text-lum-coral transition-colors mb-2">
-              ¿No sabes qué necesitas?
-            </h2>
-            <p class="text-lum-slate mb-4">
-              Conversemos y te ayudo a identificar por dónde empezar.
-            </p>
-            <span class="inline-flex items-center text-lum-coral font-medium text-sm group-hover:gap-2 transition-all">
-              Conversemos
-              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
-          </a>
+        </div>
+
+        <p class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-8">También</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {moreServices.map(service => (
+            <a
+              href={`/servicios/${service.slug}`}
+              class="group card-subtle hover:border-lum-mocha transition-all duration-300"
+            >
+              <div class="w-10 h-10 bg-lum-mocha/10 flex-shrink-0 flex items-center justify-center border border-lum-border mb-3">
+                <svg class="w-5 h-5 text-lum-mocha" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={service.icon} />
+              </div>
+              <h3 class="text-lg font-semibold text-lum-black group-hover:text-lum-mocha transition-colors mb-2">
+                {service.title}
+              </h3>
+              <p class="text-lum-slate text-sm mb-3">{service.description}</p>
+              <span class="inline-flex items-center text-lum-mocha font-mono text-mono-xs group-hover:gap-1 transition-all">
+                Ver más →
+              </span>
+            </a>
+          ))}
         </div>
       </div>
     </div>

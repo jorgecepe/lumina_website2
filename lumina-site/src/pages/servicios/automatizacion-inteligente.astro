@@ -1,0 +1,487 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Automatizacion Inteligente | Lumina Consulting"
+  description="Automatizo flujos con n8n, Python, GitHub Actions y agentes de IA para que tu equipo deje de hacer trabajo mecanico y se enfoque en lo que importa."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automatizacion Inteligente",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Automatizacion inteligente de procesos con n8n, Python, GitHub Actions y agentes de IA. Workflows, ETL, reporteria automatica e integracion de sistemas para PyMEs.",
+    "areaServed": "CL",
+    "serviceType": "Intelligent Process Automation"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/servicios" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Todos los servicios
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Automatizacion</span>
+        <h1 class="text-white mb-6">Automatizacion inteligente</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Tu equipo pierde horas en tareas mecanicas: armar reportes, enviar datos, copiar informacion entre sistemas, responder consultas repetitivas. Todo eso se puede automatizar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- El problema -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">El costo oculto de lo manual</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Tu equipo pierde horas en tareas mecanicas: armar reportes, enviar datos, copiar informacion entre sistemas, responder consultas repetitivas. Nadie se sienta a calcular cuanto cuesta eso. Cuando lo calculas, los numeros suelen ser sorprendentes.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Y no es solo el tiempo directo. Es el error humano, la dependencia de una persona, las vacaciones que detienen procesos, y el talento desperdiciado en tareas que una maquina hace mejor.
+        </p>
+
+        <div class="bg-lum-cream rounded-2xl p-8 my-10">
+          <p class="font-semibold text-lum-black mb-4">Ejemplo real:</p>
+          <p class="text-lum-slate mb-4">
+            Un analista que gana $1.500.000 al mes pasa 6 horas semanales armando reportes manuales y copiando datos entre sistemas.
+          </p>
+          <ul class="space-y-2 text-lum-slate">
+            <li>6 horas/semana x 52 semanas = 312 horas al ano</li>
+            <li>Costo hora = ~$8.000</li>
+            <li><strong>Costo anual = $2.500.000</strong> (solo en un proceso)</li>
+          </ul>
+          <p class="text-lum-slate mt-4">
+            Y eso sin contar los errores de copiar mal un numero, las vacaciones del analista donde nadie hace el reporte, o el tiempo que podria estar dedicando a algo que agregue valor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Que automatizo -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-4 text-center">Que hago</h2>
+        <p class="text-lg text-lum-slate text-center mb-10 max-w-2xl mx-auto">
+          Automatizo flujos con herramientas como n8n, Python, GitHub Actions y agentes de IA para que tu equipo deje de hacer trabajo mecanico y se enfoque en lo que importa.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Automatizacion de reporteria</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Generacion y envio automatico de reportes. Se arman solos con datos frescos y llegan a las horas que definas: ventas diarias, cierre mensual, KPIs semanales.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Tipico ahorro: 2-6 horas/semana
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Workflows inteligentes</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Integracion entre email, calendario, CRM, ERP y cualquier sistema que tenga API. Cuando pasa algo en un sistema, se disparan acciones en los demas automaticamente.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Tipico ahorro: elimina procesos manuales diarios
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Agentes de IA</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Asistentes inteligentes que clasifican emails, procesan informacion, ejecutan tareas, transcriben reuniones y preparan briefings. Van mas alla de un chatbot: toman acciones.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Tipico ahorro: 1-3 horas/dia en tareas cognitivas repetitivas
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Integracion de sistemas</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Webhooks, APIs, ETL. Mover datos de un sistema a otro sin intervencion humana: del ERP al data warehouse, del formulario al CRM, de la plataforma de ventas a la contabilidad.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Tipico ahorro: reduce errores en 80-90%
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Eliminacion de procesos manuales</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Cualquier tarea repetitiva que siga reglas claras se puede automatizar: enviar avisos, generar documentos, actualizar bases de datos, sincronizar inventarios.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Tipico ahorro: variable, pero siempre medible
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Alertas y notificaciones</h3>
+            <p class="text-lum-slate text-sm mb-4">
+              Avisos inteligentes cuando algo pasa: stock bajo, venta grande, margen negativo, cliente moroso. Por mail, WhatsApp, Telegram o donde necesites.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Tipico ahorro: detectar problemas horas o dias antes
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como trabajo -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">Como trabajo automatizacion</h2>
+
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Levantamiento del proceso actual</h3>
+              <p class="text-lum-slate">
+                Me siento con quien hace el proceso hoy y lo documentamos paso a paso. De donde salen los datos? Que transformaciones se hacen? Donde van los resultados? Que excepciones hay?
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">2</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Evaluacion de factibilidad y ROI</h3>
+              <p class="text-lum-slate">
+                No todo debe automatizarse. Calculamos cuanto tiempo y dinero ahorra versus cuanto cuesta desarrollarlo. Si el ROI no es claro, te lo digo.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">3</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Desarrollo e implementacion</h3>
+              <p class="text-lum-slate">
+                Construyo la automatizacion usando la herramienta que tenga mas sentido: n8n para workflows visuales, Python para logica compleja, GitHub Actions para pipelines de datos, agentes de IA para tareas cognitivas.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Pruebas y ajustes</h3>
+              <p class="text-lum-slate">
+                Corremos la automatizacion en paralelo con el proceso manual para validar que los resultados coinciden. Ajustamos lo que haga falta.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">5</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Documentacion y capacitacion</h3>
+              <p class="text-lum-slate">
+                Te dejo documentado que hace la automatizacion, como funciona, y que hacer si algo falla. No quiero que dependas de mi para siempre.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Herramientas -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-10 text-center">Herramientas que uso</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">n8n</h3>
+            <p class="text-sm text-lum-slate">
+              Plataforma de automatizacion visual. Ideal para conectar servicios, crear workflows complejos y orquestar agentes de IA sin depender de codigo.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">Python</h3>
+            <p class="text-sm text-lum-slate">
+              Para automatizaciones complejas, manejo de datos pesados, integraciones con APIs, scraping y cualquier cosa que requiera logica elaborada.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">GitHub Actions</h3>
+            <p class="text-sm text-lum-slate">
+              Pipelines de datos programados, ETL automaticos, despliegues de modelos. Corre en la nube, se versiona, y tiene logs de cada ejecucion.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">Claude / GPT</h3>
+            <p class="text-sm text-lum-slate">
+              Agentes de IA que procesan lenguaje natural: clasifican emails, resumen documentos, generan respuestas, transcriben y analizan reuniones.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">Cloud Functions</h3>
+            <p class="text-sm text-lum-slate">
+              Funciones serverless que reaccionan a eventos: webhooks, cambios en bases de datos, archivos nuevos. Escalan solas y cuestan casi nada.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center">
+            <h3 class="text-lg font-semibold mb-3">Power Automate</h3>
+            <p class="text-sm text-lum-slate">
+              Para empresas con Microsoft 365. Bueno para automatizar flujos simples, mails, aprobaciones y conectar apps del ecosistema Microsoft.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-white rounded-xl">
+          <p class="text-center text-lum-slate">
+            <strong>No vendo herramientas.</strong> Uso la que tenga mas sentido para tu situacion, infraestructura y presupuesto. El objetivo es resolver el problema, no implementar tecnologia por implementar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casos reales -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Casos reales</h2>
+
+        <div class="space-y-8">
+          <div class="bg-lum-cream rounded-2xl p-8">
+            <span class="badge-outline text-xs mb-4">Automotriz</span>
+            <h3 class="text-xl font-semibold mb-4">Robot de monitoreo de precios</h3>
+            <p class="text-lum-slate mb-4">
+              Red de automotoras que necesitaba comparar sus precios contra el mercado todos los dias.
+            </p>
+            <p class="text-lum-slate mb-4">
+              Construi un robot que cada manana revisa precios de +300 vehiculos, genera un ranking de competitividad y lo envia por email antes de las 7 AM.
+            </p>
+            <p class="text-lum-slate">
+              <strong>Resultado:</strong> De 3 horas manuales diarias a cero. El equipo comercial arranca el dia con informacion fresca sin mover un dedo.
+            </p>
+          </div>
+
+          <div class="bg-lum-cream rounded-2xl p-8">
+            <span class="badge-outline text-xs mb-4">Inmobiliario</span>
+            <h3 class="text-xl font-semibold mb-4">Pipeline de datos automatizado</h3>
+            <p class="text-lum-slate mb-4">
+              Grupo inmobiliario con multiples propiedades que usaba Cloudbeds como PMS y necesitaba consolidar datos de ocupacion, revenue y reservas en Power BI.
+            </p>
+            <p class="text-lum-slate mb-4">
+              Implemente un pipeline completo: Webhooks Cloudbeds &rarr; Cloud Functions &rarr; GitHub Actions &rarr; PostgreSQL &rarr; Power BI. Los datos fluyen automaticamente cada vez que hay un cambio en el PMS.
+            </p>
+            <p class="text-lum-slate">
+              <strong>Resultado:</strong> Dashboards siempre actualizados sin intervencion manual. El equipo de revenue management toma decisiones con datos del mismo dia.
+            </p>
+          </div>
+
+          <div class="bg-lum-cream rounded-2xl p-8">
+            <span class="badge-outline text-xs mb-4">Productividad personal</span>
+            <h3 class="text-xl font-semibold mb-4">Asistente personal con IA</h3>
+            <p class="text-lum-slate mb-4">
+              Chatbot en Telegram que funciona como asistente ejecutivo: clasifica emails, prepara briefings diarios, transcribe reuniones y genera resumes de accion.
+            </p>
+            <p class="text-lum-slate mb-4">
+              Construido con Claude Code + n8n. Se conecta a Gmail, Google Calendar y Notion. Entiende contexto y prioridades.
+            </p>
+            <p class="text-lum-slate">
+              <strong>Resultado:</strong> Ahorro de ~1 hora diaria en gestion de informacion. El ejecutivo llega a cada reunion con contexto preparado automaticamente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cuando NO automatizar -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">Cuando NO conviene automatizar</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          No todo deberia automatizarse. A veces el proceso manual tiene sentido, o automatizar cuesta mas de lo que ahorra.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-red-500 text-xl flex-shrink-0">&#10007;</span>
+            <div>
+              <p class="font-semibold">El proceso cambia constantemente</p>
+              <p class="text-sm text-lum-slate">Si cada vez que lo haces es diferente, automatizar es dificil y caro de mantener.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-red-500 text-xl flex-shrink-0">&#10007;</span>
+            <div>
+              <p class="font-semibold">Se hace muy pocas veces</p>
+              <p class="text-sm text-lum-slate">Si solo lo haces una vez al ano, el ahorro anual es bajo y la inversion puede no valer.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-red-500 text-xl flex-shrink-0">&#10007;</span>
+            <div>
+              <p class="font-semibold">Los datos de origen son un desastre</p>
+              <p class="text-sm text-lum-slate">Si primero hay que arreglar como se capturan los datos, eso viene antes de automatizar.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-red-500 text-xl flex-shrink-0">&#10007;</span>
+            <div>
+              <p class="font-semibold">Requiere juicio humano genuino</p>
+              <p class="text-sm text-lum-slate">Si la tarea necesita criterio, empatia o creatividad real, la IA puede asistir pero no reemplazar completamente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Preguntas frecuentes</h2>
+
+        <div class="space-y-6">
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Cuanto cuesta automatizar un proceso?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Depende de la complejidad. Una automatizacion simple (consolidar archivos y mandar un mail) puede costar $500.000-$1.000.000. Un agente de IA con integraciones multiples o un pipeline de datos complejo puede llegar a $5-10 millones. Siempre calculo el ROI antes de empezar.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Cuanto tiempo toma?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Entre 1 y 6 semanas tipicamente. Un workflow simple en n8n puede estar listo en dias. Un pipeline de datos con multiples sistemas toma mas. Lo que mas toma suele ser el levantamiento del proceso y conseguir acceso a los datos.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Que pasa si falla la automatizacion?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Diseno las automatizaciones con manejo de errores: te avisan si algo sale mal en vez de fallar silenciosamente. Cada ejecucion queda logueada. Y siempre queda documentado como hacer el proceso manual por si hay una emergencia.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              La IA va a reemplazar a mi equipo?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              En mi experiencia, rara vez. Lo que pasa es que la persona que hacia el proceso manual ahora puede dedicar ese tiempo a cosas mas valiosas: analisis, atencion a clientes, proyectos nuevos. La automatizacion libera tiempo, no reemplaza personas.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Necesito infraestructura especial?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Generalmente no. La mayoria de las automatizaciones corren en la nube con costos minimos. Si ya tienes Microsoft 365, Google Workspace o cualquier plataforma en la nube, probablemente ya tienes lo que necesitas.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Tienes procesos que podrian automatizarse?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Cuentame que procesos manuales tienen y vemos si tiene sentido automatizarlos. Sin compromiso.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hola,%20tengo%20procesos%20que%20creo%20que%20podrian%20automatizarse"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contactar por WhatsApp
+          </a>
+          <a href="/contacto" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Agendar una llamada
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articulos relacionados -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Articulos relacionados</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/blog/automatizacion-reporteria-roi" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Automatizacion</span>
+            <h4 class="font-semibold text-lum-black">Vale la pena automatizar reportes? Hagamos los numeros</h4>
+          </a>
+          <a href="/blog/errores-dashboards-evitar" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Dashboards</span>
+            <h4 class="font-semibold text-lum-black">7 errores que arruinan un buen dashboard</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

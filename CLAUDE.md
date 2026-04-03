@@ -44,28 +44,31 @@ public/              # Assets estáticos (logos, favicon, robots.txt)
 ## Sistema de Diseño
 
 **Ver `DESIGN-SYSTEM.md`** para especificaciones completas de:
-- Tipografía (Plus Jakarta Sans + DM Sans)
-- Paleta de colores actualizada
-- Sombras y animaciones
+- Tipografía (Instrument Serif + Outfit + JetBrains Mono + Bebas Neue)
+- Paleta de colores neo-brutalist (coral, mocha, sage, cream, black)
+- Sombras brutalist (solid box-shadows) y animaciones
 - Componentes (botones, cards, badges, etc.)
-- Glassmorphism y backgrounds decorativos
+- Grain texture y elementos decorativos geométricos
 
-### Colores Principales
+### Colores Principales (Neo-Brutalist)
 ```
-lumina-navy: #0f172a           // Fondo oscuro principal
-lumina-navy-light: #1e293b     // Fondo oscuro secundario
-lumina-blue: #3b82f6           // Azul principal
-lumina-accent: #06b6d4         // Cyan accent (destaque)
-lumina-slate: #64748b          // Texto secundario
-lumina-slate-light: #94a3b8    // Texto sobre fondos oscuros
-lumina-success: #10b981        // Verde éxito
+lum-black: #1a1814             // Fondo oscuro principal
+lum-charcoal: #2d2a26          // Fondo oscuro secundario
+lum-cream: #F5F0EB             // Fondo claro principal
+lum-coral: #FF6B35             // Accent principal
+lum-mocha: #A47764             // Accent secundario
+lum-sage: #7D8471              // Accent terciario
+lum-slate: #64605A             // Texto secundario
 ```
 
-## Servicios Ofrecidos
-1. **Dashboards Estratégicos** - Automatización de reportes
-2. **Análisis de Competencia** - Monitoreo automático de precios
-3. **Gestión del Negocio** - Indicadores y visibilidad total
-4. **Capacitación a Medida** - Formación con franquicia Sence
+## Servicios Ofrecidos (7)
+1. **Dashboards y visibilidad** → `/servicios/dashboards-estrategicos`
+2. **Control de gestión** → `/servicios/control-de-gestion`
+3. **Automatización inteligente** → `/servicios/automatizacion-inteligente`
+4. **Inteligencia competitiva** → `/servicios/inteligencia-competitiva`
+5. **HR Analytics y organigramas** → `/servicios/hr-analytics`
+6. **Soluciones a medida** → `/servicios/soluciones-a-medida`
+7. **Capacitación** → `/servicios/capacitacion`
 
 ## Producto Principal
 **NodalTree** - Plataforma SaaS (subdomain: nodaltree.luminaconsulting.ai)
@@ -80,7 +83,7 @@ npm run preview  # Preview del build
 ## Convenciones de Código
 - Componentes Astro usan PascalCase
 - Clases CSS con Tailwind utilities + custom classes (btn-primary, card, badge, etc.)
-- Tipografía: Plus Jakarta Sans (títulos) + DM Sans (cuerpo)
+- Tipografía: Instrument Serif (títulos) + Outfit (cuerpo) + JetBrains Mono (tags/accents)
 - Mobile-first responsive design
 - SEO: Meta tags, Open Graph, Schema.org JSON-LD
 - Usar iconos SVG en lugar de emojis

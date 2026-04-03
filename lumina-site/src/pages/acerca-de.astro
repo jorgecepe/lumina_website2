@@ -1,10 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Acerca de Jorge Cepeda | Lumina Consulting";
+const pageDescription = `15 a${String.fromCharCode(241)}os en control de gesti${String.fromCharCode(243)}n financiero. Hoy ayudo a empresas medianas a conectar sus datos, automatizar lo repetitivo y construir sistemas de decisi${String.fromCharCode(243)}n que realmente se usan.`;
 ---
 
 <Layout
-  title="Acerca de Lumina Consulting | Visibilidad de negocio para empresas medianas"
-  description="15 años en control de gestión financiero. Hoy ayudamos a empresas medianas a ver su negocio con la misma claridad que tiene un holding."
+  title={pageTitle}
+  description={pageDescription}
 >
   <!-- Hero Section -->
   <section class="relative py-24 bg-lum-black overflow-hidden">
@@ -14,62 +17,19 @@ import Layout from '../layouts/Layout.astro';
     </div>
     <div class="container-custom relative">
       <div class="max-w-4xl mx-auto text-center">
-        <span class="badge bg-white/10 text-white border-white/20 mb-6">Nosotros</span>
-        <h1 class="text-white mb-6">Acerca de Lumina Consulting</h1>
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Qui&#233;n soy</span>
+        <h1 class="text-white mb-6">Jorge Cepeda</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
-          Que tu empresa vea su negocio con la misma claridad que un holding
+          Control de gesti&#243;n, datos y automatizaci&#243;n para empresas que ya no pueden depender de Excel
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Mission & Vision -->
-  <section class="py-24 bg-white">
+  <!-- Qui&#233;n soy -->
+  <section class="py-20 bg-white" id="fundador">
     <div class="container-custom">
       <div class="max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Mission -->
-          <div class="card text-center scroll-fade">
-            <div class="icon-container icon-container-lg mx-auto mb-6">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h2 class="text-2xl mb-4">Nuestra Misión</h2>
-            <p class="text-lum-slate">
-              Que cada empresa mediana pueda abrir una pantalla y entender cómo va su negocio — con la misma claridad que tiene un holding sobre sus filiales.
-            </p>
-          </div>
-
-          <!-- Vision -->
-          <div class="card text-center scroll-fade animation-delay-100">
-            <div class="icon-container icon-container-lg mx-auto mb-6 bg-gradient-to-br from-lumina-accent/10 to-lumina-blue/10">
-              <svg class="w-8 h-8 text-lum-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-              </svg>
-            </div>
-            <h2 class="text-2xl mb-4">Nuestra Visión</h2>
-            <p class="text-lum-slate">
-              Que la visibilidad sobre el negocio deje de ser un lujo de grandes corporaciones y esté al alcance de cualquier empresa que se tome en serio sus datos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Founder Section - Critical for LLMO/E-E-A-T -->
-  <section class="py-24 bg-white" id="fundador">
-    <div class="container-custom">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12 scroll-fade">
-          <span class="badge mb-4">Fundador</span>
-          <h2>Jorge Cepeda</h2>
-          <p class="text-lum-slate max-w-2xl mx-auto mt-4">
-            15 años en control de gestión financiero. Hoy ayudo a empresas medianas a ver su negocio con la misma claridad que tiene un holding.
-          </p>
-        </div>
-
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <!-- Photo -->
           <div class="scroll-fade">
@@ -83,16 +43,19 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- Bio & Credentials -->
+          <!-- Bio -->
           <div class="scroll-fade animation-delay-100">
+            <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4">Fundador</p>
+            <h2 class="mb-6">Qui&#233;n soy</h2>
+
             <p class="text-lg text-lum-slate mb-4">
-              Pasé 15 años en Grupo Security — uno de los holdings financieros más grandes de Chile — diseñando sistemas de control de gestión, reportería financiera y analítica de datos para la alta administración. Ahí aprendí qué información necesita un gerente general para tomar decisiones, y cómo construir los sistemas que la entregan.
+              Soy Jorge Cepeda. Llevo 15 a&#241;os dise&#241;ando sistemas de control de gesti&#243;n en la industria financiera &mdash; los &#250;ltimos a&#241;os en el holding de inversiones de un banco. Hoy aplico esa experiencia a empresas medianas que necesitan la misma visibilidad y control, sin los costos ni la complejidad de las soluciones enterprise.
             </p>
             <p class="text-lg text-lum-slate mb-4">
-              Hoy aplico eso mismo a empresas medianas: conecto sus datos, automatizo su reportería, y les doy la misma visibilidad que tiene un holding sobre su operación. Además, soy profesor de Data Analytics Avanzado en la Universidad de los Andes y tengo certificación Microsoft Power BI (PL-300).
+              Lumina Consulting es mi consultora. Trabajo con empresas que est&#225;n en el punto donde Excel ya no alcanza pero SAP enterprise es demasiado. Las ayudo a conectar sus datos, automatizar lo repetitivo, y construir sistemas de decisi&#243;n que realmente se usan.
             </p>
-            <p class="text-lg text-lum-slate mb-8 font-medium">
-              No soy un desarrollador que aprendió negocios. Soy alguien de negocios que aprendió a construir soluciones técnicas.
+            <p class="text-lg text-lum-slate mb-8">
+              Tambi&#233;n soy profesor de Advanced Data Analytics en la Universidad de los Andes, y certificado Microsoft PL-300 (Power BI Data Analyst).
             </p>
 
             <!-- Credentials Grid -->
@@ -107,7 +70,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
                 <div>
                   <p class="font-semibold text-lum-black text-sm">MBA</p>
-                  <p class="text-lum-slate text-xs">Pontificia Universidad Católica de Chile</p>
+                  <p class="text-lum-slate text-xs">Pontificia Universidad Cat&#243;lica de Chile</p>
                 </div>
               </div>
 
@@ -145,8 +108,8 @@ import Layout from '../layouts/Layout.astro';
                   </svg>
                 </div>
                 <div>
-                  <p class="font-semibold text-lum-black text-sm">15+ años experiencia</p>
-                  <p class="text-lum-slate text-xs">Control financiero en Grupo Security</p>
+                  <p class="font-semibold text-lum-black text-sm">15+ a&#241;os experiencia</p>
+                  <p class="text-lum-slate text-xs">Control de gesti&#243;n en industria financiera</p>
                 </div>
               </div>
             </div>
@@ -169,190 +132,165 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Our Approach -->
-  <section class="py-24 section-light">
+  <!-- Enfoque -->
+  <section class="py-20 bg-lum-cream">
     <div class="container-custom">
-      <div class="text-center mb-16 scroll-fade">
-        <span class="badge mb-4">Filosofía</span>
-        <h2>Nuestro Enfoque</h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div class="feature-card scroll-fade">
-          <div class="icon-container mb-5">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h3 class="text-lg mb-3">Visibilidad desde el día uno</h3>
-          <p class="text-lum-slate text-sm">
-            Empiezas a ver tus números consolidados antes de que termine el proyecto. Sin esperar meses para obtener resultados.
-          </p>
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12 scroll-fade">
+          <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4">Filosof&#237;a</p>
+          <h2>Enfoque</h2>
         </div>
 
-        <div class="feature-card scroll-fade animation-delay-100">
-          <div class="icon-container mb-5">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="text-lg mb-3">Negocio primero, tecnología después</h3>
-          <p class="text-lum-slate text-sm">
-            No vendemos herramientas. Primero entendemos qué decisiones necesitas tomar, y luego elegimos la tecnología que mejor resuelve ese problema.
-          </p>
-        </div>
-
-        <div class="feature-card scroll-fade animation-delay-200">
-          <div class="icon-container mb-5">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-lg mb-3">Autonomía, no dependencia</h3>
-          <p class="text-lum-slate text-sm">
-            Te capacitamos para que tu equipo pueda mantener y evolucionar lo que construimos. No buscamos que dependas de nosotros para siempre.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Methodology -->
-  <section class="py-24 bg-white">
-    <div class="container-custom">
-      <div class="text-center mb-16 scroll-fade">
-        <span class="badge mb-4">Proceso</span>
-        <h2>Nuestra Metodología</h2>
-      </div>
-
-      <div class="max-w-3xl mx-auto">
-        <div class="space-y-6">
-          <div class="flex gap-6 scroll-fade">
-            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-lum-coral to-lum-mocha text-white flex items-center justify-center font-display font-bold text-xl">
-              1
-            </div>
-            <div class="pt-2">
-              <h3 class="text-lg mb-2">Diagnóstico</h3>
-              <p class="text-lum-slate">
-                Entendemos qué decisiones necesitas tomar y qué información te falta para tomarlas
-              </p>
-            </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card-elevated scroll-fade">
+            <span class="badge-coral mb-4">01</span>
+            <h3 class="text-xl mb-3">Estrategia + ejecuci&#243;n</h3>
+            <p class="text-lum-slate">
+              No solo construyo dashboards &mdash; defino qu&#233; medir y por qu&#233;. Primero entiendo las decisiones que necesitas tomar, y despu&#233;s dise&#241;o la soluci&#243;n que las soporta.
+            </p>
           </div>
 
-          <div class="flex gap-6 scroll-fade animation-delay-100">
-            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-lum-coral to-lum-mocha text-white flex items-center justify-center font-display font-bold text-xl">
-              2
-            </div>
-            <div class="pt-2">
-              <h3 class="text-lg mb-2">Conexión</h3>
-              <p class="text-lum-slate">
-                Nos conectamos a tus sistemas actuales — ERP, contabilidad, plataformas de reserva, Excel
-              </p>
-            </div>
+          <div class="card-elevated scroll-fade animation-delay-100">
+            <span class="badge-coral mb-4">02</span>
+            <h3 class="text-xl mb-3">Automatizaci&#243;n real</h3>
+            <p class="text-lum-slate">
+              Los flujos que construyo est&#225;n en producci&#243;n. Robots que corren a las 7 AM, agentes que responden mensajes, reportes que llegan sin que nadie los pida.
+            </p>
           </div>
 
-          <div class="flex gap-6 scroll-fade animation-delay-200">
-            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-lum-coral to-lum-mocha text-white flex items-center justify-center font-display font-bold text-xl">
-              3
-            </div>
-            <div class="pt-2">
-              <h3 class="text-lg mb-2">Construcción</h3>
-              <p class="text-lum-slate">
-                Construimos dashboards y automatizaciones con entregas parciales que puedes usar de inmediato
-              </p>
-            </div>
+          <div class="card-elevated scroll-fade animation-delay-200">
+            <span class="badge-coral mb-4">03</span>
+            <h3 class="text-xl mb-3">Sin dependencia</h3>
+            <p class="text-lum-slate">
+              Transfiero conocimiento. Tu equipo puede mantener lo que construimos. No busco contratos eternos &mdash; busco que el sistema funcione sin m&#237;.
+            </p>
           </div>
 
-          <div class="flex gap-6 scroll-fade animation-delay-300">
-            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-lum-coral to-lum-mocha text-white flex items-center justify-center font-display font-bold text-xl">
-              4
-            </div>
-            <div class="pt-2">
-              <h3 class="text-lg mb-2">Capacitación</h3>
-              <p class="text-lum-slate">
-                Te enseñamos a leer los datos, interpretar los indicadores y actuar según lo que ves
-              </p>
-            </div>
-          </div>
-
-          <div class="flex gap-6 scroll-fade animation-delay-400">
-            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-lum-coral to-lum-mocha text-white flex items-center justify-center font-display font-bold text-xl">
-              5
-            </div>
-            <div class="pt-2">
-              <h3 class="text-lg mb-2">Seguimiento</h3>
-              <p class="text-lum-slate">
-                Ajustamos indicadores y visualizaciones según cómo evoluciona tu negocio
-              </p>
-            </div>
+          <div class="card-elevated scroll-fade animation-delay-300">
+            <span class="badge-coral mb-4">04</span>
+            <h3 class="text-xl mb-3">Foco en empresas medianas</h3>
+            <p class="text-lum-slate">
+              Entiendo los ERP que usan (Softland, SAP B1, Dynamics 365), los presupuestos que manejan, y los problemas reales. No vendo soluciones enterprise a quien no las necesita.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="py-24 section-light">
+  <!-- Stack t&#233;cnico -->
+  <section class="py-20 bg-white">
     <div class="container-custom">
-      <div class="text-center mb-16 scroll-fade">
-        <span class="badge mb-4">Diferenciadores</span>
-        <h2>¿Por qué elegir Lumina Consulting?</h2>
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12 scroll-fade">
+          <p class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-4">Herramientas</p>
+          <h2>Stack t&#233;cnico</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 scroll-fade animation-delay-100">
+          <div class="card-subtle text-center py-6">
+            <p class="font-mono text-mono-sm text-lum-black font-semibold mb-1">Power BI</p>
+            <span class="badge-coral text-[10px]">PL-300</span>
+          </div>
+          <div class="card-subtle text-center py-6">
+            <p class="font-mono text-mono-sm text-lum-black font-semibold mb-1">Python</p>
+            <span class="text-lum-slate text-xs">Pandas, FastAPI</span>
+          </div>
+          <div class="card-subtle text-center py-6">
+            <p class="font-mono text-mono-sm text-lum-black font-semibold mb-1">SQL</p>
+            <span class="text-lum-slate text-xs">SQL Server, Postgres</span>
+          </div>
+          <div class="card-subtle text-center py-6">
+            <p class="font-mono text-mono-sm text-lum-black font-semibold mb-1">n8n</p>
+            <span class="text-lum-slate text-xs">Automatizaci&#243;n</span>
+          </div>
+          <div class="card-subtle text-center py-6">
+            <p class="font-mono text-mono-sm text-lum-black font-semibold mb-1">React / Next.js</p>
+            <span class="text-lum-slate text-xs">Apps web</span>
+          </div>
+          <div class="card-subtle text-center py-6">
+            <p class="font-mono text-mono-sm text-lum-black font-semibold mb-1">Supabase</p>
+            <span class="text-lum-slate text-xs">Backend + Auth</span>
+          </div>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-3 scroll-fade animation-delay-200">
+          <span class="badge-outline">GitHub Actions</span>
+          <span class="badge-outline">Vercel</span>
+          <span class="badge-outline">Astro</span>
+          <span class="badge-outline">Tailwind CSS</span>
+          <span class="badge-outline">OpenAI API</span>
+          <span class="badge-outline">Anthropic API</span>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div class="card scroll-fade">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-lum-success/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-lum-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg mb-2">Visión de holding, sin el costo de una consultora grande</h3>
-              <p class="text-lum-slate text-sm">La misma calidad de análisis que diseñé en un holding financiero, aplicada a tu empresa sin la estructura ni el precio de una firma grande</p>
-            </div>
-          </div>
+  <!-- Industrias -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-12 scroll-fade">
+          <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4">Experiencia sectorial</p>
+          <h2>Industrias</h2>
         </div>
 
-        <div class="card scroll-fade animation-delay-100">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-lum-success/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-lum-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg mb-2">Trabajas con el fundador</h3>
-              <p class="text-lum-slate text-sm">No te asignan un junior. Trabajas directo con quien diseña, ejecuta y entrega</p>
-            </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Automotriz -->
+          <div class="card scroll-fade">
+            <span class="badge-coral mb-4">Automotriz</span>
+            <ul class="arrow-list">
+              <li>Inteligencia competitiva</li>
+              <li>Control de precios</li>
+              <li>Automatizaci&#243;n comercial</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="card scroll-fade animation-delay-200">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-lum-success/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-lum-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg mb-2">Resultados en semanas, no meses</h3>
-              <p class="text-lum-slate text-sm">Entregas incrementales para que puedas usar lo que construimos apenas esté listo</p>
-            </div>
+          <!-- Inmobiliario -->
+          <div class="card scroll-fade animation-delay-100">
+            <span class="badge-mocha mb-4">Inmobiliario</span>
+            <ul class="arrow-list">
+              <li>Control de gesti&#243;n</li>
+              <li>Flujo de caja</li>
+              <li>Integraci&#243;n Cloudbeds / Airbnb</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="card scroll-fade animation-delay-300">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-lum-success/10 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-lum-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg mb-2">Nos conectamos a lo que ya tienes</h3>
-              <p class="text-lum-slate text-sm">ERPs, plataformas de reserva, contabilidad, Excel — trabajamos con tus sistemas actuales</p>
-            </div>
+          <!-- Financiero -->
+          <div class="card scroll-fade animation-delay-200">
+            <span class="badge-sage mb-4">Financiero / Banca</span>
+            <ul class="arrow-list">
+              <li>HR Analytics</li>
+              <li>Organigramas</li>
+              <li>Calibraci&#243;n de desempe&#241;o</li>
+            </ul>
+          </div>
+
+          <!-- Salud -->
+          <div class="card scroll-fade animation-delay-300">
+            <span class="badge-coral mb-4">Salud / Veterinaria</span>
+            <ul class="arrow-list">
+              <li>Reporter&#237;a operacional</li>
+              <li>Visibilidad financiera</li>
+            </ul>
+          </div>
+
+          <!-- Servicios -->
+          <div class="card scroll-fade animation-delay-400">
+            <span class="badge-mocha mb-4">Servicios profesionales</span>
+            <ul class="arrow-list">
+              <li>Automatizaci&#243;n de procesos</li>
+              <li>Infraestructura de datos</li>
+            </ul>
+          </div>
+
+          <!-- Exportaci&#243;n -->
+          <div class="card scroll-fade animation-delay-500">
+            <span class="badge-sage mb-4">Exportaci&#243;n</span>
+            <ul class="arrow-list">
+              <li>Dashboards Dynamics 365</li>
+              <li>Trazabilidad</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -367,13 +305,13 @@ import Layout from '../layouts/Layout.astro';
     </div>
     <div class="container-custom relative">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-white mb-6 scroll-fade">¿Cuánto te cuesta no ver cómo va tu negocio hoy?</h2>
+        <h2 class="text-white mb-6 scroll-fade">&#191;Cu&#225;nto te cuesta no ver c&#243;mo va tu negocio hoy?</h2>
         <p class="text-xl text-lum-slate-light mb-10 scroll-fade animation-delay-100">
-          Conversemos sobre qué visibilidad te falta y cómo podemos resolverlo
+          Conversemos sobre qu&#233; visibilidad te falta y c&#243;mo podemos resolverlo
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-fade animation-delay-200">
           <a
-            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20Lumina%20Consulting"
+            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20Lumina%20Consulting"
             target="_blank"
             class="btn-primary"
           >

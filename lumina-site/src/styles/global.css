@@ -193,6 +193,10 @@
     @apply badge text-lum-slate bg-transparent border-lum-slate-light;
   }
 
+  .badge-sage {
+    @apply badge text-lum-sage-dark bg-lum-sage-light/30 border-lum-sage;
+  }
+
   /* ============================================
      SECTION STYLES
      ============================================ */

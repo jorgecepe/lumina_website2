@@ -3,42 +3,37 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Lumina Consulting - Ve cómo va tu negocio en tiempo real"
-  description="Conectamos los sistemas de tu empresa y los convertimos en información visual y automatizada. Para dueños de empresas medianas que quieren tomar decisiones con datos reales."
+  title="Lumina Consulting | Datos, automatización e inteligencia para empresas"
+  description="Consultora chilena especializada en dashboards Power BI, automatización con IA, control de gestión y soluciones a medida para empresas medianas."
 >
-  <!-- HERO SECTION - Asymmetric, Bold Typography -->
+  <!-- SECTION 1: HERO -->
   <section class="relative min-h-[90vh] flex items-center bg-lum-cream overflow-hidden">
-    <!-- Decorative elements - NOT gradient orbs -->
     <div class="absolute top-20 right-10 w-32 h-32 border-2 border-lum-mocha/20 rotate-12" aria-hidden="true"></div>
     <div class="absolute bottom-32 left-20 w-16 h-16 bg-lum-coral/10" aria-hidden="true"></div>
     <div class="absolute top-1/3 right-1/4 w-4 h-4 bg-lum-coral" aria-hidden="true"></div>
 
     <div class="container-custom relative py-20">
       <div class="grid lg:grid-cols-12 gap-8 items-center">
-        <!-- Main content - takes most space, LEFT aligned -->
         <div class="lg:col-span-8">
-          <!-- Monospace tag -->
           <div class="flex items-center gap-3 mb-8 scroll-fade">
             <span class="w-12 h-px bg-lum-coral"></span>
-            <span class="font-mono text-mono-sm text-lum-coral uppercase tracking-wider">Inteligencia de negocio para empresas medianas</span>
+            <span class="font-mono text-mono-sm text-lum-coral uppercase tracking-wider">Datos · Automatización · Inteligencia de negocio</span>
           </div>
 
-          <!-- BIG SERIF HEADLINE - the main visual impact -->
           <h1 class="mb-8 scroll-fade delay-100">
-            <span class="block text-lum-black">Abre una pantalla y ve</span>
+            <span class="block text-lum-black">Conectamos tus datos</span>
             <span class="block">
-              <span class="text-lum-coral italic">cómo va</span>
-              <span class="text-lum-black"> tu negocio hoy</span>
+              <span class="text-lum-black">para que </span>
+              <span class="text-lum-coral italic">dejes de adivinar</span>
             </span>
           </h1>
 
           <p class="text-xl md:text-2xl text-lum-slate max-w-2xl mb-10 scroll-fade delay-200">
-            Conecto los sistemas que tu empresa ya usa — ERP, plataformas de venta, bases de datos — y los convierto en
-            <span class="text-highlight">información visual y automatizada</span>
-            para que tomes decisiones con datos reales, no con intuición ni con el Excel de la semana pasada.
+            Conecto los sistemas que tu empresa ya usa — ERP, plataformas de venta, bases de datos — los automatizo, y te doy la
+            <span class="text-highlight">visibilidad que necesitas</span>
+            para tomar decisiones con información real.
           </p>
 
-          <!-- CTAs with brutalist style -->
           <div class="flex flex-col sm:flex-row gap-4 scroll-fade delay-300">
             <a
               href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
@@ -59,7 +54,6 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Right side - Dashboard preview -->
         <div class="lg:col-span-4 lg:translate-y-12 scroll-fade-right delay-400">
           <div class="relative -rotate-1">
             <div class="absolute inset-0 bg-lum-coral/20 translate-x-2 translate-y-2"></div>
@@ -76,65 +70,144 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- WHY US - Horizontal scroll feeling, not grid -->
-  <section class="section-dark relative overflow-hidden">
+  <!-- SECTION 2: SOCIAL PROOF STRIP -->
+  <section class="py-10 bg-lum-ivory border-y border-lum-border">
     <div class="container-custom">
-      <!-- Section header - left aligned, not centered -->
-      <div class="max-w-2xl mb-16 scroll-fade">
-        <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4 block">Por qué Lumina</span>
-        <h2 class="text-lum-cream mb-4">
-          La gerencia no debería depender de un Excel para saber <span class="italic">cómo va el negocio</span>
-        </h2>
-        <p class="text-lum-slate-light text-lg">
-          Esto es lo que cambia cuando trabajamos juntos.
-        </p>
-      </div>
-
-      <!-- Benefits - asymmetric cards -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-lum-charcoal border border-lum-stone p-6 hover:border-lum-coral transition-colors scroll-fade">
-          <span class="font-display text-5xl text-lum-coral block mb-4">01</span>
-          <h3 class="text-lum-cream text-xl mb-2">Visibilidad</h3>
-          <p class="text-lum-slate-light text-sm">
-            Tus datos ya existen. Yo los conecto para que puedas verlos, actualizados, sin pedirle a nadie.
-          </p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div class="text-center scroll-fade">
+          <span class="font-display text-4xl md:text-5xl text-lum-coral block">5+</span>
+          <span class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider">Industrias atendidas</span>
         </div>
-
-        <div class="bg-lum-charcoal border border-lum-stone p-6 hover:border-lum-coral transition-colors lg:translate-y-8 scroll-fade delay-100">
-          <span class="font-display text-5xl text-lum-coral block mb-4">02</span>
-          <h3 class="text-lum-cream text-xl mb-2">Velocidad</h3>
-          <p class="text-lum-slate-light text-sm">
-            De semanas preparando reportes a información que se actualiza sola todos los días.
-          </p>
+        <span class="hidden md:block w-px h-12 bg-lum-border" aria-hidden="true"></span>
+        <div class="text-center scroll-fade delay-100">
+          <span class="font-display text-4xl md:text-5xl text-lum-coral block">4,000+</span>
+          <span class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider">Empleados gestionados</span>
         </div>
-
-        <div class="bg-lum-charcoal border border-lum-stone p-6 hover:border-lum-coral transition-colors scroll-fade delay-200">
-          <span class="font-display text-5xl text-lum-coral block mb-4">03</span>
-          <h3 class="text-lum-cream text-xl mb-2">Confianza</h3>
-          <p class="text-lum-slate-light text-sm">
-            Se acabó la caja negra. Ves directamente lo que pasa en tu operación con datos reales.
-          </p>
+        <span class="hidden md:block w-px h-12 bg-lum-border" aria-hidden="true"></span>
+        <div class="text-center scroll-fade delay-200">
+          <span class="font-display text-4xl md:text-5xl text-lum-coral block">300+</span>
+          <span class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider">Vehículos monitoreados</span>
         </div>
-
-        <div class="bg-lum-charcoal border border-lum-stone p-6 hover:border-lum-coral transition-colors lg:translate-y-8 scroll-fade delay-300">
-          <span class="font-display text-5xl text-lum-coral block mb-4">04</span>
-          <h3 class="text-lum-cream text-xl mb-2">Autonomía</h3>
-          <p class="text-lum-slate-light text-sm">
-            No dependes de mí para siempre. Transfiero conocimiento y tu equipo puede mantenerlo.
-          </p>
+        <span class="hidden md:block w-px h-12 bg-lum-border" aria-hidden="true"></span>
+        <div class="text-center scroll-fade delay-300">
+          <span class="font-display text-4xl md:text-5xl text-lum-coral block">0</span>
+          <span class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider">Reportes manuales</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOUNDER CREDENTIALS - Critical for LLMO/E-E-A-T -->
+  <!-- SECTION 3: THREE PILLARS -->
+  <section class="section bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-2xl mb-16 scroll-fade">
+        <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4 block">Qué hacemos</span>
+        <h2>Tres formas de transformar tu operación</h2>
+      </div>
+
+      <div class="space-y-12 md:space-y-16">
+        <!-- Pillar 1: Visibilidad -->
+        <div class="border-l-4 border-lum-coral pl-8 md:pl-12 py-6 scroll-fade">
+          <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider block mb-3">Ve tu negocio</span>
+          <h3 class="mb-4">Tu operación en una pantalla — actualizada, sin pedirle a nadie</h3>
+          <p class="text-lum-slate max-w-3xl mb-4">
+            Conecto tu ERP, tus plataformas de venta y tus bases de datos a dashboards que se actualizan solos.
+            La gerencia ve ventas, márgenes, flujo de caja y operación — consolidados, todos los días.
+            Sin armar Excel, sin esperar al cierre de mes.
+          </p>
+          <p class="text-lum-slate max-w-3xl mb-6">
+            Estado de resultados, presupuesto vs. real, KPIs con alertas. No solo construyo dashboards — defino contigo qué medir y por qué.
+          </p>
+          <p class="font-mono text-mono-sm text-lum-coral">
+            > Grupo inmobiliario con 7 sociedades: de planillas mensuales a visibilidad diaria de flujo de caja
+          </p>
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a href="/servicios/dashboards-estrategicos" class="btn-ghost">
+              Dashboards
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/servicios/control-de-gestion" class="btn-ghost">
+              Control de gestión
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Automatización -->
+        <div class="border-l-4 border-lum-mocha pl-8 md:pl-12 py-6 scroll-fade">
+          <span class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider block mb-3">Automatiza lo repetitivo</span>
+          <h3 class="mb-4">Tus reportes, alertas y flujos de datos — sin intervención manual</h3>
+          <p class="text-lum-slate max-w-3xl mb-4">
+            Robots que corren a las 7 AM, agentes de IA que clasifican emails, reportes que llegan solos a tu correo.
+            Automatizo con n8n, Python y GitHub Actions para que tu equipo deje de hacer trabajo mecánico.
+          </p>
+          <p class="text-lum-slate max-w-3xl mb-6">
+            Incluye inteligencia competitiva: monitoreo diario de precios y posicionamiento de tu competencia, con alertas cuando algo se mueve.
+          </p>
+          <p class="font-mono text-mono-sm text-lum-mocha">
+            > Red de automotoras: de 3 horas de trabajo manual diario a cero
+          </p>
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a href="/servicios/automatizacion-inteligente" class="btn-ghost">
+              Automatización
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/servicios/inteligencia-competitiva" class="btn-ghost">
+              Inteligencia competitiva
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Construcción -->
+        <div class="border-l-4 border-lum-sage pl-8 md:pl-12 py-6 scroll-fade">
+          <span class="font-mono text-mono-xs text-lum-sage uppercase tracking-wider block mb-3">Si no existe, lo construimos</span>
+          <h3 class="mb-4">Aplicaciones, herramientas e integraciones a la medida de tu operación</h3>
+          <p class="text-lum-slate max-w-3xl mb-4">
+            Cuando el problema no se resuelve con un dashboard ni con software del mercado, lo construyo.
+            Aplicaciones web, herramientas internas, integraciones entre sistemas que no se hablan.
+            Desde MVPs funcionales hasta productos SaaS.
+          </p>
+          <p class="text-lum-slate max-w-3xl mb-6">
+            También capacitación aplicada — con tus datos reales, no con ejemplos de libro. Power BI, análisis de datos, automatización. Franquicia SENCE disponible.
+          </p>
+          <p class="font-mono text-mono-sm text-lum-sage">
+            > NodalTree reemplazó software de USD 15,000/año en un banco con 4,000+ empleados
+          </p>
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a href="/servicios/soluciones-a-medida" class="btn-ghost">
+              Soluciones a medida
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/servicios/capacitacion" class="btn-ghost">
+              Capacitación
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: FOUNDER -->
   <section class="py-16 bg-lum-cream border-t border-lum-slate/10">
     <div class="container-custom">
       <div class="max-w-5xl mx-auto">
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          <!-- Photo -->
           <div class="flex-shrink-0 scroll-fade">
-            <a href="/acerca-de#fundador" class="block">
+            <a href="/acerca-de" class="block">
               <img
                 src="/jorge-cepeda.jpg"
                 alt="Jorge Cepeda - Fundador de Lumina Consulting"
@@ -143,14 +216,13 @@ import Layout from '../layouts/Layout.astro';
             </a>
           </div>
 
-          <!-- Credentials -->
-          <div class="flex-grow text-center md:text-left scroll-fade animation-delay-100">
+          <div class="flex-grow text-center md:text-left scroll-fade delay-100">
             <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-2">Fundador</p>
             <h3 class="text-xl md:text-2xl font-display text-lum-black mb-3">
               Jorge Cepeda
             </h3>
             <p class="text-lum-slate text-sm mb-4">
-              15 años diseñando sistemas de control de gestión en la industria financiera. Hoy ayudo a dueños de empresas medianas a ver su negocio con la misma claridad que tiene un holding.
+              15 años diseñando sistemas de control de gestión en la industria financiera — los últimos en el holding de inversiones de un banco. Hoy aplico esa experiencia a empresas medianas que necesitan la misma visibilidad y control, sin los costos de las soluciones enterprise.
             </p>
             <div class="flex flex-wrap justify-center md:justify-start gap-3">
               <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-white rounded-full text-sm text-lum-slate shadow-sm">
@@ -180,8 +252,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- LinkedIn CTA -->
-          <div class="flex-shrink-0 scroll-fade animation-delay-200">
+          <div class="flex-shrink-0 flex flex-col gap-3 scroll-fade delay-200">
             <a
               href="https://www.linkedin.com/in/jorgecepeda/"
               target="_blank"
@@ -193,200 +264,88 @@ import Layout from '../layouts/Layout.astro';
               </svg>
               Ver LinkedIn
             </a>
+            <a href="/acerca-de" class="btn-ghost text-sm justify-center">
+              Más sobre Lumina
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MANIFESTO - Big text section -->
-  <section class="section bg-lum-ivory">
-    <div class="container-narrow text-center scroll-fade">
-      <p class="text-2xl md:text-3xl lg:text-4xl text-lum-charcoal leading-relaxed font-serif">
-        Tus datos ya existen. Yo los
-        <span class="underline-sketch">conecto, automatizo</span>
-        y te los muestro para que tomes
-        <span class="text-lum-coral italic">decisiones con información real, no con intuición</span>.
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVICES - Cards with numbers -->
-  <section class="section bg-lum-cream">
-    <div class="container-custom">
-      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
-        <div class="scroll-fade">
-          <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4 block">Servicios</span>
-          <h2>Lo que hacemos</h2>
-        </div>
-        <a href="/servicios" class="btn-ghost scroll-fade-right">
-          Ver todos los servicios
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Service 1 -->
-        <div class="service-card scroll-fade">
-          <span class="number">01</span>
-          <div class="pt-4">
-            <h3 class="mb-3">Tu negocio en una pantalla</h3>
-            <p class="text-lum-slate mb-6">
-              Conecto tus sistemas y te muestro cómo va tu operación, actualizado todos los días, sin que nadie tenga que hacer un Excel.
-            </p>
-            <ul class="arrow-list">
-              <li>Información en tiempo real desde tus sistemas</li>
-              <li>Sin intervención manual</li>
-              <li>La gerencia ve, decide y actúa</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="service-card lg:-translate-y-8 scroll-fade delay-100">
-          <span class="number">02</span>
-          <div class="pt-4">
-            <h3 class="mb-3">Inteligencia competitiva automatizada</h3>
-            <p class="text-lum-slate mb-6">
-              Monitoreo diario de precios y posicionamiento de tu competencia. Sabes exactamente dónde estás parado — cada mañana, en tu correo.
-            </p>
-            <ul class="arrow-list">
-              <li>Comparación automática con el mercado</li>
-              <li>Alertas cuando un precio está mal puesto</li>
-              <li>Ranking de competitividad actualizado</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="service-card scroll-fade delay-200">
-          <span class="number">03</span>
-          <div class="pt-4">
-            <h3 class="mb-3">Control de gestión sin caja negra</h3>
-            <p class="text-lum-slate mb-6">
-              Estado de resultados, flujo de efectivo, y KPIs operacionales conectados directo desde tu ERP. La gerencia ve lo que antes solo veía el contador.
-            </p>
-            <ul class="arrow-list">
-              <li>Resultados reales vs. presupuesto</li>
-              <li>Flujo de efectivo real + proyectado</li>
-              <li>Visibilidad para socios y alta administración</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="service-card lg:-translate-y-8 scroll-fade delay-300">
-          <span class="number">04</span>
-          <div class="pt-4">
-            <h3 class="mb-3">Capacitación a Medida</h3>
-            <p class="text-lum-slate mb-6">
-              Capacitación con tus datos reales. Tu equipo aprende con los problemas de tu empresa, no con ejemplos genéricos.
-            </p>
-            <ul class="arrow-list">
-              <li>Workshops personalizados</li>
-              <li>Formato presencial u online</li>
-              <li>Opción franquicia SENCE</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA after services -->
-      <div class="mt-12 text-center">
-        <a
-          href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conversar%20sobre%20mi%20caso"
-          target="_blank"
-          class="btn-primary"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          Conversemos sobre tu caso
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS - Minimal, editorial -->
+  <!-- SECTION 5: CASES -->
   <section class="section bg-lum-cream">
     <div class="container-custom">
       <div class="max-w-2xl mb-16 scroll-fade">
-        <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4 block">Casos de éxito</span>
-        <h2>Resultados reales</h2>
+        <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4 block">Resultados reales</span>
+        <h2>Casos de éxito</h2>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-8">
-        <!-- Testimonial 1 -->
+        <!-- Case 1 -->
         <div class="border-l-4 border-lum-coral pl-8 py-4 scroll-fade">
           <div class="flex gap-3 mb-4">
             <span class="badge-coral">Automatización</span>
-            <span class="badge-outline">Automotoras</span>
+            <span class="badge-outline">Automotriz</span>
           </div>
           <h3 class="text-xl mb-3">Red de Automotoras — 300+ vehículos monitoreados diariamente</h3>
           <p class="text-lum-slate mb-4">
             De revisar precios a mano a recibir un ranking automatizado a las 7 AM. De 3 horas de trabajo manual a cero. Detección inmediata de errores de publicación y precios fuera de mercado.
           </p>
-          <blockquote class="font-serif text-lg text-lum-charcoal italic">
+          <blockquote class="font-serif text-lg text-lum-charcoal italic mb-2">
             "Es como tener un analista 24/7 trabajando para nosotros."
           </blockquote>
+          <p class="font-mono text-mono-xs text-lum-slate">— Gerente Comercial, red de automotoras en Chile</p>
         </div>
 
-        <!-- Testimonial 2 -->
+        <!-- Case 2 -->
         <div class="border-l-4 border-lum-mocha pl-8 py-4 lg:translate-y-12 scroll-fade delay-100">
           <div class="flex gap-3 mb-4">
-            <span class="badge-mocha">Reportería</span>
-            <span class="badge-outline">Salud</span>
+            <span class="badge-mocha">Dashboards</span>
+            <span class="badge-outline">Inmobiliario</span>
           </div>
-          <h3 class="text-xl mb-3">Red de Clínicas Veterinarias — De exportar Excel a dashboard en tiempo real</h3>
+          <h3 class="text-xl mb-3">Grupo Inmobiliario — 7 sociedades con visibilidad financiera unificada</h3>
           <p class="text-lum-slate mb-4">
-            Visibilidad completa por sección: ingresos, procedimientos, tendencias. La gerencia gestiona desde el dashboard — ya casi no necesitan entrar al ERP.
+            Datos dispersos en Softland, Cloudbeds y planillas. Hoy los socios ven flujo de caja real y proyectado en un mail semanal automático — sin intervención manual.
           </p>
-          <blockquote class="font-serif text-lg text-lum-charcoal italic">
-            "Nos dio un salto de profesionalismo que necesitábamos para crecer."
+          <blockquote class="font-serif text-lg text-lum-charcoal italic mb-2">
+            "Pasamos de pedir reportes a tener la información esperándonos."
           </blockquote>
+          <p class="font-mono text-mono-xs text-lum-slate">— Socio administrador, grupo inmobiliario</p>
         </div>
       </div>
 
-      <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center scroll-fade">
+      <div class="mt-12 text-center scroll-fade">
         <a href="/casos-de-exito" class="btn-secondary">
           Ver más casos
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
-        <a
-          href="https://wa.me/56991629095?text=Hola,%20tengo%20un%20problema%20similar%20y%20me%20gustaría%20conversarlo"
-          target="_blank"
-          class="btn-primary"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          ¿Tu empresa tiene un problema similar?
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCT HIGHLIGHT - NodalTree -->
+  <!-- SECTION 6: NODALTREE -->
   <section class="section-mocha relative overflow-hidden">
     <div class="absolute top-10 right-10 w-40 h-40 border border-white/10 rotate-45" aria-hidden="true"></div>
     <div class="container-custom">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="scroll-fade">
           <span class="badge text-white border-white/30 mb-6">Producto propio</span>
-          <h2 class="text-white mb-6">NodalTree</h2>
-          <p class="text-white/80 text-lg mb-8">
-            Transforma datos de Excel, CSV o SQL en organigramas interactivos.
-            Sin costo por usuario, 100% privado, resultados instantáneos.
+          <h2 class="text-white mb-4">NodalTree</h2>
+          <p class="text-white/60 font-mono text-mono-sm uppercase tracking-wider mb-6">Organigramas inteligentes desde tus datos</p>
+          <p class="text-white/80 text-lg mb-6">
+            Tu organigrama siempre actualizado, sin PowerPoint, sin software caro.
+            Importa desde Excel, CSV o base de datos. Edición en vivo, exportación PDF.
+            Multi-tenancy: cada empresa con su espacio.
           </p>
-          <div class="flex flex-wrap gap-3 mb-8">
-            <span class="badge-outline text-white/70 border-white/20">Importación flexible</span>
-            <span class="badge-outline text-white/70 border-white/20">Edición en vivo</span>
-            <span class="badge-outline text-white/70 border-white/20">Exportación PDF</span>
-          </div>
+          <p class="font-mono text-mono-sm text-white/70 mb-8">
+            > Usado por un banco con 4,000+ empleados. Reemplazó software de USD 15,000/año.
+          </p>
           <a
             href="https://nodaltree.luminaconsulting.ai"
             target="_blank"
@@ -400,21 +359,22 @@ import Layout from '../layouts/Layout.astro';
           </a>
         </div>
         <div class="scroll-fade-right">
+          <!-- TODO: Replace with real NodalTree screenshot showing an interactive org chart -->
           <div class="bg-white/10 border border-white/20 p-8 rotate-1">
             <img
               src="/logoNodalTree.png"
-              alt="NodalTree Logo"
+              alt="NodalTree — Organigramas interactivos desde tus datos"
               class="w-32 h-32 object-contain mx-auto opacity-90"
             />
+            <p class="text-white/40 text-center font-mono text-mono-xs mt-4">Vista previa próximamente</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA - Bold, simple -->
+  <!-- SECTION 7: FINAL CTA -->
   <section class="section-dark relative overflow-hidden">
-    <!-- Decorative cross -->
     <div class="absolute top-1/2 right-20 -translate-y-1/2 opacity-10" aria-hidden="true">
       <div class="w-32 h-px bg-lum-coral"></div>
       <div class="w-px h-32 bg-lum-coral absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
