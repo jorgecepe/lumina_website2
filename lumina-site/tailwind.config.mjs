@@ -41,6 +41,11 @@ export default {
           'success': '#5A8F6D',
           'warning': '#D4A03D',
           'error': '#C45B4A',
+
+          // Brand colors (third-party)
+          'linkedin': '#0A66C2',
+          'linkedin-dark': '#004182',
+          'whatsapp': '#25D366',
         }
       },
       fontFamily: {

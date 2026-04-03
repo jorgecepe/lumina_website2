@@ -95,7 +95,8 @@
            px-7 py-4
            transition-all duration-300
            border-2 border-lum-black
-           overflow-hidden;
+           overflow-hidden
+           focus-visible:outline-2 focus-visible:outline-lum-coral focus-visible:outline-offset-2;
   }
 
   .btn-primary {
@@ -358,7 +359,8 @@
   .nav-link {
     @apply relative font-body font-medium
            text-lum-charcoal hover:text-lum-coral
-           transition-colors duration-200;
+           transition-colors duration-200
+           focus-visible:outline-2 focus-visible:outline-lum-coral focus-visible:outline-offset-2;
   }
 
   .nav-link::after {
