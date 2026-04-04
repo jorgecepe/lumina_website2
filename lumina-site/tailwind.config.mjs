@@ -58,7 +58,7 @@ export default {
       fontSize: {
         // Aggressive type scale
         'display-xl': ['clamp(4rem, 12vw, 10rem)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],
-        'display-lg': ['clamp(3rem, 8vw, 6rem)', { lineHeight: '0.95', letterSpacing: '-0.02em' }],
+        'display-lg': ['clamp(2.5rem, 6vw, 4.5rem)', { lineHeight: '0.95', letterSpacing: '-0.02em' }],
         'display-md': ['clamp(2rem, 5vw, 4rem)', { lineHeight: '1', letterSpacing: '-0.01em' }],
         'body-lg': ['1.25rem', { lineHeight: '1.6' }],
         'mono-sm': ['0.875rem', { lineHeight: '1.5', letterSpacing: '0.02em' }],
