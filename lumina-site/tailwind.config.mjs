@@ -20,11 +20,11 @@ export default {
           'mocha-dark': '#8B6355',
           'mocha-muted': '#D4C4BC',
 
-          // ACCENT - Electric Coral (breaks corporate blue pattern)
-          'coral': '#FF6B35',
-          'coral-light': '#FF8F66',
-          'coral-dark': '#E55A2B',
-          'coral-muted': '#FFD4C4',
+          // ACCENT - Warm Terracotta (sobrio, profesional)
+          'coral': '#C4704A',
+          'coral-light': '#D4896A',
+          'coral-dark': '#A85D3B',
+          'coral-muted': '#E8CFBF',
 
           // Secondary accent - Sage green for contrast
           'sage': '#7D8471',
