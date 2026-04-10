@@ -202,7 +202,7 @@
      SECTION STYLES
      ============================================ */
   .section {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-14 md:py-24 lg:py-32;
   }
 
   .section-dark {

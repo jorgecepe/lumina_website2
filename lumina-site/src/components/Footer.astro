@@ -2,6 +2,10 @@
 import WhatsAppIcon from './icons/WhatsAppIcon.astro';
 const currentYear = new Date().getFullYear();
 
+// Hide floating WhatsApp button on contact pages (avoids overlapping form submit button)
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isContactPage = currentPath === '/contacto' || currentPath === '/en/contact';
+
 const quickLinks = [
   { href: '/', label: 'Inicio' },
   { href: '/acerca-de', label: 'Nosotros' },
@@ -186,13 +190,15 @@ const secondaryLinks = [
   </div>
 </footer>
 
-<!-- WhatsApp Floating Button - Brutalist style -->
-<a
-  href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
-  target="_blank"
-  class="fixed bottom-6 right-6 bg-lum-coral hover:bg-lum-coral-dark text-white p-4 transition-all duration-300 hover:-translate-y-1 z-50 group border-2 border-lum-black"
-  style="box-shadow: 4px 4px 0px 0px var(--color-lum-black, #1a1814);"
-  aria-label="Contactar por WhatsApp"
->
-  <WhatsAppIcon class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
-</a>
+{!isContactPage && (
+  <!-- WhatsApp Floating Button - Brutalist style -->
+  <a
+    href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
+    target="_blank"
+    class="fixed bottom-6 right-6 bg-lum-coral hover:bg-lum-coral-dark text-white p-4 transition-all duration-300 hover:-translate-y-1 z-50 group border-2 border-lum-black"
+    style="box-shadow: 4px 4px 0px 0px var(--color-lum-black, #1a1814);"
+    aria-label="Contactar por WhatsApp"
+  >
+    <WhatsAppIcon class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
+  </a>
+)}
