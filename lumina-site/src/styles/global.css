@@ -8,8 +8,7 @@
    ============================================ */
 
 @layer base {
-  /* FONTS - Typography with Character */
-  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
+  /* FONTS — loaded from Layout.astro <head> for non-blocking render */
 
   :root {
     /* Custom properties for dynamic theming */
@@ -44,7 +43,7 @@
   }
 
   h1 {
-    @apply text-display-lg md:text-display-xl font-normal leading-none tracking-tight;
+    @apply text-display-lg md:text-display-xl font-normal leading-tight md:leading-none tracking-tight;
   }
 
   h2 {
@@ -232,9 +231,9 @@
   /* ============================================
      DECORATIVE ELEMENTS
      ============================================ */
-  /* Noise/grain overlay */
+  /* Noise/grain overlay — desktop only (mobile GPU performance) */
   .grain {
-    @apply pointer-events-none fixed inset-0 z-50;
+    @apply pointer-events-none fixed inset-0 z-50 hidden md:block;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     opacity: var(--grain-opacity);
     mix-blend-mode: multiply;
@@ -498,6 +497,25 @@
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+}
+
+/* Respect prefers-reduced-motion: disable scroll animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade,
+  .scroll-fade-left,
+  .scroll-fade-right {
+    @apply opacity-100 translate-x-0 translate-y-0;
+    transition: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
