@@ -12,15 +12,64 @@ interface Props {
 
 const {
   title,
-  description = 'Abre una pantalla y ve cómo va tu negocio. Consultoría de datos para empresas medianas: dashboards, automatización de reportes, inteligencia competitiva.',
+  description,
   ogImage = '/logo-wide.png'
 } = Astro.props;
 
+const currentPath = Astro.url.pathname;
+const isEnglish = currentPath.startsWith('/en');
+const lang = isEnglish ? 'en' : 'es';
+
+const defaultDescription = isEnglish
+  ? 'Open a screen and see how your business is doing. Data consulting for mid-size companies: dashboards, reporting automation, competitive intelligence.'
+  : 'Abre una pantalla y ve cómo va tu negocio. Consultoría de datos para empresas medianas: dashboards, automatización de reportes, inteligencia competitiva.';
+
+const pageDescription = description || defaultDescription;
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Hreflang: map between ES and EN paths
+const hreflangMap: Record<string, string> = {
+  '/': '/en',
+  '/en': '/',
+  '/acerca-de': '/en/about',
+  '/en/about': '/acerca-de',
+  '/servicios': '/en/services',
+  '/en/services': '/servicios',
+  '/contacto': '/en/contact',
+  '/en/contact': '/contacto',
+  '/casos-de-exito': '/en/case-studies',
+  '/en/case-studies': '/casos-de-exito',
+  '/faq': '/en/faq',
+  '/en/faq': '/faq',
+  '/blog': '/en/blog',
+  '/en/blog': '/blog',
+  '/recursos': '/en/resources',
+  '/en/resources': '/recursos',
+  '/servicios/dashboards-estrategicos': '/en/services/strategic-dashboards',
+  '/en/services/strategic-dashboards': '/servicios/dashboards-estrategicos',
+  '/servicios/control-de-gestion': '/en/services/management-control',
+  '/en/services/management-control': '/servicios/control-de-gestion',
+  '/servicios/automatizacion-inteligente': '/en/services/reporting-automation',
+  '/en/services/reporting-automation': '/servicios/automatizacion-inteligente',
+  '/servicios/inteligencia-competitiva': '/en/services/competitive-analysis',
+  '/en/services/competitive-analysis': '/servicios/inteligencia-competitiva',
+  '/servicios/hr-analytics': '/en/services/hr-analytics',
+  '/en/services/hr-analytics': '/servicios/hr-analytics',
+  '/servicios/soluciones-a-medida': '/en/services/custom-solutions',
+  '/en/services/custom-solutions': '/servicios/soluciones-a-medida',
+  '/servicios/capacitacion': '/en/services/data-training',
+  '/en/services/data-training': '/servicios/capacitacion',
+};
+
+const normalizedPath = currentPath === '/' ? '/' : currentPath.replace(/\/$/, '');
+const alternatePath = hreflangMap[normalizedPath];
+const esURL = isEnglish ? (alternatePath ? new URL(alternatePath, Astro.site) : new URL('/', Astro.site)) : canonicalURL;
+const enURL = isEnglish ? canonicalURL : (alternatePath ? new URL(alternatePath, Astro.site) : new URL('/en', Astro.site));
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,33 +80,36 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
-    <meta name="description" content={description} />
+    <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:image" content={new URL(ogImage, Astro.url)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
+    <meta property="twitter:description" content={pageDescription} />
     <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
 
     <!-- Additional Meta Tags -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Lumina Consulting" />
-    <meta name="keywords" content="dashboards Power BI Chile, automatización empresas, control de gestión PyME, inteligencia competitiva, HR analytics, consultoría datos, n8n, IA empresas, soluciones a medida, empresas medianas" />
+    <meta name="keywords" content={isEnglish
+      ? "Power BI dashboards Chile, business automation, management control SMB, competitive intelligence, HR analytics, data consulting, n8n, AI business, custom solutions, mid-size companies"
+      : "dashboards Power BI Chile, automatización empresas, control de gestión PyME, inteligencia competitiva, HR analytics, consultoría datos, n8n, IA empresas, soluciones a medida, empresas medianas"
+    } />
     <meta name="theme-color" content="#1a1814" />
 
     <!-- Hreflang tags for bilingual support -->
-    <link rel="alternate" hreflang="es" href={canonicalURL} />
-    <link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname.replace(/^\//, '/en/'), Astro.site)} />
-    <link rel="alternate" hreflang="x-default" href={canonicalURL} />
+    <link rel="alternate" hreflang="es" href={esURL} />
+    <link rel="alternate" hreflang="en" href={enURL} />
+    <link rel="alternate" hreflang="x-default" href={esURL} />
 
     <!-- Fonts: preconnect + non-blocking stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -220,7 +272,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             "name": "Lumina Consulting",
             "description": "Visibilidad de negocio para empresas medianas. Dashboards, automatización de reportes e inteligencia competitiva en Chile y Latinoamérica.",
             "publisher": {"@id": "https://www.luminaconsulting.ai/#organization"},
-            "inLanguage": "es-CL"
+            "inLanguage": ["es-CL", "en"]
           }
         ]
       }

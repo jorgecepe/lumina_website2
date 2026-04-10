@@ -1,49 +1,65 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const services = [
+const coreServices = [
   {
     slug: "strategic-dashboards",
-    title: "Strategic Dashboards",
-    description: "Dashboards that actually get used. Not just pretty charts: I help you define what to measure and how to act on the data.",
+    title: "Dashboards & visibility",
+    description: "I connect your systems and show you how your operations are doing, updated every day. No more building reports by hand.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />`,
-    highlights: ["Power BI", "Streamlit", "Strategic KPIs"]
+    highlights: ["Daily updates", "No manual Excel", "Real-time data"]
   },
   {
-    slug: "hr-analytics",
-    title: "HR Analytics",
-    description: "Turn HR data into decisions. Analysis of turnover, absenteeism, personnel costs, and talent metrics.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`,
-    highlights: ["Turnover", "Absenteeism", "Labor costs"]
+    slug: "management-control",
+    title: "Data-driven management control",
+    description: "Seeing numbers isn't enough. I help you define what to measure, how to interpret it, and what decisions to make. 15 years of financial control experience.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />`,
+    highlights: ["Strategic KPIs", "Budget vs. actual", "Management by exception"]
   },
   {
     slug: "reporting-automation",
-    title: "Reporting Automation",
-    description: "Stop wasting hours copying data from one place to another. We automate reports, consolidations, and repetitive processes.",
+    title: "Intelligent automation",
+    description: "Bots, AI agents, and automated flows so your team stops doing mechanical work and focuses on what matters.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />`,
-    highlights: ["Python", "Power Automate", "ETL"]
+    highlights: ["n8n + Python", "AI agents", "Zero manual intervention"]
   },
+];
+
+const moreServices = [
   {
     slug: "competitive-analysis",
-    title: "Competitive Analysis",
-    description: "Monitor prices, products, and competitor moves without manual checking. Data scraping and automatic alerts.",
+    title: "Competitive intelligence",
+    description: "Daily monitoring of competitor prices and positioning, with automatic alerts.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />`,
-    highlights: ["Web scraping", "Alerts", "Comparative dashboard"]
+    highlights: ["Daily monitoring", "Alerts", "Rankings"]
+  },
+  {
+    slug: "hr-analytics",
+    title: "HR Analytics & org charts",
+    description: "Visibility into headcount, turnover, labor costs, and performance. Includes NodalTree.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`,
+    highlights: ["Turnover", "Absenteeism", "NodalTree"]
+  },
+  {
+    slug: "custom-solutions",
+    title: "Custom solutions",
+    description: "Web applications, internal tools, and integrations when the problem needs something built to measure.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
+    highlights: ["React/Next.js", "APIs", "SaaS"]
   },
   {
     slug: "data-training",
-    title: "Data Training",
-    description: "Power BI, advanced Excel, and data analysis courses. Hands-on training with your real data.",
+    title: "Training",
+    description: "Power BI, data analysis, automation. With your real data, not textbook examples.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />`,
-    highlights: ["Power BI", "Excel", "Corporate"]
-  }
+    highlights: ["Real data", "On-site/online", "Corporate"]
+  },
 ];
 ---
 
 <Layout
   title="Business Intelligence and Data Services | Lumina Consulting"
-  description="Strategic dashboards, HR Analytics, reporting automation, competitive analysis, and corporate training. Data consulting for SMEs."
-  lang="en"
+  description="Dashboards, management control, intelligent automation, competitive intelligence, HR analytics, custom solutions, and training for mid-size companies."
 >
   <!-- Hero Section -->
   <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
@@ -54,47 +70,65 @@ const services = [
     <div class="container-custom relative">
       <div class="max-w-4xl mx-auto text-center">
         <span class="badge bg-white/10 text-white border-white/20 mb-6">Services</span>
-        <h1 class="text-white mb-6">How I Can Help You</h1>
+        <h1 class="text-white mb-6">What we do</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
-          Practical, results-focused data consulting. No endless projects or unnecessary jargon. Solutions you can use from day one.
+          Data, automation, and intelligence for companies that want to make better decisions. No endless projects or unnecessary jargon.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Services Grid -->
+  <!-- Core Services -->
   <section class="py-20 bg-white">
     <div class="container-custom">
       <div class="max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+        <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-8">Core services</p>
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          {coreServices.map(service => (
             <a
               href={`/en/services/${service.slug}`}
-              class="group card hover:border-lum-coral/30 transition-all duration-300"
+              class="group card-elevated hover:border-lum-coral transition-all duration-300"
             >
               <div class="flex items-start gap-4 mb-4">
-                <div class="icon-container flex-shrink-0">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={service.icon} />
-                </div>
-                <div>
-                  <h2 class="text-xl font-semibold text-lum-black group-hover:text-lum-coral transition-colors">
-                    {service.title}
-                  </h2>
+                <div class="w-12 h-12 bg-lum-coral/10 flex-shrink-0 flex items-center justify-center border-2 border-lum-black">
+                  <svg class="w-6 h-6 text-lum-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={service.icon} />
                 </div>
               </div>
-              <p class="text-lum-slate mb-4">
-                {service.description}
-              </p>
+              <h2 class="text-xl font-semibold text-lum-black group-hover:text-lum-coral transition-colors mb-3">
+                {service.title}
+              </h2>
+              <p class="text-lum-slate mb-4 text-sm">{service.description}</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 {service.highlights.map(h => (
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">{h}</span>
+                  <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">{h}</span>
                 ))}
               </div>
-              <span class="inline-flex items-center text-lum-coral font-medium text-sm group-hover:gap-2 transition-all">
+              <span class="inline-flex items-center text-lum-coral font-mono text-mono-sm group-hover:gap-2 transition-all">
                 Learn more
                 <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+
+        <p class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-8">Also</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {moreServices.map(service => (
+            <a
+              href={`/en/services/${service.slug}`}
+              class="group card-subtle hover:border-lum-mocha transition-all duration-300"
+            >
+              <div class="w-10 h-10 bg-lum-mocha/10 flex-shrink-0 flex items-center justify-center border border-lum-border mb-3">
+                <svg class="w-5 h-5 text-lum-mocha" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={service.icon} />
+              </div>
+              <h3 class="text-lg font-semibold text-lum-black group-hover:text-lum-mocha transition-colors mb-2">
+                {service.title}
+              </h3>
+              <p class="text-lum-slate text-sm mb-3">{service.description}</p>
+              <span class="inline-flex items-center text-lum-mocha font-mono text-mono-xs group-hover:gap-1 transition-all">
+                Learn more →
               </span>
             </a>
           ))}
@@ -107,12 +141,12 @@ const services = [
   <section class="py-20 bg-lum-cream">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
-        <h2 class="text-center mb-12">How I Work</h2>
+        <h2 class="text-center mb-12">How I work</h2>
         <div class="space-y-8">
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">We Talk</h3>
+              <h3 class="text-lg font-semibold mb-2">We talk</h3>
               <p class="text-lum-slate">
                 You tell me what problem you want to solve. No commitment, no endless PowerPoints. An honest conversation about whether I can help or not.
               </p>
@@ -139,7 +173,7 @@ const services = [
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">Knowledge Transfer</h3>
+              <h3 class="text-lg font-semibold mb-2">Knowledge transfer</h3>
               <p class="text-lum-slate">
                 I train you so you can maintain and evolve what we build. I'm not looking to create dependency.
               </p>
@@ -164,7 +198,7 @@ const services = [
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://wa.me/56991629095?text=Hi,%20I'm%20interested%20in%20learning%20more%20about%20Lumina%20Consulting%20services"
+            href="https://wa.me/56991629095?text=Hello,%20I'm%20interested%20in%20learning%20more%20about%20Lumina%20Consulting%20services"
             target="_blank"
             class="btn-primary"
           >
@@ -174,7 +208,7 @@ const services = [
             Contact via WhatsApp
           </a>
           <a href="/en/contact" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
-            Schedule a Call
+            Schedule a call
           </a>
         </div>
       </div>

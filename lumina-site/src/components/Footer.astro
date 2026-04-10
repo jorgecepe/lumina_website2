@@ -2,11 +2,17 @@
 import WhatsAppIcon from './icons/WhatsAppIcon.astro';
 const currentYear = new Date().getFullYear();
 
-// Hide floating WhatsApp button on contact pages (avoids overlapping form submit button)
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isContactPage = currentPath === '/contacto' || currentPath === '/en/contact';
+const isEnglish = currentPath.startsWith('/en');
 
-const quickLinks = [
+const quickLinks = isEnglish ? [
+  { href: '/en', label: 'Home' },
+  { href: '/en/about', label: 'About' },
+  { href: '/en/services', label: 'Services' },
+  { href: '/en/case-studies', label: 'Cases' },
+  { href: '/en/contact', label: 'Contact' },
+] : [
   { href: '/', label: 'Inicio' },
   { href: '/acerca-de', label: 'Nosotros' },
   { href: '/servicios', label: 'Servicios' },
@@ -14,7 +20,15 @@ const quickLinks = [
   { href: '/contacto', label: 'Contacto' },
 ];
 
-const services = [
+const services = isEnglish ? [
+  { label: 'Dashboards & visibility', href: '/en/services/strategic-dashboards' },
+  { label: 'Management control', href: '/en/services/management-control' },
+  { label: 'Intelligent automation', href: '/en/services/intelligent-automation' },
+  { label: 'Competitive intelligence', href: '/en/services/competitive-analysis' },
+  { label: 'HR Analytics', href: '/en/services/hr-analytics' },
+  { label: 'Custom solutions', href: '/en/services/custom-solutions' },
+  { label: 'Training', href: '/en/services/data-training' },
+] : [
   { label: 'Dashboards y visibilidad', href: '/servicios/dashboards-estrategicos' },
   { label: 'Control de gestión', href: '/servicios/control-de-gestion' },
   { label: 'Automatización inteligente', href: '/servicios/automatizacion-inteligente' },
@@ -24,12 +38,34 @@ const services = [
   { label: 'Capacitación', href: '/servicios/capacitacion' },
 ];
 
-const secondaryLinks = [
+const secondaryLinks = isEnglish ? [
+  { label: 'Blog', href: '/en/blog' },
+  { label: 'Resources', href: '/en/resources' },
+  { label: 'FAQ', href: '/en/faq' },
+  { label: 'NodalTree', href: 'https://nodaltree.luminaconsulting.ai', external: true },
+] : [
   { label: 'Blog', href: '/blog' },
   { label: 'Recursos', href: '/recursos' },
   { label: 'FAQ', href: '/faq' },
   { label: 'NodalTree', href: 'https://nodaltree.luminaconsulting.ai', external: true },
 ];
+
+const t = {
+  nav: isEnglish ? 'Navigation' : 'Navegación',
+  more: isEnglish ? 'More' : 'Más',
+  services: isEnglish ? 'Services' : 'Servicios',
+  contact: isEnglish ? 'Contact' : 'Contacto',
+  tagline: isEnglish
+    ? 'We connect your company\'s data so leadership can make decisions with real information.'
+    : 'Conectamos los datos de tu empresa para que la gerencia tome decisiones con información real.',
+  location: isEnglish ? 'Chile · Remote services' : 'Chile · Servicios remotos',
+  privacy: isEnglish ? 'Privacy' : 'Privacidad',
+  terms: isEnglish ? 'Terms' : 'Términos',
+  waLabel: isEnglish ? 'Contact via WhatsApp' : 'Contactar por WhatsApp',
+  waMessage: isEnglish
+    ? 'Hello,%20I\'m%20interested%20in%20learning%20more%20about%20Lumina%20Consulting%20services'
+    : 'Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting',
+};
 ---
 
 <footer class="bg-lum-black text-lum-cream relative overflow-hidden">
@@ -40,14 +76,14 @@ const secondaryLinks = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-8 mb-12">
       <!-- Company Info - larger column -->
       <div class="lg:col-span-4">
-        <a href="/" class="inline-block mb-6 group">
+        <a href={isEnglish ? '/en' : '/'} class="inline-block mb-6 group">
           <!-- Logo text fallback for dark background -->
           <span class="font-serif text-2xl text-lum-cream group-hover:text-lum-coral transition-colors">
             <span class="text-lum-coral">L</span>umina
           </span>
         </a>
         <p class="text-lum-slate-light text-sm leading-relaxed mb-6 max-w-xs">
-          Conectamos los datos de tu empresa para que la gerencia tome decisiones con información real.
+          {t.tagline}
         </p>
 
         <!-- Social links with brutalist style -->
@@ -84,7 +120,7 @@ const secondaryLinks = [
 
       <!-- Quick Links -->
       <div class="lg:col-span-2">
-        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-coral mb-6">Navegación</h4>
+        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-coral mb-6">{t.nav}</h4>
         <ul class="space-y-3">
           {quickLinks.map((link, index) => (
             <li>
@@ -99,7 +135,7 @@ const secondaryLinks = [
           ))}
         </ul>
 
-        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-mocha mb-4 mt-8">Más</h4>
+        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-mocha mb-4 mt-8">{t.more}</h4>
         <ul class="space-y-3">
           {secondaryLinks.map(link => (
             <li>
@@ -123,7 +159,7 @@ const secondaryLinks = [
 
       <!-- Services -->
       <div class="lg:col-span-3">
-        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-coral mb-6">Servicios</h4>
+        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-coral mb-6">{t.services}</h4>
         <ul class="space-y-3">
           {services.map(service => (
             <li>
@@ -141,7 +177,7 @@ const secondaryLinks = [
 
       <!-- Contact -->
       <div class="lg:col-span-3">
-        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-coral mb-6">Contacto</h4>
+        <h4 class="font-mono text-mono-xs uppercase tracking-wider text-lum-coral mb-6">{t.contact}</h4>
         <ul class="space-y-4">
           <li>
             <a
@@ -164,7 +200,7 @@ const secondaryLinks = [
           </li>
           <li class="text-lum-slate-light text-sm flex items-start gap-3">
             <span class="w-1 h-4 bg-lum-mocha mt-0.5"></span>
-            <span>Chile · Servicios remotos</span>
+            <span>{t.location}</span>
           </li>
         </ul>
       </div>
@@ -177,12 +213,12 @@ const secondaryLinks = [
           <span class="text-lum-coral">//</span> {currentYear} Lumina Consulting
         </p>
         <div class="flex items-center gap-6 text-sm">
-          <a href="/privacidad" class="text-lum-slate-light hover:text-lum-cream transition-colors duration-200 font-mono text-xs">
-            Privacidad
+          <a href={isEnglish ? '/en/privacy' : '/privacidad'} class="text-lum-slate-light hover:text-lum-cream transition-colors duration-200 font-mono text-xs">
+            {t.privacy}
           </a>
           <span class="text-lum-stone">/</span>
-          <a href="/terminos" class="text-lum-slate-light hover:text-lum-cream transition-colors duration-200 font-mono text-xs">
-            Términos
+          <a href={isEnglish ? '/en/terms' : '/terminos'} class="text-lum-slate-light hover:text-lum-cream transition-colors duration-200 font-mono text-xs">
+            {t.terms}
           </a>
         </div>
       </div>
@@ -193,11 +229,11 @@ const secondaryLinks = [
 {!isContactPage && (
   <!-- WhatsApp Floating Button - Brutalist style -->
   <a
-    href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
+    href={`https://wa.me/56991629095?text=${t.waMessage}`}
     target="_blank"
     class="fixed bottom-6 right-6 bg-lum-coral hover:bg-lum-coral-dark text-white p-4 transition-all duration-300 hover:-translate-y-1 z-50 group border-2 border-lum-black"
     style="box-shadow: 4px 4px 0px 0px var(--color-lum-black, #1a1814);"
-    aria-label="Contactar por WhatsApp"
+    aria-label={t.waLabel}
   >
     <WhatsAppIcon class="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
   </a>

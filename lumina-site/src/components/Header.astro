@@ -31,16 +31,16 @@ const urlMap: Record<string, string> = {
   '/en/services/strategic-dashboards': '/servicios/dashboards-estrategicos',
   '/servicios/control-de-gestion': '/en/services/management-control',
   '/en/services/management-control': '/servicios/control-de-gestion',
-  '/servicios/automatizacion-inteligente': '/en/services/intelligent-automation',
-  '/en/services/intelligent-automation': '/servicios/automatizacion-inteligente',
-  '/servicios/inteligencia-competitiva': '/en/services/competitive-intelligence',
-  '/en/services/competitive-intelligence': '/servicios/inteligencia-competitiva',
+  '/servicios/automatizacion-inteligente': '/en/services/reporting-automation',
+  '/en/services/reporting-automation': '/servicios/automatizacion-inteligente',
+  '/servicios/inteligencia-competitiva': '/en/services/competitive-analysis',
+  '/en/services/competitive-analysis': '/servicios/inteligencia-competitiva',
   '/servicios/hr-analytics': '/en/services/hr-analytics',
   '/en/services/hr-analytics': '/servicios/hr-analytics',
   '/servicios/soluciones-a-medida': '/en/services/custom-solutions',
   '/en/services/custom-solutions': '/servicios/soluciones-a-medida',
-  '/servicios/capacitacion': '/en/services/training',
-  '/en/services/training': '/servicios/capacitacion',
+  '/servicios/capacitacion': '/en/services/data-training',
+  '/en/services/data-training': '/servicios/capacitacion',
 
   // Blog posts
   '/blog/como-elegir-kpis-pyme': '/en/blog/how-to-choose-kpis',
@@ -96,6 +96,9 @@ const navLinks = isEnglish ? [
 const ctaText = isEnglish ? "Let's talk" : 'Hablemos';
 const ctaTextMobile = isEnglish ? 'Contact via WhatsApp' : 'Contactar por WhatsApp';
 const menuAriaLabel = isEnglish ? 'Open menu' : 'Abrir menú';
+const waMessage = isEnglish
+  ? "Hello,%20I'm%20interested%20in%20learning%20more%20about%20Lumina%20Consulting%20services"
+  : 'Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting';
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
@@ -149,7 +152,7 @@ const menuAriaLabel = isEnglish ? 'Open menu' : 'Abrir menú';
 
         <!-- CTA Button -->
         <a
-          href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
+          href={`https://wa.me/56991629095?text=${waMessage}`}
           target="_blank"
           class="btn-primary text-sm py-2.5 px-5"
         >
@@ -211,7 +214,7 @@ const menuAriaLabel = isEnglish ? 'Open menu' : 'Abrir menú';
         ))}
         <div class="pt-4 px-4">
           <a
-            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20de%20Lumina%20Consulting"
+            href={`https://wa.me/56991629095?text=${waMessage}`}
             target="_blank"
             class="btn-primary w-full justify-center"
           >

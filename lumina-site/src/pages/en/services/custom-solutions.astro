@@ -1,0 +1,345 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Custom Solutions | Web applications, internal tools & integrations | Lumina Consulting"
+  description="I build custom web applications, internal tools, and integrations. From functional MVPs to full SaaS products. React, Next.js, Python, Supabase."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Solutions",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Custom web application development, internal tools, system integrations, and SaaS products for mid-size companies.",
+    "areaServed": "CL",
+    "serviceType": "Custom Software Development"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/en/services" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          All services
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Custom development</span>
+        <h1 class="text-white mb-6">Custom solutions</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          If it doesn't exist, we build it. Web applications, internal tools, and integrations designed to solve exactly your problem. No compromises with off-the-shelf software.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The problem -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">The problem</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Your problem can't be solved with a dashboard or an off-the-shelf tool. You need something built specifically for your operation.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Maybe you've already searched for software and nothing fits. Or you found something that does 60% of what you need, but the other 40% is exactly what matters. Or worse: your team has been spending months solving with Excel and goodwill something that should be automated.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          The reality is that many mid-size companies have unique processes that no standard software covers well. And hiring a large software agency is expensive, takes months, and sometimes delivers something that wasn't what you asked for.
+        </p>
+
+        <div class="bg-lum-cream p-8 my-10 border-2 border-lum-black">
+          <p class="font-semibold text-lum-black mb-4">Situations where building custom makes sense:</p>
+          <ul class="space-y-3 text-lum-slate">
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1 font-mono font-bold">&gt;</span>
+              You need to connect two systems that don't talk to each other
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1 font-mono font-bold">&gt;</span>
+              You have an operational process that no off-the-shelf software covers
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1 font-mono font-bold">&gt;</span>
+              You're paying for an expensive SaaS that you could replace with something of your own
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1 font-mono font-bold">&gt;</span>
+              You have a digital product idea and need an MVP to validate it
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1 font-mono font-bold">&gt;</span>
+              Your team wastes hours on repetitive tasks that could be automated
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I do -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">What I do</h2>
+
+        <p class="text-lg text-lum-slate mb-10">
+          I build custom web applications, internal tools, and integrations. From functional MVPs to full SaaS products. The process is straightforward: I understand your problem, propose a realistic technical solution, and execute it with incremental deliveries so you can test from day one.
+        </p>
+
+        <div class="space-y-8">
+          <div class="bg-white p-6 border-2 border-lum-black">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 bg-lum-coral text-white flex items-center justify-center font-semibold border-2 border-lum-black">1</span>
+              <h3 class="text-lg font-semibold">Understand the problem</h3>
+            </div>
+            <p class="text-lum-slate">
+              I sit down with you and the people who live the problem. Not with whoever has the idea, but with those who will actually use the tool. I map the current workflow, identify the pain points, and define what the solution needs to solve.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 border-2 border-lum-black">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 bg-lum-coral text-white flex items-center justify-center font-semibold border-2 border-lum-black">2</span>
+              <h3 class="text-lg font-semibold">Technical proposal</h3>
+            </div>
+            <p class="text-lum-slate">
+              I present you with a concrete solution: what gets built, with what technology, in how much time, and how much it costs. No vague proposals or fine print. If something doesn't make sense, I'll tell you.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 border-2 border-lum-black">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 bg-lum-coral text-white flex items-center justify-center font-semibold border-2 border-lum-black">3</span>
+              <h3 class="text-lg font-semibold">Iterative development</h3>
+            </div>
+            <p class="text-lum-slate">
+              I work in short sprints with incremental deliveries. I don't disappear for 3 months only to show up with something that wasn't what you expected. Every week or two you have something functional you can test and adjust.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 border-2 border-lum-black">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="w-10 h-10 bg-lum-coral text-white flex items-center justify-center font-semibold border-2 border-lum-black">4</span>
+              <h3 class="text-lg font-semibold">Delivery and transfer</h3>
+            </div>
+            <p class="text-lum-slate">
+              I deliver the code, the documentation, and the knowledge so you can maintain the solution. The code stays in your repository. You don't need to keep hiring me for it to work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's included -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">What's included</h2>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-4 p-6 bg-lum-cream border-2 border-lum-black">
+            <div class="w-8 h-8 bg-lum-coral flex-shrink-0 flex items-center justify-center border-2 border-lum-black">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lum-black mb-1">Functional web applications</h3>
+              <p class="text-lum-slate">React/Next.js with custom backend. From internal panels to full platforms with authentication, roles, and databases.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 bg-lum-cream border-2 border-lum-black">
+            <div class="w-8 h-8 bg-lum-coral flex-shrink-0 flex items-center justify-center border-2 border-lum-black">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lum-black mb-1">Tools that replace expensive software</h3>
+              <p class="text-lum-slate">If you're paying for a SaaS that doesn't fit or doesn't exist for your specific case, I build the custom alternative for you.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 bg-lum-cream border-2 border-lum-black">
+            <div class="w-8 h-8 bg-lum-coral flex-shrink-0 flex items-center justify-center border-2 border-lum-black">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lum-black mb-1">Complex integrations between systems</h3>
+              <p class="text-lum-slate">I connect systems that don't talk natively. ERPs, CRMs, sales platforms, third-party APIs. Everything flows automatically.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 bg-lum-cream border-2 border-lum-black">
+            <div class="w-8 h-8 bg-lum-coral flex-shrink-0 flex items-center justify-center border-2 border-lum-black">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lum-black mb-1">Hosting and maintenance</h3>
+              <p class="text-lum-slate">Self-hosted or cloud infrastructure (Vercel, Supabase, AWS). I make sure the solution is available, secure, and up to date.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-6 bg-lum-cream border-2 border-lum-black">
+            <div class="w-8 h-8 bg-lum-coral flex-shrink-0 flex items-center justify-center border-2 border-lum-black">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lum-black mb-1">Corporate websites</h3>
+              <p class="text-lum-slate">Fast, modern, SEO-optimized websites. Astro, WordPress, or whatever makes the most sense for your content management needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured projects -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Projects I've built</h2>
+
+        <div class="space-y-8">
+          <div class="bg-white p-6 border-2 border-lum-black">
+            <span class="badge text-lum-coral bg-lum-coral-muted/30 border-lum-coral text-xs mb-3">Own SaaS</span>
+            <h3 class="text-lg font-semibold mb-3">NodalTree — Interactive org charts from your data</h3>
+            <p class="text-lum-slate mb-4">
+              Platform that generates interactive org charts from Excel, CSV, or database. Flexible import, live editing with drag & drop and copy/paste nodes, export to PDF, Excel, and CSV.
+            </p>
+            <p class="text-lum-slate mb-4">
+              Used by a bank to manage the organizational structure of 4,000+ employees. Replaced a manual process that took weeks every time there was a structural change.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t-2 border-lum-border">
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">React 18</span>
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">Zustand</span>
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">Tailwind</span>
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">Supabase</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 border-2 border-lum-black">
+            <span class="badge text-lum-mocha-dark bg-lum-mocha-muted/30 border-lum-mocha text-xs mb-3">Web application</span>
+            <h3 class="text-lg font-semibold mb-3">Vehicle competitiveness dashboard</h3>
+            <p class="text-lum-slate mb-4">
+              Next.js 14 application with authentication, competitiveness rankings dashboard, vehicle model mapping management, and Supabase PostgreSQL connection. Allows a sales team to monitor their competitive position in real time.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 pt-4 border-t-2 border-lum-border">
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">Next.js 14</span>
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">Supabase</span>
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">PostgreSQL</span>
+              <span class="font-mono text-mono-xs px-2 py-1 bg-lum-cream border border-lum-border">Auth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Frequently asked questions</h2>
+
+        <div class="space-y-6">
+          <details class="bg-lum-cream p-6 border-2 border-lum-black group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              What kind of solutions do you build?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Web applications, internal tools, system integrations, and SaaS products. From an MVP in 2 weeks to a full platform. The scope depends on your problem and your budget.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream p-6 border-2 border-lum-black group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              What technologies do you work with?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              React/Next.js, Python, Supabase, PostgreSQL, Tailwind CSS, n8n, REST APIs. The stack depends on the problem. I don't have favorites: I use whatever makes the most sense for your case, your team, and your budget.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream p-6 border-2 border-lum-black group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Can I maintain the solution myself afterward?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Yes. I transfer knowledge and document everything. The code stays in your repository. If you have a technical team, they can continue developing. If not, I offer maintenance contracts so you don't have to worry.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream p-6 border-2 border-lum-black group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How much does it cost?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              It depends on the complexity. Always with a prior quote and clear scope before starting. Let's talk about your case. No surprises.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Have a problem that needs a custom solution?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Tell me what you're trying to solve. I'll let you know if it makes sense to build something custom or if there's a simpler alternative.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hello,%20I%20need%20a%20custom%20solution%20for%20my%20company.%20Can%20we%20talk?"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/contact" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Schedule a call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
