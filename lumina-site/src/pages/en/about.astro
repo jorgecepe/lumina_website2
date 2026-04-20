@@ -17,7 +17,7 @@ import Layout from '../../layouts/Layout.astro';
         <span class="badge bg-white/10 text-white border-white/20 mb-6">Who I am</span>
         <h1 class="text-white mb-6">Jorge Cepeda</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
-          Management control, data, and automation for companies that can no longer depend on Excel
+          Consultant and operator. I design decision systems, automations, and infrastructure, and I operate what I build in production.
         </p>
       </div>
     </div>
@@ -33,7 +33,7 @@ import Layout from '../../layouts/Layout.astro';
             <div class="relative">
               <div class="absolute inset-0 bg-gradient-to-br from-lum-coral/20 to-lum-mocha/20 rounded-3xl transform rotate-3"></div>
               <img
-                src="/jorge-cepeda.jpg"
+                src="/images/fotoperfil.png"
                 alt="Jorge Cepeda - Founder of Lumina Consulting, MBA UC, Microsoft Certified Power BI Data Analyst"
                 class="relative rounded-3xl shadow-xl w-full object-cover aspect-square"
               />
@@ -49,7 +49,7 @@ import Layout from '../../layouts/Layout.astro';
               I'm Jorge Cepeda. I've spent 15 years designing management control systems in the financial industry, the last few years at a bank's investment holding company. Today I apply that experience to mid-size companies that need the same visibility and control, without enterprise-level costs or complexity.
             </p>
             <p class="text-lg text-lum-slate mb-4">
-              Lumina Consulting is my firm. I work with companies that are at the point where Excel isn't enough anymore but enterprise SAP is too much. I help them connect their data, automate the repetitive, and build decision systems that actually get used.
+              Lumina Consulting is my firm, but it's also an operator. I don't deliver reports and walk away. We operate what we build: production pipelines with automated monitoring, AI agents with retraining, cloud infrastructure with SLAs. The systems detect failures before your team does, and we resolve them within the agreed SLA.
             </p>
             <p class="text-lg text-lum-slate mb-8">
               I'm also a professor of Advanced Data Analytics at Universidad de los Andes, and Microsoft Certified PL-300 (Power BI Data Analyst).
@@ -218,66 +218,66 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Industries -->
+  <!-- Principles -->
   <section class="py-20 bg-lum-cream">
     <div class="container-custom">
       <div class="max-w-5xl mx-auto">
         <div class="mb-12 scroll-fade">
-          <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4">Industry experience</p>
-          <h2>Industries</h2>
+          <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4">How I work</p>
+          <h2>Principles</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-2 gap-6">
           <div class="card scroll-fade">
-            <span class="badge-coral mb-4">Automotive</span>
-            <ul class="arrow-list">
-              <li>Competitive intelligence</li>
-              <li>Price control</li>
-              <li>Commercial automation</li>
-            </ul>
+            <span class="badge-coral mb-4">We operate what we build</span>
+            <p class="text-lum-slate">
+              The pipelines, agents, and integrations I deliver are in production. Automated monitoring, model retraining, infrastructure with SLAs. If something breaks, the system catches it before your team does, and we resolve it.
+            </p>
           </div>
 
           <div class="card scroll-fade animation-delay-100">
-            <span class="badge-mocha mb-4">Real Estate</span>
-            <ul class="arrow-list">
-              <li>Management control</li>
-              <li>Cash flow</li>
-              <li>Cloudbeds / Airbnb integration</li>
-            </ul>
+            <span class="badge-mocha mb-4">Documentation with the client</span>
+            <p class="text-lum-slate">
+              I document alongside the build, with your internal team. Your people understand what every piece does, where it lives, and how to maintain it. No inherited black boxes.
+            </p>
           </div>
 
           <div class="card scroll-fade animation-delay-200">
-            <span class="badge-sage mb-4">Financial / Banking</span>
-            <ul class="arrow-list">
-              <li>HR Analytics</li>
-              <li>Org charts</li>
-              <li>Performance calibration</li>
-            </ul>
+            <span class="badge-sage mb-4">No lock-in</span>
+            <p class="text-lum-slate">
+              I work on top of your systems, your cloud accounts, your code. Everything stays in your infrastructure and repositories. If one day you want to operate without me, you can, with no migrations or rescues needed.
+            </p>
           </div>
 
           <div class="card scroll-fade animation-delay-300">
-            <span class="badge-coral mb-4">Healthcare / Veterinary</span>
-            <ul class="arrow-list">
-              <li>Operational reporting</li>
-              <li>Financial visibility</li>
-            </ul>
+            <span class="badge-coral mb-4">Modern stack, realistic costs</span>
+            <p class="text-lum-slate">
+              Current tech (Python, Power BI, n8n, AI agents, serverless cloud) but with judgment: no over-engineering for an SME. Architecture scales to the size of the problem and the budget you have.
+            </p>
           </div>
 
           <div class="card scroll-fade animation-delay-400">
-            <span class="badge-mocha mb-4">Professional Services</span>
-            <ul class="arrow-list">
-              <li>Process automation</li>
-              <li>Data infrastructure</li>
-            </ul>
+            <span class="badge-mocha mb-4">NDAs when applicable</span>
+            <p class="text-lum-slate">
+              I handle sensitive data (financial, HR, contracts). I sign NDAs and apply proportional security protocols: dedicated credentials, revocable access, encryption in transit and at rest when required.
+            </p>
           </div>
 
           <div class="card scroll-fade animation-delay-500">
-            <span class="badge-sage mb-4">Export</span>
-            <ul class="arrow-list">
-              <li>Dynamics 365 dashboards</li>
-              <li>Traceability</li>
-            </ul>
+            <span class="badge-sage mb-4">Mid-size company focus</span>
+            <p class="text-lum-slate">
+              I understand the ERPs they use (Softland, SAP B1, Dynamics 365), the budgets they work with, and their real problems. I don't sell enterprise solutions to companies that don't need them.
+            </p>
           </div>
+        </div>
+
+        <div class="mt-12 text-center scroll-fade">
+          <a href="/en/industries" class="inline-flex items-center gap-2 text-lum-coral hover:text-lum-mocha transition-colors font-medium">
+            See industry experience by sector
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

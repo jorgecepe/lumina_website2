@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const industrias = [
+  {
+    nombre: 'Automotriz',
+    badge: 'badge-coral',
+    descripcion: 'Redes de concesionarios y automotoras: control de publicaciones, monitoreo de precios competitivos, automatización comercial.',
+    usos: [
+      'Scraping y monitoreo diario de publicaciones propias y de competencia',
+      'Alertas sobre errores de ficha (fotos faltantes, precios fuera de rango)',
+      'Dashboards de inventario, rotación y margen por sucursal',
+    ],
+    casoLink: '/casos-de-exito#automotriz',
+  },
+  {
+    nombre: 'Hotelería y hospitalidad',
+    badge: 'badge-mocha',
+    descripcion: 'Operaciones multi-propiedad: integración de reservas, contabilidad e IoT para control operacional y financiero completo.',
+    usos: [
+      'Integración Cloudbeds + contabilidad (Softland, Xero) + indicadores financieros',
+      'Automatización IoT (Home Assistant) sincronizada con reservas',
+      'Dashboard de ingresos por unidad, anticipación, origen de huéspedes',
+    ],
+    casoLink: '/casos-de-exito',
+  },
+  {
+    nombre: 'Acuicultura',
+    badge: 'badge-sage',
+    descripcion: 'RPA documental sobre portales regulatorios sin API, trazabilidad de permisos y obligaciones ambientales.',
+    usos: [
+      'Automatización de trámites en portales SEA, SERNAPESCA, DGA',
+      'Monitoreo 24/7 de vencimientos y cambios regulatorios',
+      'Base de datos centralizada de documentos por proyecto',
+    ],
+    casoLink: '/casos-de-exito',
+  },
+  {
+    nombre: 'Manufactura industrial',
+    badge: 'badge-coral',
+    descripcion: 'BI sobre ERPs tradicionales (Softland, SAP B1, Dynamics): modelos de datos para operación, producción y finanzas.',
+    usos: [
+      'Modelos tabulares Power BI con múltiples dimensiones y hechos',
+      'Medidas DAX calibradas con gerencia: margen, rotación, productividad',
+      'Dashboards que la gerencia usa diariamente, no solo mensualmente',
+    ],
+    casoLink: '/casos-de-exito',
+  },
+  {
+    nombre: 'Veterinaria y salud',
+    badge: 'badge-mocha',
+    descripcion: 'Redes de clínicas en expansión: visibilidad financiera y operacional por sucursal, sin depender de Excel manual.',
+    usos: [
+      'Integración con software de gestión clínica',
+      'Dashboards por sucursal: ingresos, procedimientos, tendencias',
+      'Reportes automáticos sin exportaciones mensuales',
+    ],
+    casoLink: '/casos-de-exito',
+  },
+  {
+    nombre: 'Inmobiliario',
+    badge: 'badge-sage',
+    descripcion: 'Holdings con activos en renta: visibilidad de rentabilidad real por unidad, flujo de caja y proyecciones.',
+    usos: [
+      'Consolidación de reservas, contabilidad e indicadores (UF, dólar)',
+      'Rentabilidad por unidad en tiempo real',
+      'Flujo proyectado vs. real sin depender del contador',
+    ],
+    casoLink: '/casos-de-exito',
+  },
+  {
+    nombre: 'Servicios financieros',
+    badge: 'badge-coral',
+    descripcion: 'Holdings y bancos: HR Analytics, organigramas dinámicos, calibración de evaluaciones de desempeño.',
+    usos: [
+      'NodalTree: organigramas interactivos con datos de RRHH',
+      'Sistemas de calibración con detección de sesgos',
+      'Análisis de estructura organizacional y costos de personal',
+    ],
+    casoLink: '/casos-de-exito',
+  },
+  {
+    nombre: 'Sector público y regulado',
+    badge: 'badge-mocha',
+    descripcion: 'Entidades con obligaciones reportivas complejas: automatización de compliance y reportería hacia reguladores.',
+    usos: [
+      'Automatización de reportes SII, UAF, CMF',
+      'Validación documental con agentes IA',
+      'Auditorías automáticas sobre datos operativos',
+    ],
+    casoLink: '/casos-de-exito',
+  },
+];
+---
+
+<Layout
+  title="Industrias | Experiencia sectorial de Lumina Consulting"
+  description="Experiencia vertical en automotriz, hotelería, acuicultura, manufactura, salud, inmobiliario, servicios financieros y sector público. Soluciones específicas por industria."
+>
+  <!-- Hero -->
+  <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="badge bg-white/10 text-white border-white/20 mb-6">Experiencia sectorial</span>
+        <h1 class="text-white mb-6">Industrias</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
+          No vendo soluciones genéricas. Conozco los ERPs, los procesos y los problemas reales de cada sector donde opero.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid de industrias -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          {industrias.map((ind) => (
+            <div class="card scroll-fade">
+              <span class={`${ind.badge} mb-4`}>{ind.nombre}</span>
+              <p class="text-lum-slate mb-6">{ind.descripcion}</p>
+
+              <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-3">Casos típicos</p>
+              <ul class="arrow-list mb-6">
+                {ind.usos.map((uso) => <li>{uso}</li>)}
+              </ul>
+
+              <a href={ind.casoLink} class="inline-flex items-center gap-2 text-lum-coral hover:text-lum-mocha transition-colors font-medium text-sm">
+                Ver casos de éxito
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-lum-black relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6 scroll-fade">¿Tu sector no está en la lista?</h2>
+        <p class="text-xl text-lum-slate-light mb-10 scroll-fade animation-delay-100">
+          La mayoría de los problemas que resuelvo son transversales. Conversemos sobre el tuyo.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-fade animation-delay-200">
+          <a
+            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20conversar%20sobre%20mi%20industria"
+            target="_blank"
+            class="btn-primary"
+          >
+            Contactar por WhatsApp
+          </a>
+          <a href="/contacto" class="btn bg-transparent text-lum-cream border-lum-cream/30 hover:bg-lum-cream/10">
+            Solicitar Diagnóstico
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
