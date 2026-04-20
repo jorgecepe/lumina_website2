@@ -1,0 +1,475 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Business Intelligence y control de gestión | Lumina Consulting"
+  description="Primero definimos qué debería medir tu gerencia para ejecutar la estrategia. Después lo montamos en dashboards conectados a tu ERP que se actualizan solos. Power BI, Looker Studio, Softland, SAP B1."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Business Intelligence y control de gestión",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Asesoría estratégica de KPIs más implementación técnica de dashboards. Definición de indicadores, modelos financieros conectados desde el ERP y visualizaciones en Power BI o Looker Studio.",
+    "areaServed": "CL",
+    "serviceType": "Business Intelligence Consulting"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/servicios" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Todos los servicios
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Servicio principal</span>
+        <h1 class="text-white mb-6">Business Intelligence y control de gestión</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          No te vendemos dashboards. Primero te ayudamos a decidir qué debería medir tu gerencia para ejecutar la estrategia. Después lo montamos en pantallas conectadas a tu ERP que se actualizan solas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- El problema real -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">Un dashboard sin framework es solo decoración</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          La mayoría de los proyectos de Business Intelligence empiezan al revés. Alguien dice "necesitamos un dashboard", contratan a alguien que sabe Power BI, conectan datos, hacen gráficos bonitos, y entregan. Tres meses después, nadie lo abre.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          El problema no es técnico. Es que nadie se sentó a preguntarse, antes de empezar, qué decisiones queremos tomar mejor, qué números realmente importan, y quién va a usar esto y para qué.
+        </p>
+
+        <div class="bg-lum-cream rounded-2xl p-8 my-10">
+          <p class="font-semibold text-lum-black mb-4">Lo que escucho cuando llego a una empresa:</p>
+          <ul class="space-y-3 text-lum-slate">
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "Tenemos un dashboard pero nadie lo usa"
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "Cada área mide cosas distintas y nunca coinciden"
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "El cierre financiero toma semanas y cuando llega ya es información vieja"
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "El gerente general pide un número y nadie sabe de dónde sacarlo"
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-500 mt-1">✗</span>
+              "Cada reunión de directorio parte discutiendo los números en vez de decidir"
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-lg text-lum-slate">
+          Si algo de esto te suena familiar, el problema no es de tecnología. Es de framework de gestión.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo trabajamos: dos fases -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-8">Cómo trabajamos esto: dos fases</h2>
+
+        <p class="text-lg text-lum-slate mb-10">
+          Empezamos por el negocio, no por la tecnología. La asesoría estratégica viene primero, la implementación técnica después. Ambas son parte del mismo servicio, pero cada una tiene su propia disciplina.
+        </p>
+
+        <!-- Fase 1 -->
+        <div class="bg-white border-2 border-lum-black p-8 mb-6" style="box-shadow: 4px 4px 0 0 #1a1814;">
+          <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-3 block">Fase 1</span>
+          <h3 class="text-2xl mb-4">Asesoría estratégica de KPIs</h3>
+          <p class="text-lum-slate mb-6">
+            Antes de abrir Power BI o conectar datos, respondemos la pregunta fundamental: ¿qué decisiones necesita tomar tu gerencia mejor y más rápido? Esta fase es consultoría pura, centrada en estrategia y control de gestión.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold flex-shrink-0">1</span>
+              <div>
+                <p class="font-semibold text-lum-black">Diagnóstico del modelo de gestión actual</p>
+                <p class="text-sm text-lum-slate">Cómo tomas decisiones hoy, qué información usas, cuánto demora en llegar, qué te falta. Identifico puntos ciegos.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold flex-shrink-0">2</span>
+              <div>
+                <p class="font-semibold text-lum-black">Diseño del framework de KPIs</p>
+                <p class="text-sm text-lum-slate">Los 5 a 7 indicadores por área que conectan con tus objetivos estratégicos. Balanced Scorecard, OKRs o híbridos, según tu empresa.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold flex-shrink-0">3</span>
+              <div>
+                <p class="font-semibold text-lum-black">Definición de umbrales y alertas</p>
+                <p class="text-sm text-lum-slate">Para cada KPI: meta, umbral de tolerancia y alerta. Gestión por excepción. Solo te preocupas cuando hay que preocuparse.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-coral text-white flex items-center justify-center font-semibold flex-shrink-0">4</span>
+              <div>
+                <p class="font-semibold text-lum-black">Advisory estratégico</p>
+                <p class="text-sm text-lum-slate">Si estás midiendo cosas equivocadas o tu modelo de incentivos contradice tus KPIs, te lo digo. 15 años diseñando sistemas de control de gestión en la industria financiera.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="bg-white border-2 border-lum-black p-8" style="box-shadow: 4px 4px 0 0 #1a1814;">
+          <span class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-3 block">Fase 2</span>
+          <h3 class="text-2xl mb-4">Implementación técnica de dashboards</h3>
+          <p class="text-lum-slate mb-6">
+            Con el framework de KPIs definido, conectamos los datos y construimos las pantallas. Dashboards que se actualizan solos, sin que nadie arme un Excel.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-mocha text-white flex items-center justify-center font-semibold flex-shrink-0">5</span>
+              <div>
+                <p class="font-semibold text-lum-black">Conexión al ERP y fuentes de datos</p>
+                <p class="text-sm text-lum-slate">Softland, SAP Business One, Dynamics 365, y plataformas verticales (VetPraxis, Cloudbeds, iHotelier). Si tu ERP no tiene API moderna, construimos la capa de extracción.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-mocha text-white flex items-center justify-center font-semibold flex-shrink-0">6</span>
+              <div>
+                <p class="font-semibold text-lum-black">Modelo dimensional y vistas SQL</p>
+                <p class="text-sm text-lum-slate">Construimos vistas SQL gestionadas como capa intermedia. Eso aísla el modelo de cambios futuros del ERP y deja el código mantenible.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-mocha text-white flex items-center justify-center font-semibold flex-shrink-0">7</span>
+              <div>
+                <p class="font-semibold text-lum-black">Diseño visual y construcción</p>
+                <p class="text-sm text-lum-slate">Power BI o Looker Studio, según tu contexto. Un dashboard que se entiende en 10 segundos le gana a uno bonito que requiere manual. Prototipos rápidos y validación antes de construir.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-lum-mocha text-white flex items-center justify-center font-semibold flex-shrink-0">8</span>
+              <div>
+                <p class="font-semibold text-lum-black">Automatización de refresh y capacitación</p>
+                <p class="text-sm text-lum-slate">Refresh automático diario o semanal según el caso. Capacitamos a tu equipo para que pueda leer, interpretar y actuar sobre los datos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack técnico -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="mb-8 text-center">Herramientas que usamos</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card">
+            <h3 class="text-lg font-semibold mb-3">Power BI</h3>
+            <p class="text-sm text-lum-slate mb-3">
+              La opción estándar para la mayoría de las empresas chilenas. Si ya tienes Microsoft 365, probablemente ya tienes licencias.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Mejor para: stack Microsoft, reportería financiera y operacional, equipos que necesitan crear sus propios reportes.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="text-lg font-semibold mb-3">Looker Studio</h3>
+            <p class="text-sm text-lum-slate mb-3">
+              Alternativa gratuita de Google. Buena para equipos que ya viven en Google Workspace o que prefieren no pagar licencias.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Mejor para: PYMEs sin licencias Microsoft, integraciones con Google Analytics, reportería web y marketing.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="text-lg font-semibold mb-3">Streamlit</h3>
+            <p class="text-sm text-lum-slate mb-3">
+              Para dashboards que necesitan lógica compleja, simulaciones o modelos predictivos. Web apps de datos más allá de gráficos.
+            </p>
+            <p class="text-xs text-lum-slate-light">
+              Mejor para: aplicaciones personalizadas, modelos complejos, empresas tech-forward.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-lum-cream rounded-xl">
+          <p class="text-center text-lum-slate">
+            <strong>¿Cuál es mejor?</strong> Depende de tu contexto. No tenemos favoritos. Usamos lo que tenga más sentido para tu situación, presupuesto y equipo. Trabajamos con ERPs chilenos comunes (Softland, SAP B1) y plataformas verticales (VetPraxis, Cloudbeds, iHotelier, sistemas DMS automotrices).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué incluye el servicio -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Qué incluye el servicio</h2>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Framework de KPIs adaptado a tu industria</p>
+              <p class="text-sm text-lum-slate">Indicadores que conectan con decisiones reales, no métricas de vanidad. Balanced Scorecard, OKRs o modelos híbridos.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Estado de resultados, flujo de efectivo y presupuesto conectados desde tu ERP</p>
+              <p class="text-sm text-lum-slate">Información financiera actualizada sin depender de que alguien arme una planilla. Cierre mensual en horas, no en semanas.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Modelos financieros: cash flow proyectado, análisis de márgenes, punto de equilibrio</p>
+              <p class="text-sm text-lum-slate">No solo ver lo que pasó, sino proyectar lo que viene. Modelos que se actualizan con datos reales.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Dashboards en Power BI o Looker Studio con refresh automático</p>
+              <p class="text-sm text-lum-slate">Vistas separadas para gerencia, operación y socios. Refresh diario sin que nadie mueva un dedo.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Umbrales, metas y alertas para gestión por excepción</p>
+              <p class="text-sm text-lum-slate">El sistema te avisa cuando algo requiere tu atención. No tienes que revisar 20 reportes para encontrar el problema.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Documentación, código fuente y capacitación al equipo</p>
+              <p class="text-sm text-lum-slate">Todo queda contigo. Sin lock-in de proveedor. Tu equipo puede mantener y ajustar lo que construimos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ejemplos reales -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Ejemplos reales</h2>
+
+        <div class="space-y-6">
+          <div class="bg-lum-cream rounded-xl p-6">
+            <span class="badge-outline text-xs mb-3">Inmobiliario y hotelería</span>
+            <h3 class="text-lg font-semibold mb-3">Grupo inmobiliario con 7 sociedades</h3>
+            <p class="text-lum-slate mb-4">
+              Modelo financiero completo integrando datos de Softland (contabilidad), Cloudbeds (reservas), APIs bancarias y tipo de cambio en tiempo real. Cash flow consolidado, margen por unidad de negocio y alertas cuando algo se sale de parámetros.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Resultado:</strong> cierre mensual pasó de más de una semana a un día. Los socios reciben un mail semanal automático con indicadores clave de las 7 sociedades.
+            </p>
+          </div>
+
+          <div class="bg-lum-cream rounded-xl p-6">
+            <span class="badge-outline text-xs mb-3">Manufactura industrial</span>
+            <h3 class="text-lg font-semibold mb-3">Fabricante chileno de pinturas industriales sobre Softland</h3>
+            <p class="text-lum-slate mb-4">
+              Modelo dimensional sobre Softland con 4 dimensiones, 10 hechos y 23 medidas DAX. Siete páginas de Power BI cubriendo Ventas y Margen, Cobranza, EERR, Balance, Margen Detalle, Inventario y Alertas de reposición.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Resultado:</strong> reportería en producción reemplazó el ciclo manual mensual. Forecast de ventas por SKU en evaluación para segunda fase.
+            </p>
+          </div>
+
+          <div class="bg-lum-cream rounded-xl p-6">
+            <span class="badge-outline text-xs mb-3">Hotelería multi-propiedad</span>
+            <h3 class="text-lg font-semibold mb-3">Operación hotelera con Cloudbeds, contabilidad y fuentes externas</h3>
+            <p class="text-lum-slate mb-4">
+              Integración de 4 fuentes en un modelo Power BI unificado con refresh automatizado. Ocupación, anticipación de reservas, ingresos por habitación, rentabilidad por unidad y flujo de caja real vs proyectado.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Resultado:</strong> visibilidad operacional y financiera completa para los socios. Decisiones de pricing con datos en tiempo real.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Preguntas que me hacen seguido</h2>
+
+        <div class="space-y-6">
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Se puede contratar solo una fase?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              El servicio completo es más valioso (la asesoría de KPIs se traduce directo a los dashboards), pero sí, es posible. Si ya tienes dashboards y quieres repensar qué medir, empezamos por la Fase 1. Si ya tienes claro qué medir y necesitas la implementación, empezamos por la Fase 2.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Cuánto tiempo toma el servicio completo?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Entre 6 y 10 semanas típicamente. Fase 1 toma 2 a 3 semanas (diagnóstico + framework de KPIs). Fase 2 toma 4 a 7 semanas (conexión al ERP, modelo dimensional, dashboards y automatización). El factor más lento suele ser conseguir acceso a los datos y limpiarlos.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Funciona con mi ERP?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Trabajamos con Softland, SAP Business One, Dynamics 365, y plataformas verticales comunes en Chile (VetPraxis, Cloudbeds, iHotelier, sistemas DMS automotrices). Si tu sistema tiene base de datos o genera archivos exportables, podemos conectarlo. Si el ERP no tiene API moderna, construimos la capa de extracción.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Qué diferencia esto de contratar a un desarrollador Power BI?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Un desarrollador Power BI construye lo que le pidas. Nosotros te ayudamos a definir qué pedir. La diferencia es 15 años diseñando sistemas de control de gestión en el holding de inversiones de un banco. No te entregamos gráficos, te entregamos un sistema que conecta estrategia con ejecución.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Quién mantiene los dashboards después?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Tu equipo, si tiene capacidad. Capacitamos para que puedan hacer ajustes menores. Para cambios mayores o problemas técnicos, ofrecemos acompañamiento mensual (horas contratadas o servicio con SLA fijo). Todo el código y la documentación queda con el cliente, sin lock-in.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">¿Necesitas pasar de ver datos a tomar decisiones con datos?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Conversemos sobre tu situación. Te cuento si tiene sentido trabajar juntos y cómo sería el proceso.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hola,%20me%20interesa%20saber%20más%20sobre%20Business%20Intelligence%20y%20control%20de%20gestión"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contactar por WhatsApp
+          </a>
+          <a href="/contacto" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Agendar una llamada
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artículos relacionados -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl font-display font-semibold text-lum-black mb-6">Artículos relacionados</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/blog/como-elegir-kpis-pyme" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Estrategia</span>
+            <h4 class="font-semibold text-lum-black">Cómo elegir los KPIs correctos</h4>
+          </a>
+          <a href="/blog/errores-dashboards-evitar" class="p-6 bg-lum-cream rounded-xl hover:bg-lum-coral/5 transition-colors">
+            <span class="badge-outline text-xs mb-2">Dashboards</span>
+            <h4 class="font-semibold text-lum-black">7 errores que arruinan un buen dashboard</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

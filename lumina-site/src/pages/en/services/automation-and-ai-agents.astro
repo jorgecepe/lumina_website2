@@ -1,0 +1,246 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Automation and AI Agents | Lumina Consulting"
+  description="Three families of solutions: automated flows between systems (n8n, Python), AI agents with your own data (RAG), and conversational assistants connected to your operations (WhatsApp, web, CRM)."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automation and AI Agents",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "Process automation, RAG-powered AI agents, conversational assistants connected to WhatsApp and CRM. Stack: n8n, Python, GitHub Actions, ChromaDB, FastAPI.",
+    "areaServed": "CL",
+    "serviceType": "Intelligent Process Automation"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/en/services" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          All services
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Main service</span>
+        <h1 class="text-white mb-6">Automation and AI agents</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Bots, AI agents, and automated flows so your team stops doing mechanical work. From n8n flows to RAG-powered conversational assistants connected to your systems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 families -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="mb-8">Three families of solutions, depending on the pain</h2>
+
+        <p class="text-lg text-lum-slate mb-12 max-w-3xl">
+          Not all "repetitive work" is solved the same way. Depending on the task, we use different stacks. These are the three families we deliver today.
+        </p>
+
+        <div class="space-y-8">
+          <!-- Family 1 -->
+          <div class="bg-white border-2 border-lum-black p-8" style="box-shadow: 4px 4px 0 0 #1a1814;">
+            <span class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-3 block">Family 1</span>
+            <h3 class="text-2xl mb-4">Automated flows between systems</h3>
+            <p class="text-lum-slate mb-4">
+              Cron-based data pipelines, daily syncs between ERP, CRM, and spreadsheets, reports that land in the right inbox at the right time. Integration between systems that don't talk. Webhooks, ETL, email or WhatsApp alerts.
+            </p>
+            <p class="text-sm text-lum-slate-light mb-3">
+              <strong>Stack:</strong> n8n (visual workflows), Python (complex logic), GitHub Actions (scheduled pipelines), Cloud Functions (event-driven).
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Typical example:</strong> a bot that every morning checks prices of 300+ vehicles, generates a competitiveness ranking, and emails it before 7 AM. From 3 daily manual hours to zero.
+            </p>
+          </div>
+
+          <!-- Family 2 -->
+          <div class="bg-white border-2 border-lum-black p-8" style="box-shadow: 4px 4px 0 0 #1a1814;">
+            <span class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-3 block">Family 2</span>
+            <h3 class="text-2xl mb-4">AI agents with your own data</h3>
+            <p class="text-lum-slate mb-4">
+              RAG-powered chatbots (Retrieval-Augmented Generation) over your manuals, contracts, knowledge base, technical docs, or internal policies. The assistant answers with your data, not generic responses from a global model.
+            </p>
+            <p class="text-sm text-lum-slate-light mb-3">
+              <strong>Stack:</strong> ChromaDB (vector store), sentence-transformers (embeddings), FastAPI (backend), Claude or GPT (base model), web interfaces or embeddable widget.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Typical example:</strong> internal assistant that answers employees' questions about processes, policies, and manuals. Reduces repetitive HR queries by 60%.
+            </p>
+          </div>
+
+          <!-- Family 3 -->
+          <div class="bg-white border-2 border-lum-black p-8" style="box-shadow: 4px 4px 0 0 #1a1814;">
+            <span class="font-mono text-mono-xs text-lum-sage uppercase tracking-wider mb-3 block">Family 3</span>
+            <h3 class="text-2xl mb-4">Conversational assistants connected to your operations</h3>
+            <p class="text-lum-slate mb-4">
+              Via web or WhatsApp Business, responding to real queries, scheduling, quoting, escalating to a human when needed. Connected to your PMS, CRM, booking engine, or ERP to query and update info in real time.
+            </p>
+            <p class="text-sm text-lum-slate-light mb-3">
+              <strong>Stack:</strong> WhatsApp Business API, Claude with function-calling, API integration to operating system, logging and human handoff.
+            </p>
+            <p class="text-sm text-lum-slate-light">
+              <strong>Typical example:</strong> a WhatsApp bot a hotel uses to answer availability queries, quote, and book, connected directly to the PMS. Available 24/7, escalates to reception when needed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The why -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">The hidden cost of manual work</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Your team loses hours on mechanical tasks: building reports, copying info between systems, answering repetitive queries. Nobody sits down to calculate how much that costs. When you do, the numbers are usually surprising.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          And it's not just direct time. It's human error, dependency on a single person, vacations that stop processes, and talent wasted on tasks a machine does better.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How we work -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">How we approach automation</h2>
+
+        <div class="space-y-6">
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Process mapping</h3>
+              <p class="text-lum-slate">We sit down with whoever runs the process today and document it step by step. Data sources, transformations, destinations, exceptions.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">2</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Feasibility and ROI evaluation</h3>
+              <p class="text-lum-slate">Not everything should be automated. We calculate time and money saved vs development cost. If the ROI isn't clear, we tell you.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">3</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Development and implementation</h3>
+              <p class="text-lum-slate">We build using the family and tool that makes most sense: n8n flows for visual workflows, RAG agents with Python and ChromaDB for internal knowledge, conversational assistants for customer service.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Parallel testing and adjustments</h3>
+              <p class="text-lum-slate">We run the automation in parallel with the manual process to verify results match. We adjust what's needed before cutting over.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">5</span>
+            <div>
+              <h3 class="text-lg font-semibold mb-2">Monitoring, retraining, and maintenance</h3>
+              <p class="text-lum-slate">Flows stay in production with active monitoring. AI agents get retrained when the knowledge base changes. Systems detect failures before your team, and we resolve them within the agreed SLA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Frequently asked questions</h2>
+
+        <div class="space-y-6">
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              How much does it cost to automate a process?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Depends on complexity and family. An n8n flow can be ready in days. A RAG agent with a knowledge base takes 2 to 4 weeks. A conversational assistant connected to live systems takes 3 to 8 weeks. Let's talk about your case and we'll give you an estimate with the ROI.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Will a RAG AI agent answer with my exact information?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Yes. RAG means the model first queries your vectorized knowledge base and answers based on that content, not on generic global knowledge. It also cites which document it pulled the answer from. When it doesn't find information, it says so explicitly instead of making things up.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              Will AI replace my team?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              In our experience, rarely. What happens is that the person who used to do the manual process can now spend that time on more valuable things: analysis, high-value customer attention, new projects. Automation frees up time, it doesn't replace people.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">Got processes that could be automated?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Tell us which manual processes you have and we'll see which family fits best. No commitment.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hello,%20I%20have%20processes%20I%20think%20could%20be%20automated"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contact via WhatsApp
+          </a>
+          <a href="/en/contact" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Schedule a call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -2,7 +2,13 @@
   "redirects": [
     { "source": "/servicios/automatizacion-reporteria", "destination": "/servicios/automatizacion-inteligente", "permanent": true },
     { "source": "/servicios/analisis-competencia", "destination": "/servicios/inteligencia-competitiva", "permanent": true },
-    { "source": "/servicios/capacitacion-sence", "destination": "/servicios/capacitacion", "permanent": true }
+    { "source": "/servicios/capacitacion-sence", "destination": "/servicios/capacitacion", "permanent": true },
+    { "source": "/servicios/dashboards-estrategicos", "destination": "/servicios/business-intelligence", "permanent": true },
+    { "source": "/servicios/control-de-gestion", "destination": "/servicios/business-intelligence", "permanent": true },
+    { "source": "/en/services/strategic-dashboards", "destination": "/en/services/business-intelligence", "permanent": true },
+    { "source": "/en/services/management-control", "destination": "/en/services/business-intelligence", "permanent": true },
+    { "source": "/servicios/automatizacion-inteligente", "destination": "/servicios/automatizacion-y-agentes-ia", "permanent": true },
+    { "source": "/en/services/reporting-automation", "destination": "/en/services/automation-and-ai-agents", "permanent": true }
   ],
   "buildCommand": "npm run build",
   "outputDirectory": "dist",

@@ -1,0 +1,323 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Automatización de plataformas sin API (RPA + IA) | Lumina Consulting"
+  description="Si tu operación depende de subir, descargar o conciliar datos en plataformas que no tienen API (portales de cumplimiento, sistemas legacy, plataformas regulatorias), automatizamos esa carga con Playwright y análisis asistido por IA."
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automatización de plataformas sin API (RPA + IA)",
+    "provider": {
+      "@type": "Organization",
+      "name": "Lumina Consulting",
+      "url": "https://luminaconsulting.ai"
+    },
+    "description": "RPA con Playwright e IA para automatizar operaciones en plataformas que no tienen API documentada: portales de cumplimiento, sistemas RRHH propios del cliente, ERPs cerrados, sistemas gubernamentales.",
+    "areaServed": "CL",
+    "serviceType": "Robotic Process Automation"
+  })} />
+
+  <!-- Hero -->
+  <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/15 rounded-full blur-3xl" />
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-4xl">
+        <a href="/servicios" class="inline-flex items-center gap-2 text-lum-slate-light hover:text-white mb-6 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Todos los servicios
+        </a>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Servicio principal</span>
+        <h1 class="text-white mb-6">Automatización de plataformas sin API</h1>
+        <p class="text-xl text-lum-slate-light max-w-2xl">
+          Si tu operación depende de subir, descargar o conciliar datos en plataformas que no tienen API (portales de cumplimiento, sistemas legacy, plataformas regulatorias), automatizamos esa carga sin pedirle nada al proveedor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- El problema -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">El problema que nadie quiere resolver</h2>
+
+        <p class="text-lg text-lum-slate mb-6">
+          Muchas industrias dependen de plataformas que sus clientes o reguladores les imponen y que no tienen API documentada. Portales de cumplimiento de proveedores, sistemas RRHH propios del cliente, ERPs cerrados, sistemas gubernamentales.
+        </p>
+
+        <p class="text-lg text-lum-slate mb-6">
+          La opción habitual es contratar a alguien para que lo haga manualmente, con la latencia y los errores que eso implica. Un documento vence y nadie se entera hasta que el cliente llama. Una acreditación se rechaza y pasan 48 horas antes de volver a intentar.
+        </p>
+
+        <div class="bg-lum-cream rounded-2xl p-8 my-10">
+          <p class="font-semibold text-lum-black mb-4">Escenarios típicos que resolvemos:</p>
+          <ul class="space-y-3 text-lum-slate">
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              <span>Carga de documentos en portales de cumplimiento de clientes grandes (mineras, salmoneras, constructoras) que imponen plataformas propietarias.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              <span>Extracción diaria de información de sistemas regulatorios o gubernamentales (declaraciones, certificaciones, tramitaciones).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              <span>Sincronización entre ERPs cerrados sin conectores y tus sistemas de gestión internos.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-lum-coral mt-1">→</span>
+              <span>Mantenimiento al día de documentación de operarios en múltiples plataformas, cada una con su formato y vencimientos distintos.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo lo resolvemos -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-8">Cómo lo resolvemos</h2>
+
+        <p class="text-lg text-lum-slate mb-10">
+          Automatizamos esa capa con Playwright más análisis asistido por IA, manejando login, autenticación de dos factores cuando aplica, navegación, carga de archivos, detección de rechazos y alertas en caso de cambios en la plataforma.
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Autenticación robusta</h3>
+            <p class="text-lum-slate">
+              Login con credenciales seguras, manejo de sesiones persistentes, resolución automática de 2FA vía TOTP o captura de SMS. Si la plataforma cierra sesión, el robot vuelve a autenticarse sin intervención.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Navegación y carga de archivos</h3>
+            <p class="text-lum-slate">
+              El robot navega la plataforma como un usuario humano: abre formularios, llena campos, adjunta archivos, envía. Manejamos rutas complejas, menús dinámicos y formularios multi-paso con validación por etapa.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Detección inteligente de rechazos y errores</h3>
+            <p class="text-lum-slate">
+              Usamos IA para interpretar mensajes de error, detectar rechazos de documentos y clasificar el motivo. El robot no solo intenta: sabe cuándo falló y por qué.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Alertas ante cambios en la plataforma</h3>
+            <p class="text-lum-slate">
+              Las UIs cambian. Cuando el proveedor actualiza la plataforma, el robot lo detecta y alerta. Ajustamos el flujo en cuestión de horas, no días.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="text-lg font-semibold mb-3">Modelo híbrido humano-en-el-loop para casos difíciles</h3>
+            <p class="text-lum-slate">
+              Cuando hay protección anti-bot agresiva (Cloudflare Turnstile, reCAPTCHA v3, captchas visuales), adaptamos la solución a un modelo asistido por humano para los pasos críticos. El robot hace el 95% del trabajo, un operador autoriza los pasos protegidos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué entregamos -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Qué entregamos</h2>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Robots RPA por plataforma en producción</p>
+              <p class="text-sm text-lum-slate">Un scraper o flujo automatizado por cada plataforma crítica, corriendo en infraestructura dedicada con monitoreo 24/7.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Dashboard de cumplimiento unificado</p>
+              <p class="text-sm text-lum-slate">Vista única que muestra el estado de cada plataforma, cada documento y cada operación pendiente, con semáforos por vencimiento y rechazo.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Sistema de alertas configurables</p>
+              <p class="text-sm text-lum-slate">Avisos por email o WhatsApp cuando un documento es rechazado, una plataforma cambia su UI, o un vencimiento se acerca.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Trazabilidad auditada de cada operación</p>
+              <p class="text-sm text-lum-slate">Log detallado de cada intento, con screenshots, timestamps, códigos de respuesta y resultado. Evidencia ante auditorías internas o externas.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-lum-cream rounded-xl">
+            <span class="text-lum-coral text-xl mt-0.5">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <div>
+              <p class="font-semibold text-lum-black">Contrato de mantenimiento mensual</p>
+              <p class="text-sm text-lum-slate">Las UIs cambian. El servicio incluye ajustes cuando la plataforma se actualiza, dentro del SLA acordado. No pagas por cada cambio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Caso real -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Caso real</h2>
+
+        <div class="bg-white rounded-xl p-8">
+          <span class="badge-outline text-xs mb-3">Acuicultura y manufactura</span>
+          <h3 class="text-xl font-semibold mb-4">PYME chilena de iluminación LED para acuicultura</h3>
+
+          <p class="text-lum-slate mb-4">
+            <strong>Problema:</strong> mantener al día la documentación de operarios de campo en nueve plataformas distintas (una fuente interna, ocho plataformas regulatorias y de clientes). Cada cliente salmonero exige documentos en su propia plataforma, con su propio formato y vencimiento. La operación dependía de una persona interna más una empresa externa con latencia de 48 horas. Al momento del diagnóstico: 37% de cumplimiento documental visible en el portal de uno de los principales clientes, dos documentos vencidos y acreditación próxima a expirar.
+          </p>
+
+          <p class="text-lum-slate mb-4">
+            <strong>Solución:</strong> sistema integral en cuatro etapas. Auditoría inicial de duplicados, gestor documental unificado sobre la fuente interna, incorporación de fuentes externas (mutual, capacitaciones), y carga automática a cinco plataformas con stack compartido vía RPA con Playwright.
+          </p>
+
+          <p class="text-sm text-lum-slate-light mb-3">
+            <strong>Herramientas:</strong> Python, PostgreSQL, n8n, Playwright, FastAPI.
+          </p>
+
+          <div class="bg-lum-cream rounded-xl p-6 mt-6">
+            <p class="font-semibold text-lum-black mb-3">Resultado:</p>
+            <p class="text-lum-slate">
+              Cumplimiento documental medible en tiempo real, eliminación de la dependencia del proveedor manual con latencia de 48 horas, dashboard único de cumplimiento por cliente y trazabilidad auditada de cada operación realizada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas frecuentes -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Preguntas frecuentes</h2>
+
+        <div class="space-y-6">
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Es legal automatizar una plataforma sin permiso del proveedor?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Si tienes credenciales legítimas y estás realizando operaciones que ya te corresponden como usuario (subir tus propios documentos, descargar tu propia información), automatizar esas operaciones es tu derecho. Nosotros no hacemos scraping de datos de terceros ni accedemos a información que no te pertenece. Trabajamos siempre desde dentro de tu cuenta, con tus credenciales, haciendo lo que un empleado tuyo haría manualmente.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Qué pasa si la plataforma detecta el robot?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Usamos técnicas de navegación humana simulada (delays realistas, patrones de movimiento, headers correctos). Si la plataforma implementa protección anti-bot agresiva (Cloudflare Turnstile, captchas visuales), aplicamos el modelo híbrido humano-en-el-loop: el robot hace el 95% del trabajo automáticamente, y un operador autoriza los pasos protegidos con captcha en 2 o 3 clicks.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Qué pasa cuando la plataforma cambia su interfaz?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              El sistema detecta el cambio automáticamente y alerta. Los ajustes están incluidos en el contrato de mantenimiento mensual, no generan cobros extra. Típicamente el ajuste toma 1 a 3 días hábiles dependiendo de la magnitud del cambio.
+            </p>
+          </details>
+
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿En cuánto tiempo tengo el primer robot en producción?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">
+              Un robot simple (una plataforma, operaciones básicas como carga de documentos) puede estar en producción en 3 a 6 semanas. Sistemas complejos con múltiples plataformas y flujos interconectados, 8 a 12 semanas. La primera semana es diagnóstico: mapeamos cada plataforma y definimos alcance.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-lum-black">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white mb-6">¿Tu operación depende de una plataforma sin API?</h2>
+        <p class="text-xl text-lum-slate-light mb-8">
+          Conversemos sobre tu caso. Te decimos si es factible automatizarlo y qué modelo encaja mejor.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/56991629095?text=Hola,%20tengo%20una%20plataforma%20sin%20API%20que%20me%20gustaría%20automatizar"
+            target="_blank"
+            class="btn-primary"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Contactar por WhatsApp
+          </a>
+          <a href="/contacto" class="btn-secondary bg-white/5 border-white/20 text-white hover:bg-white/10">
+            Agendar una llamada
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

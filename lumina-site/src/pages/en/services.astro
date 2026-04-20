@@ -3,25 +3,32 @@ import Layout from '../../layouts/Layout.astro';
 
 const coreServices = [
   {
-    slug: "strategic-dashboards",
-    title: "Dashboards & visibility",
-    description: "I connect your systems and show you how your operations are doing, updated every day. No more building reports by hand.",
+    slug: "business-intelligence",
+    title: "Business Intelligence and management control",
+    description: "First we help you decide what your leadership should measure to execute strategy. Then we build it into dashboards connected to your ERP that update themselves.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />`,
-    highlights: ["Daily updates", "No manual Excel", "Real-time data"]
+    highlights: ["KPIs + Dashboards", "Power BI / Looker", "Softland / SAP B1"]
   },
   {
-    slug: "management-control",
-    title: "Data-driven management control",
-    description: "Seeing numbers isn't enough. I help you define what to measure, how to interpret it, and what decisions to make. 15 years of financial control experience.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />`,
-    highlights: ["Strategic KPIs", "Budget vs. actual", "Management by exception"]
-  },
-  {
-    slug: "reporting-automation",
-    title: "Intelligent automation",
-    description: "Bots, AI agents, and automated flows so your team stops doing mechanical work and focuses on what matters.",
+    slug: "automation-and-ai-agents",
+    title: "Automation and AI agents",
+    description: "Three families: automated flows between systems (n8n), AI agents with your own data (RAG), and conversational assistants connected to your operations.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />`,
-    highlights: ["n8n + Python", "AI agents", "Zero manual intervention"]
+    highlights: ["n8n + Python", "RAG agents", "WhatsApp + web"]
+  },
+  {
+    slug: "rpa-platforms-without-api",
+    title: "RPA for platforms without APIs",
+    description: "Compliance portals, legacy systems, regulatory platforms. If the platform has no API, we automate the load with Playwright and AI-assisted analysis.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />`,
+    highlights: ["Playwright + AI", "24/7 monitoring", "Audited traceability"]
+  },
+  {
+    slug: "custom-solutions",
+    title: "Custom solutions and infrastructure",
+    description: "Web applications, integrations, purpose-built agents, managed cloud infrastructure. When off-the-shelf doesn't fit, we build what you need and keep it in production.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
+    highlights: ["Web apps", "Managed cloud", "Own SaaS"]
   },
 ];
 
@@ -35,31 +42,48 @@ const moreServices = [
   },
   {
     slug: "hr-analytics",
-    title: "HR Analytics & org charts",
-    description: "Visibility into headcount, turnover, labor costs, and performance. Includes NodalTree.",
+    title: "HR Analytics and org charts",
+    description: "Visibility into headcount, turnover, labor costs, and performance. Natural gateway to NodalTree.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`,
-    highlights: ["Turnover", "Absenteeism", "NodalTree"]
-  },
-  {
-    slug: "custom-solutions",
-    title: "Custom solutions",
-    description: "Web applications, internal tools, and integrations when the problem needs something built to measure.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
-    highlights: ["React/Next.js", "APIs", "SaaS"]
+    highlights: ["Turnover", "NodalTree", "People analytics"]
   },
   {
     slug: "data-training",
-    title: "Training",
-    description: "Power BI, data analysis, automation. With your real data, not textbook examples.",
+    title: "Corporate training",
+    description: "Power BI, data analysis, automation, and AI tooling. Taught by the same professor who teaches Advanced Data Analytics at UANDES. With your real data, not textbook examples.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />`,
-    highlights: ["Real data", "On-site/online", "Corporate"]
+    highlights: ["UANDES + PL-300", "Real data", "On-site/online"]
+  },
+];
+
+const modalities = [
+  {
+    name: "Diagnostic and sprint",
+    description: "You want concrete value fast. We define the first deliverable, build it, and leave it in production.",
+    duration: "4 to 8 weeks",
+    investment: "From 50 UF",
+    fits: "First project with Lumina, standalone dashboard, automation of a specific process."
+  },
+  {
+    name: "Phased program",
+    description: "A larger project with multiple chained deliverables. Each phase is approved, delivered, and invoiced before the next begins.",
+    duration: "2 to 4 months",
+    investment: "From 110 UF",
+    fits: "Full Business Intelligence implementation, multiple RPA platforms, system migration."
+  },
+  {
+    name: "Monthly engagement",
+    description: "You already have an operation running and need maintenance, continuous improvements, and availability for new topics. Two variants: contracted monthly hours, or monthly service with fixed SLA.",
+    duration: "Renewable every 3 to 6 months",
+    investment: "From 15 UF/month",
+    fits: "RPA bot maintenance, continuous pipeline operation, SLA on production dashboards."
   },
 ];
 ---
 
 <Layout
-  title="Business Intelligence and Data Services | Lumina Consulting"
-  description="Dashboards, management control, intelligent automation, competitive intelligence, HR analytics, custom solutions, and training for mid-size companies."
+  title="Services | BI, automation, RPA, AI and custom solutions | Lumina Consulting"
+  description="Business Intelligence, automation with AI agents, RPA for platforms without APIs, custom solutions, competitive intelligence, HR analytics, and corporate training for mid-size companies in Chile."
 >
   <!-- Hero Section -->
   <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
@@ -72,7 +96,7 @@ const moreServices = [
         <span class="badge bg-white/10 text-white border-white/20 mb-6">Services</span>
         <h1 class="text-white mb-6">What we do</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
-          Data, automation, and intelligence for companies that want to make better decisions. No endless projects or unnecessary jargon.
+          Four main lines, three complementary. Data, automation, and intelligence for companies that want to make better decisions.
         </p>
       </div>
     </div>
@@ -81,9 +105,9 @@ const moreServices = [
   <!-- Core Services -->
   <section class="py-20 bg-white">
     <div class="container-custom">
-      <div class="max-w-5xl mx-auto">
-        <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-8">Core services</p>
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="max-w-6xl mx-auto">
+        <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-8">Main lines</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
           {coreServices.map(service => (
             <a
               href={`/en/services/${service.slug}`}
@@ -113,8 +137,8 @@ const moreServices = [
           ))}
         </div>
 
-        <p class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-8">Also</p>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <p class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-8">Complementary services</p>
+        <div class="grid md:grid-cols-3 gap-6">
           {moreServices.map(service => (
             <a
               href={`/en/services/${service.slug}`}
@@ -137,18 +161,61 @@ const moreServices = [
     </div>
   </section>
 
-  <!-- How I work -->
+  <!-- How we work: modalities -->
   <section class="py-20 bg-lum-cream">
     <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4">Engagement models</p>
+          <h2 class="mb-4">How we work</h2>
+          <p class="text-lg text-lum-slate max-w-3xl mx-auto">
+            Three formats depending on the moment of the problem. Most relationships start in one and migrate to another over time.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          {modalities.map(m => (
+            <div class="bg-white border-2 border-lum-black p-8" style="box-shadow: 4px 4px 0 0 #1a1814;">
+              <div class="grid md:grid-cols-4 gap-6 items-start">
+                <div class="md:col-span-2">
+                  <h3 class="text-xl font-semibold mb-3">{m.name}</h3>
+                  <p class="text-lum-slate text-sm mb-3">{m.description}</p>
+                  <p class="text-xs text-lum-slate-light">{m.fits}</p>
+                </div>
+                <div class="md:border-l-2 md:border-lum-border md:pl-6">
+                  <p class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider mb-2">Duration</p>
+                  <p class="text-sm text-lum-black">{m.duration}</p>
+                </div>
+                <div class="md:border-l-2 md:border-lum-border md:pl-6">
+                  <p class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider mb-2">Investment</p>
+                  <p class="text-lg font-semibold text-lum-coral">{m.investment}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 p-6 bg-white rounded-xl border border-lum-border">
+          <p class="text-sm text-lum-slate">
+            <strong class="text-lum-black">All modalities include</strong> full technical documentation, source code, knowledge transfer to your team, and no vendor lock-in. Ranges are indicative and adjust to scope. Final pricing is set after diagnosis. UF is the Chilean unidad de fomento, ~$39,000 CLP as of 2026.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
       <div class="max-w-3xl mx-auto">
-        <h2 class="text-center mb-12">How I work</h2>
+        <h2 class="text-center mb-12">Working process</h2>
         <div class="space-y-8">
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
             <div>
               <h3 class="text-lg font-semibold mb-2">We talk</h3>
               <p class="text-lum-slate">
-                You tell me what problem you want to solve. No commitment, no endless PowerPoints. An honest conversation about whether I can help or not.
+                You tell us what problem you want to solve. No commitment, no endless PowerPoints. An honest conversation about whether we can help or not.
               </p>
             </div>
           </div>
@@ -157,7 +224,7 @@ const moreServices = [
             <div>
               <h3 class="text-lg font-semibold mb-2">Diagnosis</h3>
               <p class="text-lum-slate">
-                I review your data, processes, and context. I tell you what's realistic to achieve, how long it would take, and how much it would cost. If it doesn't make sense, I'll tell you that too.
+                We review your data, processes, and context. We tell you what's realistic to achieve, how long it would take, and how much it would cost. If it doesn't make sense, we tell you that too.
               </p>
             </div>
           </div>
@@ -166,16 +233,16 @@ const moreServices = [
             <div>
               <h3 class="text-lg font-semibold mb-2">Execution</h3>
               <p class="text-lum-slate">
-                I work fast, with partial deliveries so you can start using things as soon as they're ready. No surprises or scope changes mid-project.
+                We work fast, with partial deliveries so you can start using things as soon as they're ready. No surprises or scope changes mid-project.
               </p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">Knowledge transfer</h3>
+              <h3 class="text-lg font-semibold mb-2">Operation and handoff</h3>
               <p class="text-lum-slate">
-                I train you so you can maintain and evolve what we build. I'm not looking to create dependency.
+                We operate what we build: pipelines in production with monitoring, AI agents with retraining, infrastructure with SLA. The systems detect failures before your team, and we resolve them within the agreed SLA. We train your team so they can maintain and evolve what we built.
               </p>
             </div>
           </div>
@@ -194,7 +261,7 @@ const moreServices = [
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-white mb-6">Not sure where to start?</h2>
         <p class="text-xl text-lum-slate-light mb-10">
-          Tell me what problem you have and we'll figure out together if it makes sense to work on it.
+          Tell us what problem you have and we'll figure out together if it makes sense to work on it.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a

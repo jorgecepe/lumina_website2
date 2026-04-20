@@ -3,25 +3,32 @@ import Layout from '../layouts/Layout.astro';
 
 const coreServices = [
   {
-    slug: "dashboards-estrategicos",
-    title: "Dashboards y visibilidad",
-    description: "Conecto tus sistemas y te muestro cómo va tu operación, actualizado todos los días. Sin armar reportes a mano.",
+    slug: "business-intelligence",
+    title: "Business Intelligence y control de gestión",
+    description: "Primero definimos qué debería medir tu gerencia para ejecutar la estrategia. Después lo montamos en dashboards conectados a tu ERP que se actualizan solos.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />`,
-    highlights: ["Actualización diaria", "Sin Excel manual", "Datos en tiempo real"]
+    highlights: ["KPIs + Dashboards", "Power BI / Looker", "Softland / SAP B1"]
   },
   {
-    slug: "control-de-gestion",
-    title: "Control de gestión con datos",
-    description: "No basta con ver números. Defino contigo qué medir, cómo interpretarlo y qué decisiones tomar. 15 años de experiencia en control financiero.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />`,
-    highlights: ["KPIs estratégicos", "Presupuesto vs. real", "Gestión por excepción"]
-  },
-  {
-    slug: "automatizacion-inteligente",
-    title: "Automatización inteligente",
-    description: "Robots, agentes de IA y flujos automáticos para que tu equipo deje de hacer trabajo mecánico y se enfoque en lo que importa.",
+    slug: "automatizacion-y-agentes-ia",
+    title: "Automatización y agentes de IA",
+    description: "Tres familias: flujos automáticos entre sistemas (n8n), agentes de IA con tu información (RAG), y asistentes conversacionales conectados a tu operación.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />`,
-    highlights: ["n8n + Python", "Agentes de IA", "Sin intervención manual"]
+    highlights: ["n8n + Python", "Agentes RAG", "WhatsApp + web"]
+  },
+  {
+    slug: "rpa-plataformas-sin-api",
+    title: "Automatización de plataformas sin API",
+    description: "Portales de cumplimiento, sistemas legacy, plataformas regulatorias. Si la plataforma no tiene API, automatizamos la carga con Playwright y análisis asistido por IA.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />`,
+    highlights: ["Playwright + IA", "Monitoreo 24/7", "Trazabilidad auditada"]
+  },
+  {
+    slug: "soluciones-a-medida",
+    title: "Soluciones a medida e infraestructura",
+    description: "Aplicaciones web, integraciones, agentes específicos, infraestructura cloud gestionada. Cuando lo estándar no calza, construimos lo que necesitas y lo mantenemos en producción.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
+    highlights: ["Web apps", "Cloud gestionada", "SaaS propio"]
   },
 ];
 
@@ -36,30 +43,47 @@ const moreServices = [
   {
     slug: "hr-analytics",
     title: "HR Analytics y organigramas",
-    description: "Visibilidad sobre dotación, rotación, costos laborales y desempeño. Incluye NodalTree.",
+    description: "Visibilidad sobre dotación, rotación, costos laborales y desempeño. Puerta natural hacia NodalTree.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`,
-    highlights: ["Rotación", "Ausentismo", "NodalTree"]
-  },
-  {
-    slug: "soluciones-a-medida",
-    title: "Soluciones a medida",
-    description: "Aplicaciones web, herramientas internas e integraciones cuando el problema necesita algo hecho a tu medida.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`,
-    highlights: ["React/Next.js", "APIs", "SaaS"]
+    highlights: ["Rotación", "NodalTree", "People analytics"]
   },
   {
     slug: "capacitacion",
-    title: "Capacitación",
-    description: "Power BI, análisis de datos, automatización y herramientas de IA. Con tus datos reales, no ejemplos de libro. Dictada por el mismo profesor de Data Analytics en UANDES.",
+    title: "Capacitación corporativa",
+    description: "Power BI, análisis de datos, automatización y herramientas de IA. Dictada por el mismo profesor de Data Analytics en UANDES. Con tus datos reales, no ejemplos de libro.",
     icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />`,
-    highlights: ["Datos reales", "Presencial/online", "UANDES + PL-300"]
+    highlights: ["UANDES + PL-300", "Datos reales", "Presencial/online"]
+  },
+];
+
+const modalidades = [
+  {
+    nombre: "Diagnóstico y sprint",
+    descripcion: "Quieres ver valor concreto rápido. Definimos el primer entregable, lo construimos y lo dejamos en producción.",
+    duracion: "4 a 8 semanas",
+    inversion: "Desde 50 UF",
+    aplica: "Primer proyecto con Lumina, dashboard puntual, automatización de un proceso específico."
+  },
+  {
+    nombre: "Programa por fases",
+    descripcion: "Hay un proyecto más grande con varios entregables encadenados. Cada fase se aprueba, se entrega y se factura antes de comenzar la siguiente.",
+    duracion: "2 a 4 meses",
+    inversion: "Desde 110 UF",
+    aplica: "Implementación completa de Business Intelligence, multiple plataformas RPA, migración de sistemas."
+  },
+  {
+    nombre: "Acompañamiento mensual",
+    descripcion: "Ya tienes una operación corriendo y necesitas mantenimiento, mejoras continuas y disponibilidad para temas nuevos. Dos variantes: horas mensuales contratadas o servicio mensual con SLA fijo.",
+    duracion: "Renovable cada 3 a 6 meses",
+    inversion: "Desde 15 UF/mes",
+    aplica: "Mantenimiento de robots RPA, operación continua de pipelines, SLA sobre dashboards en producción."
   },
 ];
 ---
 
 <Layout
-  title="Servicios | Datos, automatización e inteligencia para empresas | Lumina Consulting"
-  description="Dashboards, control de gestión, automatización inteligente, inteligencia competitiva, HR analytics, soluciones a medida y capacitación para empresas medianas en Chile."
+  title="Servicios | BI, automatización, RPA, IA y soluciones a medida | Lumina Consulting"
+  description="Business Intelligence, automatización con agentes de IA, RPA para plataformas sin API, soluciones a medida, inteligencia competitiva, HR analytics y capacitación para empresas medianas en Chile."
 >
   <!-- Hero Section -->
   <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
@@ -72,7 +96,7 @@ const moreServices = [
         <span class="badge bg-white/10 text-white border-white/20 mb-6">Servicios</span>
         <h1 class="text-white mb-6">Lo que hacemos</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl mx-auto">
-          Datos, automatización e inteligencia para empresas que quieren decidir mejor. Sin proyectos eternos ni jerga innecesaria.
+          Cuatro líneas principales, tres complementarias. Datos, automatización e inteligencia para empresas que quieren decidir mejor.
         </p>
       </div>
     </div>
@@ -81,9 +105,9 @@ const moreServices = [
   <!-- Core Services -->
   <section class="py-20 bg-white">
     <div class="container-custom">
-      <div class="max-w-5xl mx-auto">
-        <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-8">Servicios principales</p>
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="max-w-6xl mx-auto">
+        <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-8">Líneas principales</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
           {coreServices.map(service => (
             <a
               href={`/servicios/${service.slug}`}
@@ -113,8 +137,8 @@ const moreServices = [
           ))}
         </div>
 
-        <p class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-8">También</p>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <p class="font-mono text-mono-xs text-lum-mocha uppercase tracking-wider mb-8">Servicios complementarios</p>
+        <div class="grid md:grid-cols-3 gap-6">
           {moreServices.map(service => (
             <a
               href={`/servicios/${service.slug}`}
@@ -137,18 +161,61 @@ const moreServices = [
     </div>
   </section>
 
-  <!-- How I work -->
+  <!-- Cómo trabajamos: modalidades -->
   <section class="py-20 bg-lum-cream">
     <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="font-mono text-mono-xs text-lum-coral uppercase tracking-wider mb-4">Modalidades</p>
+          <h2 class="mb-4">Cómo trabajamos</h2>
+          <p class="text-lg text-lum-slate max-w-3xl mx-auto">
+            Tres formatos según el momento del problema. La mayoría de las relaciones empiezan en uno y migran a otro con el tiempo.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          {modalidades.map(m => (
+            <div class="bg-white border-2 border-lum-black p-8" style="box-shadow: 4px 4px 0 0 #1a1814;">
+              <div class="grid md:grid-cols-4 gap-6 items-start">
+                <div class="md:col-span-2">
+                  <h3 class="text-xl font-semibold mb-3">{m.nombre}</h3>
+                  <p class="text-lum-slate text-sm mb-3">{m.descripcion}</p>
+                  <p class="text-xs text-lum-slate-light">{m.aplica}</p>
+                </div>
+                <div class="md:border-l-2 md:border-lum-border md:pl-6">
+                  <p class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider mb-2">Duración</p>
+                  <p class="text-sm text-lum-black">{m.duracion}</p>
+                </div>
+                <div class="md:border-l-2 md:border-lum-border md:pl-6">
+                  <p class="font-mono text-mono-xs text-lum-slate uppercase tracking-wider mb-2">Inversión</p>
+                  <p class="text-lg font-semibold text-lum-coral">{m.inversion}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 p-6 bg-white rounded-xl border border-lum-border">
+          <p class="text-sm text-lum-slate">
+            <strong class="text-lum-black">Todas las modalidades incluyen</strong> documentación técnica completa, código fuente, transferencia de conocimiento al equipo y sin lock-in de proveedor. Los rangos son orientativos y se ajustan según alcance. El presupuesto final se cierra tras el diagnóstico.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo trabajo (proceso) -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
       <div class="max-w-3xl mx-auto">
-        <h2 class="text-center mb-12">Cómo trabajo</h2>
+        <h2 class="text-center mb-12">Proceso de trabajo</h2>
         <div class="space-y-8">
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">1</span>
             <div>
               <h3 class="text-lg font-semibold mb-2">Conversamos</h3>
               <p class="text-lum-slate">
-                Me cuentas qué problema quieres resolver. Sin compromiso, sin PowerPoints eternos. Una conversación honesta sobre si puedo ayudarte o no.
+                Nos cuentas qué problema quieres resolver. Sin compromiso, sin PowerPoints eternos. Una conversación honesta sobre si podemos ayudarte o no.
               </p>
             </div>
           </div>
@@ -157,7 +224,7 @@ const moreServices = [
             <div>
               <h3 class="text-lg font-semibold mb-2">Diagnóstico</h3>
               <p class="text-lum-slate">
-                Reviso tus datos, procesos y contexto. Te digo qué es realista lograr, en cuánto tiempo, y cuánto costaría. Si no tiene sentido, te lo digo también.
+                Revisamos tus datos, procesos y contexto. Te decimos qué es realista lograr, en cuánto tiempo, y cuánto costaría. Si no tiene sentido, te lo decimos también.
               </p>
             </div>
           </div>
@@ -166,16 +233,16 @@ const moreServices = [
             <div>
               <h3 class="text-lg font-semibold mb-2">Ejecución</h3>
               <p class="text-lum-slate">
-                Trabajo rápido, con entregas parciales para que puedas usar las cosas apenas estén listas. Sin sorpresas ni cambios de alcance a mitad de camino.
+                Trabajamos rápido, con entregas parciales para que puedas usar las cosas apenas estén listas. Sin sorpresas ni cambios de alcance a mitad de camino.
               </p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="w-10 h-10 rounded-full bg-lum-coral text-white flex-shrink-0 flex items-center justify-center font-semibold">4</span>
             <div>
-              <h3 class="text-lg font-semibold mb-2">Transferencia</h3>
+              <h3 class="text-lg font-semibold mb-2">Operación y transferencia</h3>
               <p class="text-lum-slate">
-                Te capacito para que puedas mantener y evolucionar lo que construimos. No busco que dependas de mí para siempre.
+                Operamos lo que construimos: pipelines en producción con monitoreo, agentes con retraining, infraestructura con SLA. Los sistemas detectan las fallas antes que tu equipo, y las resolvemos dentro del SLA acordado. Capacitamos al equipo para que puedan mantener y evolucionar lo que construimos.
               </p>
             </div>
           </div>
@@ -194,7 +261,7 @@ const moreServices = [
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-white mb-6">¿No sabes por dónde empezar?</h2>
         <p class="text-xl text-lum-slate-light mb-10">
-          Cuéntame qué problema tienes y vemos juntos si tiene sentido trabajar en ello.
+          Cuéntanos qué problema tienes y vemos juntos si tiene sentido trabajar en ello.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
