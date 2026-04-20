@@ -3,9 +3,10 @@
 ## Descripción General
 Sitio web para **Lumina Consulting**, agencia de inteligencia de negocio fundada por Jorge Cepeda. Lumina conecta los sistemas de datos de empresas medianas chilenas (ERPs, plataformas de venta, APIs públicas) y los convierte en información visual, automatizada y actualizada para la gerencia.
 
-**Propuesta de valor:** "Abre una pantalla y ve cómo va tu negocio hoy — sin pedirle a nadie que haga un Excel."
+**Propuesta de valor:** "Abre una pantalla y ve cómo va tu negocio hoy, sin pedirle a nadie que haga un Excel."
+**Posicionamiento:** Consultor + operador. No entrega informes y se va: opera lo que construye (pipelines en producción con monitoreo automatizado, agentes de IA con retraining, infraestructura cloud con SLA).
 **Cliente ideal:** Dueños y socios de empresas medianas (50-500 personas) en Chile.
-**Sectores:** Automotriz, inmobiliario, retail, salud/veterinaria, servicios.
+**Sectores:** Automotriz, hotelería, acuicultura, manufactura industrial, veterinaria/salud, inmobiliario, servicios financieros, sector público.
 
 **Dominio:** luminaconsulting.ai
 **Contacto:** jcepeda@luminaconsulting.ai | +56 9 9162 9095
@@ -22,13 +23,15 @@ Sitio web para **Lumina Consulting**, agencia de inteligencia de negocio fundada
 src/
 ├── pages/           # Páginas (rutas automáticas)
 │   ├── index.astro          # Homepage
-│   ├── servicios.astro      # Servicios detallados
-│   ├── acerca-de.astro      # Quiénes somos
-│   ├── casos-de-exito.astro # Testimonios
+│   ├── servicios.astro      # Servicios detallados + modalidades
+│   ├── industrias.astro     # 8 verticales con experiencia sectorial
+│   ├── acerca-de.astro      # Quiénes somos (consultor + operador)
+│   ├── casos-de-exito.astro # 7 casos anonimizados
 │   ├── contacto.astro       # Contacto y lead gen
 │   ├── portfolio.astro      # Proyectos GitHub
 │   ├── privacidad.astro     # Política privacidad
-│   └── terminos.astro       # Términos de uso
+│   ├── terminos.astro       # Términos de uso
+│   └── en/                  # Versión inglesa (mirror completo)
 ├── components/      # Componentes reutilizables
 │   ├── Header.astro         # Navegación sticky
 │   ├── Footer.astro         # Pie de página + CTA WhatsApp
@@ -61,14 +64,27 @@ lum-sage: #7D8471              // Accent terciario
 lum-slate: #64605A             // Texto secundario
 ```
 
-## Servicios Ofrecidos (7)
-1. **Dashboards y visibilidad** → `/servicios/dashboards-estrategicos`
-2. **Control de gestión** → `/servicios/control-de-gestion`
-3. **Automatización inteligente** → `/servicios/automatizacion-inteligente`
-4. **Inteligencia competitiva** → `/servicios/inteligencia-competitiva`
-5. **HR Analytics y organigramas** → `/servicios/hr-analytics`
-6. **Soluciones a medida** → `/servicios/soluciones-a-medida`
+## Taxonomía de Servicios (4 líneas core + 3 complementarias)
+
+**Core (pilares destacados):**
+1. **Business Intelligence** (asesoría KPIs + modelos de datos + dashboards) → `/servicios/business-intelligence`
+2. **Automatización y agentes IA** (flujos n8n, agentes RAG, asistentes conversacionales) → `/servicios/automatizacion-y-agentes-ia`
+3. **RPA (plataformas sin API)** (Playwright + IA para automatizar portales regulatorios/comerciales) → `/servicios/rpa-plataformas-sin-api`
+4. **Soluciones a medida** (apps web, MVPs, sistemas custom) → `/servicios/soluciones-a-medida`
+
+**Complementarias:**
+5. **Inteligencia competitiva** → `/servicios/inteligencia-competitiva`
+6. **HR Analytics y organigramas** (NodalTree) → `/servicios/hr-analytics`
 7. **Capacitación** → `/servicios/capacitacion`
+
+**Modalidades de contratación (página `/servicios`):**
+- Diagnóstico y sprint: desde 50 UF
+- Programa por fases: desde 110 UF
+- Acompañamiento mensual: desde 15 UF/mes
+
+**Páginas adicionales:**
+- `/industrias` y `/en/industries`: 8 verticales con experiencia sectorial
+- `/casos-de-exito` y `/en/case-studies`: 7 casos anonimizados en producción
 
 ## Producto Principal
 **NodalTree** - Plataforma SaaS (subdomain: nodaltree.luminaconsulting.ai)
