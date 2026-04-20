@@ -1,0 +1,16 @@
+# Local working folders (not for repo)
+branding/
+temp_ReporteIndexacion/
+
+# Agent tooling (local to each user)
+.agents/
+.claude/
+skills-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
