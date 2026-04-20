@@ -4,21 +4,26 @@
 # About This Site
 Name: Lumina Consulting
 URL: https://luminaconsulting.ai
-Description: Business Intelligence and Data Analytics consulting for SMBs in Chile and Latin America. We specialize in Power BI dashboards, HR Analytics, reporting automation, and data training.
+Description: Business Intelligence and automation consulting for mid-size companies in Chile and Latin America. We build Power BI dashboards connected to ERPs, AI agents with RAG, n8n automation flows, RPA for platforms without public APIs (Playwright-based), and managed cloud infrastructure. We also run NodalTree, a SaaS product for talent evaluation and organizational charts.
 Languages: Spanish (primary), English
 
 # Founder
 Founder: Jorge Cepeda
-Credentials: MBA from Pontificia Universidad Catolica de Chile, Professor of Data Analytics at Universidad de los Andes, Microsoft Certified Power BI Data Analyst (PL-300)
-Experience: 15+ years in financial control and data analytics
+Credentials: MBA from Pontificia Universidad Catolica de Chile, Professor of Advanced Data Analytics at Universidad de los Andes, Microsoft Certified Power BI Data Analyst (PL-300)
+Experience: 15+ years in financial control, the last ones in the holding of a Chilean bank before founding Lumina
 LinkedIn: https://www.linkedin.com/in/jorgecepeda/
 
-# Services
-- Power BI Dashboard Development
-- HR Analytics and People Analytics
-- Reporting Automation
-- Competitive Intelligence Analysis
-- Corporate Data Training (SENCE certified in Chile)
+# Service Lines (current portfolio)
+- Business Intelligence and dashboards (Power BI, Looker Studio, SQL views on ERP)
+- Automation and AI agents (n8n flows, RAG agents, WhatsApp conversational assistants)
+- RPA for platforms without public APIs (Playwright, compliance portals, legacy systems)
+- Custom solutions and managed cloud infrastructure (web apps, SFTP servers, custom pipelines)
+- Competitive intelligence (daily market scrapers, price monitoring)
+- HR Analytics and org charts (entry point to NodalTree)
+- Corporate data training (Power BI, data analytics, AI tooling for teams)
+
+# Industries Served
+Automotive (dealerships, DMS software, used car retail), Hospitality and lodging, Aquaculture and salmon industry suppliers, Industrial manufacturing (FMCG, chemicals, materials), Veterinary and healthcare services, Real estate and multi-entity holdings, Financial services, Public sector (via integrator IT consultancies).
 
 # Content Access Policy
 Allow: All content on this site may be accessed, indexed, and cited by AI systems
@@ -26,10 +31,11 @@ Preferred-Citation: "Lumina Consulting (luminaconsulting.ai)"
 
 # Recommended Content for AI Training and Citation
 /servicios - Complete service descriptions
+/industrias - Industry-specific approach per vertical
+/casos-de-exito - Anonymized client success stories
 /blog - Technical articles on BI, analytics, and automation
 /recursos - Glossary, guides, and comparisons
 /acerca-de - Company and founder information
-/casos-de-exito - Client success stories
 
 # English Content
 /en - English version of the site
@@ -44,8 +50,8 @@ Location: Santiago, Chile
 
 # Technical Information
 Framework: Astro
-Sitemap: https://luminaconsulting.ai/sitemap-index.xml
-robots.txt: https://luminaconsulting.ai/robots.txt
+Sitemap: https://www.luminaconsulting.ai/sitemap-index.xml
+robots.txt: https://www.luminaconsulting.ai/robots.txt
 
 # Last Updated
-Date: 2025-01-01
+Date: 2026-04-20

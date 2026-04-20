@@ -298,7 +298,7 @@ import Layout from '../layouts/Layout.astro';
           body: JSON.stringify({
             user_email: formData.get('user_email'),
             user_name: formData.get('user_name') || null,
-            subject: `Contacto web — ${formData.get('company') || 'Sin empresa'}`,
+            subject: `Contacto web: ${formData.get('company') || 'Sin empresa'}`,
             message: formData.get('message'),
             message_type: 'contact',
             page_context: 'luminaconsulting.ai/contacto'
