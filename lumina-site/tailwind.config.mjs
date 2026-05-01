@@ -4,43 +4,45 @@ export default {
   theme: {
     extend: {
       colors: {
-        // NEO-BRUTALIST PALETTE - Anti-AI Design
+        // TECH PALETTE - Navy + Cyan (Option A, coral 0%)
+        // Tokens keep legacy names (coral/mocha/sage) for backward compatibility
+        // with ~2,260 references across the codebase. Semantic cleanup is deferred.
         'lum': {
-          // Base - Warm off-blacks and creams
-          'black': '#1a1814',
-          'charcoal': '#2d2a26',
-          'stone': '#3d3833',
-          'cream': '#F5F0EB',
-          'ivory': '#FAF8F5',
-          'white': '#FFFEFA',
+          // Base - Cool navy and neutral paper
+          'black': '#0A0E1A',
+          'charcoal': '#131826',
+          'stone': '#1F2937',
+          'cream': '#FAFAF9',
+          'ivory': '#F5F5F4',
+          'white': '#FFFFFF',
 
-          // Mocha Mousse (Pantone 2025) scale
-          'mocha': '#A47764',
-          'mocha-light': '#C4A394',
-          'mocha-dark': '#8B6355',
-          'mocha-muted': '#D4C4BC',
+          // Legacy "mocha" tokens, now neutral slate
+          'mocha': '#475569',
+          'mocha-light': '#94A3B8',
+          'mocha-dark': '#334155',
+          'mocha-muted': '#E2E8F0',
 
-          // ACCENT - Warm Terracotta (sobrio, profesional)
-          'coral': '#C4704A',
-          'coral-light': '#D4896A',
-          'coral-dark': '#A85D3B',
-          'coral-muted': '#E8CFBF',
+          // ACCENT - Deep teal (cyan-800, sweet spot)
+          'coral': '#155E75',
+          'coral-light': '#0E7490',
+          'coral-dark': '#164E63',
+          'coral-muted': '#CFFAFE',
 
-          // Secondary accent - Sage green for contrast
-          'sage': '#7D8471',
-          'sage-light': '#A8B09C',
-          'sage-dark': '#5C6352',
+          // Legacy "sage" tokens, now neutral slate
+          'sage': '#475569',
+          'sage-light': '#94A3B8',
+          'sage-dark': '#334155',
 
           // Utility
-          'slate': '#64605A',
-          'slate-light': '#9A958E',
-          'border': '#E5DFD8',
-          'border-dark': '#3d3833',
+          'slate': '#64748B',
+          'slate-light': '#94A3B8',
+          'border': '#E2E8F0',
+          'border-dark': '#1E293B',
 
           // Semantic
-          'success': '#5A8F6D',
-          'warning': '#D4A03D',
-          'error': '#C45B4A',
+          'success': '#10B981',
+          'warning': '#F59E0B',
+          'error': '#EF4444',
 
           // Brand colors (third-party)
           'linkedin': '#0A66C2',
@@ -49,20 +51,23 @@ export default {
         }
       },
       fontFamily: {
-        // TYPOGRAPHY WITH CHARACTER - No Inter, No Roboto
-        'serif': ['Instrument Serif', 'Georgia', 'serif'],
+        // Single sans-serif (Inter) + JetBrains Mono for tech accents.
+        // Legacy keys (serif/display/body) all alias to Inter so the existing
+        // font-serif / font-display / font-body classes don't need to be touched.
+        'serif': ['Inter', 'system-ui', 'sans-serif'],
         'mono': ['JetBrains Mono', 'Fira Code', 'monospace'],
-        'display': ['Bebas Neue', 'Impact', 'sans-serif'],
-        'body': ['Outfit', 'system-ui', 'sans-serif'],
+        'display': ['Inter', 'system-ui', 'sans-serif'],
+        'body': ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        // Aggressive type scale
-        'display-xl': ['clamp(3rem, 7vw, 5.5rem)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],
-        'display-lg': ['clamp(2.5rem, 6vw, 4.5rem)', { lineHeight: '0.95', letterSpacing: '-0.02em' }],
-        'display-md': ['clamp(2rem, 5vw, 4rem)', { lineHeight: '1', letterSpacing: '-0.01em' }],
-        'body-lg': ['1.25rem', { lineHeight: '1.6' }],
-        'mono-sm': ['0.875rem', { lineHeight: '1.5', letterSpacing: '0.02em' }],
-        'mono-xs': ['0.75rem', { lineHeight: '1.4', letterSpacing: '0.03em' }],
+        // Type scale tuned for Inter (denser than Instrument Serif at same px)
+        'display-xl': ['clamp(2.25rem, 5vw, 4rem)', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
+        'display-lg': ['clamp(2rem, 4.25vw, 3.25rem)', { lineHeight: '1.1', letterSpacing: '-0.022em' }],
+        'display-md': ['clamp(1.75rem, 3.5vw, 2.5rem)', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.6' }],
+        // Mono sizes bumped for readability at low contrast (eyebrows, callouts, ghost buttons)
+        'mono-sm': ['0.9375rem', { lineHeight: '1.5', letterSpacing: '0.02em' }],
+        'mono-xs': ['0.8125rem', { lineHeight: '1.4', letterSpacing: '0.05em' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -84,13 +89,15 @@ export default {
         'dots': "radial-gradient(circle, currentColor 1px, transparent 1px)",
       },
       boxShadow: {
-        'brutal': '4px 4px 0px 0px currentColor',
-        'brutal-lg': '8px 8px 0px 0px currentColor',
-        'brutal-xl': '12px 12px 0px 0px currentColor',
-        'inner-brutal': 'inset 4px 4px 0px 0px currentColor',
-        'soft': '0 4px 30px -10px rgba(26, 24, 20, 0.15)',
-        'elevated': '0 20px 60px -20px rgba(26, 24, 20, 0.2)',
-        'glow-coral': '0 0 40px -10px rgba(255, 107, 53, 0.4)',
+        // Soft elevation shadows tuned for the navy/cyan palette.
+        // Legacy 'brutal*' keys retained as aliases so existing markup
+        // (e.g. ContactFormModal uses shadow-brutal-lg) keeps rendering.
+        'soft': '0 4px 12px -2px rgba(10, 14, 26, 0.08)',
+        'elevated': '0 12px 32px -8px rgba(10, 14, 26, 0.12)',
+        'lifted': '0 24px 48px -16px rgba(10, 14, 26, 0.16)',
+        'brutal': '0 4px 12px -2px rgba(10, 14, 26, 0.08)',
+        'brutal-lg': '0 12px 32px -8px rgba(10, 14, 26, 0.12)',
+        'glow-cyan': '0 0 40px -10px rgba(21, 94, 117, 0.32)',
       },
       animation: {
         'float-slow': 'float 8s ease-in-out infinite',

@@ -107,11 +107,11 @@ const waMessage = isEnglish
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
   <div class="container-custom">
-    <nav class="flex items-center justify-between py-4 border-b-2 border-transparent transition-all duration-300">
+    <nav class="flex items-center justify-between py-4 border-b border-transparent transition-all duration-300">
       <!-- Logo -->
       <a href={isEnglish ? '/en' : '/'} class="flex items-center group">
         <img
-          src="/logo-wide.svg"
+          src="/logo-wide-transparent.png"
           alt="Lumina Consulting"
           class="h-10 lg:h-16 w-auto transition-transform duration-300 group-hover:translate-x-1"
         />
@@ -179,7 +179,7 @@ const waMessage = isEnglish
         <!-- Mobile Menu Button -->
         <button
           id="mobile-menu-button"
-          class="p-2.5 border-2 border-lum-black hover:bg-lum-black hover:text-lum-cream transition-colors"
+          class="p-2.5 border border-lum-border rounded-md hover:bg-lum-black hover:text-lum-cream hover:border-lum-black transition-colors"
           aria-label={menuAriaLabel}
           aria-expanded="false"
         >
@@ -195,7 +195,7 @@ const waMessage = isEnglish
 
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="hidden lg:hidden">
-      <div class="py-4 space-y-1 border-t-2 border-lum-black bg-lum-cream">
+      <div class="py-4 space-y-1 border-t border-lum-border bg-lum-cream">
         {navLinks.map((link, index) => (
           <a
             href={link.href}
@@ -236,17 +236,17 @@ const waMessage = isEnglish
 
 <style>
   #main-header {
-    background: rgba(245, 240, 235, 0.95);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(250, 250, 249, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   #main-header.scrolled {
-    background: rgba(245, 240, 235, 0.98);
+    background: rgba(250, 250, 249, 0.95);
   }
 
   #main-header.scrolled nav {
-    border-color: #E5DFD8;
+    border-color: #E2E8F0;
   }
 </style>
 
