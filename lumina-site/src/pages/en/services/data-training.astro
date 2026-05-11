@@ -3,8 +3,8 @@ import Layout from '../../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Corporate Data Training | Lumina Consulting"
-  description="Power BI, advanced Excel, and data analysis courses for your team. Practical, hands-on training applied to your real business problems."
+  title="Applied Corporate Training | AI, Claude Code, Power BI, Excel | Lumina Consulting"
+  description="Hands-on courses on generative AI (Claude, ChatGPT, Copilot), Claude Code, AI APIs (Anthropic, OpenAI), Power BI, and advanced Excel for your team. Practical, applied to your real business problems."
   lang="en"
 >
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -16,7 +16,7 @@ import Layout from '../../../layouts/Layout.astro';
       "name": "Lumina Consulting",
       "url": "https://luminaconsulting.ai"
     },
-    "description": "Corporate training in Power BI, advanced Excel, and data analysis. Practical courses with hands-on exercises using your real data.",
+    "description": "Corporate training in generative AI (Claude, ChatGPT, Copilot), Claude Code, AI APIs (Anthropic, OpenAI), Power BI, and advanced Excel. Practical courses with hands-on exercises using your real data.",
     "areaServed": ["CL", "LATAM"],
     "serviceType": "Corporate Training"
   })} />
@@ -35,9 +35,9 @@ import Layout from '../../../layouts/Layout.astro';
           All services
         </a>
         <span class="badge bg-white/10 text-white border-white/20 mb-4">Training</span>
-        <h1 class="text-white mb-6">Data Training</h1>
+        <h1 class="text-white mb-6">Applied Corporate Training</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl">
-          Practical Power BI, advanced Excel, and data analysis courses. Not abstract theory: we work with your company's real data and problems.
+          Hands-on courses on generative AI, Claude Code, AI APIs (Anthropic, OpenAI), Power BI, and advanced Excel. Not abstract theory: we work with your company's real data, processes, and problems. Taught by the same professor who teaches Advanced Data Analytics at Universidad de los Andes.
         </p>
       </div>
     </div>
@@ -88,17 +88,74 @@ import Layout from '../../../layouts/Layout.astro';
       <div class="max-w-4xl mx-auto">
         <h2 class="mb-10 text-center">Available courses</h2>
 
-        <div class="space-y-6">
+        <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-4">Generative AI</p>
+
+        <div class="space-y-6 mb-12">
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Generative AI for executives and boards</h3>
+                <p class="text-lum-slate mb-4">
+                  Strategic session aimed at CEOs, boards, and executive committees. What generative AI really is today, what changes in the business, what investment and risk decisions emerge, and how to talk to the technical team without jargon. Hands-off: the goal is for the top line to understand magnitude, not learn prompts.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Short session</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Board focus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Generative AI applied by business area</h3>
+                <p class="text-lum-slate mb-4">
+                  Hands-on workshop for teams that already use, or want to start using, tools like Claude, ChatGPT, and Copilot in their day-to-day work. Cases contextualized by role: finance and management control, sales and marketing, operations, HR, legal. Prompt best practices, handling of sensitive data, integration with Office and Google Workspace, and building custom skills for repetitive tasks.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Hands-on workshop</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Adaptable by area</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Real data</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Claude Code and AI-assisted development for technical teams</h3>
+                <p class="text-lum-slate mb-4">
+                  Advanced course for analysts, engineers, and technical teams that want to accelerate their work with AI-assisted development. Intensive use of Claude Code to build scripts, automations, and analysis over local files; consuming Anthropic and OpenAI APIs to embed AI inside internal pipelines and tools; building agents with MCPs, skills, and subagents; working directly with Power BI files (.pbip) and notebooks to accelerate reporting. Focused on solid engineering habits, not demos.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Advanced</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Intensive hands-on</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Claude Code + APIs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-4">Data, BI, and analytics</p>
+
+        <div class="space-y-6 mb-12">
           <div class="bg-white rounded-xl p-6">
             <div class="flex flex-col md:flex-row md:items-start gap-6">
               <div class="flex-1">
                 <h3 class="text-xl font-semibold mb-2">Power BI for business users</h3>
                 <p class="text-lum-slate mb-4">
-                  From zero to creating useful dashboards. Data connection, basic modeling, visualizations, and publishing. Designed for managers, analysts, and anyone who needs to make decisions with data.
+                  From zero to creating useful dashboards. Data connection, basic modeling, visualizations, publishing, and automatic refresh. Designed for managers, analysts, and anyone who needs to make decisions with data. Adaptable to classic Power BI or .pbip files with AI-accelerated workflows.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">16-24 hours</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">From zero</span>
                   <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">PL-300 ready</span>
                 </div>
               </div>
             </div>
@@ -109,11 +166,12 @@ import Layout from '../../../layouts/Layout.astro';
               <div class="flex-1">
                 <h3 class="text-xl font-semibold mb-2">Advanced Excel for data analysis</h3>
                 <p class="text-lum-slate mb-4">
-                  Pivot tables, lookup functions, array formulas, Power Query for automating data cleaning. For those who already use Excel but want to get more out of it.
+                  Pivot tables, lookup functions, array formulas, Power Query for automating data cleaning, integration with Power BI. For those who already use Excel but want to get much more out of it. Includes using Claude and Copilot inside Excel to accelerate analysis.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">12-16 hours</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Intermediate to advanced</span>
                   <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Excel + AI</span>
                 </div>
               </div>
             </div>
@@ -124,31 +182,40 @@ import Layout from '../../../layouts/Layout.astro';
               <div class="flex-1">
                 <h3 class="text-xl font-semibold mb-2">Data analysis for decision making</h3>
                 <p class="text-lum-slate mb-4">
-                  Beyond the tools: how to frame business questions, choose what to measure, interpret data, and present conclusions effectively. Ideal for managers and team leaders.
+                  Beyond the tools: how to frame business questions, choose what to measure, interpret data, and present conclusions effectively. Ideal for managers and team leaders who receive many reports and need to separate signal from noise.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">8-12 hours</span>
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl p-6">
-            <div class="flex flex-col md:flex-row md:items-start gap-6">
-              <div class="flex-1">
-                <h3 class="text-xl font-semibold mb-2">Custom training</h3>
-                <p class="text-lum-slate mb-4">
-                  If no standard course fits what you need, we design one specifically for your team. Can combine topics, go deeper in specific areas, or focus on a concrete project.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Variable duration</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">For leaders</span>
                   <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-4">Custom design</p>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Custom training</h3>
+                <p class="text-lum-slate mb-4">
+                  If no standard course fits what you need, we design one specifically for your team. Can combine topics, go deeper in specific areas, or focus on a concrete project. Structure, duration, format, and level are defined after a discovery call.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Variable duration</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">In-person or online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">100% custom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-sm text-lum-slate mt-10 text-center max-w-2xl mx-auto">
+          Duration, depth, and format are adjusted to the needs and level of the group. After a short conversation we propose a program and a budget.
+        </p>
       </div>
     </div>
   </section>

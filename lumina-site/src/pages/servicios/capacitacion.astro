@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Capacitacion a Medida | Lumina Consulting"
-  description="Cursos de Power BI, Excel avanzado, analisis de datos e inteligencia artificial para tu equipo. Capacitacion practica, aplicada a tu realidad, dictada por un profesor universitario con credenciales Microsoft."
+  title="Capacitación corporativa aplicada | IA, Claude Code, Power BI, Excel | Lumina Consulting"
+  description="Cursos prácticos de IA generativa (Claude, ChatGPT, Copilot), Claude Code y APIs (Anthropic, OpenAI), Power BI y Excel avanzado. Capacitación aplicada a tu realidad, dictada por profesor universitario con credenciales Microsoft."
 >
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -33,10 +33,10 @@ import Layout from '../../layouts/Layout.astro';
           </svg>
           Todos los servicios
         </a>
-        <span class="badge bg-white/10 text-white border-white/20 mb-4">Formacion</span>
-        <h1 class="text-white mb-6">Capacitacion a medida</h1>
+        <span class="badge bg-white/10 text-white border-white/20 mb-4">Formación</span>
+        <h1 class="text-white mb-6">Capacitación corporativa aplicada</h1>
         <p class="text-xl text-lum-slate-light max-w-2xl">
-          Cursos practicos de Power BI, Excel avanzado, analisis de datos e inteligencia artificial. No teoria abstracta: trabajamos con los datos y problemas reales de tu empresa. Dictados por el mismo profesor que ensena Advanced Data Analytics en la Universidad de los Andes.
+          Cursos prácticos de IA generativa, Claude Code, APIs (Anthropic, OpenAI), Power BI y Excel avanzado. No teoría abstracta: trabajamos con los datos, procesos y problemas reales de tu empresa. Dictados por el mismo profesor que enseña Advanced Data Analytics en la Universidad de los Andes.
         </p>
       </div>
     </div>
@@ -94,17 +94,74 @@ import Layout from '../../layouts/Layout.astro';
       <div class="max-w-4xl mx-auto">
         <h2 class="mb-10 text-center">Cursos disponibles</h2>
 
-        <div class="space-y-6">
+        <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-4">Inteligencia artificial generativa</p>
+
+        <div class="space-y-6 mb-12">
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">IA generativa para gerencias y directorios</h3>
+                <p class="text-lum-slate mb-4">
+                  Sesión estratégica orientada a gerencias generales, directorios y comités ejecutivos. Qué es realmente la IA generativa hoy, qué cambia en el negocio, qué decisiones de inversión y riesgo aparecen, y cómo conversar con el equipo técnico sin tecnicismos. Sin teclado: el objetivo es que la primera línea entienda magnitud, no que aprenda prompts.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Sesión corta</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Foco directorio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">IA generativa aplicada por área de negocio</h3>
+                <p class="text-lum-slate mb-4">
+                  Taller práctico para equipos que ya usan, o quieren empezar a usar, herramientas como Claude, ChatGPT y Copilot en su trabajo diario. Casos contextualizados por rol: finanzas y control de gestión, comercial y marketing, operaciones, RRHH, legal. Buenas prácticas de prompt, manejo de datos sensibles, integración con Office y Google Workspace, y construcción de skills propios para tareas repetitivas del área.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Taller práctico</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Adaptable por área</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Datos reales</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Claude Code y desarrollo asistido por IA para equipos técnicos</h3>
+                <p class="text-lum-slate mb-4">
+                  Curso avanzado para analistas, ingenieros y equipos técnicos que quieren acelerar su trabajo con desarrollo asistido por IA. Uso intensivo de Claude Code para construir scripts, automatizaciones y análisis sobre archivos locales; consumo de las APIs de Anthropic y OpenAI para integrar IA dentro de pipelines y herramientas internas; construcción de agentes con MCPs, skills y subagentes; trabajo directo con archivos de Power BI (.pbip) y notebooks para acelerar reportería. Foco en hábitos de ingeniería robustos, no en demos.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Avanzado</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Hands-on intensivo</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Claude Code + APIs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-4">Datos, BI y análisis</p>
+
+        <div class="space-y-6 mb-12">
           <div class="bg-white rounded-xl p-6">
             <div class="flex flex-col md:flex-row md:items-start gap-6">
               <div class="flex-1">
                 <h3 class="text-xl font-semibold mb-2">Power BI para usuarios de negocio</h3>
                 <p class="text-lum-slate mb-4">
-                  Desde cero hasta crear dashboards utiles. Conexion de datos, modelado basico, visualizaciones, y publicacion. Pensado para gerentes, analistas y cualquiera que necesite tomar decisiones con datos.
+                  Desde cero hasta crear dashboards útiles. Conexión de datos, modelado básico, visualizaciones, publicación y refresco automático. Pensado para gerentes, analistas y cualquiera que necesite tomar decisiones con datos. Adaptable a Power BI clásico o trabajo con archivos .pbip y aceleración con IA.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">16-24 horas</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Desde cero</span>
                   <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">PL-300 ready</span>
                 </div>
               </div>
             </div>
@@ -113,13 +170,14 @@ import Layout from '../../layouts/Layout.astro';
           <div class="bg-white rounded-xl p-6">
             <div class="flex flex-col md:flex-row md:items-start gap-6">
               <div class="flex-1">
-                <h3 class="text-xl font-semibold mb-2">Excel avanzado para analisis de datos</h3>
+                <h3 class="text-xl font-semibold mb-2">Excel avanzado para análisis de datos</h3>
                 <p class="text-lum-slate mb-4">
-                  Tablas dinamicas, funciones de busqueda, formulas matriciales, Power Query para automatizar limpieza de datos. Para quienes ya usan Excel pero quieren sacarle mas provecho.
+                  Tablas dinámicas, funciones de búsqueda, fórmulas matriciales, Power Query para automatizar limpieza de datos, integración con Power BI. Para quienes ya usan Excel pero quieren sacarle mucho más provecho. Incluye uso de Claude y Copilot dentro de Excel para acelerar análisis.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">12-16 horas</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Intermedio a avanzado</span>
                   <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Excel + IA</span>
                 </div>
               </div>
             </div>
@@ -128,49 +186,42 @@ import Layout from '../../layouts/Layout.astro';
           <div class="bg-white rounded-xl p-6">
             <div class="flex flex-col md:flex-row md:items-start gap-6">
               <div class="flex-1">
-                <h3 class="text-xl font-semibold mb-2">Analisis de datos para toma de decisiones</h3>
+                <h3 class="text-xl font-semibold mb-2">Análisis de datos para toma de decisiones</h3>
                 <p class="text-lum-slate mb-4">
-                  Mas alla de las herramientas: como plantear preguntas de negocio, elegir que medir, interpretar datos, y presentar conclusiones de forma efectiva. Ideal para gerentes y lideres de area.
+                  Más allá de las herramientas: cómo plantear preguntas de negocio, elegir qué medir, interpretar datos y presentar conclusiones de forma efectiva. Ideal para gerentes y líderes de área que reciben muchos reportes y necesitan separar la señal del ruido.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">8-12 horas</span>
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl p-6">
-            <div class="flex flex-col md:flex-row md:items-start gap-6">
-              <div class="flex-1">
-                <h3 class="text-xl font-semibold mb-2">Inteligencia artificial para productividad empresarial</h3>
-                <p class="text-lum-slate mb-4">
-                  Como usar herramientas de IA (ChatGPT, Claude, Copilot) de forma practica en el trabajo diario: redaccion, analisis, automatizacion de tareas, generacion de reportes y toma de decisiones asistida. No es un curso teorico sobre IA: es un taller practico de productividad.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">8-16 horas</span>
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Adaptable por area</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl p-6">
-            <div class="flex flex-col md:flex-row md:items-start gap-6">
-              <div class="flex-1">
-                <h3 class="text-xl font-semibold mb-2">Curso a medida</h3>
-                <p class="text-lum-slate mb-4">
-                  Si ningun curso estandar calza con lo que necesitas, diseno uno especifico para tu equipo. Puede combinar temas, profundizar en areas especificas, o enfocarse en un proyecto concreto.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Duracion variable</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Para líderes</span>
                   <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-4">Diseño a medida</p>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6">
+            <div class="flex flex-col md:flex-row md:items-start gap-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-2">Curso a medida</h3>
+                <p class="text-lum-slate mb-4">
+                  Si ningún curso estándar calza con lo que necesitas, diseño uno específico para tu equipo. Puede combinar temas, profundizar en áreas específicas, o enfocarse en un proyecto concreto del negocio. La estructura, duración, formato y nivel se definen tras una reunión de levantamiento.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Duración variable</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">Presencial u online</span>
+                  <span class="text-xs px-2 py-1 bg-lum-cream rounded">100% personalizado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-sm text-lum-slate mt-10 text-center max-w-2xl mx-auto">
+          La duración, profundidad y formato se ajustan a las necesidades y nivel del grupo. Después de una conversación corta proponemos un programa y un presupuesto.
+        </p>
       </div>
     </div>
   </section>
