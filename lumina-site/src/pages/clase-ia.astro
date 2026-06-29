@@ -1,0 +1,366 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Landing de la clase gancho comercial. Fecha y cupos abajo se editan acá.
+const fecha = 'Lunes 6 de julio';
+const hora = '19:00';
+const formato = 'Online por Google Meet';
+const duracion = '75 minutos';
+const cupos = 'Cupos limitados';
+---
+
+<Layout
+  title="Clase gratis: Claude en serio | IA para multiplicar tu productividad | Lumina"
+  description="Clase gratuita en vivo (75 min) para usar la IA en serio en tu trabajo. Demos reales con Claude y un set de herramientas que te ahorran horas. Lunes 6 de julio, online por Google Meet. Cupos limitados."
+>
+  <!-- Hero -->
+  <section class="relative py-16 md:py-24 bg-lum-black overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -right-32 w-96 h-96 bg-lum-coral/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 -left-32 w-96 h-96 bg-lum-coral/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <span class="badge bg-white/10 text-white border-white/20 mb-5">Clase gratis · {cupos}</span>
+        <h1 class="text-white mb-3">Claude en serio</h1>
+        <p class="text-xl md:text-2xl font-semibold text-lum-coral-light mb-6">IA para multiplicar tu productividad</p>
+        <p class="text-xl text-lum-slate-light max-w-2xl mb-8">
+          75 minutos para usar la IA en serio en tu trabajo. Demos en vivo con Claude y un set de
+          herramientas que te ahorran horas. Sin humo y sin teoría: te vas con cosas que puedes
+          aplicar el mismo día.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-9">
+          <span class="inline-flex items-center gap-2 text-sm text-white bg-white/5 border border-white/15 rounded-md px-3 py-1.5">{fecha} · {hora}</span>
+          <span class="inline-flex items-center gap-2 text-sm text-white bg-white/5 border border-white/15 rounded-md px-3 py-1.5">{formato}</span>
+          <span class="inline-flex items-center gap-2 text-sm text-white bg-white/5 border border-white/15 rounded-md px-3 py-1.5">{duracion}</span>
+        </div>
+        <a href="#inscripcion" class="btn-primary bg-lum-coral hover:bg-lum-coral-light">
+          Reserva tu cupo
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lo que vas a ver -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="max-w-2xl mb-12 scroll-fade">
+          <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-3">En vivo, no diapositivas</p>
+          <h2 class="mb-4">Lo que vas a ver</h2>
+          <p class="text-lg text-lum-slate">
+            Sobre tareas que haces todos los días. Y, con la misma honestidad, dónde la IA todavía se
+            equivoca y cómo cubrirlo.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card-elevated scroll-fade">
+            <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-2">Claude</p>
+            <h3 class="text-xl font-semibold mb-3">Lee y construye, no solo chatea</h3>
+            <p class="text-lum-slate">
+              Lee un contrato y te dice las 3 cláusulas más riesgosas, con la página. Y construye
+              asistentes a tu medida en minutos, no en semanas.
+            </p>
+          </div>
+          <div class="card-elevated scroll-fade">
+            <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-2">Claude</p>
+            <h3 class="text-xl font-semibold mb-3">Tu estratega, no solo tu asistente</h3>
+            <p class="text-lum-slate">
+              Le pasas un problema de negocio y lo piensa contigo: opciones, riesgos, un plan. No solo
+              ejecuta tareas, razona a tu lado.
+            </p>
+          </div>
+          <div class="card-elevated scroll-fade">
+            <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-2">Sin humo</p>
+            <h3 class="text-xl font-semibold mb-3">Confía, pero verifica</h3>
+            <p class="text-lum-slate">
+              También te muestro dónde la IA todavía se equivoca, con total seguridad, y el truco
+              simple para que no te pase a ti.
+            </p>
+          </div>
+          <div class="card-elevated scroll-fade">
+            <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-2">Bonus</p>
+            <h3 class="text-xl font-semibold mb-3">Herramientas que te ahorran horas</h3>
+            <p class="text-lum-slate">
+              Además de Claude, te muestro un set de herramientas, gratuitas o de costo mínimo, que
+              te ahorran horas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La idea del dia -->
+  <section class="py-20 bg-lum-cream">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center scroll-fade">
+        <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-4">La idea del día</p>
+        <h2 class="mb-6">Un stack más simple, no más herramientas</h2>
+        <p class="text-xl text-lum-slate">
+          Si usas Claude solo para chatear, dejas el 80% sobre la mesa. Bien usado, reemplaza a media
+          docena de aplicaciones que hoy pagas por separado. La clase no es un recorrido por veinte
+          apps: es Claude en serio, más unas pocas herramientas que de verdad lo complementan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quien la dicta -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-[auto,1fr] gap-8 items-start scroll-fade">
+        <img
+          src="/jorge-cepeda.jpg"
+          alt="Jorge Cepeda, Lumina"
+          width="140"
+          height="140"
+          class="w-32 h-32 md:w-36 md:h-36 rounded-2xl object-cover border border-lum-border"
+        />
+        <div>
+          <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-3">Quién la dicta</p>
+          <h2 class="mb-4">Jorge Cepeda</h2>
+          <p class="text-lg text-lum-slate mb-5">
+            Enseño las mismas herramientas que uso para construir sistemas reales de IA y datos para
+            mis clientes. No vengo a vender el sueño de la IA: vengo de cosas que funcionan en
+            producción.
+          </p>
+          <ul class="space-y-2 text-lum-slate">
+            <li><strong class="text-lum-black">MBA</strong>, Pontificia Universidad Católica de Chile</li>
+            <li><strong class="text-lum-black">Profesor de Advanced Data Analytics</strong>, Universidad de los Andes</li>
+            <li><strong class="text-lum-black">Microsoft Certified Power BI Data Analyst</strong> (PL-300)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inscripcion -->
+  <section id="inscripcion" class="py-20 bg-lum-cream scroll-mt-24">
+    <div class="container-custom">
+      <div class="max-w-xl mx-auto">
+        <div class="text-center mb-8">
+          <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-3">{fecha} · {hora} · {formato}</p>
+          <h2 class="mb-4">Reserva tu cupo</h2>
+          <p class="text-lum-slate">
+            Déjame tus datos y te envío el enlace de Google Meet al correo unos días antes. Los cupos
+            son limitados para que la clase sea conversable.
+          </p>
+        </div>
+
+        <div class="card-elevated bg-white">
+          <form id="clase-form" class="space-y-4">
+            <div>
+              <label for="f-nombre" class="block text-sm font-medium text-lum-charcoal mb-1.5">Nombre y apellido <span class="text-lum-coral">*</span></label>
+              <input type="text" id="f-nombre" name="nombre" class="input" placeholder="Tu nombre" required />
+            </div>
+            <div>
+              <label for="f-email" class="block text-sm font-medium text-lum-charcoal mb-1.5">Correo electrónico <span class="text-lum-coral">*</span></label>
+              <input type="email" id="f-email" name="email" class="input" placeholder="tu@email.com" required />
+              <p class="text-lum-error text-xs mt-1 hidden" id="f-email-error">Ingresa un correo válido</p>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="f-empresa" class="block text-sm font-medium text-lum-charcoal mb-1.5">Empresa <span class="text-lum-coral">*</span></label>
+                <input type="text" id="f-empresa" name="empresa" class="input" placeholder="Dónde trabajas" required />
+              </div>
+              <div>
+                <label for="f-cargo" class="block text-sm font-medium text-lum-charcoal mb-1.5">Cargo <span class="text-lum-coral">*</span></label>
+                <input type="text" id="f-cargo" name="cargo" class="input" placeholder="Tu rol" required />
+              </div>
+            </div>
+            <div>
+              <label for="f-interes" class="block text-sm font-medium text-lum-charcoal mb-1.5">¿Qué te gustaría poder hacer con IA en tu trabajo? <span class="text-lum-slate-light font-normal">(opcional)</span></label>
+              <textarea id="f-interes" name="interes" rows="3" class="input resize-none" placeholder="Me ayuda a ajustar las demos a lo que les sirve"></textarea>
+            </div>
+
+            <button type="submit" id="f-submit" class="btn-primary w-full justify-center py-3">
+              <span id="f-submit-text">Reservar mi cupo</span>
+              <span id="f-submit-loading" class="hidden items-center gap-2">
+                <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Enviando...
+              </span>
+            </button>
+            <p class="text-xs text-lum-slate-light text-center">Sin costo. Te llega el enlace al correo que dejes acá.</p>
+          </form>
+
+          <!-- Exito -->
+          <div id="clase-success" class="hidden text-center py-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-lum-success/15 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-lum-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-2xl mb-2">¡Quedaste inscrito!</h3>
+            <p class="text-lum-slate">Te envío el enlace de Google Meet al correo unos días antes de la clase. Si no lo ves, revisa spam o escríbeme.</p>
+          </div>
+
+          <!-- Error -->
+          <div id="clase-error" class="hidden text-center py-6">
+            <div class="w-16 h-16 mx-auto mb-4 bg-lum-error/15 rounded-full flex items-center justify-center">
+              <svg class="w-8 h-8 text-lum-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <h3 class="text-2xl mb-2">No se pudo enviar</h3>
+            <p class="text-lum-slate mb-5">Intenta de nuevo o escríbeme por WhatsApp y te inscribo.</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+              <button type="button" id="f-retry" class="btn-outline">Intentar de nuevo</button>
+              <a href="https://wa.me/56991629095?text=Hola,%20quiero%20inscribirme%20en%20la%20clase%20gratis%20de%20IA" target="_blank" rel="noopener" class="btn-primary">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-10">Preguntas frecuentes</h2>
+        <div class="space-y-4">
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Tiene algún costo?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">No. La clase es completamente gratuita. Solo te pido que reserves cupo para mantener el grupo conversable.</p>
+          </details>
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Necesito saber de IA o de programación?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">No. Está pensada para personas que trabajan y quieren sacarle provecho a la IA, sin tecnicismos. Basta con saber usar un navegador.</p>
+          </details>
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿Qué necesito para participar?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">Un computador con conexión y ganas de probar. Te envío el enlace de Google Meet al correo unos días antes.</p>
+          </details>
+          <details class="bg-lum-cream rounded-xl p-6 group">
+            <summary class="font-semibold cursor-pointer list-none flex justify-between items-center">
+              ¿La clase queda grabada?
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <p class="mt-4 text-lum-slate">Es una sesión en vivo, pensada para participar en el momento. Por eso el valor está en estar presente.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const ENDPOINT = 'https://wueqnruymfwbnkzwrdil.supabase.co/functions/v1/send-contact-message';
+
+  const form = document.getElementById('clase-form');
+  const successState = document.getElementById('clase-success');
+  const errorState = document.getElementById('clase-error');
+  const submitBtn = document.getElementById('f-submit');
+  const submitText = document.getElementById('f-submit-text');
+  const submitLoading = document.getElementById('f-submit-loading');
+  const emailError = document.getElementById('f-email-error');
+  const retryBtn = document.getElementById('f-retry');
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function setLoading(loading) {
+    if (loading) {
+      submitBtn.setAttribute('disabled', 'true');
+      submitText.classList.add('hidden');
+      submitLoading.classList.remove('hidden');
+      submitLoading.classList.add('flex');
+    } else {
+      submitBtn.removeAttribute('disabled');
+      submitText.classList.remove('hidden');
+      submitLoading.classList.add('hidden');
+      submitLoading.classList.remove('flex');
+    }
+  }
+
+  function showSuccess() {
+    form.classList.add('hidden');
+    errorState.classList.add('hidden');
+    successState.classList.remove('hidden');
+  }
+
+  function showError() {
+    form.classList.add('hidden');
+    successState.classList.add('hidden');
+    errorState.classList.remove('hidden');
+  }
+
+  function showForm() {
+    successState.classList.add('hidden');
+    errorState.classList.add('hidden');
+    form.classList.remove('hidden');
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const email = (data.get('email') || '').toString().trim();
+
+    if (!isValidEmail(email)) {
+      emailError.classList.remove('hidden');
+      return;
+    }
+    emailError.classList.add('hidden');
+    setLoading(true);
+
+    const nombre = (data.get('nombre') || '').toString().trim();
+    const empresa = (data.get('empresa') || '').toString().trim();
+    const cargo = (data.get('cargo') || '').toString().trim();
+    const interes = (data.get('interes') || '').toString().trim();
+
+    const message = [
+      'Nueva inscripcion a la clase gratis "Claude en serio".',
+      '',
+      'Empresa: ' + empresa,
+      'Cargo: ' + cargo,
+      'Que le gustaria hacer con IA: ' + (interes || '(no respondio)'),
+    ].join('\n');
+
+    try {
+      const response = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          user_email: email,
+          user_name: nombre,
+          subject: 'Inscripcion clase gratis IA - ' + nombre + ' (' + empresa + ')',
+          message: message,
+          message_type: 'contact',
+          page_context: 'clase-ia'
+        })
+      });
+      const result = await response.json();
+      if (result && result.success) {
+        showSuccess();
+      } else {
+        showError();
+      }
+    } catch (err) {
+      console.error('Inscripcion clase error:', err);
+      showError();
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  form && form.addEventListener('submit', handleSubmit);
+  retryBtn && retryBtn.addEventListener('click', showForm);
+</script>
