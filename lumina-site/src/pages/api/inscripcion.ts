@@ -100,6 +100,9 @@ export const POST: APIRoute = async ({ request }) => {
           <p>${saludo}</p>
           <p>Gracias por inscribirte en la clase gratis
              <strong>"Claude en serio: IA para multiplicar tu productividad"</strong>.</p>
+          <p style="background:#f1f5f9;border-left:3px solid #155E75;padding:10px 14px;margin:14px 0">
+             <strong>Cuando:</strong> lunes 6 de julio a las 19:00 hrs (Chile)<br>
+             <strong>Donde:</strong> en linea, por Google Meet</p>
           <p>En los proximos dias te enviare un correo con el enlace y las instrucciones para
              sumarte a la clase.</p>
           <p>Ante cualquier duda quedo disponible en
