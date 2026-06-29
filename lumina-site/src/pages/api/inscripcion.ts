@@ -95,19 +95,27 @@ export const POST: APIRoute = async ({ request }) => {
     // Best-effort: si falla, la inscripcion igual queda capturada (ya se notifico a Lumina).
     if (pageContext === 'clase-ia') {
       const saludo = userName ? `Hola ${esc(userName.split(' ')[0])},` : 'Hola,';
+      const calUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Claude%20en%20serio%3A%20IA%20para%20multiplicar%20tu%20productividad&amp;dates=20260706T190000/20260706T201500&amp;ctz=America%2FSantiago&amp;details=Clase%20gratis%20online%20por%20Google%20Meet.%20El%20enlace%20y%20las%20instrucciones%20llegan%20por%20correo%20unos%20dias%20antes.&amp;location=Google%20Meet';
       const confirmHtml = `
-        <div style="font-family:Arial,sans-serif;font-size:15px;color:#1a1a2e;line-height:1.6">
+        <div style="font-family:Arial,sans-serif;font-size:15px;color:#1a1a2e;line-height:1.6;max-width:560px">
           <p>${saludo}</p>
-          <p>Gracias por inscribirte en la clase gratis
-             <strong>"Claude en serio: IA para multiplicar tu productividad"</strong>.</p>
+          <p>Tu cupo quedó confirmado. Los cupos son limitados para que la clase sea conversable y
+             alcances a preguntar lo tuyo, así que si por alguna razón no puedes asistir, avísame
+             para liberar tu lugar.</p>
           <p style="background:#f1f5f9;border-left:3px solid #155E75;padding:10px 14px;margin:14px 0">
-             <strong>Cuando:</strong> lunes 6 de julio a las 19:00 hrs (Chile)<br>
-             <strong>Donde:</strong> en linea, por Google Meet</p>
-          <p>En los proximos dias te enviare un correo con el enlace y las instrucciones para
-             sumarte a la clase.</p>
-          <p>Ante cualquier duda quedo disponible en
+             <strong>Cuándo:</strong> lunes 6 de julio, 19:00 hrs (Chile)<br>
+             <strong>Dónde:</strong> en línea, por Google Meet</p>
+          <p style="margin:18px 0">
+             <a href="${calUrl}" style="display:inline-block;background:#155E75;color:#ffffff;text-decoration:none;padding:11px 20px;border-radius:6px;font-weight:bold">+ Agregar a mi Google Calendar</a></p>
+          <p>En 75 minutos vas a ver, en vivo, cómo usar Claude e IA en serio en tu trabajo:
+             herramientas que te ahorran horas, cómo resguardar datos sensibles, y cómo armar
+             proyectos y skills que adaptan a Claude a tu forma de trabajar.</p>
+          <p>En los próximos días te envío el enlace de Meet con las instrucciones. Te recomiendo
+             bloquear el horario en tu calendario desde ya.</p>
+          <p>Cualquier duda, responde este correo o escríbeme a
              <a href="mailto:jcepeda@luminaconsulting.ai">jcepeda@luminaconsulting.ai</a>.</p>
-          <p>Saludos,<br>Jorge Cepeda &middot; Lumina</p>
+          <p>Saludos,<br>Jorge Cepeda<br>
+             <a href="https://www.luminaconsulting.ai">www.luminaconsulting.ai</a></p>
         </div>`;
       try {
         await fetch('https://api.resend.com/emails', {
@@ -120,7 +128,7 @@ export const POST: APIRoute = async ({ request }) => {
             from,
             to: [userEmail],
             reply_to: to,
-            subject: 'Quedaste inscrito: Claude en serio',
+            subject: 'Tu cupo está confirmado: Claude en serio',
             html: confirmHtml,
           }),
         });
