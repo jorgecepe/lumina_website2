@@ -1,10 +1,15 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.luminaconsulting.ai',
+  // Hibrido: todas las paginas siguen siendo estaticas (prerender por defecto);
+  // solo las rutas /api con `export const prerender = false` corren como funcion serverless.
+  output: 'hybrid',
+  adapter: vercel(),
   integrations: [tailwind(), sitemap()],
   redirects: {
     '/servicios/automatizacion-reporteria': '/servicios/automatizacion-inteligente',
