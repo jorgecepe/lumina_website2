@@ -91,6 +91,41 @@ export const POST: APIRoute = async ({ request }) => {
       return json({ success: false, error: 'email_provider', status: r.status }, 502);
     }
 
+    // Correo de confirmacion al inscrito (solo para inscripciones de la clase).
+    // Best-effort: si falla, la inscripcion igual queda capturada (ya se notifico a Lumina).
+    if (pageContext === 'clase-ia') {
+      const saludo = userName ? `Hola ${esc(userName.split(' ')[0])},` : 'Hola,';
+      const confirmHtml = `
+        <div style="font-family:Arial,sans-serif;font-size:15px;color:#1a1a2e;line-height:1.6">
+          <p>${saludo}</p>
+          <p>Gracias por inscribirte en la clase gratis
+             <strong>"Claude en serio: IA para multiplicar tu productividad"</strong>.</p>
+          <p>En los proximos dias te enviare un correo con el enlace y las instrucciones para
+             sumarte a la clase.</p>
+          <p>Ante cualquier duda quedo disponible en
+             <a href="mailto:jcepeda@luminaconsulting.ai">jcepeda@luminaconsulting.ai</a>.</p>
+          <p>Saludos,<br>Jorge Cepeda &middot; Lumina</p>
+        </div>`;
+      try {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            from,
+            to: [userEmail],
+            reply_to: to,
+            subject: 'Quedaste inscrito: Claude en serio',
+            html: confirmHtml,
+          }),
+        });
+      } catch (e) {
+        console.error('confirmation email failed', e);
+      }
+    }
+
     return json({ success: true });
   } catch (e) {
     console.error('inscripcion handler error', e);
