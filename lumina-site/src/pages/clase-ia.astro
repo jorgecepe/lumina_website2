@@ -1,16 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Landing de la clase gancho comercial. Fecha y cupos abajo se editan acá.
+// === INTERRUPTOR DE CUPOS ===
+// true  = inscripciones abiertas (modo normal)
+// false = cupos llenos -> la pagina pasa a modo "lista de espera" para la proxima edicion
+// Para cerrar: cambiar a false y redeploy (push a main). Sin base de datos, cierre manual.
+const inscripcionesAbiertas = true;
+
 const fecha = 'Lunes 6 de julio';
 const hora = '19:00';
 const formato = 'Online por Google Meet';
 const duracion = '75 minutos';
-const cupos = 'Cupos limitados';
+
+// Textos derivados del interruptor
+const badgeTxt = inscripcionesAbiertas ? 'Clase gratis · Cupos limitados' : 'Cupos agotados · Lista de espera';
+const ctaTxt = inscripcionesAbiertas ? 'Reserva tu cupo' : 'Unirme a la lista de espera';
+const formEyebrow = inscripcionesAbiertas ? `${fecha} · ${hora} · ${formato}` : 'Esta edición se llenó';
+const formTitle = inscripcionesAbiertas ? 'Reserva tu cupo' : 'Lista de espera';
+const formIntro = inscripcionesAbiertas
+  ? 'Déjame tus datos y te envío el enlace de Google Meet al correo unos días antes. Los cupos son limitados para que la clase sea conversable.'
+  : 'Esta edición llegó a su tope de cupos. Déjame tus datos y te aviso apenas abra la próxima edición, vas a tener prioridad para tomar tu lugar.';
+const submitTxt = inscripcionesAbiertas ? 'Reservar mi cupo' : 'Unirme a la lista de espera';
+const footnote = inscripcionesAbiertas
+  ? 'Sin costo. Te llega el enlace al correo que dejes acá.'
+  : 'Sin costo. Te aviso apenas haya cupos para la próxima edición.';
+const successTitle = inscripcionesAbiertas ? '¡Quedaste inscrito!' : '¡Estás en la lista de espera!';
+const successMsg = inscripcionesAbiertas
+  ? 'Te envío el enlace de Google Meet al correo unos días antes de la clase. Si no lo ves, revisa spam o escríbeme.'
+  : 'Te aviso apenas abra la próxima edición de la clase. Si tienes alguna duda, escríbeme.';
+const pageCtx = inscripcionesAbiertas ? 'clase-ia' : 'clase-ia-espera';
+
+const metaTitle = inscripcionesAbiertas
+  ? 'Clase gratis: Claude en serio | IA para multiplicar tu productividad | Lumina'
+  : 'Lista de espera: Claude en serio | Lumina';
 ---
 
 <Layout
-  title="Clase gratis: Claude en serio | IA para multiplicar tu productividad | Lumina"
+  title={metaTitle}
   description="Clase gratuita en vivo (75 min) para usar la IA en serio en tu trabajo. Demos reales con Claude y un set de herramientas que te ahorran horas. Lunes 6 de julio, online por Google Meet. Cupos limitados."
 >
   <!-- Hero -->
@@ -21,7 +47,7 @@ const cupos = 'Cupos limitados';
     </div>
     <div class="container-custom relative">
       <div class="max-w-3xl">
-        <span class="badge bg-white/10 text-white border-white/20 mb-5">Clase gratis · {cupos}</span>
+        <span class="badge bg-white/10 text-white border-white/20 mb-5">{badgeTxt}</span>
         <h1 class="text-white mb-3">Claude en serio</h1>
         <p class="text-xl md:text-2xl font-semibold text-lum-coral-light mb-6">IA para multiplicar tu productividad</p>
         <p class="text-xl text-lum-slate-light max-w-2xl mb-8">
@@ -35,7 +61,7 @@ const cupos = 'Cupos limitados';
           <span class="inline-flex items-center gap-2 text-sm text-white bg-white/5 border border-white/15 rounded-md px-3 py-1.5">{duracion}</span>
         </div>
         <a href="#inscripcion" class="btn-primary bg-lum-coral hover:bg-lum-coral-light">
-          Reserva tu cupo
+          {ctaTxt}
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -139,21 +165,19 @@ const cupos = 'Cupos limitados';
     </div>
   </section>
 
-  <!-- Inscripcion -->
+  <!-- Inscripcion / Lista de espera -->
   <section id="inscripcion" class="py-20 bg-lum-cream scroll-mt-24">
     <div class="container-custom">
       <div class="max-w-xl mx-auto">
         <div class="text-center mb-8">
-          <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-3">{fecha} · {hora} · {formato}</p>
-          <h2 class="mb-4">Reserva tu cupo</h2>
-          <p class="text-lum-slate">
-            Déjame tus datos y te envío el enlace de Google Meet al correo unos días antes. Los cupos
-            son limitados para que la clase sea conversable.
-          </p>
+          <p class="text-mono-xs font-mono uppercase tracking-wider text-lum-coral mb-3">{formEyebrow}</p>
+          <h2 class="mb-4">{formTitle}</h2>
+          <p class="text-lum-slate">{formIntro}</p>
         </div>
 
         <div class="card-elevated bg-white">
           <form id="clase-form" class="space-y-4">
+            <input type="hidden" id="f-pagectx" value={pageCtx} />
             <div>
               <label for="f-nombre" class="block text-sm font-medium text-lum-charcoal mb-1.5">Nombre y apellido <span class="text-lum-coral">*</span></label>
               <input type="text" id="f-nombre" name="nombre" class="input" placeholder="Tu nombre" required />
@@ -179,7 +203,7 @@ const cupos = 'Cupos limitados';
             </div>
 
             <button type="submit" id="f-submit" class="btn-primary w-full justify-center py-3">
-              <span id="f-submit-text">Reservar mi cupo</span>
+              <span id="f-submit-text">{submitTxt}</span>
               <span id="f-submit-loading" class="hidden items-center gap-2">
                 <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -188,7 +212,7 @@ const cupos = 'Cupos limitados';
                 Enviando...
               </span>
             </button>
-            <p class="text-xs text-lum-slate-light text-center">Sin costo. Te llega el enlace al correo que dejes acá.</p>
+            <p class="text-xs text-lum-slate-light text-center">{footnote}</p>
           </form>
 
           <!-- Exito -->
@@ -198,8 +222,8 @@ const cupos = 'Cupos limitados';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h3 class="text-2xl mb-2">¡Quedaste inscrito!</h3>
-            <p class="text-lum-slate">Te envío el enlace de Google Meet al correo unos días antes de la clase. Si no lo ves, revisa spam o escríbeme.</p>
+            <h3 class="text-2xl mb-2">{successTitle}</h3>
+            <p class="text-lum-slate">{successMsg}</p>
           </div>
 
           <!-- Error -->
@@ -210,10 +234,10 @@ const cupos = 'Cupos limitados';
               </svg>
             </div>
             <h3 class="text-2xl mb-2">No se pudo enviar</h3>
-            <p class="text-lum-slate mb-5">Intenta de nuevo o escríbeme por WhatsApp y te inscribo.</p>
+            <p class="text-lum-slate mb-5">Intenta de nuevo o escríbeme por WhatsApp y te ayudo.</p>
             <div class="flex flex-col sm:flex-row gap-3 justify-center">
               <button type="button" id="f-retry" class="btn-outline">Intentar de nuevo</button>
-              <a href="https://wa.me/56991629095?text=Hola,%20quiero%20inscribirme%20en%20la%20clase%20gratis%20de%20IA" target="_blank" rel="noopener" class="btn-primary">WhatsApp</a>
+              <a href="https://wa.me/56991629095?text=Hola,%20tengo%20una%20duda%20con%20la%20clase%20de%20IA" target="_blank" rel="noopener" class="btn-primary">WhatsApp</a>
             </div>
           </div>
         </div>
@@ -272,6 +296,8 @@ const cupos = 'Cupos limitados';
   const submitLoading = document.getElementById('f-submit-loading');
   const emailError = document.getElementById('f-email-error');
   const retryBtn = document.getElementById('f-retry');
+  const pageCtx = (document.getElementById('f-pagectx') || {}).value || 'clase-ia';
+  const esEspera = pageCtx === 'clase-ia-espera';
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -326,8 +352,11 @@ const cupos = 'Cupos limitados';
     const cargo = (data.get('cargo') || '').toString().trim();
     const interes = (data.get('interes') || '').toString().trim();
 
+    const tipoTxt = esEspera ? 'Lista de espera clase IA' : 'Inscripcion clase gratis IA';
     const message = [
-      'Nueva inscripcion a la clase gratis "Claude en serio".',
+      esEspera
+        ? 'Nueva persona en LISTA DE ESPERA de la clase "Claude en serio".'
+        : 'Nueva inscripcion a la clase gratis "Claude en serio".',
       '',
       'Empresa: ' + empresa,
       'Cargo: ' + cargo,
@@ -341,10 +370,10 @@ const cupos = 'Cupos limitados';
         body: JSON.stringify({
           user_email: email,
           user_name: nombre,
-          subject: 'Inscripcion clase gratis IA - ' + nombre + ' (' + empresa + ')',
+          subject: tipoTxt + ' - ' + nombre + ' (' + empresa + ')',
           message: message,
           message_type: 'contact',
-          page_context: 'clase-ia'
+          page_context: pageCtx
         })
       });
       const result = await response.json();

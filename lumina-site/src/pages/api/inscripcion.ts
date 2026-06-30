@@ -93,10 +93,22 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Correo de confirmacion al inscrito (solo para inscripciones de la clase).
     // Best-effort: si falla, la inscripcion igual queda capturada (ya se notifico a Lumina).
-    if (pageContext === 'clase-ia') {
+    if (pageContext === 'clase-ia' || pageContext === 'clase-ia-espera') {
+      const esEspera = pageContext === 'clase-ia-espera';
       const saludo = userName ? `Hola ${esc(userName.split(' ')[0])},` : 'Hola,';
       const calUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Claude%20en%20serio%3A%20IA%20para%20multiplicar%20tu%20productividad&amp;dates=20260706T190000/20260706T201500&amp;ctz=America%2FSantiago&amp;details=Clase%20gratis%20online%20por%20Google%20Meet.%20El%20enlace%20y%20las%20instrucciones%20llegan%20por%20correo%20unos%20dias%20antes.&amp;location=Google%20Meet';
-      const confirmHtml = `
+      const confirmHtml = esEspera ? `
+        <div style="font-family:Arial,sans-serif;font-size:15px;color:#1a1a2e;line-height:1.6;max-width:560px">
+          <p>${saludo}</p>
+          <p>Gracias por tu interés. Esta edición de la clase
+             <strong>"Claude en serio: IA para multiplicar tu productividad"</strong> llegó a su tope
+             de cupos, así que quedaste en la <strong>lista de espera</strong>.</p>
+          <p>Te aviso apenas abra la próxima edición y vas a tener prioridad para tomar tu lugar.</p>
+          <p>Cualquier duda, responde este correo o escríbeme a
+             <a href="mailto:jcepeda@luminaconsulting.ai">jcepeda@luminaconsulting.ai</a>.</p>
+          <p>Saludos,<br>Jorge Cepeda<br>
+             <a href="https://www.luminaconsulting.ai">www.luminaconsulting.ai</a></p>
+        </div>` : `
         <div style="font-family:Arial,sans-serif;font-size:15px;color:#1a1a2e;line-height:1.6;max-width:560px">
           <p>${saludo}</p>
           <p>Tu cupo quedó confirmado. Los cupos son limitados para que la clase sea conversable y
@@ -128,7 +140,7 @@ export const POST: APIRoute = async ({ request }) => {
             from,
             to: [userEmail],
             reply_to: to,
-            subject: 'Tu cupo está confirmado: Claude en serio',
+            subject: esEspera ? 'Estás en la lista de espera: Claude en serio' : 'Tu cupo está confirmado: Claude en serio',
             html: confirmHtml,
           }),
         });
